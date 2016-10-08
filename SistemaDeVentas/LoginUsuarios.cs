@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaDeVentas
 {
-    public partial class Form1 : Form
+    public partial class LoginUsuarios : Form
     {
-        public Form1()
+        public LoginUsuarios()
         {
             InitializeComponent();
         }
