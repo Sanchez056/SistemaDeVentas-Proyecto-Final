@@ -28,13 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TiposUsuarioscomboBox1 = new System.Windows.Forms.ComboBox();
             this.TiposUsuarioslabel = new System.Windows.Forms.Label();
             this.Contraseñalabel2 = new System.Windows.Forms.Label();
-            this.UsuariosIdlabel = new System.Windows.Forms.Label();
-            this.IdUsuariostextBox1 = new System.Windows.Forms.TextBox();
+            this.NombreUsuariolabel = new System.Windows.Forms.Label();
+            this.NombreUsuariostextBox1 = new System.Windows.Forms.TextBox();
             this.ContraseñatextBox2 = new System.Windows.Forms.TextBox();
             this.IniciarSeccionbutton1 = new System.Windows.Forms.Button();
+            this.NombreUsuarioerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ContraseñaerrorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.NombreUsuarioerrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContraseñaerrorProvider2)).BeginInit();
             this.SuspendLayout();
             // 
             // TiposUsuarioscomboBox1
@@ -63,26 +68,27 @@
             this.Contraseñalabel2.TabIndex = 3;
             this.Contraseñalabel2.Text = "Contraseñas:";
             // 
-            // UsuariosIdlabel
+            // NombreUsuariolabel
             // 
-            this.UsuariosIdlabel.AutoSize = true;
-            this.UsuariosIdlabel.Location = new System.Drawing.Point(31, 50);
-            this.UsuariosIdlabel.Name = "UsuariosIdlabel";
-            this.UsuariosIdlabel.Size = new System.Drawing.Size(55, 13);
-            this.UsuariosIdlabel.TabIndex = 4;
-            this.UsuariosIdlabel.Text = "UsuarioId:";
+            this.NombreUsuariolabel.AutoSize = true;
+            this.NombreUsuariolabel.Location = new System.Drawing.Point(31, 50);
+            this.NombreUsuariolabel.Name = "NombreUsuariolabel";
+            this.NombreUsuariolabel.Size = new System.Drawing.Size(104, 13);
+            this.NombreUsuariolabel.TabIndex = 4;
+            this.NombreUsuariolabel.Text = "Nombre  de Usuario:";
             // 
-            // IdUsuariostextBox1
+            // NombreUsuariostextBox1
             // 
-            this.IdUsuariostextBox1.Location = new System.Drawing.Point(31, 66);
-            this.IdUsuariostextBox1.Name = "IdUsuariostextBox1";
-            this.IdUsuariostextBox1.Size = new System.Drawing.Size(251, 20);
-            this.IdUsuariostextBox1.TabIndex = 5;
+            this.NombreUsuariostextBox1.Location = new System.Drawing.Point(31, 66);
+            this.NombreUsuariostextBox1.Name = "NombreUsuariostextBox1";
+            this.NombreUsuariostextBox1.Size = new System.Drawing.Size(251, 20);
+            this.NombreUsuariostextBox1.TabIndex = 5;
             // 
             // ContraseñatextBox2
             // 
             this.ContraseñatextBox2.Location = new System.Drawing.Point(31, 128);
             this.ContraseñatextBox2.Name = "ContraseñatextBox2";
+            this.ContraseñatextBox2.PasswordChar = '*';
             this.ContraseñatextBox2.Size = new System.Drawing.Size(251, 20);
             this.ContraseñatextBox2.TabIndex = 6;
             // 
@@ -97,6 +103,15 @@
             this.IniciarSeccionbutton1.Text = "Iniciar Sesion";
             this.IniciarSeccionbutton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IniciarSeccionbutton1.UseVisualStyleBackColor = true;
+            this.IniciarSeccionbutton1.Click += new System.EventHandler(this.IniciarSeccionbutton1_Click);
+            // 
+            // NombreUsuarioerrorProvider1
+            // 
+            this.NombreUsuarioerrorProvider1.ContainerControl = this;
+            // 
+            // ContraseñaerrorProvider2
+            // 
+            this.ContraseñaerrorProvider2.ContainerControl = this;
             // 
             // LoginUsuarios
             // 
@@ -104,14 +119,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 283);
             this.Controls.Add(this.ContraseñatextBox2);
-            this.Controls.Add(this.IdUsuariostextBox1);
-            this.Controls.Add(this.UsuariosIdlabel);
+            this.Controls.Add(this.NombreUsuariostextBox1);
+            this.Controls.Add(this.NombreUsuariolabel);
             this.Controls.Add(this.Contraseñalabel2);
             this.Controls.Add(this.TiposUsuarioslabel);
             this.Controls.Add(this.TiposUsuarioscomboBox1);
             this.Controls.Add(this.IniciarSeccionbutton1);
             this.Name = "LoginUsuarios";
             this.Text = "LoginUsuarios";
+            ((System.ComponentModel.ISupportInitialize)(this.NombreUsuarioerrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ContraseñaerrorProvider2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,8 +140,10 @@
         private System.Windows.Forms.ComboBox TiposUsuarioscomboBox1;
         private System.Windows.Forms.Label TiposUsuarioslabel;
         private System.Windows.Forms.Label Contraseñalabel2;
-        private System.Windows.Forms.Label UsuariosIdlabel;
-        private System.Windows.Forms.TextBox IdUsuariostextBox1;
+        private System.Windows.Forms.Label NombreUsuariolabel;
+        private System.Windows.Forms.TextBox NombreUsuariostextBox1;
         private System.Windows.Forms.TextBox ContraseñatextBox2;
+        private System.Windows.Forms.ErrorProvider NombreUsuarioerrorProvider1;
+        private System.Windows.Forms.ErrorProvider ContraseñaerrorProvider2;
     }
 }

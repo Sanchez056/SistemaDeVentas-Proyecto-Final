@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
 using DAL;
 using Entidades;
 
@@ -37,6 +38,15 @@ namespace BLL
             }
 
         }
+        // Otra forma de Agregar en la base de datos
+       /* public static void Agregar(int idUsuarios, string nombreUsuarios, string Contrasena)
+        {
+            using (SistemaVentasDb db = new SistemaVentasDb())
+            {
+                db.Usuarios.Add(new Usuarios { IdUsuario= idUsuarios, NombreUsuario = nombreUsuarios,Contrasena = Contrasena });
+                db.SaveChanges();
+            }
+        }*/
         public static Usuarios Buscar(int id)
         {
             var db = new SistemaVentasDb();
@@ -45,6 +55,7 @@ namespace BLL
 
 
         }
+        
         public static void Modificar(int id, Usuarios usuario)
         {
             var db = new SistemaVentasDb();
@@ -80,7 +91,7 @@ namespace BLL
 
             var db = new SistemaVentasDb();
 
-            lista = db.Usuarios.Where(p => p.IdUsuario == id).ToList();
+            lista = db.Usuarios.Where(p => p.UsuarioId == id).ToList();
 
             return lista;
 
@@ -96,6 +107,26 @@ namespace BLL
 
             return lista;
 
+
+        }
+        public static List<Usuarios> CargarDatos()
+        {
+            using (SistemaVentasDb db = new SistemaVentasDb())
+            {
+                var datos = (from p in db.Usuarios select p).ToList();
+
+                return datos;
+            }
+        }
+        public static List<Usuarios> getContraseña(string aux)
+        {
+            List<Usuarios> lista = new List<Usuarios>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Usuarios.Where(p => p.Contrasena== aux).ToList();
+
+            return lista;
 
         }
     }

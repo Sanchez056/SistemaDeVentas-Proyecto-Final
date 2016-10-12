@@ -10,12 +10,14 @@ namespace DAL
 {
     public class SistemaVentasDb :DbContext
     {
-      public  SistemaVentasDb() : base("name=ConStr")
+        
+
+        public  SistemaVentasDb() : base("name=ConStr")
         {
 
         }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
-        public virtual DbSet<TiposUsuarios> TipoUsuario{ get; set; }
+        public virtual DbSet<Articulos> Articulos { get; set; }
       
     }
 }

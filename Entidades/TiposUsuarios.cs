@@ -10,8 +10,8 @@ namespace Entidades
    public  class TiposUsuarios
     {
         [Key]
-        public int IdUsuario { get; set; }
-        public string TiposUsuario{ get; set; }
+        public int UsuarioId{ get; set; }
+        public string Detalle{ get; set; }
 
        
 
@@ -19,7 +19,7 @@ namespace Entidades
 
         public override string ToString()
         {
-            return this.TiposUsuario;
+            return this.Detalle;
         }
 
     }
