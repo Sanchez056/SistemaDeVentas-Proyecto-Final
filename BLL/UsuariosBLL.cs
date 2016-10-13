@@ -38,15 +38,7 @@ namespace BLL
             }
 
         }
-        // Otra forma de Agregar en la base de datos
-       /* public static void Agregar(int idUsuarios, string nombreUsuarios, string Contrasena)
-        {
-            using (SistemaVentasDb db = new SistemaVentasDb())
-            {
-                db.Usuarios.Add(new Usuarios { IdUsuario= idUsuarios, NombreUsuario = nombreUsuarios,Contrasena = Contrasena });
-                db.SaveChanges();
-            }
-        }*/
+
         public static Usuarios Buscar(int id)
         {
             var db = new SistemaVentasDb();
@@ -55,17 +47,19 @@ namespace BLL
 
 
         }
-        
-        public static void Modificar(int id, Usuarios usuario)
+
+        public static void Eliminar(int id)
         {
             var db = new SistemaVentasDb();
-
             Usuarios u = db.Usuarios.Find(id);
 
-            u.NombreUsuario = usuario.NombreUsuario;
-            u.Contrasena = usuario.Contrasena;
+            db.Usuarios.Remove(u);
             db.SaveChanges();
         }
+
+   
+        
+        
         public static List<Usuarios> GetListaNombreUsuario(string aux)
         {
             List<Usuarios> lista = new List<Usuarios>();
@@ -77,14 +71,7 @@ namespace BLL
             return lista;
 
         }
-        public static void Eliminar(int id)
-        {
-            var db = new SistemaVentasDb();
-            Usuarios u = db.Usuarios.Find(id);
-
-            db.Usuarios.Remove(u);
-            db.SaveChanges();
-        }
+       
         public static List<Usuarios> GetListaIdUsuarios(int id)
         {
             List<Usuarios> lista = new List<Usuarios>();

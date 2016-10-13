@@ -11,9 +11,23 @@ namespace Entidades
     {
         [Key]
         public int ArticuloId{ get; set; }
+
         public string NombreArticulo { get; set; }
+
         public string MarcaUsuario { get; set; }
+
+        public int PrecioArticulo { get; set; }
+
         public  int   CantidadArticulo { get; set; }
-        public  int    PrecioArticulo{ get; set; }
+
+        public string Despcricion { get; set; }
+
+        public DateTime FechaIngreso { get; set; }
+
+
+
+
+
+
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaDeVentas
+namespace SistemaDeVentas.Registros
 {
-    public partial class RegistrosArticulo : Form
+    public partial class RegistroDeCompra : Form
     {
-        public RegistrosArticulo()
+        public RegistroDeCompra()
         {
             InitializeComponent();
         }

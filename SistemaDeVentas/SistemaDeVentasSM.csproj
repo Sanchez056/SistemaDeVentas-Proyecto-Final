@@ -76,10 +76,16 @@
     <Compile Include="Consultas\ConsultaUsuarios.Designer.cs">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginUsuarios.cs">
+    <Compile Include="RegistroDeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginUsuarios.Designer.cs">
+    <Compile Include="RegistroDeClientes.Designer.cs">
+      <DependentUpon>RegistroDeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\LoginUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\LoginUsuarios.Designer.cs">
       <DependentUpon>LoginUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
@@ -90,22 +96,43 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\RegistroDeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroDeCompra.Designer.cs">
+      <DependentUpon>RegistroDeCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RegistroDeProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistroDeProveedores.Designer.cs">
+      <DependentUpon>RegistroDeProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registros\RegistroDeUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registros\RegistroDeUsuarios.Designer.cs">
       <DependentUpon>RegistroDeUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistrosArticulo.cs">
+    <Compile Include="Registros\RegistrosArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistrosArticulo.Designer.cs">
+    <Compile Include="Registros\RegistrosArticulo.Designer.cs">
       <DependentUpon>RegistrosArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\RegistrosGarantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registros\RegistrosGarantes.Designer.cs">
+      <DependentUpon>RegistrosGarantes.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Consultas\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginUsuarios.resx">
+    <EmbeddedResource Include="RegistroDeClientes.resx">
+      <DependentUpon>RegistroDeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\LoginUsuarios.resx">
       <DependentUpon>LoginUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
@@ -121,11 +148,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registros\RegistroDeCompra.resx">
+      <DependentUpon>RegistroDeCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\RegistroDeProveedores.resx">
+      <DependentUpon>RegistroDeProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroDeUsuarios.resx">
       <DependentUpon>RegistroDeUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistrosArticulo.resx">
+    <EmbeddedResource Include="Registros\RegistrosArticulo.resx">
       <DependentUpon>RegistrosArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registros\RegistrosGarantes.resx">
+      <DependentUpon>RegistrosGarantes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -190,6 +226,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SistemaVentasDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\search1.ico" />
+    <None Include="Resources\cancel1.ico" />
+    <None Include="Resources\picture_add.ico" />
+    <None Include="Resources\cancel.ico" />
+    <None Include="Resources\save1.ico" />
+    <None Include="Resources\new.ico" />
+    <None Include="Resources\kghostview_32x32-32.ico" />
+    <None Include="Resources\file_broken_32x32-32.ico" />
+    <None Include="Resources\3floppy_unmount_32x32-32.ico" />
+    <None Include="Resources\krec_fileempty_32x32-32.ico" />
+    <None Include="Resources\add-note.ico" />
     <None Include="Resources\add.ico" />
     <None Include="Resources\insert.ico" />
     <None Include="Resources\adim.ico" />
@@ -208,7 +255,12 @@
     <None Include="Resources\next-.ico" />
     <None Include="Resources\logout-28550.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

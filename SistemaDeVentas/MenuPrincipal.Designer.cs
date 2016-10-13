@@ -32,16 +32,18 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistroProveedorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasDeArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RegistroProveedorToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistrocompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistroventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,11 +79,47 @@
             this.registrarArticuloToolStripMenuItem,
             this.registrarClientesToolStripMenuItem,
             this.registrarUsuariosToolStripMenuItem,
-            this.RegistroProveedorToolStripMenuItem1});
+            this.RegistroProveedorToolStripMenuItem1,
+            this.RegistrocompraToolStripMenuItem,
+            this.RegistroventasToolStripMenuItem});
             this.RegistroToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.RegistroToolStripMenuItem.Name = "RegistroToolStripMenuItem";
             this.RegistroToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
             this.RegistroToolStripMenuItem.Text = "Registros";
+            // 
+            // registrarArticuloToolStripMenuItem
+            // 
+            this.registrarArticuloToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.registrarArticuloToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.add_note;
+            this.registrarArticuloToolStripMenuItem.Name = "registrarArticuloToolStripMenuItem";
+            this.registrarArticuloToolStripMenuItem.Size = new System.Drawing.Size(166, 32);
+            this.registrarArticuloToolStripMenuItem.Text = " Articulo";
+            // 
+            // registrarClientesToolStripMenuItem
+            // 
+            this.registrarClientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.registrarClientesToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.add_user;
+            this.registrarClientesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Red;
+            this.registrarClientesToolStripMenuItem.Name = "registrarClientesToolStripMenuItem";
+            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(166, 32);
+            this.registrarClientesToolStripMenuItem.Text = "Cliente";
+            // 
+            // registrarUsuariosToolStripMenuItem
+            // 
+            this.registrarUsuariosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.registrarUsuariosToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.add_user;
+            this.registrarUsuariosToolStripMenuItem.Name = "registrarUsuariosToolStripMenuItem";
+            this.registrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(166, 32);
+            this.registrarUsuariosToolStripMenuItem.Text = "Usuario";
+            this.registrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuariosToolStripMenuItem_Click);
+            // 
+            // RegistroProveedorToolStripMenuItem1
+            // 
+            this.RegistroProveedorToolStripMenuItem1.ForeColor = System.Drawing.Color.Black;
+            this.RegistroProveedorToolStripMenuItem1.Image = global::SistemaDeVentas.Properties.Resources.add_user;
+            this.RegistroProveedorToolStripMenuItem1.Name = "RegistroProveedorToolStripMenuItem1";
+            this.RegistroProveedorToolStripMenuItem1.Size = new System.Drawing.Size(166, 32);
+            this.RegistroProveedorToolStripMenuItem1.Text = "Proveedor";
             // 
             // ConsultaToolStripMenuItem
             // 
@@ -98,26 +136,26 @@
             // consultasDeClientesToolStripMenuItem
             // 
             this.consultasDeClientesToolStripMenuItem.Name = "consultasDeClientesToolStripMenuItem";
-            this.consultasDeClientesToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
-            this.consultasDeClientesToolStripMenuItem.Text = "Consultas De Clientes";
+            this.consultasDeClientesToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.consultasDeClientesToolStripMenuItem.Text = " Clientes";
             // 
             // consultasDeUsuariosToolStripMenuItem
             // 
             this.consultasDeUsuariosToolStripMenuItem.Name = "consultasDeUsuariosToolStripMenuItem";
-            this.consultasDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
-            this.consultasDeUsuariosToolStripMenuItem.Text = "Consultas De Usuarios";
+            this.consultasDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.consultasDeUsuariosToolStripMenuItem.Text = "Usuarios";
             // 
             // consultasDeToolStripMenuItem
             // 
             this.consultasDeToolStripMenuItem.Name = "consultasDeToolStripMenuItem";
-            this.consultasDeToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
-            this.consultasDeToolStripMenuItem.Text = "Consultas De Proveedor";
+            this.consultasDeToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.consultasDeToolStripMenuItem.Text = "Proveedor";
             // 
             // consultasDeArticuloToolStripMenuItem
             // 
             this.consultasDeArticuloToolStripMenuItem.Name = "consultasDeArticuloToolStripMenuItem";
-            this.consultasDeArticuloToolStripMenuItem.Size = new System.Drawing.Size(235, 24);
-            this.consultasDeArticuloToolStripMenuItem.Text = "Consultas De Articulo";
+            this.consultasDeArticuloToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.consultasDeArticuloToolStripMenuItem.Text = "Articulo";
             // 
             // AyudaToolStripMenuItem
             // 
@@ -125,39 +163,19 @@
             this.AyudaToolStripMenuItem.Size = new System.Drawing.Size(61, 23);
             this.AyudaToolStripMenuItem.Text = "Ayuda";
             // 
-            // registrarClientesToolStripMenuItem
+            // RegistrocompraToolStripMenuItem
             // 
-            this.registrarClientesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.registrarClientesToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.add_user;
-            this.registrarClientesToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Red;
-            this.registrarClientesToolStripMenuItem.Name = "registrarClientesToolStripMenuItem";
-            this.registrarClientesToolStripMenuItem.Size = new System.Drawing.Size(222, 32);
-            this.registrarClientesToolStripMenuItem.Text = "Registrar Cliente";
+            this.RegistrocompraToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.add_user;
+            this.RegistrocompraToolStripMenuItem.Name = "RegistrocompraToolStripMenuItem";
+            this.RegistrocompraToolStripMenuItem.Size = new System.Drawing.Size(166, 32);
+            this.RegistrocompraToolStripMenuItem.Text = "Compra";
             // 
-            // registrarUsuariosToolStripMenuItem
+            // RegistroventasToolStripMenuItem
             // 
-            this.registrarUsuariosToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.registrarUsuariosToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.add_user;
-            this.registrarUsuariosToolStripMenuItem.Name = "registrarUsuariosToolStripMenuItem";
-            this.registrarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(222, 32);
-            this.registrarUsuariosToolStripMenuItem.Text = "Registrar Usuario";
-            this.registrarUsuariosToolStripMenuItem.Click += new System.EventHandler(this.registrarUsuariosToolStripMenuItem_Click);
-            // 
-            // RegistroProveedorToolStripMenuItem1
-            // 
-            this.RegistroProveedorToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.RegistroProveedorToolStripMenuItem1.Image = global::SistemaDeVentas.Properties.Resources.add_user;
-            this.RegistroProveedorToolStripMenuItem1.Name = "RegistroProveedorToolStripMenuItem1";
-            this.RegistroProveedorToolStripMenuItem1.Size = new System.Drawing.Size(222, 32);
-            this.RegistroProveedorToolStripMenuItem1.Text = "Registrar Proveedor";
-            // 
-            // registrarArticuloToolStripMenuItem
-            // 
-            this.registrarArticuloToolStripMenuItem.ForeColor = System.Drawing.Color.Lime;
-            this.registrarArticuloToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.add_user;
-            this.registrarArticuloToolStripMenuItem.Name = "registrarArticuloToolStripMenuItem";
-            this.registrarArticuloToolStripMenuItem.Size = new System.Drawing.Size(222, 32);
-            this.registrarArticuloToolStripMenuItem.Text = "Registrar Articulo";
+            this.RegistroventasToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.add_user;
+            this.RegistroventasToolStripMenuItem.Name = "RegistroventasToolStripMenuItem";
+            this.RegistroventasToolStripMenuItem.Size = new System.Drawing.Size(166, 32);
+            this.RegistroventasToolStripMenuItem.Text = "Ventas";
             // 
             // MenuPrincipal
             // 
@@ -167,6 +185,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -196,5 +215,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultasDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasDeArticuloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RegistrocompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem RegistroventasToolStripMenuItem;
     }
 }
