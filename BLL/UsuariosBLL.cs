@@ -10,8 +10,9 @@ using Entidades;
 
 namespace BLL
 {
-    public class UsuariosBLL
+    public class UsuariosBLL 
     {
+
         Usuarios usuario = new Usuarios();
 
         public static void Insertar(Usuarios u)
@@ -57,9 +58,10 @@ namespace BLL
             db.SaveChanges();
         }
 
-   
-        
-        
+
+
+
+
         public static List<Usuarios> GetListaNombreUsuario(string aux)
         {
             List<Usuarios> lista = new List<Usuarios>();

@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data;
+
 using Entidades;
-using BLL;
+
 
 namespace BLL
 {
@@ -37,5 +39,48 @@ namespace BLL
             }
 
         }
+
+        public static Articulos Buscar(int id)
+        {
+            var db = new SistemaVentasDb();
+
+            return db.Articulos.Find(id);
+
+
+        }
+
+        public static void Eliminar(int id)
+        {
+            var db = new SistemaVentasDb();
+            Articulos a = db.Articulos.Find(id);
+
+            db.Articulos.Remove(a);
+            db.SaveChanges();
+        }
+
+
+        public static List<Articulos> GetListaNombreArticulo(string aux)
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.Where(p => p.NombreArticulo== aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Articulos> GetListaMarcaArticulo(string aux)
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.Where(p => p.MarcaArticulo== aux).ToList();
+
+            return lista;
+
+        }
+
     }
 }

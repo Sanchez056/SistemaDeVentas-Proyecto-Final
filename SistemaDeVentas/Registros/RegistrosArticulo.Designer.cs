@@ -31,20 +31,20 @@
             this.ArticuloIdlabel = new System.Windows.Forms.Label();
             this.NombreArticulolabel = new System.Windows.Forms.Label();
             this.MarcaArticulolabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ArticuloIdtextBox = new System.Windows.Forms.TextBox();
+            this.NombreArticulotextBox = new System.Windows.Forms.TextBox();
+            this.MarcaArticulotextBox = new System.Windows.Forms.TextBox();
+            this.CantidadArticulotextBox = new System.Windows.Forms.TextBox();
             this.CantidadArticulolabel = new System.Windows.Forms.Label();
             this.PrecioArticulolabel = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PrecioArticulotextBox = new System.Windows.Forms.TextBox();
             this.DescripcionLabel = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.DespcripciontextBox = new System.Windows.Forms.TextBox();
             this.Imagenlabel = new System.Windows.Forms.Label();
             this.FechaIngresolabel = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.EliminarImagenbutton = new System.Windows.Forms.Button();
-            this.Imagenbutton = new System.Windows.Forms.Button();
+            this.AñadirImagenbutton = new System.Windows.Forms.Button();
             this.ImagenArticulopictureBox = new System.Windows.Forms.PictureBox();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardabutton = new System.Windows.Forms.Button();
@@ -80,33 +80,33 @@
             this.MarcaArticulolabel.TabIndex = 2;
             this.MarcaArticulolabel.Text = "Marca de Articulo:";
             // 
-            // textBox1
+            // ArticuloIdtextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(17, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 22);
-            this.textBox1.TabIndex = 3;
+            this.ArticuloIdtextBox.Location = new System.Drawing.Point(17, 38);
+            this.ArticuloIdtextBox.Name = "ArticuloIdtextBox";
+            this.ArticuloIdtextBox.Size = new System.Drawing.Size(115, 22);
+            this.ArticuloIdtextBox.TabIndex = 3;
             // 
-            // textBox2
+            // NombreArticulotextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(20, 94);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 22);
-            this.textBox2.TabIndex = 4;
+            this.NombreArticulotextBox.Location = new System.Drawing.Point(20, 94);
+            this.NombreArticulotextBox.Name = "NombreArticulotextBox";
+            this.NombreArticulotextBox.Size = new System.Drawing.Size(225, 22);
+            this.NombreArticulotextBox.TabIndex = 4;
             // 
-            // textBox3
+            // MarcaArticulotextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(21, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(224, 22);
-            this.textBox3.TabIndex = 5;
+            this.MarcaArticulotextBox.Location = new System.Drawing.Point(21, 147);
+            this.MarcaArticulotextBox.Name = "MarcaArticulotextBox";
+            this.MarcaArticulotextBox.Size = new System.Drawing.Size(224, 22);
+            this.MarcaArticulotextBox.TabIndex = 5;
             // 
-            // textBox4
+            // CantidadArticulotextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(273, 94);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(224, 22);
-            this.textBox4.TabIndex = 6;
+            this.CantidadArticulotextBox.Location = new System.Drawing.Point(273, 94);
+            this.CantidadArticulotextBox.Name = "CantidadArticulotextBox";
+            this.CantidadArticulotextBox.Size = new System.Drawing.Size(224, 22);
+            this.CantidadArticulotextBox.TabIndex = 6;
             // 
             // CantidadArticulolabel
             // 
@@ -126,12 +126,12 @@
             this.PrecioArticulolabel.TabIndex = 8;
             this.PrecioArticulolabel.Text = "Precio de  Articulo:";
             // 
-            // textBox5
+            // PrecioArticulotextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(276, 147);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(221, 22);
-            this.textBox5.TabIndex = 9;
+            this.PrecioArticulotextBox.Location = new System.Drawing.Point(276, 147);
+            this.PrecioArticulotextBox.Name = "PrecioArticulotextBox";
+            this.PrecioArticulotextBox.Size = new System.Drawing.Size(221, 22);
+            this.PrecioArticulotextBox.TabIndex = 9;
             // 
             // DescripcionLabel
             // 
@@ -142,13 +142,13 @@
             this.DescripcionLabel.TabIndex = 15;
             this.DescripcionLabel.Text = "Descripcion:";
             // 
-            // textBox6
+            // DespcripciontextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(21, 199);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(224, 47);
-            this.textBox6.TabIndex = 16;
+            this.DespcripciontextBox.Location = new System.Drawing.Point(21, 199);
+            this.DespcripciontextBox.Multiline = true;
+            this.DespcripciontextBox.Name = "DespcripciontextBox";
+            this.DespcripciontextBox.Size = new System.Drawing.Size(224, 47);
+            this.DespcripciontextBox.TabIndex = 16;
             // 
             // Imagenlabel
             // 
@@ -188,16 +188,16 @@
             this.EliminarImagenbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.EliminarImagenbutton.UseVisualStyleBackColor = true;
             // 
-            // Imagenbutton
+            // AñadirImagenbutton
             // 
-            this.Imagenbutton.Image = global::SistemaDeVentas.Properties.Resources.picture_add;
-            this.Imagenbutton.Location = new System.Drawing.Point(276, 305);
-            this.Imagenbutton.Name = "Imagenbutton";
-            this.Imagenbutton.Size = new System.Drawing.Size(86, 32);
-            this.Imagenbutton.TabIndex = 21;
-            this.Imagenbutton.Text = "Añadir";
-            this.Imagenbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Imagenbutton.UseVisualStyleBackColor = true;
+            this.AñadirImagenbutton.Image = global::SistemaDeVentas.Properties.Resources.picture_add;
+            this.AñadirImagenbutton.Location = new System.Drawing.Point(276, 305);
+            this.AñadirImagenbutton.Name = "AñadirImagenbutton";
+            this.AñadirImagenbutton.Size = new System.Drawing.Size(86, 32);
+            this.AñadirImagenbutton.TabIndex = 21;
+            this.AñadirImagenbutton.Text = "Añadir";
+            this.AñadirImagenbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AñadirImagenbutton.UseVisualStyleBackColor = true;
             // 
             // ImagenArticulopictureBox
             // 
@@ -230,6 +230,7 @@
             this.Guardabutton.Text = "Guardar";
             this.Guardabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Guardabutton.UseVisualStyleBackColor = true;
+            this.Guardabutton.Click += new System.EventHandler(this.Guardabutton_Click);
             // 
             // Nuevobutton
             // 
@@ -241,6 +242,7 @@
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Buscarbutton
             // 
@@ -252,6 +254,7 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // RegistrosArticulo
             // 
@@ -259,24 +262,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 440);
             this.Controls.Add(this.EliminarImagenbutton);
-            this.Controls.Add(this.Imagenbutton);
+            this.Controls.Add(this.AñadirImagenbutton);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.FechaIngresolabel);
             this.Controls.Add(this.Imagenlabel);
             this.Controls.Add(this.ImagenArticulopictureBox);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.DespcripciontextBox);
             this.Controls.Add(this.DescripcionLabel);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardabutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.PrecioArticulotextBox);
             this.Controls.Add(this.PrecioArticulolabel);
             this.Controls.Add(this.CantidadArticulolabel);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CantidadArticulotextBox);
+            this.Controls.Add(this.MarcaArticulotextBox);
+            this.Controls.Add(this.NombreArticulotextBox);
+            this.Controls.Add(this.ArticuloIdtextBox);
             this.Controls.Add(this.MarcaArticulolabel);
             this.Controls.Add(this.NombreArticulolabel);
             this.Controls.Add(this.ArticuloIdlabel);
@@ -294,24 +297,24 @@
         private System.Windows.Forms.Label ArticuloIdlabel;
         private System.Windows.Forms.Label NombreArticulolabel;
         private System.Windows.Forms.Label MarcaArticulolabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ArticuloIdtextBox;
+        private System.Windows.Forms.TextBox NombreArticulotextBox;
+        private System.Windows.Forms.TextBox MarcaArticulotextBox;
+        private System.Windows.Forms.TextBox CantidadArticulotextBox;
         private System.Windows.Forms.Label CantidadArticulolabel;
         private System.Windows.Forms.Label PrecioArticulolabel;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PrecioArticulotextBox;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardabutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Label DescripcionLabel;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox DespcripciontextBox;
         private System.Windows.Forms.PictureBox ImagenArticulopictureBox;
         private System.Windows.Forms.Label Imagenlabel;
         private System.Windows.Forms.Label FechaIngresolabel;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.Button Imagenbutton;
+        private System.Windows.Forms.Button AñadirImagenbutton;
         private System.Windows.Forms.Button EliminarImagenbutton;
     }
 }

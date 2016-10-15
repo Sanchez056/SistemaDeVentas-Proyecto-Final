@@ -47,6 +47,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -56,6 +76,7 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -76,10 +97,11 @@
     <Compile Include="Consultas\ConsultaUsuarios.Designer.cs">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistroDeClientes.cs">
+    <Compile Include="Program.cs" />
+    <Compile Include="Registros\RegistroDeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RegistroDeClientes.Designer.cs">
+    <Compile Include="Registros\RegistroDeClientes.Designer.cs">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Registros\LoginUsuarios.cs">
@@ -94,7 +116,6 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registros\RegistroDeCompra.cs">
       <SubType>Form</SubType>
@@ -126,10 +147,11 @@
     <Compile Include="Registros\RegistrosGarantes.Designer.cs">
       <DependentUpon>RegistrosGarantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="Consultas\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RegistroDeClientes.resx">
+    <EmbeddedResource Include="Registros\RegistroDeClientes.resx">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\LoginUsuarios.resx">
@@ -154,6 +176,9 @@
     <EmbeddedResource Include="Registros\RegistroDeProveedores.resx">
       <DependentUpon>RegistroDeProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registros\RegistroDeUsuarios.af.resx">
+      <DependentUpon>RegistroDeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroDeUsuarios.resx">
       <DependentUpon>RegistroDeUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -163,7 +188,9 @@
     <EmbeddedResource Include="Registros\RegistrosGarantes.resx">
       <DependentUpon>RegistrosGarantes.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -226,6 +253,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SistemaVentasDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\agregar-archivo-icono-3676-32.png" />
+    <None Include="Resources\user1.ico" />
+    <None Include="Resources\users3.ico" />
+    <None Include="Resources\users2.ico" />
+    <None Include="Resources\agregar-usuarios-icono-3782-48.png" />
+    <None Include="Resources\agregar-un-grafico-de-barras-icono-5280-32.png" />
+    <None Include="Resources\c-agregar-a-favoritos-icono-5920-48.png" />
+    <None Include="Resources\kchart_32x32-32.ico" />
+    <None Include="Resources\shopping cart full.ico" />
     <None Include="Resources\search1.ico" />
     <None Include="Resources\cancel1.ico" />
     <None Include="Resources\picture_add.ico" />

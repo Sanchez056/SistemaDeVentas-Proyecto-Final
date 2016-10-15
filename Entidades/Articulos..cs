@@ -14,15 +14,16 @@ namespace Entidades
 
         public string NombreArticulo { get; set; }
 
-        public string MarcaUsuario { get; set; }
+        public string MarcaArticulo{ get; set; }
 
-        public int PrecioArticulo { get; set; }
+        public float PrecioArticulo { get; set; }
 
-        public  int   CantidadArticulo { get; set; }
+        public  float  CantidadArticulo { get; set; }
 
         public string Despcricion { get; set; }
 
-        public DateTime FechaIngreso { get; set; }
+        //public DateTime FechaIngreso { get; set; }
+        
 
 
 

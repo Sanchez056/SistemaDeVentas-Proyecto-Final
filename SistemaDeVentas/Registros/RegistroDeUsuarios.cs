@@ -10,9 +10,10 @@ using System.Windows.Forms;
 using Entidades;
 using BLL;
 
+
 namespace SistemaDeVentas
 {
-    public partial class RegistroDeUsuarios : Form
+    public partial class RegistroDeUsuarios : Form 
     {
         public RegistroDeUsuarios()
         {
@@ -23,12 +24,12 @@ namespace SistemaDeVentas
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             if (validarId("Favor ingresar el id del usuario que desea buscar") && ValidarBuscar())
-                LLenar(UsuariosBLL.Buscar(String(IdUsuariotextBox.Text)));
+                LLenar(UsuariosBLL.Buscar(String(UsuarioIdtextBox.Text)));
 
         }
         private void LLenar(Usuarios usuario)
         {
-            IdUsuariotextBox.Text = usuario.UsuarioId.ToString();
+            UsuarioIdtextBox.Text = usuario.UsuarioId.ToString();
             NombreUsuariostextBox.Text = usuario.NombreUsuario.ToString();
             ContraseñatextBox.Text = usuario.Contrasena;
             ConfimarContraseñatextBox1.Text = usuario.Contrasena;
@@ -38,9 +39,9 @@ namespace SistemaDeVentas
        
         private bool validarId(string message)
         {
-            if (string.IsNullOrEmpty(IdUsuariotextBox.Text))
+            if (string.IsNullOrEmpty(UsuarioIdtextBox.Text))
             {
-                BuscarerrorProvider1.SetError(IdUsuariotextBox, "Por Favor Ingresar Id");
+                BuscarerrorProvider1.SetError(UsuarioIdtextBox, "Por Favor Ingresar Id");
                 MessageBox.Show(message);
                 return false;
             }
@@ -51,7 +52,7 @@ namespace SistemaDeVentas
         }
         private bool ValidarBuscar()
         {
-            if (UsuariosBLL.Buscar(String(IdUsuariotextBox.Text)) == null)
+            if (UsuariosBLL.Buscar(String(UsuarioIdtextBox.Text)) == null)
             {
                 MessageBox.Show("Este registro no existe");
                  return false;
@@ -78,7 +79,7 @@ namespace SistemaDeVentas
         // Metodo Limpiar para el Botton de Nuevo Usuario
         public void Limpiar()
         {
-            IdUsuariotextBox.Clear();
+            UsuarioIdtextBox.Clear();
             NombreUsuariostextBox.Clear();
             ContraseñatextBox.Clear();
             ConfimarContraseñatextBox1.Clear();
@@ -93,7 +94,7 @@ namespace SistemaDeVentas
             LlenarClase(usuario);
             if (ValidarTextbox() && ValidarExiste(NombreUsuariostextBox.Text))
             {
-                UsuariosBLL.Insertar(usuario);
+               UsuariosBLL.Insertar(usuario);
                 Limpiar();
                 MessageBox.Show("Guardado con exito");
             }
@@ -109,22 +110,8 @@ namespace SistemaDeVentas
         //---
 
         //-- Botton Moficar que Modifica el Usuario  
-        private void Modificarbutton_Click(object sender, EventArgs e)
-        {
-            Usuarios usuario = new Usuarios();
-            if (validarId("Favor Buscar el Usuarios que se Modificar") && ValidarTextbox())
-            {
-
-                LlenarClase(usuario);
-                if (ValidarExiste(NombreUsuariostextBox.Text))
-                {
-                    UsuariosBLL.Modificar(String(IdUsuariotextBox.Text), usuario);
-                    Limpiar();
-                    MessageBox.Show("La Modificacion Fue Todo un Exito");
-                }
-
-            }
-        }
+       
+        
 
         private bool ValidarExiste(string aux)
         {
@@ -187,7 +174,7 @@ namespace SistemaDeVentas
 
             if (validarId("Favor digitar el id del usuario que desea eliminar") && ValidarBuscar())
             {
-                UsuariosBLL.Eliminar(String(IdUsuariotextBox.Text));
+                 UsuariosBLL.Eliminar(String(UsuarioIdtextBox.Text));
                 Limpiar();
                 MessageBox.Show("ELiminado con exito");
             }

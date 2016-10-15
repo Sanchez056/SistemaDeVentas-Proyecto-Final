@@ -22,36 +22,21 @@ namespace SistemaDeVentas
             InitializeComponent();
         }
 
-        private void MenuPrincipal_Load(object sender, EventArgs e)
+        private void articuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            RegistrosArticulo ResArt = new RegistrosArticulo();
+
+            ResArt.MdiParent = this;
+            ResArt.Show();
 
         }
 
-        private void registrarUsuairoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            RegistroDeUsuarios ResUs = new RegistroDeUsuarios();
 
-
-
-            
-
-           
-           
-
-        }
-        
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-           
-           
-        }
-
-        private void registrarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-            RegistroDeUsuarios rUsuarios = new RegistroDeUsuarios();
-            rUsuarios.MdiParent = this;
-            rUsuarios.Show();
-
+            ResUs.MdiParent = this;
+            ResUs.Show();
         }
     }
 }
