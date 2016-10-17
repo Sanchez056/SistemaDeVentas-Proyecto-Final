@@ -34,5 +34,10 @@ namespace SistemaDeVentas.Consultas
 
             ConsultaUsuariosdataGridView.DataSource = lista;
         }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

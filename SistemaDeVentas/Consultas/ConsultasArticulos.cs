@@ -40,19 +40,19 @@ namespace SistemaDeVentas.Consultas
         {
             MyViewerArticulos viewer = new MyViewerArticulos();
 
-            /*viewer.Reset();
-            viewer.RptViewer.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
+            viewer.ArticulosreportViewer.Reset();
+            viewer.ArticulosreportViewer.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
 
-            viewer.RptViewer.LocalReport.ReportPath = @"Reportes\ListadoUsuarios.rdlc";
+            viewer.ArticulosreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\Reportes\ListadoArticulos";
 
-            viewer.RptViewer.LocalReport.DataSources.Clear();
+            viewer.ArticulosreportViewer.LocalReport.DataSources.Clear();
 
 
-            viewer.RptViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSetUsuarios", lista));
+            viewer.ArticulosreportViewer.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DataSetArticulo", lista));
 
-            viewer.RptViewer.LocalReport.Refresh();
+            viewer.ArticulosreportViewer.LocalReport.Refresh();
 
-            viewer.Show();*/
+            viewer.Show();
         }
     }
 }

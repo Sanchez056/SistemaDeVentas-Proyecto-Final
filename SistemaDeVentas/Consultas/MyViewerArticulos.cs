@@ -20,8 +20,12 @@ namespace SistemaDeVentas.Consultas
         private void MyViewerArticulos_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+            this.ArticulosreportViewer.RefreshReport();
         }
 
+        private void ArticulosreportViewer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

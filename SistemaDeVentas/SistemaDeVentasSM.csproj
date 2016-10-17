@@ -180,6 +180,11 @@
     <Compile Include="Registros\RegistrosGarantes.Designer.cs">
       <DependentUpon>RegistrosGarantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="SistemaVentasDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaVentasDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="Consultas\ConsultaClientes.resx">
       <DependentUpon>ConsultaClientes.cs</DependentUpon>
@@ -230,6 +235,9 @@
     <EmbeddedResource Include="Registros\RegistrosGarantes.resx">
       <DependentUpon>RegistrosGarantes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ListadoArticulos.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -242,6 +250,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SistemaVentasDbDataSet.xsc">
+      <DependentUpon>SistemaVentasDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaVentasDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaVentasDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaVentasDbDataSet.xss">
+      <DependentUpon>SistemaVentasDbDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -335,9 +354,7 @@
     <None Include="Resources\next-.ico" />
     <None Include="Resources\logout-28550.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>

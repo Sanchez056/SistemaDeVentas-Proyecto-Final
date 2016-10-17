@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ArticulosreportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // ArticulosreportViewer
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(2, 2);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(671, 315);
-            this.reportViewer1.TabIndex = 0;
+            this.ArticulosreportViewer.Location = new System.Drawing.Point(2, 2);
+            this.ArticulosreportViewer.Name = "ArticulosreportViewer";
+            this.ArticulosreportViewer.Size = new System.Drawing.Size(671, 315);
+            this.ArticulosreportViewer.TabIndex = 0;
+            this.ArticulosreportViewer.Load += new System.EventHandler(this.ArticulosreportViewer_Load);
             // 
             // MyViewerArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 309);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.ArticulosreportViewer);
             this.Name = "MyViewerArticulos";
             this.Text = "MyViewerArticulos";
             this.Load += new System.EventHandler(this.MyViewerArticulos_Load);
@@ -53,6 +54,6 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        public Microsoft.Reporting.WinForms.ReportViewer ArticulosreportViewer;
     }
 }
