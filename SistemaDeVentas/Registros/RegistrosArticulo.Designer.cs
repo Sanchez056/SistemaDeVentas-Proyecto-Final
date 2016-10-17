@@ -50,6 +50,8 @@
             this.Guardabutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.CodigoArticulolabel = new System.Windows.Forms.Label();
+            this.CodigoArticulotextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImagenArticulopictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // NombreArticulolabel
             // 
             this.NombreArticulolabel.AutoSize = true;
-            this.NombreArticulolabel.Location = new System.Drawing.Point(14, 76);
+            this.NombreArticulolabel.Location = new System.Drawing.Point(21, 129);
             this.NombreArticulolabel.Name = "NombreArticulolabel";
             this.NombreArticulolabel.Size = new System.Drawing.Size(120, 15);
             this.NombreArticulolabel.TabIndex = 1;
@@ -74,7 +76,7 @@
             // MarcaArticulolabel
             // 
             this.MarcaArticulolabel.AutoSize = true;
-            this.MarcaArticulolabel.Location = new System.Drawing.Point(18, 129);
+            this.MarcaArticulolabel.Location = new System.Drawing.Point(21, 172);
             this.MarcaArticulolabel.Name = "MarcaArticulolabel";
             this.MarcaArticulolabel.Size = new System.Drawing.Size(111, 15);
             this.MarcaArticulolabel.TabIndex = 2;
@@ -82,23 +84,23 @@
             // 
             // ArticuloIdtextBox
             // 
-            this.ArticuloIdtextBox.Location = new System.Drawing.Point(17, 38);
+            this.ArticuloIdtextBox.Location = new System.Drawing.Point(24, 38);
             this.ArticuloIdtextBox.Name = "ArticuloIdtextBox";
-            this.ArticuloIdtextBox.Size = new System.Drawing.Size(115, 22);
+            this.ArticuloIdtextBox.Size = new System.Drawing.Size(120, 22);
             this.ArticuloIdtextBox.TabIndex = 3;
             // 
             // NombreArticulotextBox
             // 
-            this.NombreArticulotextBox.Location = new System.Drawing.Point(20, 94);
+            this.NombreArticulotextBox.Location = new System.Drawing.Point(26, 147);
             this.NombreArticulotextBox.Name = "NombreArticulotextBox";
-            this.NombreArticulotextBox.Size = new System.Drawing.Size(225, 22);
+            this.NombreArticulotextBox.Size = new System.Drawing.Size(218, 22);
             this.NombreArticulotextBox.TabIndex = 4;
             // 
             // MarcaArticulotextBox
             // 
-            this.MarcaArticulotextBox.Location = new System.Drawing.Point(21, 147);
+            this.MarcaArticulotextBox.Location = new System.Drawing.Point(24, 190);
             this.MarcaArticulotextBox.Name = "MarcaArticulotextBox";
-            this.MarcaArticulotextBox.Size = new System.Drawing.Size(224, 22);
+            this.MarcaArticulotextBox.Size = new System.Drawing.Size(220, 22);
             this.MarcaArticulotextBox.TabIndex = 5;
             // 
             // CantidadArticulotextBox
@@ -136,7 +138,7 @@
             // DescripcionLabel
             // 
             this.DescripcionLabel.AutoSize = true;
-            this.DescripcionLabel.Location = new System.Drawing.Point(20, 181);
+            this.DescripcionLabel.Location = new System.Drawing.Point(21, 215);
             this.DescripcionLabel.Name = "DescripcionLabel";
             this.DescripcionLabel.Size = new System.Drawing.Size(77, 15);
             this.DescripcionLabel.TabIndex = 15;
@@ -144,10 +146,10 @@
             // 
             // DespcripciontextBox
             // 
-            this.DespcripciontextBox.Location = new System.Drawing.Point(21, 199);
+            this.DespcripciontextBox.Location = new System.Drawing.Point(24, 233);
             this.DespcripciontextBox.Multiline = true;
             this.DespcripciontextBox.Name = "DespcripciontextBox";
-            this.DespcripciontextBox.Size = new System.Drawing.Size(224, 47);
+            this.DespcripciontextBox.Size = new System.Drawing.Size(220, 47);
             this.DespcripciontextBox.TabIndex = 16;
             // 
             // Imagenlabel
@@ -162,7 +164,7 @@
             // FechaIngresolabel
             // 
             this.FechaIngresolabel.AutoSize = true;
-            this.FechaIngresolabel.Location = new System.Drawing.Point(23, 253);
+            this.FechaIngresolabel.Location = new System.Drawing.Point(21, 297);
             this.FechaIngresolabel.Name = "FechaIngresolabel";
             this.FechaIngresolabel.Size = new System.Drawing.Size(145, 15);
             this.FechaIngresolabel.TabIndex = 19;
@@ -170,7 +172,7 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(26, 277);
+            this.maskedTextBox1.Location = new System.Drawing.Point(26, 315);
             this.maskedTextBox1.Mask = "00/00/0000 00:00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
@@ -247,7 +249,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Image = global::SistemaDeVentas.Properties.Resources.search1;
-            this.Buscarbutton.Location = new System.Drawing.Point(138, 20);
+            this.Buscarbutton.Location = new System.Drawing.Point(150, 20);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(94, 40);
             this.Buscarbutton.TabIndex = 10;
@@ -256,11 +258,29 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // CodigoArticulolabel
+            // 
+            this.CodigoArticulolabel.AutoSize = true;
+            this.CodigoArticulolabel.Location = new System.Drawing.Point(21, 76);
+            this.CodigoArticulolabel.Name = "CodigoArticulolabel";
+            this.CodigoArticulolabel.Size = new System.Drawing.Size(116, 15);
+            this.CodigoArticulolabel.TabIndex = 23;
+            this.CodigoArticulolabel.Text = "Codigo de Articulo:";
+            // 
+            // CodigoArticulotextBox
+            // 
+            this.CodigoArticulotextBox.Location = new System.Drawing.Point(24, 95);
+            this.CodigoArticulotextBox.Name = "CodigoArticulotextBox";
+            this.CodigoArticulotextBox.Size = new System.Drawing.Size(220, 22);
+            this.CodigoArticulotextBox.TabIndex = 24;
+            // 
             // RegistrosArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 440);
+            this.Controls.Add(this.CodigoArticulotextBox);
+            this.Controls.Add(this.CodigoArticulolabel);
             this.Controls.Add(this.EliminarImagenbutton);
             this.Controls.Add(this.AñadirImagenbutton);
             this.Controls.Add(this.maskedTextBox1);
@@ -316,5 +336,7 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button AñadirImagenbutton;
         private System.Windows.Forms.Button EliminarImagenbutton;
+        private System.Windows.Forms.Label CodigoArticulolabel;
+        private System.Windows.Forms.TextBox CodigoArticulotextBox;
     }
 }

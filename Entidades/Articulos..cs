@@ -12,6 +12,8 @@ namespace Entidades
         [Key]
         public int ArticuloId{ get; set; }
 
+        public string CodigoArticulo { get; set; }
+
         public string NombreArticulo { get; set; }
 
         public string MarcaArticulo{ get; set; }

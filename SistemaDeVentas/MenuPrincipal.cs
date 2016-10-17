@@ -16,6 +16,7 @@ namespace SistemaDeVentas
     {
         
         RegistroDeUsuarios Rus = new RegistroDeUsuarios();
+        
        
         public MenuPrincipal()
         {
@@ -25,6 +26,7 @@ namespace SistemaDeVentas
         private void articuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegistrosArticulo ResArt = new RegistrosArticulo();
+           
 
             ResArt.MdiParent = this;
             ResArt.Show();
@@ -37,6 +39,21 @@ namespace SistemaDeVentas
 
             ResUs.MdiParent = this;
             ResUs.Show();
+        }
+
+        private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consultas.ConsultaUsuarios consulta= new Consultas.ConsultaUsuarios();
+
+            consulta.MdiParent = this;
+            consulta.Show();
+        }
+
+        private void ConsultaarticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.ConsultasArticulos consulta = new Consultas.ConsultasArticulos();
+            consulta.MdiParent = this;
+            consulta.Show();
         }
     }
 }

@@ -59,6 +59,33 @@ namespace BLL
         }
 
 
+        public static List<Articulos> GetLista()
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.ToList();
+
+            return lista;
+
+
+        }
+
+        public static List<Articulos> GetLista(int articuloId)
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.Where(p => p.ArticuloId == articuloId).ToList();
+
+            return lista;
+
+        }
+
+
+
         public static List<Articulos> GetListaNombreArticulo(string aux)
         {
             List<Articulos> lista = new List<Articulos>();
@@ -77,6 +104,18 @@ namespace BLL
             var db = new SistemaVentasDb();
 
             lista = db.Articulos.Where(p => p.MarcaArticulo== aux).ToList();
+
+            return lista;
+
+        }
+
+        public static List<Articulos> GetListaCodigoArticulo(string aux)
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.Where(p => p.CodigoArticulo== aux).ToList();
 
             return lista;
 

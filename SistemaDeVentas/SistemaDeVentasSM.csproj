@@ -76,10 +76,13 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,11 +94,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaClientes.Designer.cs">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaGarantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaGarantes.Designer.cs">
+      <DependentUpon>ConsultaGarantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaProveedores.Designer.cs">
+      <DependentUpon>ConsultaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\ConsultasArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultasArticulos.Designer.cs">
+      <DependentUpon>ConsultasArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\ConsultaUsuarios.Designer.cs">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\MyViewerArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\MyViewerArticulos.Designer.cs">
+      <DependentUpon>MyViewerArticulos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Registros\RegistroDeClientes.cs">
@@ -148,8 +181,17 @@
       <DependentUpon>RegistrosGarantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="Consultas\ConsultaClientes.resx">
+      <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultasArticulos.resx">
+      <DependentUpon>ConsultasArticulos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\MyViewerArticulos.resx">
+      <DependentUpon>MyViewerArticulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroDeClientes.resx">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
@@ -253,6 +295,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SistemaVentasDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\print.ico" />
+    <None Include="Resources\search2.ico" />
     <None Include="Resources\agregar-archivo-icono-3676-32.png" />
     <None Include="Resources\user1.ico" />
     <None Include="Resources\users3.ico" />
