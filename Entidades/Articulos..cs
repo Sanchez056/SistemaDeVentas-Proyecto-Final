@@ -18,9 +18,12 @@ namespace Entidades
 
         public string MarcaArticulo{ get; set; }
 
-        public float PrecioArticulo { get; set; }
+        public string NombreProveedor { get; set; }
 
-        public  float  CantidadArticulo { get; set; }
+        public int PrecioCompraArticulo { get; set; }
+
+        public int PrecioVentaArticulo { get; set; }
+        public  int  CantidadArticulo { get; set; }
 
         public string Despcricion { get; set; }
 

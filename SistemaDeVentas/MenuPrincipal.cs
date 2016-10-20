@@ -30,6 +30,7 @@ namespace SistemaDeVentas
 
             ResArt.MdiParent = this;
             ResArt.Show();
+            ResArt.Location = new Point(10, 100);
 
         }
 
@@ -39,6 +40,7 @@ namespace SistemaDeVentas
 
             ResUs.MdiParent = this;
             ResUs.Show();
+            ResUs.Location = new Point(10, 100);
         }
 
         private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -47,6 +49,7 @@ namespace SistemaDeVentas
 
             consulta.MdiParent = this;
             consulta.Show();
+            consulta.Location = new Point(10, 100);
         }
 
         private void ConsultaarticulosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +57,54 @@ namespace SistemaDeVentas
             Consultas.ConsultasArticulos consulta = new Consultas.ConsultasArticulos();
             consulta.MdiParent = this;
             consulta.Show();
+            consulta.Location = new Point(10, 100);
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void RegistrosclientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+            RegistroDeClientes resCli = new RegistroDeClientes();
+
+
+            resCli.MdiParent = this;
+            resCli.Show();
+            resCli.Location = new Point(10, 100);
+
+        }
+
+        private void registrosEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void RegistrosproveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.RegistroDeProveedores regisProvee = new Registros.RegistroDeProveedores();
+
+            regisProvee.MdiParent = this;
+            regisProvee.Show();
+            regisProvee.Location = new Point(10, 100);
+
+
+        }
+
+        private void garanteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.RegistrosGarantes regGarante = new Registros.RegistrosGarantes();
+
+            regGarante.MdiParent = this;
+            regGarante.Show();
+            regGarante.Location = new Point(10, 100);
         }
     }
 }

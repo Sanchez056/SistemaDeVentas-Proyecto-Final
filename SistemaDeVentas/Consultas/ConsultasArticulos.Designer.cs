@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultasArticulos));
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.ConsultaArticulosdataGridView = new System.Windows.Forms.DataGridView();
             this.Desdelabel = new System.Windows.Forms.Label();
@@ -44,11 +45,13 @@
             // Imprimirbutton
             // 
             this.Imprimirbutton.AutoSize = true;
-            this.Imprimirbutton.Location = new System.Drawing.Point(19, 356);
+            this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print;
+            this.Imprimirbutton.Location = new System.Drawing.Point(12, 332);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(88, 56);
             this.Imprimirbutton.TabIndex = 82;
             this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Imprimirbutton.UseVisualStyleBackColor = true;
             this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
@@ -60,7 +63,7 @@
             this.ConsultaArticulosdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultaArticulosdataGridView.Location = new System.Drawing.Point(12, 110);
             this.ConsultaArticulosdataGridView.Name = "ConsultaArticulosdataGridView";
-            this.ConsultaArticulosdataGridView.Size = new System.Drawing.Size(622, 223);
+            this.ConsultaArticulosdataGridView.Size = new System.Drawing.Size(680, 184);
             this.ConsultaArticulosdataGridView.TabIndex = 81;
             // 
             // Desdelabel
@@ -74,11 +77,13 @@
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(432, 13);
+            this.Buscarbutton.Image = global::SistemaDeVentas.Properties.Resources.search1;
+            this.Buscarbutton.Location = new System.Drawing.Point(432, 4);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(134, 37);
+            this.Buscarbutton.Size = new System.Drawing.Size(95, 46);
             this.Buscarbutton.TabIndex = 79;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -148,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 435);
+            this.ClientSize = new System.Drawing.Size(720, 396);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.ConsultaArticulosdataGridView);
             this.Controls.Add(this.Desdelabel);
@@ -159,8 +164,9 @@
             this.Controls.Add(this.DesdeDateTimePicke);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultasArticulos";
-            this.Text = "ConsultasArticulos";
+            this.Text = "Consultar Articulos";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaArticulosdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -94,6 +94,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaGeneralVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaGeneralVentas.Designer.cs">
+      <DependentUpon>ConsultaGeneralVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consultas\ConsultaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="Consultas\MyViewerArticulos.Designer.cs">
       <DependentUpon>MyViewerArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion.Designer.cs">
+      <DependentUpon>Presentacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Registros\RegistroDeClientes.cs">
@@ -186,6 +198,9 @@
       <DependentUpon>SistemaVentasDbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="Consultas\ConsultaGeneralVentas.resx">
+      <DependentUpon>ConsultaGeneralVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaClientes.resx">
       <DependentUpon>ConsultaClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\MyViewerArticulos.resx">
       <DependentUpon>MyViewerArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion.resx">
+      <DependentUpon>Presentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registros\RegistroDeClientes.resx">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
@@ -314,6 +332,32 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SistemaVentasDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\access.ico" />
+    <None Include="Resources\logout-285501.jpg" />
+    <None Include="Resources\fondo2.png" />
+    <None Include="Resources\elegant-grey-illumination-background-presentations-powerpoint-backgrounds_low1.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\personal.png" />
+    <None Include="Resources\data-concept-closed-padlock-digital-background-37553209.jpg" />
+    <None Include="Resources\cancel2.ico" />
+    <None Include="Resources\add1.ico" />
+    <None Include="Resources\fondo-negro-15913.jpg" />
+    <None Include="Resources\fondo-negro-15912.jpg" />
+    <None Include="Resources\fondo-negro-15911.jpg" />
+    <None Include="Resources\oscuridad-fondos-de-pantalla-minimalistas-hd-muy-buenos-compilado-772721.jpg" />
+    <None Include="Resources\fondo1.png" />
+    <None Include="Resources\fondo-negro-1591.jpg" />
+    <None Include="Resources\blue-and-red-neon-circle-pattern-wallpaper-600191.jpg" />
+    <None Include="Resources\statistics1.ico" />
+    <None Include="Resources\statistics2.ico" />
+    <None Include="Resources\statistics.ico" />
+    <None Include="Resources\agregar-un-grafico-de-barras-icono-5280-321.png" />
+    <None Include="Resources\fondo.png" />
+    <None Include="Resources\fondo-twitter1.png" />
+    <None Include="Resources\oscuridad-fondos-de-pantalla-minimalistas-hd-muy-buenos-compilado-77272.jpg" />
+    <None Include="Resources\blue-and-red-neon-circle-pattern-wallpaper-60019.jpg" />
+    <None Include="Resources\fondo-twitter.png" />
+    <None Include="Resources\fondo-madera-negro.jpg" />
     <None Include="Resources\print.ico" />
     <None Include="Resources\search2.ico" />
     <None Include="Resources\agregar-archivo-icono-3676-32.png" />

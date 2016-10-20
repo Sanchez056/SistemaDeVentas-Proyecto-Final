@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using BLL;
 using Entidades;
@@ -16,9 +17,18 @@ namespace SistemaDeVentas
         MenuPrincipal MP = new MenuPrincipal();
         public LoginUsuarios()
         {
+            Thread tardar = new Thread(new ThreadStart(PresentacionBar));
+            tardar.Start();
+            Thread.Sleep(8000);
             InitializeComponent();
+            tardar.Abort();
         }
         //--
+
+            public void PresentacionBar()
+        {
+            Application.Run(new Presentacion());
+        }
 
         //--
         public bool ValidarExisteUsuario()

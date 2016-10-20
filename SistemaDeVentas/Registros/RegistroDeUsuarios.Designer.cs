@@ -42,13 +42,13 @@
             this.TipoUsuarioscomboBox = new System.Windows.Forms.ComboBox();
             this.TipoUsuarioslabel = new System.Windows.Forms.Label();
             this.BuscarerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NombreUsuarioserrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ContraseñaerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ConfimarContraseñaerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.NombreUsuarioserrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ContraseñaerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ConfimarContraseñaerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreUsuarioserrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContraseñaerrorProvider1)).BeginInit();
@@ -115,38 +115,6 @@
             // 
             this.BuscarerrorProvider1.ContainerControl = this;
             // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.delete_user;
-            resources.ApplyResources(this.Eliminarbutton, "Eliminarbutton");
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
-            // 
-            // Guardarbutton
-            // 
-            this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save;
-            resources.ApplyResources(this.Guardarbutton, "Guardarbutton");
-            this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.UseVisualStyleBackColor = true;
-            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
-            // 
-            // Nuevobutton
-            // 
-            this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources.add_user;
-            resources.ApplyResources(this.Nuevobutton, "Nuevobutton");
-            this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.UseVisualStyleBackColor = true;
-            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
-            // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Image = global::SistemaDeVentas.Properties.Resources.search;
-            resources.ApplyResources(this.Buscarbutton, "Buscarbutton");
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
-            // 
             // NombreUsuarioserrorProvider1
             // 
             this.NombreUsuarioserrorProvider1.ContainerControl = this;
@@ -159,10 +127,47 @@
             // 
             this.ConfimarContraseñaerrorProvider1.ContainerControl = this;
             // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.delete_user;
+            resources.ApplyResources(this.Eliminarbutton, "Eliminarbutton");
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Guardarbutton
+            // 
+            this.Guardarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save;
+            resources.ApplyResources(this.Guardarbutton, "Guardarbutton");
+            this.Guardarbutton.Name = "Guardarbutton";
+            this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
+            // 
+            // Nuevobutton
+            // 
+            this.Nuevobutton.ForeColor = System.Drawing.Color.Black;
+            this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources.add_user;
+            resources.ApplyResources(this.Nuevobutton, "Nuevobutton");
+            this.Nuevobutton.Name = "Nuevobutton";
+            this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Buscarbutton.Image = global::SistemaDeVentas.Properties.Resources.search;
+            resources.ApplyResources(this.Buscarbutton, "Buscarbutton");
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
             // RegistroDeUsuarios
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -178,7 +183,7 @@
             this.Controls.Add(this.NombreUsuariostextBox);
             this.Controls.Add(this.UsuarioIdtextBox);
             this.Controls.Add(this.IdLabel);
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "RegistroDeUsuarios";
             this.Load += new System.EventHandler(this.RegistroDeUsuarios_Load);

@@ -16,7 +16,7 @@ namespace SistemaDeVentas
            // Database.SetInitializer<SistemaDeVentasDb>(new DropCreateDatabaseAlways<Siste>());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginUsuarios());
+            Application.Run(new MenuPrincipal());
 
         }
     }
