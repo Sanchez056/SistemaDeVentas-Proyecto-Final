@@ -19,8 +19,12 @@ namespace DAL
         public virtual DbSet<Usuarios> Usuarios { get; set; }
         public virtual DbSet<Articulos> Articulos { get; set; }
         public virtual DbSet<Clientes>  Clientes { get; set; }
-        public virtual DbSet<Garentes> Gerentes { get; set; }
+        public virtual DbSet<Garantes> Gerantes { get; set; }
         public virtual DbSet<Proveedores> Proveedores { get; set; }
+
+        public virtual DbSet<TipoUsuarios> TipoUsuarios { get; set; }
+
+        public virtual DbSet<CiudadClientes> CiudadCliente { get; set; }
 
       
     }

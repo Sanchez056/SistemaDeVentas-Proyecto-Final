@@ -13,7 +13,7 @@ namespace Entidades
         public int UsuarioId { get; set; }
         public string NombreUsuario { get; set; }
         public string Contrasena { get; set; }
-        //public string TipoUsuarios{ get; set; }
+        public string Tipo{ get; set; }
 
 
     }

@@ -41,6 +41,7 @@
             this.RegistrosproveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistroarticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.garanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultausuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultaclientesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.Ingresobutton = new System.Windows.Forms.Button();
             this.Comprabutton = new System.Windows.Forms.Button();
             this.Cajabutton = new System.Windows.Forms.Button();
-            this.garanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.garantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -170,6 +171,13 @@
             this.registrosEmpleadoToolStripMenuItem.Text = "Empleado";
             this.registrosEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.registrosEmpleadoToolStripMenuItem_Click);
             // 
+            // garanteToolStripMenuItem
+            // 
+            this.garanteToolStripMenuItem.Name = "garanteToolStripMenuItem";
+            this.garanteToolStripMenuItem.Size = new System.Drawing.Size(171, 32);
+            this.garanteToolStripMenuItem.Text = "Garante";
+            this.garanteToolStripMenuItem.Click += new System.EventHandler(this.garanteToolStripMenuItem_Click);
+            // 
             // ventasToolStripMenuItem
             // 
             this.ventasToolStripMenuItem.BackColor = System.Drawing.SystemColors.HighlightText;
@@ -178,7 +186,8 @@
             this.ConsultaclientesToolStripMenuItem2,
             this.ConsultaempleadosToolStripMenuItem,
             this.ConsultaarticulosToolStripMenuItem,
-            this.ConsultaproveedoresToolStripMenuItem});
+            this.ConsultaproveedoresToolStripMenuItem,
+            this.garantesToolStripMenuItem});
             this.ventasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
@@ -196,6 +205,7 @@
             this.ConsultaclientesToolStripMenuItem2.Name = "ConsultaclientesToolStripMenuItem2";
             this.ConsultaclientesToolStripMenuItem2.Size = new System.Drawing.Size(157, 24);
             this.ConsultaclientesToolStripMenuItem2.Text = "Clientes";
+            this.ConsultaclientesToolStripMenuItem2.Click += new System.EventHandler(this.ConsultaclientesToolStripMenuItem2_Click);
             // 
             // ConsultaempleadosToolStripMenuItem
             // 
@@ -215,6 +225,7 @@
             this.ConsultaproveedoresToolStripMenuItem.Name = "ConsultaproveedoresToolStripMenuItem";
             this.ConsultaproveedoresToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
             this.ConsultaproveedoresToolStripMenuItem.Text = "Proveedores";
+            this.ConsultaproveedoresToolStripMenuItem.Click += new System.EventHandler(this.ConsultaproveedoresToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -227,7 +238,6 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.flowLayoutPanel1.Controls.Add(this.Ventasbutton);
             this.flowLayoutPanel1.Controls.Add(this.Ingresobutton);
@@ -235,7 +245,7 @@
             this.flowLayoutPanel1.Controls.Add(this.Cajabutton);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 30);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(460, 49);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(119, 405);
             this.flowLayoutPanel1.TabIndex = 4;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -259,7 +269,7 @@
             this.Ingresobutton.ForeColor = System.Drawing.Color.Black;
             this.Ingresobutton.Image = global::SistemaDeVentas.Properties.Resources.statistics1;
             this.Ingresobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Ingresobutton.Location = new System.Drawing.Point(118, 3);
+            this.Ingresobutton.Location = new System.Drawing.Point(3, 52);
             this.Ingresobutton.Name = "Ingresobutton";
             this.Ingresobutton.Size = new System.Drawing.Size(109, 43);
             this.Ingresobutton.TabIndex = 2;
@@ -271,7 +281,7 @@
             // 
             this.Comprabutton.BackColor = System.Drawing.Color.White;
             this.Comprabutton.ForeColor = System.Drawing.Color.Black;
-            this.Comprabutton.Location = new System.Drawing.Point(233, 3);
+            this.Comprabutton.Location = new System.Drawing.Point(3, 101);
             this.Comprabutton.Name = "Comprabutton";
             this.Comprabutton.Size = new System.Drawing.Size(109, 43);
             this.Comprabutton.TabIndex = 1;
@@ -283,7 +293,7 @@
             // 
             this.Cajabutton.BackColor = System.Drawing.Color.White;
             this.Cajabutton.ForeColor = System.Drawing.Color.Black;
-            this.Cajabutton.Location = new System.Drawing.Point(348, 3);
+            this.Cajabutton.Location = new System.Drawing.Point(3, 150);
             this.Cajabutton.Name = "Cajabutton";
             this.Cajabutton.Size = new System.Drawing.Size(109, 43);
             this.Cajabutton.TabIndex = 3;
@@ -291,12 +301,12 @@
             this.Cajabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Cajabutton.UseVisualStyleBackColor = false;
             // 
-            // garanteToolStripMenuItem
+            // garantesToolStripMenuItem
             // 
-            this.garanteToolStripMenuItem.Name = "garanteToolStripMenuItem";
-            this.garanteToolStripMenuItem.Size = new System.Drawing.Size(171, 32);
-            this.garanteToolStripMenuItem.Text = "Garante";
-            this.garanteToolStripMenuItem.Click += new System.EventHandler(this.garanteToolStripMenuItem_Click);
+            this.garantesToolStripMenuItem.Name = "garantesToolStripMenuItem";
+            this.garantesToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
+            this.garantesToolStripMenuItem.Text = "Garantes";
+            this.garantesToolStripMenuItem.Click += new System.EventHandler(this.garantesToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
@@ -353,5 +363,6 @@
         private System.Windows.Forms.Button Ingresobutton;
         private System.Windows.Forms.Button Cajabutton;
         private System.Windows.Forms.ToolStripMenuItem garanteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem garantesToolStripMenuItem;
     }
 }

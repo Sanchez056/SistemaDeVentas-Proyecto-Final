@@ -7,10 +7,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Entidades
 {
-   public  class TiposUsuarios
+   public  class TipoUsuarios
     {
         [Key]
-        public int UsuarioId{ get; set; }
+        public int TipoUsuariosId{ get; set; }
         public string Detalle{ get; set; }
 
        

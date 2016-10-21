@@ -235,5 +235,20 @@ namespace SistemaDeVentas
         {
 
         }
+
+        private void Modificarbutton_Click(object sender, EventArgs e)
+        {
+            Articulos articulo = new Articulos();
+                LlenarClase(articulo);
+                
+
+                    ArticuloBLL.Modificar(ut.StringInt(ArticuloIdtextBox.Text), articulo);
+                    Limpiar();
+            
+                    MessageBox.Show("Actualizado con exito");
+                
+
+            
+        }
     }
 }

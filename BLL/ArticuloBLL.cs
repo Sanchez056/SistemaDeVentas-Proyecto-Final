@@ -49,6 +49,21 @@ namespace BLL
 
         }
 
+        public static void Modificar(int id, Articulos articulo)
+        {
+            var db = new SistemaVentasDb();
+
+            Articulos a = db.Articulos.Find(id);
+            a.NombreArticulo = articulo.NombreArticulo;
+            a.MarcaArticulo = articulo.MarcaArticulo;
+            a.CodigoArticulo = articulo.CodigoArticulo;
+            a.CantidadArticulo = articulo.CantidadArticulo;
+            a.Despcricion = articulo.Despcricion;
+            a.PrecioCompraArticulo = articulo.PrecioCompraArticulo;
+            a.NombreProveedor= articulo.NombreProveedor;
+            db.SaveChanges();
+        }
+
         public static void Eliminar(int id)
         {
             var db = new SistemaVentasDb();

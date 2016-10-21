@@ -198,11 +198,17 @@
       <DependentUpon>SistemaVentasDbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="Consultas\ConsultaGarantes.resx">
+      <DependentUpon>ConsultaGarantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaGeneralVentas.resx">
       <DependentUpon>ConsultaGeneralVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultaClientes.resx">
       <DependentUpon>ConsultaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\ConsultaProveedores.resx">
+      <DependentUpon>ConsultaProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\ConsultasArticulos.resx">
       <DependentUpon>ConsultasArticulos.cs</DependentUpon>

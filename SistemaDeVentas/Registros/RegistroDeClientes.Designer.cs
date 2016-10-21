@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ClienteIdlabel = new System.Windows.Forms.Label();
             this.Nombrelabel = new System.Windows.Forms.Label();
             this.Apellidolabel = new System.Windows.Forms.Label();
-            this.Sexolabel = new System.Windows.Forms.Label();
             this.Direccionlabel = new System.Windows.Forms.Label();
             this.Telefonolabel = new System.Windows.Forms.Label();
             this.Cedulalabel = new System.Windows.Forms.Label();
@@ -43,20 +43,44 @@
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
             this.TelefonomaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.CelularmaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.FechaIngresomaskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.CedulamaskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.MasculinocheckBox = new System.Windows.Forms.CheckBox();
-            this.FemeninocheckBox = new System.Windows.Forms.CheckBox();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.CedulamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.CiudadcomboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.BuscarerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NombreerrorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ApellidoerrorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CedulaerrorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CiudaderrorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DirrecionerrorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TelefonoerrorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CelularerrorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.SexogroupBox = new System.Windows.Forms.GroupBox();
+            this.FemeninocheckBox = new System.Windows.Forms.CheckBox();
+            this.MasculinocheckBox = new System.Windows.Forms.CheckBox();
+            this.SexoerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Modificarbutton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ApellidoerrorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CedulaerrorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CiudaderrorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DirrecionerrorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TelefonoerrorProvider9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CelularerrorProvider10)).BeginInit();
+            this.SexogroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SexoerrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // ClienteIdlabel
             // 
             this.ClienteIdlabel.AutoSize = true;
-            this.ClienteIdlabel.Location = new System.Drawing.Point(19, 40);
+            this.ClienteIdlabel.Location = new System.Drawing.Point(18, 104);
             this.ClienteIdlabel.Name = "ClienteIdlabel";
             this.ClienteIdlabel.Size = new System.Drawing.Size(55, 14);
             this.ClienteIdlabel.TabIndex = 0;
@@ -65,7 +89,7 @@
             // Nombrelabel
             // 
             this.Nombrelabel.AutoSize = true;
-            this.Nombrelabel.Location = new System.Drawing.Point(19, 89);
+            this.Nombrelabel.Location = new System.Drawing.Point(18, 153);
             this.Nombrelabel.Name = "Nombrelabel";
             this.Nombrelabel.Size = new System.Drawing.Size(47, 14);
             this.Nombrelabel.TabIndex = 1;
@@ -74,26 +98,16 @@
             // Apellidolabel
             // 
             this.Apellidolabel.AutoSize = true;
-            this.Apellidolabel.Location = new System.Drawing.Point(19, 138);
+            this.Apellidolabel.Location = new System.Drawing.Point(18, 202);
             this.Apellidolabel.Name = "Apellidolabel";
             this.Apellidolabel.Size = new System.Drawing.Size(49, 14);
             this.Apellidolabel.TabIndex = 2;
             this.Apellidolabel.Text = "Apellido:";
             // 
-            // Sexolabel
-            // 
-            this.Sexolabel.AutoSize = true;
-            this.Sexolabel.Location = new System.Drawing.Point(19, 246);
-            this.Sexolabel.Name = "Sexolabel";
-            this.Sexolabel.Size = new System.Drawing.Size(32, 14);
-            this.Sexolabel.TabIndex = 3;
-            this.Sexolabel.Text = "Sexo:";
-            this.Sexolabel.Click += new System.EventHandler(this.Sexolabel_Click);
-            // 
             // Direccionlabel
             // 
             this.Direccionlabel.AutoSize = true;
-            this.Direccionlabel.Location = new System.Drawing.Point(256, 89);
+            this.Direccionlabel.Location = new System.Drawing.Point(255, 202);
             this.Direccionlabel.Name = "Direccionlabel";
             this.Direccionlabel.Size = new System.Drawing.Size(55, 14);
             this.Direccionlabel.TabIndex = 4;
@@ -102,7 +116,7 @@
             // Telefonolabel
             // 
             this.Telefonolabel.AutoSize = true;
-            this.Telefonolabel.Location = new System.Drawing.Point(256, 138);
+            this.Telefonolabel.Location = new System.Drawing.Point(255, 251);
             this.Telefonolabel.Name = "Telefonolabel";
             this.Telefonolabel.Size = new System.Drawing.Size(52, 14);
             this.Telefonolabel.TabIndex = 5;
@@ -111,7 +125,7 @@
             // Cedulalabel
             // 
             this.Cedulalabel.AutoSize = true;
-            this.Cedulalabel.Location = new System.Drawing.Point(19, 192);
+            this.Cedulalabel.Location = new System.Drawing.Point(18, 256);
             this.Cedulalabel.Name = "Cedulalabel";
             this.Cedulalabel.Size = new System.Drawing.Size(40, 14);
             this.Cedulalabel.TabIndex = 6;
@@ -120,7 +134,7 @@
             // Fechalabel
             // 
             this.Fechalabel.AutoSize = true;
-            this.Fechalabel.Location = new System.Drawing.Point(256, 246);
+            this.Fechalabel.Location = new System.Drawing.Point(293, 104);
             this.Fechalabel.Name = "Fechalabel";
             this.Fechalabel.Size = new System.Drawing.Size(74, 14);
             this.Fechalabel.TabIndex = 7;
@@ -129,7 +143,7 @@
             // Celularlabel
             // 
             this.Celularlabel.AutoSize = true;
-            this.Celularlabel.Location = new System.Drawing.Point(256, 192);
+            this.Celularlabel.Location = new System.Drawing.Point(255, 305);
             this.Celularlabel.Name = "Celularlabel";
             this.Celularlabel.Size = new System.Drawing.Size(42, 14);
             this.Celularlabel.TabIndex = 8;
@@ -137,28 +151,28 @@
             // 
             // ClienteIdtextBox
             // 
-            this.ClienteIdtextBox.Location = new System.Drawing.Point(22, 57);
+            this.ClienteIdtextBox.Location = new System.Drawing.Point(21, 121);
             this.ClienteIdtextBox.Name = "ClienteIdtextBox";
             this.ClienteIdtextBox.Size = new System.Drawing.Size(104, 20);
             this.ClienteIdtextBox.TabIndex = 9;
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(22, 107);
+            this.NombretextBox.Location = new System.Drawing.Point(21, 171);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(186, 20);
             this.NombretextBox.TabIndex = 10;
             // 
             // ApellidotextBox
             // 
-            this.ApellidotextBox.Location = new System.Drawing.Point(22, 156);
+            this.ApellidotextBox.Location = new System.Drawing.Point(21, 220);
             this.ApellidotextBox.Name = "ApellidotextBox";
             this.ApellidotextBox.Size = new System.Drawing.Size(186, 20);
             this.ApellidotextBox.TabIndex = 11;
             // 
             // DirecciontextBox
             // 
-            this.DirecciontextBox.Location = new System.Drawing.Point(259, 107);
+            this.DirecciontextBox.Location = new System.Drawing.Point(258, 220);
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(186, 20);
             this.DirecciontextBox.TabIndex = 12;
@@ -166,57 +180,25 @@
             // 
             // TelefonomaskedTextBox1
             // 
-            this.TelefonomaskedTextBox1.Location = new System.Drawing.Point(259, 155);
+            this.TelefonomaskedTextBox1.Location = new System.Drawing.Point(258, 268);
+            this.TelefonomaskedTextBox1.Mask = "000-000-0000";
             this.TelefonomaskedTextBox1.Name = "TelefonomaskedTextBox1";
             this.TelefonomaskedTextBox1.Size = new System.Drawing.Size(186, 20);
             this.TelefonomaskedTextBox1.TabIndex = 13;
             // 
             // CelularmaskedTextBox2
             // 
-            this.CelularmaskedTextBox2.Location = new System.Drawing.Point(259, 210);
+            this.CelularmaskedTextBox2.Location = new System.Drawing.Point(258, 323);
+            this.CelularmaskedTextBox2.Mask = "000-000-0000";
             this.CelularmaskedTextBox2.Name = "CelularmaskedTextBox2";
             this.CelularmaskedTextBox2.Size = new System.Drawing.Size(186, 20);
             this.CelularmaskedTextBox2.TabIndex = 14;
-            // 
-            // FechaIngresomaskedTextBox3
-            // 
-            this.FechaIngresomaskedTextBox3.Location = new System.Drawing.Point(259, 264);
-            this.FechaIngresomaskedTextBox3.Name = "FechaIngresomaskedTextBox3";
-            this.FechaIngresomaskedTextBox3.Size = new System.Drawing.Size(186, 20);
-            this.FechaIngresomaskedTextBox3.TabIndex = 15;
-            // 
-            // CedulamaskedTextBox4
-            // 
-            this.CedulamaskedTextBox4.Location = new System.Drawing.Point(22, 210);
-            this.CedulamaskedTextBox4.Name = "CedulamaskedTextBox4";
-            this.CedulamaskedTextBox4.Size = new System.Drawing.Size(186, 20);
-            this.CedulamaskedTextBox4.TabIndex = 16;
-            // 
-            // MasculinocheckBox
-            // 
-            this.MasculinocheckBox.AutoSize = true;
-            this.MasculinocheckBox.Location = new System.Drawing.Point(22, 267);
-            this.MasculinocheckBox.Name = "MasculinocheckBox";
-            this.MasculinocheckBox.Size = new System.Drawing.Size(73, 18);
-            this.MasculinocheckBox.TabIndex = 17;
-            this.MasculinocheckBox.Text = "Masculino";
-            this.MasculinocheckBox.UseVisualStyleBackColor = true;
-            // 
-            // FemeninocheckBox
-            // 
-            this.FemeninocheckBox.AutoSize = true;
-            this.FemeninocheckBox.Location = new System.Drawing.Point(108, 267);
-            this.FemeninocheckBox.Name = "FemeninocheckBox";
-            this.FemeninocheckBox.Size = new System.Drawing.Size(72, 18);
-            this.FemeninocheckBox.TabIndex = 18;
-            this.FemeninocheckBox.Text = "Femenino";
-            this.FemeninocheckBox.UseVisualStyleBackColor = true;
             // 
             // Eliminarbutton
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.file_broken_32x32_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(300, 328);
+            this.Eliminarbutton.Location = new System.Drawing.Point(333, 396);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(113, 42);
             this.Eliminarbutton.TabIndex = 22;
@@ -229,7 +211,7 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.Color.Black;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(167, 328);
+            this.Guardarbutton.Location = new System.Drawing.Point(123, 396);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(105, 42);
             this.Guardarbutton.TabIndex = 21;
@@ -242,7 +224,7 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.Color.Black;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources._new;
-            this.Nuevobutton.Location = new System.Drawing.Point(35, 328);
+            this.Nuevobutton.Location = new System.Drawing.Point(12, 396);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(104, 42);
             this.Nuevobutton.TabIndex = 20;
@@ -255,7 +237,7 @@
             // 
             this.Buscarbutton.ForeColor = System.Drawing.Color.Black;
             this.Buscarbutton.Image = global::SistemaDeVentas.Properties.Resources.search;
-            this.Buscarbutton.Location = new System.Drawing.Point(142, 40);
+            this.Buscarbutton.Location = new System.Drawing.Point(141, 104);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(87, 42);
             this.Buscarbutton.TabIndex = 19;
@@ -264,20 +246,182 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(101, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(258, 31);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Registros De Clientes";
+            // 
+            // FechadateTimePicker
+            // 
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(296, 121);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(92, 20);
+            this.FechadateTimePicker.TabIndex = 6;
+            // 
+            // CedulamaskedTextBox
+            // 
+            this.CedulamaskedTextBox.Location = new System.Drawing.Point(21, 273);
+            this.CedulamaskedTextBox.Mask = "999-9999999-9";
+            this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
+            this.CedulamaskedTextBox.Size = new System.Drawing.Size(186, 20);
+            this.CedulamaskedTextBox.TabIndex = 24;
+            // 
+            // CiudadcomboBox
+            // 
+            this.CiudadcomboBox.FormattingEnabled = true;
+            this.CiudadcomboBox.Items.AddRange(new object[] {
+            "Espaillat",
+            "Puerto Plata",
+            "Santiago",
+            "La Vega",
+            "Monseñor Nouel",
+            "Sánchez Ramírez",
+            "Duarte",
+            "Hermanas Mirabal",
+            "María Trinidad Sánchez",
+            "Samaná",
+            "Dajabón",
+            "Monte Cristi",
+            "Santiago Rodríguez",
+            "Valverde",
+            "Azua",
+            "Peravia",
+            "San José de Ocoa",
+            "San Cristóbal",
+            "Elías Piña",
+            "San Juan",
+            "Enriquillo\t",
+            "Barahona",
+            "Bahoruco",
+            "Independencia",
+            "Pedernales",
+            "El Seibo",
+            "La Romana",
+            "La Altagracia",
+            "Hato Mayor",
+            "Monte Plata",
+            "San Pedro de Macorís",
+            "Distrito Nacional",
+            "Santo Domingo "});
+            this.CiudadcomboBox.Location = new System.Drawing.Point(258, 171);
+            this.CiudadcomboBox.Name = "CiudadcomboBox";
+            this.CiudadcomboBox.Size = new System.Drawing.Size(186, 22);
+            this.CiudadcomboBox.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(258, 153);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 14);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Ciudad:";
+            // 
+            // BuscarerrorProvider1
+            // 
+            this.BuscarerrorProvider1.ContainerControl = this;
+            // 
+            // NombreerrorProvider2
+            // 
+            this.NombreerrorProvider2.ContainerControl = this;
+            // 
+            // ApellidoerrorProvider3
+            // 
+            this.ApellidoerrorProvider3.ContainerControl = this;
+            // 
+            // CedulaerrorProvider4
+            // 
+            this.CedulaerrorProvider4.ContainerControl = this;
+            // 
+            // CiudaderrorProvider7
+            // 
+            this.CiudaderrorProvider7.ContainerControl = this;
+            // 
+            // DirrecionerrorProvider8
+            // 
+            this.DirrecionerrorProvider8.ContainerControl = this;
+            // 
+            // TelefonoerrorProvider9
+            // 
+            this.TelefonoerrorProvider9.ContainerControl = this;
+            // 
+            // CelularerrorProvider10
+            // 
+            this.CelularerrorProvider10.ContainerControl = this;
+            // 
+            // SexogroupBox
+            // 
+            this.SexogroupBox.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.SexogroupBox.Controls.Add(this.FemeninocheckBox);
+            this.SexogroupBox.Controls.Add(this.MasculinocheckBox);
+            this.SexogroupBox.ForeColor = System.Drawing.Color.White;
+            this.BuscarerrorProvider1.SetIconAlignment(this.SexogroupBox, System.Windows.Forms.ErrorIconAlignment.BottomLeft);
+            this.SexogroupBox.Location = new System.Drawing.Point(21, 305);
+            this.SexogroupBox.Name = "SexogroupBox";
+            this.SexogroupBox.Size = new System.Drawing.Size(186, 57);
+            this.SexogroupBox.TabIndex = 27;
+            this.SexogroupBox.TabStop = false;
+            this.SexogroupBox.Text = "Sexo";
+            // 
+            // FemeninocheckBox
+            // 
+            this.FemeninocheckBox.AutoSize = true;
+            this.FemeninocheckBox.Location = new System.Drawing.Point(102, 29);
+            this.FemeninocheckBox.Name = "FemeninocheckBox";
+            this.FemeninocheckBox.Size = new System.Drawing.Size(72, 18);
+            this.FemeninocheckBox.TabIndex = 21;
+            this.FemeninocheckBox.Text = "Femenino";
+            this.FemeninocheckBox.UseVisualStyleBackColor = true;
+            // 
+            // MasculinocheckBox
+            // 
+            this.MasculinocheckBox.AutoSize = true;
+            this.MasculinocheckBox.Location = new System.Drawing.Point(16, 29);
+            this.MasculinocheckBox.Name = "MasculinocheckBox";
+            this.MasculinocheckBox.Size = new System.Drawing.Size(73, 18);
+            this.MasculinocheckBox.TabIndex = 20;
+            this.MasculinocheckBox.Text = "Masculino";
+            this.MasculinocheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SexoerrorProvider1
+            // 
+            this.SexoerrorProvider1.ContainerControl = this;
+            // 
+            // Modificarbutton
+            // 
+            this.Modificarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Modificarbutton.Location = new System.Drawing.Point(234, 396);
+            this.Modificarbutton.Name = "Modificarbutton";
+            this.Modificarbutton.Size = new System.Drawing.Size(93, 42);
+            this.Modificarbutton.TabIndex = 28;
+            this.Modificarbutton.Text = "Modificar";
+            this.Modificarbutton.UseVisualStyleBackColor = true;
+            this.Modificarbutton.Click += new System.EventHandler(this.Modificarbutton_Click);
+            // 
             // RegistroDeClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(462, 383);
+            this.ClientSize = new System.Drawing.Size(460, 453);
+            this.Controls.Add(this.Modificarbutton);
+            this.Controls.Add(this.SexogroupBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CiudadcomboBox);
+            this.Controls.Add(this.CedulamaskedTextBox);
+            this.Controls.Add(this.FechadateTimePicker);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
-            this.Controls.Add(this.FemeninocheckBox);
-            this.Controls.Add(this.MasculinocheckBox);
-            this.Controls.Add(this.CedulamaskedTextBox4);
-            this.Controls.Add(this.FechaIngresomaskedTextBox3);
             this.Controls.Add(this.CelularmaskedTextBox2);
             this.Controls.Add(this.TelefonomaskedTextBox1);
             this.Controls.Add(this.DirecciontextBox);
@@ -289,7 +433,6 @@
             this.Controls.Add(this.Cedulalabel);
             this.Controls.Add(this.Telefonolabel);
             this.Controls.Add(this.Direccionlabel);
-            this.Controls.Add(this.Sexolabel);
             this.Controls.Add(this.Apellidolabel);
             this.Controls.Add(this.Nombrelabel);
             this.Controls.Add(this.ClienteIdlabel);
@@ -298,6 +441,17 @@
             this.Name = "RegistroDeClientes";
             this.Text = "Registro de Cliente";
             this.Load += new System.EventHandler(this.RegistroDeClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ApellidoerrorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CedulaerrorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CiudaderrorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DirrecionerrorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TelefonoerrorProvider9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CelularerrorProvider10)).EndInit();
+            this.SexogroupBox.ResumeLayout(false);
+            this.SexogroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SexoerrorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,7 +462,6 @@
         private System.Windows.Forms.Label ClienteIdlabel;
         private System.Windows.Forms.Label Nombrelabel;
         private System.Windows.Forms.Label Apellidolabel;
-        private System.Windows.Forms.Label Sexolabel;
         private System.Windows.Forms.Label Direccionlabel;
         private System.Windows.Forms.Label Telefonolabel;
         private System.Windows.Forms.Label Cedulalabel;
@@ -320,13 +473,27 @@
         private System.Windows.Forms.TextBox DirecciontextBox;
         private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox1;
         private System.Windows.Forms.MaskedTextBox CelularmaskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox FechaIngresomaskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox4;
-        private System.Windows.Forms.CheckBox MasculinocheckBox;
-        private System.Windows.Forms.CheckBox FemeninocheckBox;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        public System.Windows.Forms.MaskedTextBox CedulamaskedTextBox;
+        private System.Windows.Forms.ComboBox CiudadcomboBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider1;
+        private System.Windows.Forms.ErrorProvider NombreerrorProvider2;
+        private System.Windows.Forms.ErrorProvider ApellidoerrorProvider3;
+        private System.Windows.Forms.ErrorProvider CedulaerrorProvider4;
+        private System.Windows.Forms.ErrorProvider CiudaderrorProvider7;
+        private System.Windows.Forms.ErrorProvider DirrecionerrorProvider8;
+        private System.Windows.Forms.ErrorProvider TelefonoerrorProvider9;
+        private System.Windows.Forms.ErrorProvider CelularerrorProvider10;
+        private System.Windows.Forms.GroupBox SexogroupBox;
+        private System.Windows.Forms.CheckBox FemeninocheckBox;
+        private System.Windows.Forms.CheckBox MasculinocheckBox;
+        private System.Windows.Forms.ErrorProvider SexoerrorProvider1;
+        private System.Windows.Forms.Button Modificarbutton;
     }
 }

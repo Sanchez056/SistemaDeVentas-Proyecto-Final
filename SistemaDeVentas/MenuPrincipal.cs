@@ -30,7 +30,7 @@ namespace SistemaDeVentas
 
             ResArt.MdiParent = this;
             ResArt.Show();
-            ResArt.Location = new Point(10, 100);
+            ResArt.Location = new Point(130, 10);
 
         }
 
@@ -40,7 +40,7 @@ namespace SistemaDeVentas
 
             ResUs.MdiParent = this;
             ResUs.Show();
-            ResUs.Location = new Point(10, 100);
+            ResUs.Location = new Point(130, 10);
         }
 
         private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace SistemaDeVentas
 
             consulta.MdiParent = this;
             consulta.Show();
-            consulta.Location = new Point(10, 100);
+            consulta.Location = new Point(130, 10);
         }
 
         private void ConsultaarticulosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace SistemaDeVentas
             Consultas.ConsultasArticulos consulta = new Consultas.ConsultasArticulos();
             consulta.MdiParent = this;
             consulta.Show();
-            consulta.Location = new Point(10, 100);
+            consulta.Location = new Point(130, 10);
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace SistemaDeVentas
 
             resCli.MdiParent = this;
             resCli.Show();
-            resCli.Location = new Point(10, 100);
+            resCli.Location = new Point(130, 10);
 
         }
 
@@ -93,7 +93,7 @@ namespace SistemaDeVentas
 
             regisProvee.MdiParent = this;
             regisProvee.Show();
-            regisProvee.Location = new Point(10, 100);
+            regisProvee.Location = new Point(130, 10);
 
 
         }
@@ -104,7 +104,34 @@ namespace SistemaDeVentas
 
             regGarante.MdiParent = this;
             regGarante.Show();
-            regGarante.Location = new Point(10, 100);
+            regGarante.Location =  new Point(130, 10);
+        }
+
+        private void ConsultaclientesToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Consultas.ConsultaClientes consulta= new Consultas.ConsultaClientes();
+
+            consulta.MdiParent = this;
+            consulta.Show();
+            consulta.Location = new Point(130, 10);
+        }
+
+        private void ConsultaproveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.ConsultaProveedores consulta = new Consultas.ConsultaProveedores();
+
+            consulta.MdiParent = this;
+            consulta.Show();
+            consulta.Location = new Point(130, 10);
+        }
+
+        private void garantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultas.ConsultaGarantes consulta = new Consultas.ConsultaGarantes();
+
+            consulta.MdiParent = this;
+            consulta.Show();
+            consulta.Location = new Point(130, 10);
         }
     }
 }

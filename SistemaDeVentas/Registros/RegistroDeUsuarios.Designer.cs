@@ -49,6 +49,7 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.RegistrosUsuarioslabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreUsuarioserrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContraseñaerrorProvider1)).BeginInit();
@@ -103,6 +104,10 @@
             // TipoUsuarioscomboBox
             // 
             this.TipoUsuarioscomboBox.FormattingEnabled = true;
+            this.TipoUsuarioscomboBox.Items.AddRange(new object[] {
+            resources.GetString("TipoUsuarioscomboBox.Items"),
+            resources.GetString("TipoUsuarioscomboBox.Items1"),
+            resources.GetString("TipoUsuarioscomboBox.Items2")});
             resources.ApplyResources(this.TipoUsuarioscomboBox, "TipoUsuarioscomboBox");
             this.TipoUsuarioscomboBox.Name = "TipoUsuarioscomboBox";
             // 
@@ -163,11 +168,17 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // RegistrosUsuarioslabel
+            // 
+            resources.ApplyResources(this.RegistrosUsuarioslabel, "RegistrosUsuarioslabel");
+            this.RegistrosUsuarioslabel.Name = "RegistrosUsuarioslabel";
+            // 
             // RegistroDeUsuarios
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
+            this.Controls.Add(this.RegistrosUsuarioslabel);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -217,5 +228,6 @@
         private System.Windows.Forms.ErrorProvider NombreUsuarioserrorProvider1;
         private System.Windows.Forms.ErrorProvider ContraseñaerrorProvider1;
         private System.Windows.Forms.ErrorProvider ConfimarContraseñaerrorProvider1;
+        private System.Windows.Forms.Label RegistrosUsuarioslabel;
     }
 }

@@ -46,6 +46,26 @@ namespace BLL
 
         }
 
+        public static void Modificar(int id, Clientes cliente)
+        {
+            var db = new SistemaVentasDb();
+
+            Clientes c = db.Clientes.Find(id);
+            c.Celular = cliente.Celular;
+            c.Direccion = cliente.Direccion;
+            c.Fecha = cliente.Fecha;
+            c.Nombre = cliente.Nombre;
+            c.Apellido = cliente.Apellido;
+            c.Telefono = cliente.Telefono;
+            c.Sexo = cliente.Sexo;
+            c.Cedula = cliente.Cedula;
+            c.Ciudad = cliente.Ciudad;
+            
+            db.SaveChanges();
+        }
+
+
+
         public static void Eliminar(int id)
         {
             var db = new SistemaVentasDb();

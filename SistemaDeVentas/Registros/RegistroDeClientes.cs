@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using BLL;
+using DAL;
 
 
 namespace SistemaDeVentas
@@ -36,17 +37,19 @@ namespace SistemaDeVentas
         }
         private void LLenar(Clientes cliente)
         {
+            
             ClienteIdtextBox.Text = cliente.ClienteId.ToString();
             NombretextBox.Text = cliente.Nombre;
             ApellidotextBox.Text = cliente.Apellido;
-           // CedulamaskedTextBox4 = cliente.Cedula;
+            CiudadcomboBox.Text = cliente.Ciudad;
             DirecciontextBox.Text = cliente.Direccion;
+            CedulamaskedTextBox.Text = cliente.Cedula;
             TelefonomaskedTextBox1.Text = cliente.Telefono;
             CelularmaskedTextBox2.Text = cliente.Celular;
-            
-
-
-
+            if (cliente.Sexo == "M")
+                MasculinocheckBox.Checked = true;
+            if (cliente.Sexo == "F")
+                FemeninocheckBox.Checked = true;
 
         }
         Utilidades ut = new Utilidades();
@@ -80,9 +83,9 @@ namespace SistemaDeVentas
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Clientes cliente = new Clientes();
-            //BuscarerrorProvider.Clear();
+            BuscarerrorProvider1.Clear();
             LlenarClase(cliente);
-            if (ValidarTextbox() && ValidarExiste(CedulamaskedTextBox4.Text))
+            if (ValidarTextbox() && ValidarExiste(CedulamaskedTextBox.Text))
             {
                 ClientesBLL.Insertar(cliente);
                 Limpiar();
@@ -94,18 +97,38 @@ namespace SistemaDeVentas
 
         private bool ValidarExiste(string aux)
         {
-            if (ArticuloBLL.GetListaCodigoArticulo(aux).Count() > 0)
+            if (ClientesBLL.GetListaCedula(aux).Count() > 0)
             {
-                MessageBox.Show("Este Codigo de Articulo ya existe, favor intentar con otro Codigo de Articulo...");
+                MessageBox.Show("Este cedula de cliente ya existe, favor intentar con otra Cedula ...");
                 return false;
             }
             return true;
         }
         private void LlenarClase(Clientes c)
         {
+            CiudadClientes cud = new CiudadClientes();
             c.Nombre = NombretextBox.Text;
             c.Apellido = ApellidotextBox.Text;
-            c.Cedula = CedulamaskedTextBox4.Text;
+            c.Cedula = CedulamaskedTextBox.Text;
+            c.Ciudad = cud.CiudadCliente = CiudadcomboBox.Text;
+            c.Direccion = DirecciontextBox.Text;
+            c.Telefono = TelefonomaskedTextBox1.Text;
+            c.Celular = CelularmaskedTextBox2.Text;
+            if (MasculinocheckBox.Checked == true)
+            {
+                c.Sexo = "M";
+            }
+            else
+            {
+                if (FemeninocheckBox.Checked == true)
+
+                    c.Sexo = "F";
+                else
+
+                    c.Sexo = "M";
+            }
+
+            c.Fecha = FechadateTimePicker.Value;
 
 
         }
@@ -116,60 +139,76 @@ namespace SistemaDeVentas
 
             if (string.IsNullOrEmpty(NombretextBox.Text) &&
                 string.IsNullOrEmpty(ApellidotextBox.Text) &&
-                string.IsNullOrEmpty(CedulamaskedTextBox4.Text) &&
+                string.IsNullOrEmpty(CedulamaskedTextBox.Text) &&
                 string.IsNullOrEmpty(DirecciontextBox.Text) &&
                 string.IsNullOrEmpty(TelefonomaskedTextBox1.Text) &&
-                string.IsNullOrEmpty(CedulamaskedTextBox4.Text) &&
-                string.IsNullOrEmpty(FechaIngresomaskedTextBox3.Text) 
-                
+                string.IsNullOrEmpty(CelularmaskedTextBox2.Text)
+
                 )
             {
-               /* CodigoArticuloerrorProvider1.SetError(CodigoArticulotextBox, "Favor Ingresar un Codigo al Articulo");
-                NombreArticuloerrorProvider1.SetError(NombreArticulotextBox, "Favor Ingresar el Nombre al Articulo");
-                MarcaArticuloerrorProvider1.SetError(MarcaArticulotextBox, "Favor Ingresar la Marca del Articulo");
-                NombreProveedorerrorProvider1.SetError(NombreProveedortextBox, "Favor Ingresar el Proveedor del Articulo");
-                DescripcionerrorProvider1.SetError(DespcripciontextBox, "Favor Ingresar Descripcion Articulo");
-                CantidaderrorProvider1.SetError(CantidadArticulotextBox, "Favor Ingresar Cantidad de  Articulo");
-                PrecioCompraArticuloerrorProvider1.SetError(PrecioCompraArticulotextBox, "Favor Ingresar Precio de Compra de el Articulo");
-                PrecioVentasArticuloerrorProvider1.SetError(PrecioVentastextBox, "Favor Ingresar Precio para la Venta del  Articulo");
-                */
+                 NombreerrorProvider2.SetError(NombretextBox, "Favor Ingresar el Nombre de cliente");
+                 ApellidoerrorProvider3.SetError(ApellidotextBox, "Favor Ingresar el Apellido de Cliente");
+                 CedulaerrorProvider4.SetError(CedulamaskedTextBox, "Favor Ingresar la Cedula Cliente");
+                 CiudaderrorProvider7.SetError(CiudadcomboBox, "Favor Ingresar la Ciudad actual de donde recide el cliente");
+                 DirrecionerrorProvider8.SetError(DirecciontextBox,"Favor Ingresar la Dirrecion de la ciudad de donde esta el Cliente");
+                 TelefonoerrorProvider9.SetError(TelefonomaskedTextBox1, "Favor Ingresar el Numero de Telefono Recidencia del Cliente");
+                 CedulaerrorProvider4.SetError(CedulamaskedTextBox, "Favor Ingresarel Numero de Celular de Cliente");
+                 
                 MessageBox.Show("Favor llenar todos los campos obligatorios");
 
             }
             if (string.IsNullOrEmpty(NombretextBox.Text))
             {
-                //CodigoArticuloerrorProvider1.Clear();
-                //CodigoArticuloerrorProvider1.SetError(CodigoArticulotextBox, "Favor ingresar el Codigo del Articulo");
+                NombreerrorProvider2.Clear();
+                NombreerrorProvider2.SetError(NombretextBox, "Favor ingresar el Nombre del Cliente");
                 return false;
             }
             if (string.IsNullOrEmpty(ApellidotextBox.Text))
             {
-                //NombreArticuloerrorProvider1.Clear();
-                //NombreArticuloerrorProvider1.SetError(NombreArticulotextBox, "Favor ingresar el nombre del Articulo");
+                ApellidoerrorProvider3.Clear();
+                ApellidoerrorProvider3.SetError(ApellidotextBox, "Favor ingresar el Apellido del Cliente");
                 return false;
             }
 
-            if (string.IsNullOrEmpty(CedulamaskedTextBox4.Text))
+            if (string.IsNullOrEmpty(CedulamaskedTextBox.Text))
             {
-                //MarcaArticuloerrorProvider1.Clear();
-                //MarcaArticuloerrorProvider1.SetError(MarcaArticulotextBox, "Favor ingresar la marca del Articulo");
+                 CedulaerrorProvider4.Clear();
+                 CedulaerrorProvider4.SetError(CedulamaskedTextBox, "Favor ingresar el Numero de Cedula de Identidad");
+                return false;
+            }
+            if (string.IsNullOrEmpty(CiudadcomboBox.Text))
+            {
+                CiudaderrorProvider7.Clear();
+                CiudaderrorProvider7.SetError(CiudadcomboBox, "Favor ingrese la Ciudad que Actual de Cliente");
                 return false;
             }
             if (string.IsNullOrEmpty(DirecciontextBox.Text))
             {
-                //NombreProveedorerrorProvider1.Clear();
-
-                //NombreProveedorerrorProvider1.SetError(NombreProveedortextBox, "Favor ingrese el nombre del proveedor de el articulo");
+                DirecciontextBox.Clear();
+                DirrecionerrorProvider8.SetError(DirecciontextBox, "Favor ingrese la dirrecion de la ciudad de donde vive cliente");
                 return false;
             }
 
+            if (string.IsNullOrEmpty(TelefonomaskedTextBox1.Text))
+            {
+                TelefonomaskedTextBox1.Clear();
+                TelefonoerrorProvider9.SetError(TelefonomaskedTextBox1, "Favor ingrese el numero telefono de su Recidencia");
+                return false;
+            }
             if (string.IsNullOrEmpty(CelularmaskedTextBox2.Text))
             {
-                //DescripcionerrorProvider1.Clear();
-                //DescripcionerrorProvider1.SetError(DespcripciontextBox, "Favor ingrese la descripcion del articulo");
+                CelularerrorProvider10.Clear();
+                CelularerrorProvider10.SetError(CedulamaskedTextBox, "Favor ingrese el Numero de Celular");
                 return false;
             }
-           
+
+            if (MasculinocheckBox.Checked == false && FemeninocheckBox.Checked == false)
+            {
+                SexoerrorProvider1.SetError(SexogroupBox, "Seleccionar sexo");
+                return false;
+            }
+
+
 
 
             return true;
@@ -190,14 +229,19 @@ namespace SistemaDeVentas
         }
         public void Limpiar()
         {
-            // DateTimePicker f = new DateTimePicker();
+            DateTimePicker f = new DateTimePicker();
             NombretextBox.Clear();
             ApellidotextBox.Clear();
-            CedulamaskedTextBox4.Clear();
+            CedulamaskedTextBox.Clear();
             DirecciontextBox.Clear();
+            CiudadcomboBox.Text = "Elegir Su Ciudad";
             TelefonomaskedTextBox1.Clear();
             CelularmaskedTextBox2.Clear();
-            // FechaIngresodateTimePicker1.Value = f.Value;
+            MasculinocheckBox.Checked = false;
+            FemeninocheckBox.Checked = false;
+            FechadateTimePicker.Value = f.Value;
+            //-----
+            limpiarErroresProvider();
 
         }
 
@@ -209,6 +253,53 @@ namespace SistemaDeVentas
                 Limpiar();
                 MessageBox.Show("ELiminado con exito");
             }
+
         }
+
+        public List<Clientes> lista = new List<Clientes>();
+        private void CargarConboBox()
+        {
+            var db = new SistemaVentasDb();
+            lista = db.Clientes.ToList();
+            if (lista.Count > 0)
+            {
+                CiudadcomboBox.DataSource = lista;
+                CiudadcomboBox.ValueMember = "ClienteId";
+                CiudadcomboBox.DisplayMember = "Ciudad";
+            }
+        }
+        ///---------------
+        private void limpiarErroresProvider()
+        {
+            NombreerrorProvider2.Clear();
+            ApellidoerrorProvider3.Clear();
+            CedulamaskedTextBox.Clear();
+            SexoerrorProvider1.Clear();
+            CiudaderrorProvider7.Clear();
+            DirrecionerrorProvider8.Clear();
+            TelefonoerrorProvider9.Clear();
+            CelularerrorProvider10.Clear();
+
+
+
+
+        }
+
+        private void Modificarbutton_Click(object sender, EventArgs e)
+        {
+            Clientes cliente = new Clientes();
+            if (validarId("Favor Buscar al Cliente  que desea actualizar"))
+            {
+                LlenarClase(cliente);
+                    ClientesBLL.Modificar(ut.StringInt(ClienteIdtextBox.Text), cliente);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("Modificar con exito");
+                
+
+            }
+        }
+
+        ///-------------
     }
 }

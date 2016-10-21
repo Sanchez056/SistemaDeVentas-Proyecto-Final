@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using BLL;
+using DAL;
 
 
 namespace SistemaDeVentas
@@ -18,11 +19,13 @@ namespace SistemaDeVentas
         public RegistroDeUsuarios()
         {
             InitializeComponent();
+            //CargarConboBox();
 
         }
         //-- Botton Buscar y Todos sus Metodos Utilizados para Realizar dicha busqueda en la base de datos
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
+            //CargarConboBox();
             if (validarId("Favor ingresar el id del usuario que desea buscar") && ValidarBuscar())
                 LLenar(UsuariosBLL.Buscar(String(UsuarioIdtextBox.Text)));
 
@@ -33,8 +36,8 @@ namespace SistemaDeVentas
             NombreUsuariostextBox.Text = usuario.NombreUsuario.ToString();
             ContraseñatextBox.Text = usuario.Contrasena;
             ConfimarContraseñatextBox1.Text = usuario.Contrasena;
-            //TipoUsuarioscomboBox.Text = usuario.TipoUsuarios;
-
+            TipoUsuarioscomboBox.Text = usuario.Tipo;
+            //CargarConboBox();
         }
        
         private bool validarId(string message)
@@ -83,7 +86,7 @@ namespace SistemaDeVentas
             NombreUsuariostextBox.Clear();
             ContraseñatextBox.Clear();
             ConfimarContraseñatextBox1.Clear();
-            TipoUsuarioscomboBox.Text = "Selecion de Opciones";
+            TipoUsuarioscomboBox.Text ="Elegir una Opcion";
         }
         //--
         //Botton De Guardar Usuario
@@ -92,6 +95,7 @@ namespace SistemaDeVentas
             Usuarios usuario = new Usuarios();
             BuscarerrorProvider1.Clear();
             LlenarClase(usuario);
+            //CargarConboBox();
             if (ValidarTextbox() && ValidarExiste(NombreUsuariostextBox.Text))
             {
                UsuariosBLL.Insertar(usuario);
@@ -100,11 +104,13 @@ namespace SistemaDeVentas
             }
 
         }
+
         private void LlenarClase(Usuarios u)
         {
+            TipoUsuarios tus = new TipoUsuarios();
             u.NombreUsuario = NombreUsuariostextBox.Text;
             u.Contrasena = ContraseñatextBox.Text;
-            //u.IdUsuario = (int)TipoUsuarioscomboBox.SelectedValue;
+            u.Tipo =  tus.Detalle = TipoUsuarioscomboBox.Text;
 
         }
         //---
@@ -181,19 +187,26 @@ namespace SistemaDeVentas
         }
         //-------
         // En Prueba
+        public List<TipoUsuarios> lista = new List<TipoUsuarios>();
         private void CargarConboBox()
         {
-            //TipoUsuarioscomboBox.DataSource = TiposUsuariosBLL.GetLista();
-            TipoUsuarioscomboBox.ValueMember = "IdUsuarios";
-            TipoUsuarioscomboBox.DisplayMember = "Detalle";
+            var db = new SistemaVentasDb();
+            lista = db.TipoUsuarios.ToList();
+            if (lista.Count > 0)
+            {
+                TipoUsuarioscomboBox.DataSource = lista;
+                TipoUsuarioscomboBox.ValueMember = "TipoUsuarioId";
+                TipoUsuarioscomboBox.DisplayMember = "Detalle";
+            }
         }
 
 
 
-
+       
         private void RegistroDeUsuarios_Load(object sender, EventArgs e)
         {
-         
+
+            
         }
     }
 }
