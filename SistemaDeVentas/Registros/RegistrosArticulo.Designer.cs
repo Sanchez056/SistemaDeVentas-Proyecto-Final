@@ -62,7 +62,8 @@
             this.PrecioVentasArticuloerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.FechaIngresoArticuloerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.RegistrosArticulolabel = new System.Windows.Forms.Label();
-            this.Modificarbutton = new System.Windows.Forms.Button();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Fechalabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoArticuloerrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreArticuloerrorProvider1)).BeginInit();
@@ -79,7 +80,7 @@
             // 
             this.ArticuloIdlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ArticuloIdlabel.AutoSize = true;
-            this.ArticuloIdlabel.Location = new System.Drawing.Point(25, 328);
+            this.ArticuloIdlabel.Location = new System.Drawing.Point(25, 293);
             this.ArticuloIdlabel.Name = "ArticuloIdlabel";
             this.ArticuloIdlabel.Size = new System.Drawing.Size(70, 15);
             this.ArticuloIdlabel.TabIndex = 0;
@@ -88,7 +89,7 @@
             // NombreArticulolabel
             // 
             this.NombreArticulolabel.AutoSize = true;
-            this.NombreArticulolabel.Location = new System.Drawing.Point(25, 206);
+            this.NombreArticulolabel.Location = new System.Drawing.Point(25, 224);
             this.NombreArticulolabel.Name = "NombreArticulolabel";
             this.NombreArticulolabel.Size = new System.Drawing.Size(120, 15);
             this.NombreArticulolabel.TabIndex = 1;
@@ -97,7 +98,7 @@
             // MarcaArticulolabel
             // 
             this.MarcaArticulolabel.AutoSize = true;
-            this.MarcaArticulolabel.Location = new System.Drawing.Point(25, 258);
+            this.MarcaArticulolabel.Location = new System.Drawing.Point(25, 276);
             this.MarcaArticulolabel.Name = "MarcaArticulolabel";
             this.MarcaArticulolabel.Size = new System.Drawing.Size(111, 15);
             this.MarcaArticulolabel.TabIndex = 2;
@@ -112,21 +113,21 @@
             // 
             // NombreArticulotextBox
             // 
-            this.NombreArticulotextBox.Location = new System.Drawing.Point(28, 224);
+            this.NombreArticulotextBox.Location = new System.Drawing.Point(28, 242);
             this.NombreArticulotextBox.Name = "NombreArticulotextBox";
             this.NombreArticulotextBox.Size = new System.Drawing.Size(311, 22);
             this.NombreArticulotextBox.TabIndex = 4;
             // 
             // MarcaArticulotextBox
             // 
-            this.MarcaArticulotextBox.Location = new System.Drawing.Point(28, 276);
+            this.MarcaArticulotextBox.Location = new System.Drawing.Point(28, 294);
             this.MarcaArticulotextBox.Name = "MarcaArticulotextBox";
             this.MarcaArticulotextBox.Size = new System.Drawing.Size(311, 22);
             this.MarcaArticulotextBox.TabIndex = 5;
             // 
             // CantidadArticulotextBox
             // 
-            this.CantidadArticulotextBox.Location = new System.Drawing.Point(386, 171);
+            this.CantidadArticulotextBox.Location = new System.Drawing.Point(389, 242);
             this.CantidadArticulotextBox.Name = "CantidadArticulotextBox";
             this.CantidadArticulotextBox.Size = new System.Drawing.Size(299, 22);
             this.CantidadArticulotextBox.TabIndex = 6;
@@ -134,7 +135,7 @@
             // CantidadArticulolabel
             // 
             this.CantidadArticulolabel.AutoSize = true;
-            this.CantidadArticulolabel.Location = new System.Drawing.Point(382, 153);
+            this.CantidadArticulolabel.Location = new System.Drawing.Point(385, 224);
             this.CantidadArticulolabel.Name = "CantidadArticulolabel";
             this.CantidadArticulolabel.Size = new System.Drawing.Size(130, 15);
             this.CantidadArticulolabel.TabIndex = 7;
@@ -143,7 +144,7 @@
             // PrecioCompraArticulolabel
             // 
             this.PrecioCompraArticulolabel.AutoSize = true;
-            this.PrecioCompraArticulolabel.Location = new System.Drawing.Point(383, 206);
+            this.PrecioCompraArticulolabel.Location = new System.Drawing.Point(386, 277);
             this.PrecioCompraArticulolabel.Name = "PrecioCompraArticulolabel";
             this.PrecioCompraArticulolabel.Size = new System.Drawing.Size(161, 15);
             this.PrecioCompraArticulolabel.TabIndex = 8;
@@ -151,7 +152,7 @@
             // 
             // PrecioCompraArticulotextBox
             // 
-            this.PrecioCompraArticulotextBox.Location = new System.Drawing.Point(385, 224);
+            this.PrecioCompraArticulotextBox.Location = new System.Drawing.Point(388, 295);
             this.PrecioCompraArticulotextBox.Name = "PrecioCompraArticulotextBox";
             this.PrecioCompraArticulotextBox.Size = new System.Drawing.Size(300, 22);
             this.PrecioCompraArticulotextBox.TabIndex = 9;
@@ -159,7 +160,7 @@
             // DescripcionLabel
             // 
             this.DescripcionLabel.AutoSize = true;
-            this.DescripcionLabel.Location = new System.Drawing.Point(25, 362);
+            this.DescripcionLabel.Location = new System.Drawing.Point(385, 153);
             this.DescripcionLabel.Name = "DescripcionLabel";
             this.DescripcionLabel.Size = new System.Drawing.Size(77, 15);
             this.DescripcionLabel.TabIndex = 15;
@@ -167,10 +168,10 @@
             // 
             // DespcripciontextBox
             // 
-            this.DespcripciontextBox.Location = new System.Drawing.Point(28, 387);
+            this.DespcripciontextBox.Location = new System.Drawing.Point(386, 178);
             this.DespcripciontextBox.Multiline = true;
             this.DespcripciontextBox.Name = "DespcripciontextBox";
-            this.DespcripciontextBox.Size = new System.Drawing.Size(311, 47);
+            this.DespcripciontextBox.Size = new System.Drawing.Size(313, 40);
             this.DespcripciontextBox.TabIndex = 16;
             // 
             // CodigoArticulolabel
@@ -192,7 +193,7 @@
             // PrecioVentaslabel
             // 
             this.PrecioVentaslabel.AutoSize = true;
-            this.PrecioVentaslabel.Location = new System.Drawing.Point(382, 258);
+            this.PrecioVentaslabel.Location = new System.Drawing.Point(385, 329);
             this.PrecioVentaslabel.Name = "PrecioVentaslabel";
             this.PrecioVentaslabel.Size = new System.Drawing.Size(145, 15);
             this.PrecioVentaslabel.TabIndex = 25;
@@ -202,7 +203,7 @@
             // NombreProveedorlabel
             // 
             this.NombreProveedorlabel.AutoSize = true;
-            this.NombreProveedorlabel.Location = new System.Drawing.Point(25, 310);
+            this.NombreProveedorlabel.Location = new System.Drawing.Point(25, 328);
             this.NombreProveedorlabel.Name = "NombreProveedorlabel";
             this.NombreProveedorlabel.Size = new System.Drawing.Size(114, 15);
             this.NombreProveedorlabel.TabIndex = 26;
@@ -210,14 +211,14 @@
             // 
             // NombreProveedortextBox
             // 
-            this.NombreProveedortextBox.Location = new System.Drawing.Point(28, 328);
+            this.NombreProveedortextBox.Location = new System.Drawing.Point(28, 346);
             this.NombreProveedortextBox.Name = "NombreProveedortextBox";
             this.NombreProveedortextBox.Size = new System.Drawing.Size(311, 22);
             this.NombreProveedortextBox.TabIndex = 27;
             // 
             // PrecioVentastextBox
             // 
-            this.PrecioVentastextBox.Location = new System.Drawing.Point(386, 277);
+            this.PrecioVentastextBox.Location = new System.Drawing.Point(389, 348);
             this.PrecioVentastextBox.Name = "PrecioVentastextBox";
             this.PrecioVentastextBox.Size = new System.Drawing.Size(299, 22);
             this.PrecioVentastextBox.TabIndex = 28;
@@ -226,7 +227,7 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
-            this.Eliminarbutton.Location = new System.Drawing.Point(532, 456);
+            this.Eliminarbutton.Location = new System.Drawing.Point(484, 410);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(122, 51);
             this.Eliminarbutton.TabIndex = 14;
@@ -239,7 +240,7 @@
             // 
             this.Guardabutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Guardabutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardabutton.Location = new System.Drawing.Point(198, 455);
+            this.Guardabutton.Location = new System.Drawing.Point(260, 412);
             this.Guardabutton.Name = "Guardabutton";
             this.Guardabutton.Size = new System.Drawing.Size(124, 51);
             this.Guardabutton.TabIndex = 12;
@@ -252,7 +253,7 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources._new;
-            this.Nuevobutton.Location = new System.Drawing.Point(45, 453);
+            this.Nuevobutton.Location = new System.Drawing.Point(44, 410);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(112, 53);
             this.Nuevobutton.TabIndex = 11;
@@ -324,24 +325,32 @@
             this.RegistrosArticulolabel.TabIndex = 29;
             this.RegistrosArticulolabel.Text = "Registros De Articulos";
             // 
-            // Modificarbutton
+            // FechadateTimePicker
             // 
-            this.Modificarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Modificarbutton.Location = new System.Drawing.Point(362, 456);
-            this.Modificarbutton.Name = "Modificarbutton";
-            this.Modificarbutton.Size = new System.Drawing.Size(129, 49);
-            this.Modificarbutton.TabIndex = 30;
-            this.Modificarbutton.Text = "Modificar";
-            this.Modificarbutton.UseVisualStyleBackColor = true;
-            this.Modificarbutton.Click += new System.EventHandler(this.Modificarbutton_Click);
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(389, 126);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(92, 22);
+            this.FechadateTimePicker.TabIndex = 30;
+            // 
+            // Fechalabel
+            // 
+            this.Fechalabel.AutoSize = true;
+            this.Fechalabel.Location = new System.Drawing.Point(386, 108);
+            this.Fechalabel.Name = "Fechalabel";
+            this.Fechalabel.Size = new System.Drawing.Size(89, 15);
+            this.Fechalabel.TabIndex = 31;
+            this.Fechalabel.Text = "Fecha Ingreso:";
             // 
             // RegistrosArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(710, 528);
-            this.Controls.Add(this.Modificarbutton);
+            this.ClientSize = new System.Drawing.Size(710, 475);
+            this.Controls.Add(this.FechadateTimePicker);
+            this.Controls.Add(this.Fechalabel);
             this.Controls.Add(this.RegistrosArticulolabel);
             this.Controls.Add(this.PrecioVentastextBox);
             this.Controls.Add(this.NombreProveedortextBox);
@@ -421,6 +430,7 @@
         private System.Windows.Forms.ErrorProvider PrecioVentasArticuloerrorProvider1;
         private System.Windows.Forms.ErrorProvider FechaIngresoArticuloerrorProvider1;
         private System.Windows.Forms.Label RegistrosArticulolabel;
-        private System.Windows.Forms.Button Modificarbutton;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        private System.Windows.Forms.Label Fechalabel;
     }
 }

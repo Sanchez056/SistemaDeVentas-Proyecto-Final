@@ -21,7 +21,7 @@ namespace BLL
                 using (var db = new SistemaVentasDb())
                 {
 
-                    db.Gerantes.Add(g);
+                    db.Garantes.Add(g);
                     db.SaveChanges();
                     db.Dispose();
 
@@ -41,7 +41,7 @@ namespace BLL
         {
             var db = new SistemaVentasDb();
 
-            return db.Gerantes.Find(id);
+            return db.Garantes.Find(id);
 
 
         }
@@ -49,9 +49,9 @@ namespace BLL
         public static void Eliminar(int id)
         {
             var db = new SistemaVentasDb();
-            Garantes g = db.Gerantes.Find(id);
+            Garantes g = db.Garantes.Find(id);
 
-            db.Gerantes.Remove(g);
+            db.Garantes.Remove(g);
             db.SaveChanges();
         }
 
@@ -62,7 +62,7 @@ namespace BLL
 
             var db = new SistemaVentasDb();
 
-            lista = db.Gerantes.ToList();
+            lista = db.Garantes.ToList();
 
             return lista;
 
@@ -75,7 +75,7 @@ namespace BLL
 
             var db = new SistemaVentasDb();
 
-            lista = db.Gerantes.Where(p => p.GeranteId == garanteId).ToList();
+            lista = db.Garantes.Where(p => p.GaranteId == garanteId).ToList();
 
             return lista;
 
@@ -83,13 +83,71 @@ namespace BLL
 
 
 
+        public static List<Garantes> GetListaNombreGarantes(string aux)
+        {
+            List<Garantes> lista = new List<Garantes>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Garantes.Where(p => p.Nombre == aux).ToList();
+
+            return lista;
+
+        }
+
+        public static List<Garantes> GetListaApellido(string aux)
+        {
+            List<Garantes> lista = new List<Garantes>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Garantes.Where(p => p.Apellido == aux).ToList();
+
+            return lista;
+
+        }
+
+        public static List<Garantes> GetListaSexo(string aux)
+        {
+            List<Garantes> lista = new List<Garantes>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Garantes.Where(p => p.Sexo == aux).ToList();
+
+            return lista;
+
+        }
+
         public static List<Garantes> GetListaCedula(string aux)
         {
             List<Garantes> lista = new List<Garantes>();
 
             var db = new SistemaVentasDb();
 
-            lista = db.Gerantes.Where(p => p.Celula== aux).ToList();
+            lista = db.Garantes.Where(p => p.Cedula == aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Garantes> GetListaFecha(DateTime aux)
+        {
+            List<Garantes> lista = new List<Garantes>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Garantes.Where(p => p.Fecha == aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Garantes> GetListaFecha(DateTime Desde, DateTime Hasta)
+        {
+            List<Garantes> lista = new List<Garantes>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Garantes.Where(p => p.Fecha >= Desde && p.Fecha <= Hasta).ToList();
 
             return lista;
 

@@ -53,6 +53,9 @@
             this.CiudadcomboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BuscarerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.SexogroupBox = new System.Windows.Forms.GroupBox();
+            this.FemeninocheckBox = new System.Windows.Forms.CheckBox();
+            this.MasculinocheckBox = new System.Windows.Forms.CheckBox();
             this.NombreerrorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ApellidoerrorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
             this.CedulaerrorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -60,12 +63,9 @@
             this.DirrecionerrorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
             this.TelefonoerrorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
             this.CelularerrorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.SexogroupBox = new System.Windows.Forms.GroupBox();
-            this.FemeninocheckBox = new System.Windows.Forms.CheckBox();
-            this.MasculinocheckBox = new System.Windows.Forms.CheckBox();
             this.SexoerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Modificarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).BeginInit();
+            this.SexogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ApellidoerrorProvider3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CedulaerrorProvider4)).BeginInit();
@@ -73,7 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DirrecionerrorProvider8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TelefonoerrorProvider9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CelularerrorProvider10)).BeginInit();
-            this.SexogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SexoerrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,7 +197,7 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.file_broken_32x32_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(333, 396);
+            this.Eliminarbutton.Location = new System.Drawing.Point(296, 396);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(113, 42);
             this.Eliminarbutton.TabIndex = 22;
@@ -211,7 +210,7 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.Color.Black;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(123, 396);
+            this.Guardarbutton.Location = new System.Drawing.Point(170, 396);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(105, 42);
             this.Guardarbutton.TabIndex = 21;
@@ -224,7 +223,7 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.Color.Black;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources._new;
-            this.Nuevobutton.Location = new System.Drawing.Point(12, 396);
+            this.Nuevobutton.Location = new System.Drawing.Point(48, 396);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(104, 42);
             this.Nuevobutton.TabIndex = 20;
@@ -328,34 +327,6 @@
             // 
             this.BuscarerrorProvider1.ContainerControl = this;
             // 
-            // NombreerrorProvider2
-            // 
-            this.NombreerrorProvider2.ContainerControl = this;
-            // 
-            // ApellidoerrorProvider3
-            // 
-            this.ApellidoerrorProvider3.ContainerControl = this;
-            // 
-            // CedulaerrorProvider4
-            // 
-            this.CedulaerrorProvider4.ContainerControl = this;
-            // 
-            // CiudaderrorProvider7
-            // 
-            this.CiudaderrorProvider7.ContainerControl = this;
-            // 
-            // DirrecionerrorProvider8
-            // 
-            this.DirrecionerrorProvider8.ContainerControl = this;
-            // 
-            // TelefonoerrorProvider9
-            // 
-            this.TelefonoerrorProvider9.ContainerControl = this;
-            // 
-            // CelularerrorProvider10
-            // 
-            this.CelularerrorProvider10.ContainerControl = this;
-            // 
             // SexogroupBox
             // 
             this.SexogroupBox.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -390,20 +361,37 @@
             this.MasculinocheckBox.Text = "Masculino";
             this.MasculinocheckBox.UseVisualStyleBackColor = true;
             // 
+            // NombreerrorProvider2
+            // 
+            this.NombreerrorProvider2.ContainerControl = this;
+            // 
+            // ApellidoerrorProvider3
+            // 
+            this.ApellidoerrorProvider3.ContainerControl = this;
+            // 
+            // CedulaerrorProvider4
+            // 
+            this.CedulaerrorProvider4.ContainerControl = this;
+            // 
+            // CiudaderrorProvider7
+            // 
+            this.CiudaderrorProvider7.ContainerControl = this;
+            // 
+            // DirrecionerrorProvider8
+            // 
+            this.DirrecionerrorProvider8.ContainerControl = this;
+            // 
+            // TelefonoerrorProvider9
+            // 
+            this.TelefonoerrorProvider9.ContainerControl = this;
+            // 
+            // CelularerrorProvider10
+            // 
+            this.CelularerrorProvider10.ContainerControl = this;
+            // 
             // SexoerrorProvider1
             // 
             this.SexoerrorProvider1.ContainerControl = this;
-            // 
-            // Modificarbutton
-            // 
-            this.Modificarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Modificarbutton.Location = new System.Drawing.Point(234, 396);
-            this.Modificarbutton.Name = "Modificarbutton";
-            this.Modificarbutton.Size = new System.Drawing.Size(93, 42);
-            this.Modificarbutton.TabIndex = 28;
-            this.Modificarbutton.Text = "Modificar";
-            this.Modificarbutton.UseVisualStyleBackColor = true;
-            this.Modificarbutton.Click += new System.EventHandler(this.Modificarbutton_Click);
             // 
             // RegistroDeClientes
             // 
@@ -411,7 +399,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(460, 453);
-            this.Controls.Add(this.Modificarbutton);
             this.Controls.Add(this.SexogroupBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CiudadcomboBox);
@@ -442,6 +429,8 @@
             this.Text = "Registro de Cliente";
             this.Load += new System.EventHandler(this.RegistroDeClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).EndInit();
+            this.SexogroupBox.ResumeLayout(false);
+            this.SexogroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ApellidoerrorProvider3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CedulaerrorProvider4)).EndInit();
@@ -449,8 +438,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DirrecionerrorProvider8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TelefonoerrorProvider9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CelularerrorProvider10)).EndInit();
-            this.SexogroupBox.ResumeLayout(false);
-            this.SexogroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SexoerrorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -494,6 +481,5 @@
         private System.Windows.Forms.CheckBox FemeninocheckBox;
         private System.Windows.Forms.CheckBox MasculinocheckBox;
         private System.Windows.Forms.ErrorProvider SexoerrorProvider1;
-        private System.Windows.Forms.Button Modificarbutton;
     }
 }

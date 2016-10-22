@@ -8,15 +8,17 @@ namespace Entidades
 {
    public  class Proveedores
     {
-    [Key]
+         [Key]
         public int ProveedorId{ get; set; }
 
-        public string  NombreCompañia{ get; set; }
+        public string  NombreProveedor{ get; set; }
 
-        public string Direccion { get; set; }
 
         public string Ciudad { get; set; }
 
+        public string Direccion { get; set; }
+
+        
 
 
         public string Telefono{ get; set; }
@@ -24,6 +26,8 @@ namespace Entidades
         public string Fax{ get; set; }
 
         public string Correo { get; set; }
+
+       public DateTime FechaIngreso { get; set; }
 
 
     }

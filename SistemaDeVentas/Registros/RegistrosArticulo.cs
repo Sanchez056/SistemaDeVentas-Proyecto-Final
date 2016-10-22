@@ -139,8 +139,9 @@ namespace SistemaDeVentas
             a.CantidadArticulo = int.Parse(CantidadArticulotextBox.Text);
             a.PrecioCompraArticulo= int.Parse(PrecioCompraArticulotextBox.Text);
             a.PrecioVentaArticulo = int.Parse(PrecioVentastextBox.Text);
-           // a.FechaIngreso = DateTime.Parse(FechaIngresodateTimePicker1.Text);
-               
+
+             a.Fecha= FechadateTimePicker.Value;
+
 
         }
        
@@ -238,14 +239,7 @@ namespace SistemaDeVentas
 
         private void Modificarbutton_Click(object sender, EventArgs e)
         {
-            Articulos articulo = new Articulos();
-                LlenarClase(articulo);
-                
-
-                    ArticuloBLL.Modificar(ut.StringInt(ArticuloIdtextBox.Text), articulo);
-                    Limpiar();
             
-                    MessageBox.Show("Actualizado con exito");
                 
 
             

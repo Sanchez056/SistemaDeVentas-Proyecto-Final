@@ -49,20 +49,7 @@ namespace BLL
 
         }
 
-        public static void Modificar(int id, Articulos articulo)
-        {
-            var db = new SistemaVentasDb();
-
-            Articulos a = db.Articulos.Find(id);
-            a.NombreArticulo = articulo.NombreArticulo;
-            a.MarcaArticulo = articulo.MarcaArticulo;
-            a.CodigoArticulo = articulo.CodigoArticulo;
-            a.CantidadArticulo = articulo.CantidadArticulo;
-            a.Despcricion = articulo.Despcricion;
-            a.PrecioCompraArticulo = articulo.PrecioCompraArticulo;
-            a.NombreProveedor= articulo.NombreProveedor;
-            db.SaveChanges();
-        }
+       
 
         public static void Eliminar(int id)
         {
@@ -136,5 +123,38 @@ namespace BLL
 
         }
 
+        public static List<Articulos> GetListaNombreProveedor(string aux)
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.Where(p => p.NombreProveedor== aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Articulos> GetListaFecha(DateTime aux)
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.Where(p => p.Fecha== aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Articulos> GetListaFecha(DateTime Desde, DateTime Hasta)
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.Where(p => p.Fecha >= Desde && p.Fecha <= Hasta).ToList();
+
+            return lista;
+
+        }
     }
 }

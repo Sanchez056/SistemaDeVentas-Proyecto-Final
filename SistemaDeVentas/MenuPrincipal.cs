@@ -133,6 +133,11 @@ namespace SistemaDeVentas
             consulta.Show();
             consulta.Location = new Point(130, 10);
         }
+
+        private void Ventasbutton_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
 

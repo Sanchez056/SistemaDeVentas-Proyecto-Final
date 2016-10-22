@@ -27,7 +27,7 @@ namespace Entidades
 
         public string Despcricion { get; set; }
 
-        //public DateTime FechaIngreso { get; set; }
+        public DateTime Fecha { get; set; }
         
 
 

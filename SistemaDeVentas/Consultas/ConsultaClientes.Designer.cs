@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ConsultaClienterlabel = new System.Windows.Forms.Label();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.ConsultaClientesdataGridView = new System.Windows.Forms.DataGridView();
             this.Desdelabel = new System.Windows.Forms.Label();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.FiltrotextBox = new System.Windows.Forms.TextBox();
             this.Hastalabel = new System.Windows.Forms.Label();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DesdeDateTimePicke = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.BuscarerrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaClientesdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // ConsultaClienterlabel
@@ -52,26 +56,20 @@
             this.ConsultaClienterlabel.TabIndex = 104;
             this.ConsultaClienterlabel.Text = "Consulta De Clientes";
             // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.AutoSize = true;
-            this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
-            this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print;
-            this.Imprimirbutton.Location = new System.Drawing.Point(21, 533);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(93, 57);
-            this.Imprimirbutton.TabIndex = 103;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
-            // 
             // ConsultaClientesdataGridView
             // 
-            this.ConsultaClientesdataGridView.Anchor = System.Windows.Forms.AnchorStyles.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ConsultaClientesdataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.ConsultaClientesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaClientesdataGridView.Location = new System.Drawing.Point(21, 201);
+            this.ConsultaClientesdataGridView.Location = new System.Drawing.Point(12, 201);
             this.ConsultaClientesdataGridView.Name = "ConsultaClientesdataGridView";
-            this.ConsultaClientesdataGridView.Size = new System.Drawing.Size(680, 309);
+            this.ConsultaClientesdataGridView.Size = new System.Drawing.Size(1040, 309);
             this.ConsultaClientesdataGridView.TabIndex = 102;
             // 
             // Desdelabel
@@ -82,18 +80,6 @@
             this.Desdelabel.Size = new System.Drawing.Size(37, 15);
             this.Desdelabel.TabIndex = 101;
             this.Desdelabel.Text = "Desde";
-            // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Buscarbutton.Image = global::SistemaDeVentas.Properties.Resources.search1;
-            this.Buscarbutton.Location = new System.Drawing.Point(451, 91);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(95, 61);
-            this.Buscarbutton.TabIndex = 100;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
             // 
             // FiltrotextBox
             // 
@@ -145,24 +131,52 @@
             this.label1.TabIndex = 95;
             this.label1.Text = "Filtrar";
             // 
-            // comboBox1
+            // FiltrarcomboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "UsuarioId",
-            "Nombre"});
-            this.comboBox1.Location = new System.Drawing.Point(73, 125);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 94;
+            this.FiltrarcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FiltrarcomboBox.FormattingEnabled = true;
+            this.FiltrarcomboBox.Location = new System.Drawing.Point(73, 125);
+            this.FiltrarcomboBox.Name = "FiltrarcomboBox";
+            this.FiltrarcomboBox.Size = new System.Drawing.Size(121, 23);
+            this.FiltrarcomboBox.TabIndex = 94;
+            // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.AutoSize = true;
+            this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
+            this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print;
+            this.Imprimirbutton.Location = new System.Drawing.Point(21, 533);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(93, 57);
+            this.Imprimirbutton.TabIndex = 103;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Buscarbutton.Image = global::SistemaDeVentas.Properties.Resources.search1;
+            this.Buscarbutton.Location = new System.Drawing.Point(451, 91);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(95, 61);
+            this.Buscarbutton.TabIndex = 100;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // BuscarerrorProvider1
+            // 
+            this.BuscarerrorProvider1.ContainerControl = this;
             // 
             // ConsultaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(722, 605);
+            this.ClientSize = new System.Drawing.Size(1070, 605);
             this.Controls.Add(this.ConsultaClienterlabel);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.ConsultaClientesdataGridView);
@@ -173,12 +187,14 @@
             this.Controls.Add(this.HastadateTimePicker);
             this.Controls.Add(this.DesdeDateTimePicke);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FiltrarcomboBox);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "ConsultaClientes";
             this.Text = "ConsultaClientes";
+            this.Load += new System.EventHandler(this.ConsultaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaClientesdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +212,7 @@
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
         private System.Windows.Forms.DateTimePicker DesdeDateTimePicke;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox FiltrarcomboBox;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider1;
     }
 }

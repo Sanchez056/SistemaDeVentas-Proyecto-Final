@@ -262,6 +262,7 @@
             this.Ventasbutton.Text = "Ventas";
             this.Ventasbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Ventasbutton.UseVisualStyleBackColor = false;
+            this.Ventasbutton.Click += new System.EventHandler(this.Ventasbutton_Click);
             // 
             // Ingresobutton
             // 

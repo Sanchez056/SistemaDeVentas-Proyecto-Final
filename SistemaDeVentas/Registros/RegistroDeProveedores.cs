@@ -27,18 +27,19 @@ namespace SistemaDeVentas.Registros
         private void LLenar(Proveedores proveedor)
         {
             ProveedorIdtextBox.Text = proveedor.ProveedorId.ToString();
-            NombretextBox.Text = proveedor.NombreCompañia;
+            NombretextBox.Text = proveedor.NombreProveedor;
             DirreciontextBox.Text = proveedor.Direccion;
-            CiudadtextBox.Text = proveedor.Ciudad;
+            CiudadcomboBox.Text = proveedor.Ciudad;
             TelefonomaskedTextBox.Text = proveedor.Telefono;
             FaxmaskedTextBox.Text = proveedor.Fax;
             CorreotextBox.Text = proveedor.Correo;
+
   
         }
 
         private bool ValidarBuscar()
         {
-            if (ClientesBLL.Buscar(ut.StringInt(ProveedorIdtextBox.Text)) == null)
+            if (ProveedorBLL.Buscar(ut.StringInt(ProveedorIdtextBox.Text)) == null)
             {
                 MessageBox.Show("Este registro no existe");
                 return false;
@@ -67,25 +68,27 @@ namespace SistemaDeVentas.Registros
         }
         public void Limpiar()
         {
-            // DateTimePicker f = new DateTimePicker();
+             DateTimePicker f = new DateTimePicker();
             NombretextBox.Clear();
             DirreciontextBox.Clear();
-            CiudadtextBox.Clear();
+            CiudadcomboBox.Text = "Elegir su Ciudad";
             TelefonomaskedTextBox.Clear();
             FaxmaskedTextBox.Clear();
             CorreotextBox.Clear();
-            // FechaIngresodateTimePicker1.Value = f.Value;
+            FechaIngresodateTimePicker.Value = f.Value;
+            limpiarErroresProvider();
 
         }
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Proveedores proveedor = new Proveedores();
-            //BuscarerrorProvider.Clear();
+            BuscarerrorProvider.Clear();
             LlenarClase(proveedor);
             if (ValidarTextbox() && ValidarExiste(NombretextBox.Text))
             {
                 ProveedorBLL.Insertar(proveedor);
                 Limpiar();
+                limpiarErroresProvider();
                 MessageBox.Show("-_-Guardado Con Exito-_-");
             }
 
@@ -93,7 +96,7 @@ namespace SistemaDeVentas.Registros
 
         private bool ValidarExiste(string aux)
         {
-            if (ProveedorBLL.GetListaNombreProveedro(aux).Count() > 0)
+            if (ProveedorBLL.GetListaNombreProveedor(aux).Count() > 0)
             {
                 MessageBox.Show("Este Nombre proveedor de ya existe, favor intentar con otro Nombre de Proveedor...");
                 return false;
@@ -103,76 +106,74 @@ namespace SistemaDeVentas.Registros
 
         private void LlenarClase(Proveedores p)
         {
-            p.NombreCompañia = NombretextBox.Text;
+            CiudadClientes cud = new CiudadClientes();
+            p.NombreProveedor = NombretextBox.Text;
+            p.Ciudad = CiudadcomboBox.Text;
             p.Direccion = DirreciontextBox.Text;
-            p.Ciudad = CiudadtextBox.Text;
             p.Telefono= TelefonomaskedTextBox.Text;
             p.Fax = FaxmaskedTextBox.Text;
             p.Correo = CorreotextBox.Text;
-
-
+          
+            p.FechaIngreso = FechaIngresodateTimePicker.Value;
         }
         private bool ValidarTextbox()
         {
 
             if (string.IsNullOrEmpty(NombretextBox.Text) &&
                 string.IsNullOrEmpty(DirreciontextBox.Text) &&
-                string.IsNullOrEmpty(CiudadtextBox.Text) &&
+                string.IsNullOrEmpty(CiudadcomboBox.Text) &&
                 string.IsNullOrEmpty(TelefonomaskedTextBox.Text) &&
                 string.IsNullOrEmpty(FaxmaskedTextBox.Text) &&
                 string.IsNullOrEmpty(CorreotextBox.Text) 
                 
                 )
             {
-                /* CodigoArticuloerrorProvider1.SetError(CodigoArticulotextBox, "Favor Ingresar un Codigo al Articulo");
-                 NombreArticuloerrorProvider1.SetError(NombreArticulotextBox, "Favor Ingresar el Nombre al Articulo");
-                 MarcaArticuloerrorProvider1.SetError(MarcaArticulotextBox, "Favor Ingresar la Marca del Articulo");
-                 NombreProveedorerrorProvider1.SetError(NombreProveedortextBox, "Favor Ingresar el Proveedor del Articulo");
-                 DescripcionerrorProvider1.SetError(DespcripciontextBox, "Favor Ingresar Descripcion Articulo");
-                 CantidaderrorProvider1.SetError(CantidadArticulotextBox, "Favor Ingresar Cantidad de  Articulo");
-                 PrecioCompraArticuloerrorProvider1.SetError(PrecioCompraArticulotextBox, "Favor Ingresar Precio de Compra de el Articulo");
-                 PrecioVentasArticuloerrorProvider1.SetError(PrecioVentastextBox, "Favor Ingresar Precio para la Venta del  Articulo");
-                 */
+                 NombreerrorProvider.SetError(NombretextBox, "Favor Ingresar el Nombre de Proveedor");
+                 DirrecionerrorProvider.SetError(DirreciontextBox, "Favor Ingresar la Dirrecion");
+                 CiudaderrorProvider.SetError(CiudadcomboBox, "Favor Ingresar la ciudad de donde esta el proveedor");
+                 TelefonoerrorProvider.SetError(TelefonomaskedTextBox, "Favor Ingresar el Telefono de proveedor");
+                 FaxerrorProvider.SetError(FaxmaskedTextBox, "Favor Ingresar el numero de Fax de proveedor");
+                 CorreoerrorProvider.SetError(CorreotextBox, "Favor Ingresar Correo de la proveedor");
+                 
                 MessageBox.Show("Favor llenar todos los campos obligatorios");
 
             }
             if (string.IsNullOrEmpty(NombretextBox.Text))
             {
-                //CodigoArticuloerrorProvider1.Clear();
-                //CodigoArticuloerrorProvider1.SetError(CodigoArticulotextBox, "Favor ingresar el Codigo del Articulo");
+                NombreerrorProvider.Clear();
+                NombreerrorProvider.SetError(NombretextBox, "Favor ingresar el Nombre del proveedor");
                 return false;
             }
             if (string.IsNullOrEmpty(DirreciontextBox.Text))
             {
-                //NombreArticuloerrorProvider1.Clear();
-                //NombreArticuloerrorProvider1.SetError(NombreArticulotextBox, "Favor ingresar el nombre del Articulo");
+                 DirrecionerrorProvider.Clear();
+                 DirrecionerrorProvider.SetError(DirreciontextBox, "Favor ingresar la dirrecion del proveedor");
                 return false;
             }
 
-            if (string.IsNullOrEmpty(CiudadtextBox.Text))
+            if (string.IsNullOrEmpty(CiudadcomboBox.Text))
             {
-                //MarcaArticuloerrorProvider1.Clear();
-                //MarcaArticuloerrorProvider1.SetError(MarcaArticulotextBox, "Favor ingresar la marca del Articulo");
+                CiudaderrorProvider.Clear();
+                CiudaderrorProvider.SetError(CiudadcomboBox, "Favor ingresar la Ciudad de donde esta ubicado el proveedor");
                 return false;
             }
             if (string.IsNullOrEmpty(TelefonomaskedTextBox.Text))
             {
-                //NombreProveedorerrorProvider1.Clear();
-
-                //NombreProveedorerrorProvider1.SetError(NombreProveedortextBox, "Favor ingrese el nombre del proveedor de el articulo");
+                TelefonoerrorProvider.Clear();
+                TelefonoerrorProvider.SetError(TelefonomaskedTextBox, "Favor ingrese el numero de telefono del proveedor");
                 return false;
             }
 
             if (string.IsNullOrEmpty(FaxmaskedTextBox.Text))
             {
-                //DescripcionerrorProvider1.Clear();
-                //DescripcionerrorProvider1.SetError(DespcripciontextBox, "Favor ingrese la descripcion del articulo");
+                FaxerrorProvider.Clear();
+                FaxerrorProvider.SetError(FaxmaskedTextBox, "Favor ingrese el numero de fax del proveedor");
                 return false;
             }
             if (string.IsNullOrEmpty(CorreotextBox.Text))
             {
-                //DescripcionerrorProvider1.Clear();
-                //DescripcionerrorProvider1.SetError(DespcripciontextBox, "Favor ingrese la descripcion del articulo");
+                CorreoerrorProvider.Clear();
+                CorreoerrorProvider.SetError(CorreotextBox, "Favor ingrese el correo eletronico de proveedor");
                 return false;
             }
 
@@ -188,6 +189,18 @@ namespace SistemaDeVentas.Registros
                 Limpiar();
                 MessageBox.Show("ELiminado con exito");
             }
+
+        }
+
+        private void limpiarErroresProvider()
+        {
+            NombreerrorProvider.Clear();
+            DirrecionerrorProvider.Clear();
+            CiudaderrorProvider.Clear();
+            TelefonoerrorProvider.Clear();
+            FaxerrorProvider.Clear();
+            CorreoerrorProvider.Clear();
+            
         }
     }
 }

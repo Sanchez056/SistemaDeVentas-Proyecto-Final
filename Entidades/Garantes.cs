@@ -11,7 +11,7 @@ namespace Entidades
     {
      [Key]
 
-        public int GeranteId { get; set; }
+        public int GaranteId { get; set; }
 
         public string Nombre { get; set; }
 
@@ -19,7 +19,9 @@ namespace Entidades
 
         public string Sexo { get; set; }
 
-        public string Celula{ get; set; }
+        public string Cedula{ get; set; }
+
+        public string Ciudad { get; set; }
 
         public string  Direccion { get; set; }
 

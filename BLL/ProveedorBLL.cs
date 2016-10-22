@@ -11,7 +11,7 @@ namespace BLL
 {
    public class ProveedorBLL
     {
-        Proveedores articulos = new Proveedores();
+        Proveedores proveedores = new Proveedores();
 
         public static void Insertar(Proveedores p)
         {
@@ -84,18 +84,44 @@ namespace BLL
 
 
 
-        public static List<Proveedores> GetListaNombreProveedro(string aux)
+        public static List<Proveedores> GetListaNombreProveedor(string aux)
         {
             List<Proveedores> lista = new List<Proveedores>();
 
             var db = new SistemaVentasDb();
 
-            lista = db.Proveedores.Where(p => p.NombreCompañia == aux).ToList();
+            lista = db.Proveedores.Where(p => p.NombreProveedor == aux).ToList();
 
             return lista;
 
         }
-        
+
+       
+
+       
+        public static List<Proveedores> GetListaFecha(DateTime aux)
+        {
+            List<Proveedores> lista = new List<Proveedores>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Proveedores.Where(p => p.FechaIngreso == aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Proveedores> GetListaFecha(DateTime Desde, DateTime Hasta)
+        {
+            List<Proveedores> lista = new List<Proveedores>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Proveedores.Where(p => p.FechaIngreso >= Desde && p.FechaIngreso <= Hasta).ToList();
+
+            return lista;
+
+        }
+
 
 
     }

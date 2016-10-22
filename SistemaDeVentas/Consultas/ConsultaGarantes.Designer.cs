@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ConsultaProveedorlabel = new System.Windows.Forms.Label();
             this.ConsultaGarantesdataGridView = new System.Windows.Forms.DataGridView();
             this.Desdelabel = new System.Windows.Forms.Label();
@@ -36,10 +39,12 @@
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DesdeDateTimePicke = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaGarantesdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // ConsultaProveedorlabel
@@ -57,10 +62,29 @@
             // 
             this.ConsultaGarantesdataGridView.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ConsultaGarantesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConsultaGarantesdataGridView.Location = new System.Drawing.Point(30, 194);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ConsultaGarantesdataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ConsultaGarantesdataGridView.EnableHeadersVisualStyles = false;
+            this.ConsultaGarantesdataGridView.Location = new System.Drawing.Point(12, 218);
             this.ConsultaGarantesdataGridView.Name = "ConsultaGarantesdataGridView";
-            this.ConsultaGarantesdataGridView.Size = new System.Drawing.Size(690, 242);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ConsultaGarantesdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.ConsultaGarantesdataGridView.Size = new System.Drawing.Size(946, 242);
+            this.ConsultaGarantesdataGridView.StandardTab = true;
             this.ConsultaGarantesdataGridView.TabIndex = 102;
+            this.ConsultaGarantesdataGridView.VirtualMode = true;
             // 
             // Desdelabel
             // 
@@ -121,30 +145,28 @@
             this.label1.TabIndex = 95;
             this.label1.Text = "Filtrar";
             // 
-            // comboBox1
+            // FiltrarcomboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "UsuarioId",
-            "Nombre"});
-            this.comboBox1.Location = new System.Drawing.Point(63, 118);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 94;
+            this.FiltrarcomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FiltrarcomboBox.FormattingEnabled = true;
+            this.FiltrarcomboBox.Location = new System.Drawing.Point(63, 118);
+            this.FiltrarcomboBox.Name = "FiltrarcomboBox";
+            this.FiltrarcomboBox.Size = new System.Drawing.Size(121, 23);
+            this.FiltrarcomboBox.TabIndex = 94;
             // 
             // Imprimirbutton
             // 
             this.Imprimirbutton.AutoSize = true;
             this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
             this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print;
-            this.Imprimirbutton.Location = new System.Drawing.Point(30, 455);
+            this.Imprimirbutton.Location = new System.Drawing.Point(30, 466);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(93, 54);
             this.Imprimirbutton.TabIndex = 103;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
             // Buscarbutton
             // 
@@ -157,13 +179,18 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // BuscarerrorProvider
+            // 
+            this.BuscarerrorProvider.ContainerControl = this;
             // 
             // ConsultaGarantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(749, 521);
+            this.ClientSize = new System.Drawing.Size(1014, 527);
             this.Controls.Add(this.ConsultaProveedorlabel);
             this.Controls.Add(this.Imprimirbutton);
             this.Controls.Add(this.ConsultaGarantesdataGridView);
@@ -174,12 +201,14 @@
             this.Controls.Add(this.HastadateTimePicker);
             this.Controls.Add(this.DesdeDateTimePicke);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.FiltrarcomboBox);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "ConsultaGarantes";
             this.Text = "ConsultaGarantes";
+            this.Load += new System.EventHandler(this.ConsultaGarantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ConsultaGarantesdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,6 +226,7 @@
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
         private System.Windows.Forms.DateTimePicker DesdeDateTimePicke;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox FiltrarcomboBox;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
     }
 }

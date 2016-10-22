@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ProveedorIdlabel = new System.Windows.Forms.Label();
             this.NombreProveedorlabel = new System.Windows.Forms.Label();
             this.Ciudadlabel = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.Correolabel = new System.Windows.Forms.Label();
             this.ProveedorIdtextBox = new System.Windows.Forms.TextBox();
             this.NombretextBox = new System.Windows.Forms.TextBox();
-            this.CiudadtextBox = new System.Windows.Forms.TextBox();
             this.DirreciontextBox = new System.Windows.Forms.TextBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -47,6 +47,23 @@
             this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.FaxmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.CorreotextBox = new System.Windows.Forms.TextBox();
+            this.CiudadcomboBox = new System.Windows.Forms.ComboBox();
+            this.FechaIngresodateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NombreerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DirrecionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CiudaderrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TelefonoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FaxerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CorreoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DirrecionerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CiudaderrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TelefonoerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FaxerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CorreoerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // ProveedorIdlabel
@@ -61,7 +78,7 @@
             // NombreProveedorlabel
             // 
             this.NombreProveedorlabel.AutoSize = true;
-            this.NombreProveedorlabel.Location = new System.Drawing.Point(18, 156);
+            this.NombreProveedorlabel.Location = new System.Drawing.Point(18, 172);
             this.NombreProveedorlabel.Name = "NombreProveedorlabel";
             this.NombreProveedorlabel.Size = new System.Drawing.Size(104, 15);
             this.NombreProveedorlabel.TabIndex = 1;
@@ -70,7 +87,7 @@
             // Ciudadlabel
             // 
             this.Ciudadlabel.AutoSize = true;
-            this.Ciudadlabel.Location = new System.Drawing.Point(18, 269);
+            this.Ciudadlabel.Location = new System.Drawing.Point(18, 285);
             this.Ciudadlabel.Name = "Ciudadlabel";
             this.Ciudadlabel.Size = new System.Drawing.Size(46, 15);
             this.Ciudadlabel.TabIndex = 2;
@@ -79,7 +96,7 @@
             // Dirreccionlabel
             // 
             this.Dirreccionlabel.AutoSize = true;
-            this.Dirreccionlabel.Location = new System.Drawing.Point(18, 213);
+            this.Dirreccionlabel.Location = new System.Drawing.Point(18, 229);
             this.Dirreccionlabel.Name = "Dirreccionlabel";
             this.Dirreccionlabel.Size = new System.Drawing.Size(58, 15);
             this.Dirreccionlabel.TabIndex = 3;
@@ -88,7 +105,7 @@
             // Telefonolabel
             // 
             this.Telefonolabel.AutoSize = true;
-            this.Telefonolabel.Location = new System.Drawing.Point(266, 156);
+            this.Telefonolabel.Location = new System.Drawing.Point(266, 172);
             this.Telefonolabel.Name = "Telefonolabel";
             this.Telefonolabel.Size = new System.Drawing.Size(51, 15);
             this.Telefonolabel.TabIndex = 4;
@@ -97,7 +114,7 @@
             // Faxlabel
             // 
             this.Faxlabel.AutoSize = true;
-            this.Faxlabel.Location = new System.Drawing.Point(266, 213);
+            this.Faxlabel.Location = new System.Drawing.Point(266, 229);
             this.Faxlabel.Name = "Faxlabel";
             this.Faxlabel.Size = new System.Drawing.Size(29, 15);
             this.Faxlabel.TabIndex = 5;
@@ -106,7 +123,7 @@
             // Correolabel
             // 
             this.Correolabel.AutoSize = true;
-            this.Correolabel.Location = new System.Drawing.Point(266, 269);
+            this.Correolabel.Location = new System.Drawing.Point(266, 285);
             this.Correolabel.Name = "Correolabel";
             this.Correolabel.Size = new System.Drawing.Size(46, 15);
             this.Correolabel.TabIndex = 6;
@@ -121,21 +138,14 @@
             // 
             // NombretextBox
             // 
-            this.NombretextBox.Location = new System.Drawing.Point(21, 175);
+            this.NombretextBox.Location = new System.Drawing.Point(21, 190);
             this.NombretextBox.Name = "NombretextBox";
             this.NombretextBox.Size = new System.Drawing.Size(212, 21);
             this.NombretextBox.TabIndex = 8;
             // 
-            // CiudadtextBox
-            // 
-            this.CiudadtextBox.Location = new System.Drawing.Point(21, 288);
-            this.CiudadtextBox.Name = "CiudadtextBox";
-            this.CiudadtextBox.Size = new System.Drawing.Size(212, 21);
-            this.CiudadtextBox.TabIndex = 9;
-            // 
             // DirreciontextBox
             // 
-            this.DirreciontextBox.Location = new System.Drawing.Point(21, 231);
+            this.DirreciontextBox.Location = new System.Drawing.Point(21, 247);
             this.DirreciontextBox.Name = "DirreciontextBox";
             this.DirreciontextBox.Size = new System.Drawing.Size(212, 21);
             this.DirreciontextBox.TabIndex = 10;
@@ -157,7 +167,7 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel2;
-            this.Eliminarbutton.Location = new System.Drawing.Point(321, 357);
+            this.Eliminarbutton.Location = new System.Drawing.Point(321, 365);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(104, 55);
             this.Eliminarbutton.TabIndex = 16;
@@ -170,7 +180,7 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(184, 357);
+            this.Guardarbutton.Location = new System.Drawing.Point(184, 365);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(111, 55);
             this.Guardarbutton.TabIndex = 15;
@@ -183,7 +193,7 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources.add1;
-            this.Nuevobutton.Location = new System.Drawing.Point(54, 357);
+            this.Nuevobutton.Location = new System.Drawing.Point(54, 365);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(102, 55);
             this.Nuevobutton.TabIndex = 14;
@@ -204,33 +214,123 @@
             // 
             // TelefonomaskedTextBox
             // 
-            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(269, 175);
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(269, 191);
             this.TelefonomaskedTextBox.Mask = "(999)000-0000";
             this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
-            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(142, 21);
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(188, 21);
             this.TelefonomaskedTextBox.TabIndex = 19;
             // 
             // FaxmaskedTextBox
             // 
-            this.FaxmaskedTextBox.Location = new System.Drawing.Point(269, 231);
+            this.FaxmaskedTextBox.Location = new System.Drawing.Point(269, 247);
             this.FaxmaskedTextBox.Mask = "(999)000-0000";
             this.FaxmaskedTextBox.Name = "FaxmaskedTextBox";
-            this.FaxmaskedTextBox.Size = new System.Drawing.Size(142, 21);
+            this.FaxmaskedTextBox.Size = new System.Drawing.Size(188, 21);
             this.FaxmaskedTextBox.TabIndex = 20;
             // 
             // CorreotextBox
             // 
-            this.CorreotextBox.Location = new System.Drawing.Point(269, 288);
+            this.CorreotextBox.Location = new System.Drawing.Point(269, 304);
             this.CorreotextBox.Name = "CorreotextBox";
-            this.CorreotextBox.Size = new System.Drawing.Size(187, 21);
+            this.CorreotextBox.Size = new System.Drawing.Size(188, 21);
             this.CorreotextBox.TabIndex = 21;
+            // 
+            // CiudadcomboBox
+            // 
+            this.CiudadcomboBox.FormattingEnabled = true;
+            this.CiudadcomboBox.Items.AddRange(new object[] {
+            "Espaillat",
+            "Puerto Plata",
+            "Santiago",
+            "La Vega",
+            "Monseñor Nouel",
+            "Sánchez Ramírez",
+            "Duarte",
+            "Hermanas Mirabal",
+            "María Trinidad Sánchez",
+            "Samaná",
+            "Dajabón",
+            "Monte Cristi",
+            "Santiago Rodríguez",
+            "Valverde",
+            "Azua",
+            "Peravia",
+            "San José de Ocoa",
+            "San Cristóbal",
+            "Elías Piña",
+            "San Juan",
+            "Enriquillo\t",
+            "Barahona",
+            "Bahoruco",
+            "Independencia",
+            "Pedernales",
+            "El Seibo",
+            "La Romana",
+            "La Altagracia",
+            "Hato Mayor",
+            "Monte Plata",
+            "San Pedro de Macorís",
+            "Distrito Nacional",
+            "Santo Domingo "});
+            this.CiudadcomboBox.Location = new System.Drawing.Point(21, 303);
+            this.CiudadcomboBox.Name = "CiudadcomboBox";
+            this.CiudadcomboBox.Size = new System.Drawing.Size(212, 23);
+            this.CiudadcomboBox.TabIndex = 22;
+            // 
+            // FechaIngresodateTimePicker
+            // 
+            this.FechaIngresodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechaIngresodateTimePicker.Location = new System.Drawing.Point(269, 148);
+            this.FechaIngresodateTimePicker.Name = "FechaIngresodateTimePicker";
+            this.FechaIngresodateTimePicker.Size = new System.Drawing.Size(95, 21);
+            this.FechaIngresodateTimePicker.TabIndex = 23;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(266, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 15);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Fecha Ingreso:";
+            // 
+            // BuscarerrorProvider
+            // 
+            this.BuscarerrorProvider.ContainerControl = this;
+            // 
+            // NombreerrorProvider
+            // 
+            this.NombreerrorProvider.ContainerControl = this;
+            // 
+            // DirrecionerrorProvider
+            // 
+            this.DirrecionerrorProvider.ContainerControl = this;
+            // 
+            // CiudaderrorProvider
+            // 
+            this.CiudaderrorProvider.ContainerControl = this;
+            // 
+            // TelefonoerrorProvider
+            // 
+            this.TelefonoerrorProvider.ContainerControl = this;
+            // 
+            // FaxerrorProvider
+            // 
+            this.FaxerrorProvider.ContainerControl = this;
+            // 
+            // CorreoerrorProvider
+            // 
+            this.CorreoerrorProvider.ContainerControl = this;
             // 
             // RegistroDeProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(501, 432);
+            this.ClientSize = new System.Drawing.Size(501, 439);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.FechaIngresodateTimePicker);
+            this.Controls.Add(this.CiudadcomboBox);
             this.Controls.Add(this.CorreotextBox);
             this.Controls.Add(this.FaxmaskedTextBox);
             this.Controls.Add(this.TelefonomaskedTextBox);
@@ -240,7 +340,6 @@
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.DirreciontextBox);
-            this.Controls.Add(this.CiudadtextBox);
             this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.ProveedorIdtextBox);
             this.Controls.Add(this.Correolabel);
@@ -254,6 +353,13 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "RegistroDeProveedores";
             this.Text = "Registro de Proveedor";
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DirrecionerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CiudaderrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TelefonoerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FaxerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CorreoerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,7 +376,6 @@
         private System.Windows.Forms.Label Correolabel;
         private System.Windows.Forms.TextBox ProveedorIdtextBox;
         private System.Windows.Forms.TextBox NombretextBox;
-        private System.Windows.Forms.TextBox CiudadtextBox;
         private System.Windows.Forms.TextBox DirreciontextBox;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
@@ -280,5 +385,15 @@
         private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
         private System.Windows.Forms.MaskedTextBox FaxmaskedTextBox;
         private System.Windows.Forms.TextBox CorreotextBox;
+        private System.Windows.Forms.ComboBox CiudadcomboBox;
+        private System.Windows.Forms.DateTimePicker FechaIngresodateTimePicker;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
+        private System.Windows.Forms.ErrorProvider NombreerrorProvider;
+        private System.Windows.Forms.ErrorProvider DirrecionerrorProvider;
+        private System.Windows.Forms.ErrorProvider CiudaderrorProvider;
+        private System.Windows.Forms.ErrorProvider TelefonoerrorProvider;
+        private System.Windows.Forms.ErrorProvider FaxerrorProvider;
+        private System.Windows.Forms.ErrorProvider CorreoerrorProvider;
     }
 }

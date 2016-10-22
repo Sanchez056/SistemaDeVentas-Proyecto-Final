@@ -43,19 +43,24 @@ namespace SistemaDeVentas.Registros
 
         private void LLenar(Garantes garante)
         {
-            GaranteIdtextBox.Text = garante.GeranteId.ToString();
+            GaranteIdtextBox.Text = garante.GaranteId.ToString();
             NombretextBox.Text = garante.Nombre;
             ApellidotextBox.Text = garante.Apellido;
-           // cedulaMaskedTextBox = garante.Celula;
+            cedulaMaskedTextBox.Text = garante.Cedula;
+            CiudadcomboBox.Text = garante.Ciudad;
             DirecciontextBox.Text = garante.Direccion;
-            TelefonoRecidencialMaskedTextBox.Text = garante.Telefono;
+            TelefonomaskedTextBox.Text = garante.Telefono;
             CeluarmaskedTextBox1.Text = garante.Celular;
+            if (garante.Sexo == "M")
+                MasculinocheckBox.Checked = true;
+            if (garante.Sexo == "F")
+                FemeninocheckBox.Checked = true;
 
         }
        
         private bool ValidarBuscar()
         {
-            if (ClientesBLL.Buscar(ut.StringInt(GaranteIdtextBox.Text)) == null)
+            if (GaranteBLL.Buscar(ut.StringInt(GaranteIdtextBox.Text)) == null)
             {
                 MessageBox.Show("Este registro no existe");
                 return false;
@@ -86,26 +91,30 @@ namespace SistemaDeVentas.Registros
         }
         public void Limpiar()
         {
-            // DateTimePicker f = new DateTimePicker();
+            DateTimePicker f = new DateTimePicker();
             NombretextBox.Clear();
             ApellidotextBox.Clear();
             cedulaMaskedTextBox.Clear();
+            CiudadcomboBox.Text = "Elegir Su Ciudad";
             DirecciontextBox.Clear();
-            TelefonoRecidencialMaskedTextBox.Clear();
+            TelefonomaskedTextBox.Clear();
             CeluarmaskedTextBox1.Clear();
-            // FechaIngresodateTimePicker1.Value = f.Value;
+            MasculinocheckBox.Checked = false;
+            FemeninocheckBox.Checked = false;
+            fechaDateTimePicker.Value = f.Value;
 
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Garantes garante = new Garantes();
-            //BuscarerrorProvider.Clear();
+            BuscarerrorProvider.Clear();
             LlenarClase(garante);
             if (ValidarTextbox() && ValidarExiste(cedulaMaskedTextBox.Text))
             {
                 GaranteBLL.Insertar(garante);
                 Limpiar();
+                limpiarErroresProvider();
                 MessageBox.Show("-_-Guardado Con Exito-_-");
             }
 
@@ -123,10 +132,26 @@ namespace SistemaDeVentas.Registros
         {
             g.Nombre = NombretextBox.Text;
             g.Apellido = ApellidotextBox.Text;
-            g.Celula= cedulaMaskedTextBox.Text;
+            g.Cedula= cedulaMaskedTextBox.Text;
+            g.Ciudad = CiudadcomboBox.Text;
             g.Direccion = DirecciontextBox.Text;
-            g.Telefono = TelefonoRecidencialMaskedTextBox.Text;
+            g.Telefono = TelefonomaskedTextBox.Text;
             g.Celular = CeluarmaskedTextBox1.Text;
+            if (MasculinocheckBox.Checked == true)
+            {
+                g.Sexo = "M";
+            }
+            else
+            {
+                if (FemeninocheckBox.Checked == true)
+
+                    g.Sexo = "F";
+                else
+
+                    g.Sexo = "M";
+            }
+
+            g.Fecha = fechaDateTimePicker.Value;
 
 
         }
@@ -139,61 +164,71 @@ namespace SistemaDeVentas.Registros
                 string.IsNullOrEmpty(ApellidotextBox.Text) &&
                 string.IsNullOrEmpty(cedulaMaskedTextBox.Text) &&
                 string.IsNullOrEmpty(DirecciontextBox.Text) &&
-                string.IsNullOrEmpty(TelefonoRecidencialMaskedTextBox.Text) &&
+                string.IsNullOrEmpty(TelefonomaskedTextBox.Text) &&
                 string.IsNullOrEmpty(CeluarmaskedTextBox1.Text)
                
                 )
             {
-                /* CodigoArticuloerrorProvider1.SetError(CodigoArticulotextBox, "Favor Ingresar un Codigo al Articulo");
-                 NombreArticuloerrorProvider1.SetError(NombreArticulotextBox, "Favor Ingresar el Nombre al Articulo");
-                 MarcaArticuloerrorProvider1.SetError(MarcaArticulotextBox, "Favor Ingresar la Marca del Articulo");
-                 NombreProveedorerrorProvider1.SetError(NombreProveedortextBox, "Favor Ingresar el Proveedor del Articulo");
-                 DescripcionerrorProvider1.SetError(DespcripciontextBox, "Favor Ingresar Descripcion Articulo");
-                 CantidaderrorProvider1.SetError(CantidadArticulotextBox, "Favor Ingresar Cantidad de  Articulo");
-                 PrecioCompraArticuloerrorProvider1.SetError(PrecioCompraArticulotextBox, "Favor Ingresar Precio de Compra de el Articulo");
-                 PrecioVentasArticuloerrorProvider1.SetError(PrecioVentastextBox, "Favor Ingresar Precio para la Venta del  Articulo");
-                 */
+                NombreerrorProvider.SetError(NombretextBox, "Favor Ingresar el Nombre de Garante");
+                ApellidoerrorProvider.SetError(ApellidotextBox, "Favor Ingresar el Apellido de Garante");
+                CedulaerrorProvider.SetError(cedulaMaskedTextBox, "Favor Ingresar la Cedula Garante");
+                CiudaderrorProvider.SetError(CiudadcomboBox, "Favor Ingresar la Ciudad actual de donde recide el Garante");
+                DirrecionerrorProvider.SetError(DirecciontextBox, "Favor Ingresar la Dirrecion de la ciudad de donde esta el Garante");
+                TelefonoerrorProvider.SetError(TelefonomaskedTextBox, "Favor Ingresar el Numero de Telefono Recidencia del Garante");
+                CelularerrorProvider.SetError(CeluarmaskedTextBox1, "Favor Ingresarel Numero de Celular de Garante");
+
                 MessageBox.Show("Favor llenar todos los campos obligatorios");
 
             }
             if (string.IsNullOrEmpty(NombretextBox.Text))
             {
-                //CodigoArticuloerrorProvider1.Clear();
-                //CodigoArticuloerrorProvider1.SetError(CodigoArticulotextBox, "Favor ingresar el Codigo del Articulo");
+                NombreerrorProvider.Clear();
+                NombreerrorProvider.SetError(NombretextBox, "Favor ingresar el Nombre del Garante");
                 return false;
             }
             if (string.IsNullOrEmpty(ApellidotextBox.Text))
             {
-                //NombreArticuloerrorProvider1.Clear();
-                //NombreArticuloerrorProvider1.SetError(NombreArticulotextBox, "Favor ingresar el nombre del Articulo");
+                ApellidoerrorProvider.Clear();
+                ApellidoerrorProvider.SetError(ApellidotextBox, "Favor ingresar el Apellido del Garante");
                 return false;
             }
 
             if (string.IsNullOrEmpty(cedulaMaskedTextBox.Text))
             {
-                //MarcaArticuloerrorProvider1.Clear();
-                //MarcaArticuloerrorProvider1.SetError(MarcaArticulotextBox, "Favor ingresar la marca del Articulo");
+                CedulaerrorProvider.Clear();
+                CedulaerrorProvider.SetError(cedulaMaskedTextBox, "Favor ingresar el Numero de Cedula de Garante");
+                return false;
+            }
+            if (string.IsNullOrEmpty(CiudadcomboBox.Text))
+            {
+                CiudaderrorProvider.Clear();
+                CiudaderrorProvider.SetError(CiudadcomboBox, "Favor ingrese la Ciudad que Actual del Garante");
                 return false;
             }
             if (string.IsNullOrEmpty(DirecciontextBox.Text))
             {
-                //NombreProveedorerrorProvider1.Clear();
+                DirecciontextBox.Clear();
+                DirrecionerrorProvider.SetError(DirecciontextBox, "Favor ingrese la dirrecion de la ciudad de donde vive el Garante");
 
-                //NombreProveedorerrorProvider1.SetError(NombreProveedortextBox, "Favor ingrese el nombre del proveedor de el articulo");
                 return false;
             }
 
-            if (string.IsNullOrEmpty(TelefonoRecidencialMaskedTextBox.Text))
+            if (string.IsNullOrEmpty(TelefonomaskedTextBox.Text))
             {
-                //DescripcionerrorProvider1.Clear();
-                //DescripcionerrorProvider1.SetError(DespcripciontextBox, "Favor ingrese la descripcion del articulo");
+                TelefonoerrorProvider.Clear();
+                TelefonoerrorProvider.SetError(TelefonomaskedTextBox, "Favor ingrese el numero telefono  de la Recidencia del garante");
                 return false;
             }
 
             if (string.IsNullOrEmpty(CeluarmaskedTextBox1.Text))
             {
-                //DescripcionerrorProvider1.Clear();
-                //DescripcionerrorProvider1.SetError(DespcripciontextBox, "Favor ingrese la descripcion del articulo");
+                CelularerrorProvider.Clear();
+                CelularerrorProvider.SetError(CeluarmaskedTextBox1, "Favor ingrese el Numero de Celular");
+                return false;
+            }
+            if (MasculinocheckBox.Checked == false && FemeninocheckBox.Checked == false)
+            {
+                SexoerrorProvider.SetError(SexogroupBox, "Seleccionar sexo");
                 return false;
             }
 
@@ -206,10 +241,23 @@ namespace SistemaDeVentas.Registros
         {
             if (validarId("Favor digitar el id del Garante que desea eliminar") && ValidarBuscar())
             {
-                ClientesBLL.Eliminar(ut.StringInt(GaranteIdtextBox.Text));
+                GaranteBLL.Eliminar(ut.StringInt(GaranteIdtextBox.Text));
                 Limpiar();
+                limpiarErroresProvider();
                 MessageBox.Show("ELiminado con exito");
             }
+        }
+        private void limpiarErroresProvider()
+        {
+            NombreerrorProvider.Clear();
+            ApellidoerrorProvider.Clear();
+            CedulaerrorProvider.Clear();
+            SexoerrorProvider.Clear();
+            CiudaderrorProvider.Clear();
+            DirrecionerrorProvider.Clear();
+            TelefonoerrorProvider.Clear();
+            CelularerrorProvider.Clear();
+
         }
     }
 }

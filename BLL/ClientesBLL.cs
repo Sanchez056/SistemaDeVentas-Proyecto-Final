@@ -46,23 +46,7 @@ namespace BLL
 
         }
 
-        public static void Modificar(int id, Clientes cliente)
-        {
-            var db = new SistemaVentasDb();
-
-            Clientes c = db.Clientes.Find(id);
-            c.Celular = cliente.Celular;
-            c.Direccion = cliente.Direccion;
-            c.Fecha = cliente.Fecha;
-            c.Nombre = cliente.Nombre;
-            c.Apellido = cliente.Apellido;
-            c.Telefono = cliente.Telefono;
-            c.Sexo = cliente.Sexo;
-            c.Cedula = cliente.Cedula;
-            c.Ciudad = cliente.Ciudad;
-            
-            db.SaveChanges();
-        }
+        
 
 
 
@@ -127,6 +111,18 @@ namespace BLL
 
         }
 
+        public static List<Clientes> GetListaSexo(string aux)
+        {
+            List<Clientes> lista = new List<Clientes>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Clientes.Where(p => p.Sexo == aux).ToList();
+
+            return lista;
+
+        }
+
         public static List<Clientes> GetListaCedula(string aux)
         {
             List<Clientes> lista = new List<Clientes>();
@@ -134,6 +130,28 @@ namespace BLL
             var db = new SistemaVentasDb();
 
             lista = db.Clientes.Where(p => p.Cedula == aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Clientes> GetListaFecha(DateTime aux)
+        {
+            List<Clientes> lista = new List<Clientes>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Clientes.Where(p => p.Fecha == aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Clientes> GetListaFecha(DateTime Desde, DateTime Hasta)
+        {
+            List<Clientes> lista = new List<Clientes>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Clientes.Where(p => p.Fecha >= Desde && p.Fecha <= Hasta).ToList();
 
             return lista;
 

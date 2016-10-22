@@ -89,6 +89,7 @@ namespace SistemaDeVentas
             {
                 ClientesBLL.Insertar(cliente);
                 Limpiar();
+                limpiarErroresProvider();
                 MessageBox.Show("-_-Guardado Con Exito-_-");
             }
 
@@ -191,14 +192,14 @@ namespace SistemaDeVentas
 
             if (string.IsNullOrEmpty(TelefonomaskedTextBox1.Text))
             {
-                TelefonomaskedTextBox1.Clear();
+                TelefonoerrorProvider9.Clear();
                 TelefonoerrorProvider9.SetError(TelefonomaskedTextBox1, "Favor ingrese el numero telefono de su Recidencia");
                 return false;
             }
             if (string.IsNullOrEmpty(CelularmaskedTextBox2.Text))
             {
                 CelularerrorProvider10.Clear();
-                CelularerrorProvider10.SetError(CedulamaskedTextBox, "Favor ingrese el Numero de Celular");
+                CelularerrorProvider10.SetError(CelularmaskedTextBox2, "Favor ingrese el Numero de Celular");
                 return false;
             }
 
@@ -280,25 +281,9 @@ namespace SistemaDeVentas
             TelefonoerrorProvider9.Clear();
             CelularerrorProvider10.Clear();
 
-
-
-
         }
 
-        private void Modificarbutton_Click(object sender, EventArgs e)
-        {
-            Clientes cliente = new Clientes();
-            if (validarId("Favor Buscar al Cliente  que desea actualizar"))
-            {
-                LlenarClase(cliente);
-                    ClientesBLL.Modificar(ut.StringInt(ClienteIdtextBox.Text), cliente);
-                    Limpiar();
-                    limpiarErroresProvider();
-                    MessageBox.Show("Modificar con exito");
-                
-
-            }
-        }
+        
 
         ///-------------
     }
