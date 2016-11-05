@@ -205,7 +205,7 @@ namespace SistemaDeVentas.Consultas
             viewer.GarantesreportViewer.Reset();
             viewer.GarantesreportViewer.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
 
-            viewer.GarantesreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\Reportes\ListadoGarantes.rdlc";
+            viewer.GarantesreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\UI\Reportes\ListadoGarantes.rdlc";
 
 
             viewer.GarantesreportViewer.LocalReport.DataSources.Clear();

@@ -421,6 +421,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>SistemaVentasDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\user_gray.ico" />
     <None Include="Resources\access.ico" />
     <None Include="Resources\logout-285501.jpg" />
     <None Include="Resources\fondo2.png" />

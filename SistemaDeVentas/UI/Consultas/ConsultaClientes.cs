@@ -209,7 +209,7 @@ namespace SistemaDeVentas.Consultas
             viewer.ClientesreportViewer.Reset();
             viewer.ClientesreportViewer.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
 
-            viewer.ClientesreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\Reportes\ListadoClientes.rdlc";
+            viewer.ClientesreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\UI\Reportes\ListadoClientes.rdlc";
        
 
             viewer.ClientesreportViewer.LocalReport.DataSources.Clear();

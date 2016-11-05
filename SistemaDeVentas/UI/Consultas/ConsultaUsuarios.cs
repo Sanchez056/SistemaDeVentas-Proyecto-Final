@@ -114,7 +114,7 @@ namespace SistemaDeVentas.Consultas
             viewer.UsuariosreportViewer.Reset();
             viewer.UsuariosreportViewer.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
 
-            viewer.UsuariosreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\Reportes\ListadosUsuarios.rdlc";
+            viewer.UsuariosreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\UI\Reportes\ListadosUsuarios.rdlc";
 
 
             viewer.UsuariosreportViewer.LocalReport.DataSources.Clear();

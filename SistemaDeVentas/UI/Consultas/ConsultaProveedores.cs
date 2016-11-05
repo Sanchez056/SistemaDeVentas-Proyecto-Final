@@ -144,7 +144,7 @@ namespace SistemaDeVentas.Consultas
             viewer.ProveedorreportViewer.Reset();
             viewer.ProveedorreportViewer.ProcessingMode = Microsoft.Reporting.WinForms.ProcessingMode.Local;
 
-            viewer.ProveedorreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\Reportes\ListadoProveedores.rdlc";
+            viewer.ProveedorreportViewer.LocalReport.ReportPath = @"D:\Origen Sistema De Ventas\SistemaDeVentas\SistemaDeVentas\UI\Reportes\ListadoProveedores.rdlc";
 
 
             viewer.ProveedorreportViewer.LocalReport.DataSources.Clear();

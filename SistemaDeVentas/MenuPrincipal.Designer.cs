@@ -169,6 +169,7 @@
             // 
             // registrosEmpleadoToolStripMenuItem
             // 
+            this.registrosEmpleadoToolStripMenuItem.Image = global::SistemaDeVentas.Properties.Resources.user_gray;
             this.registrosEmpleadoToolStripMenuItem.Name = "registrosEmpleadoToolStripMenuItem";
             this.registrosEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(171, 32);
             this.registrosEmpleadoToolStripMenuItem.Text = "Empleado";
