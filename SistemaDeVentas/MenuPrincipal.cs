@@ -30,7 +30,7 @@ namespace SistemaDeVentas
 
             ResArt.MdiParent = this;
             ResArt.Show();
-            ResArt.Location = new Point(130, 10);
+            ResArt.Location = new Point(40, 40);
 
         }
 
@@ -40,7 +40,7 @@ namespace SistemaDeVentas
 
             ResUs.MdiParent = this;
             ResUs.Show();
-            ResUs.Location = new Point(130, 10);
+            ResUs.Location = new Point(40, 40);
         }
 
         private void usuariosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace SistemaDeVentas
 
             consulta.MdiParent = this;
             consulta.Show();
-            consulta.Location = new Point(130, 10);
+            consulta.Location = new Point(40, 40);
         }
 
         private void ConsultaarticulosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace SistemaDeVentas
             Consultas.ConsultasArticulos consulta = new Consultas.ConsultasArticulos();
             consulta.MdiParent = this;
             consulta.Show();
-            consulta.Location = new Point(130, 10);
+            consulta.Location = new Point(40, 40);
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -78,13 +78,19 @@ namespace SistemaDeVentas
 
             resCli.MdiParent = this;
             resCli.Show();
-            resCli.Location = new Point(130, 10);
+            resCli.Location = new Point(40, 40);
 
         }
 
         private void registrosEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Registros.RegistrosDeEmpleado regisEmpleado= new Registros.RegistrosDeEmpleado();
+
+            regisEmpleado.MdiParent = this;
+            regisEmpleado.Show();
+            regisEmpleado.Location = new Point(40, 40);
+
+
         }
 
         private void RegistrosproveedorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,7 +99,7 @@ namespace SistemaDeVentas
 
             regisProvee.MdiParent = this;
             regisProvee.Show();
-            regisProvee.Location = new Point(130, 10);
+            regisProvee.Location = new Point(40, 40);
 
 
         }
@@ -104,7 +110,7 @@ namespace SistemaDeVentas
 
             regGarante.MdiParent = this;
             regGarante.Show();
-            regGarante.Location =  new Point(130, 10);
+            regGarante.Location =  new Point(40, 40);
         }
 
         private void ConsultaclientesToolStripMenuItem2_Click(object sender, EventArgs e)
@@ -113,7 +119,7 @@ namespace SistemaDeVentas
 
             consulta.MdiParent = this;
             consulta.Show();
-            consulta.Location = new Point(130, 10);
+            consulta.Location = new Point(40, 40);
         }
 
         private void ConsultaproveedoresToolStripMenuItem_Click(object sender, EventArgs e)
@@ -122,7 +128,7 @@ namespace SistemaDeVentas
 
             consulta.MdiParent = this;
             consulta.Show();
-            consulta.Location = new Point(130, 10);
+            consulta.Location = new Point(40, 40);
         }
 
         private void garantesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,12 +137,17 @@ namespace SistemaDeVentas
 
             consulta.MdiParent = this;
             consulta.Show();
-            consulta.Location = new Point(130, 10);
+            consulta.Location = new Point(40, 40);
         }
 
         private void Ventasbutton_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

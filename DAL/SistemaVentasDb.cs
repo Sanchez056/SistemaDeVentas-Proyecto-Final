@@ -24,9 +24,12 @@ namespace DAL
 
         public virtual DbSet<TipoUsuarios> TipoUsuarios { get; set; }
 
-        public virtual DbSet<CiudadClientes> CiudadCliente { get; set; }
+        public virtual DbSet<Empleados> Empleados{ get; set; }
 
-      
+        public virtual DbSet<CategoriaArticulos> CategoriaArticulos { get; set; }
+
+
+
     }
 }
 

@@ -50,8 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArticuloBLL.cs" />
-    <Compile Include="CiudadClientesBLL.cs" />
     <Compile Include="ClientesBLL.cs" />
+    <Compile Include="EmpleadosBLL.cs" />
     <Compile Include="GaranteBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProveedorBLL.cs" />
