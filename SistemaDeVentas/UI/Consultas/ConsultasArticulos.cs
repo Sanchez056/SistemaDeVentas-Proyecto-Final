@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-
+using BLL;
 namespace SistemaDeVentas.Consultas
 {
     public partial class ConsultasArticulos : Form
@@ -34,7 +34,7 @@ namespace SistemaDeVentas.Consultas
             FiltrarcomboBox.Items.Insert(4, "FechaIngreso");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
             FiltrarcomboBox.DisplayMember = "Id";
-            ConsultaArticulosdataGridView.DataSource = BLL.ArticuloBLL.GetLista();
+            ConsultaArticulosdataGridView.DataSource = ArticuloBLL.GetLista();
         }
 
         private void BuscarSelecionComBox()
@@ -47,11 +47,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.ArticuloBLL.GetLista(ut.StringInt(FiltrotextBox.Text));
+                    lista = ArticuloBLL.GetLista(ut.StringInt(FiltrotextBox.Text));
                 }
                 else
                 {
-                    lista = BLL.ArticuloBLL.GetLista();
+                    lista = ArticuloBLL.GetLista();
                 }
 
                 ConsultaArticulosdataGridView.DataSource = lista;
@@ -61,11 +61,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.ArticuloBLL.GetListaNombreArticulo(FiltrotextBox.Text);
+                    lista = ArticuloBLL.GetListaNombreArticulo(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.ArticuloBLL.GetLista();
+                    lista = ArticuloBLL.GetLista();
                 }
 
                 ConsultaArticulosdataGridView.DataSource = lista;
@@ -75,11 +75,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.ArticuloBLL.GetListaMarcaArticulo(FiltrotextBox.Text);
+                    lista = ArticuloBLL.GetListaMarcaArticulo(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.ArticuloBLL.GetLista();
+                    lista = ArticuloBLL.GetLista();
                 }
 
                 ConsultaArticulosdataGridView.DataSource = lista;
@@ -89,11 +89,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.ArticuloBLL.GetListaNombreProveedor(FiltrotextBox.Text);
+                    lista = ArticuloBLL.GetListaNombreProveedor(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.ArticuloBLL.GetLista();
+                    lista = ArticuloBLL.GetLista();
                 }
 
                 ConsultaArticulosdataGridView.DataSource = lista;
@@ -104,11 +104,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.ArticuloBLL.GetListaFecha(DesdeDateTimePicke.Value, HastadateTimePicker.Value);
+                    lista = ArticuloBLL.GetListaFecha(DesdeDateTimePicke.Value, HastadateTimePicker.Value);
                 }
                 else
                 {
-                    lista = BLL.ArticuloBLL.GetLista();
+                    lista = ArticuloBLL.GetLista();
                 }
 
                 ConsultaArticulosdataGridView.DataSource = lista;
@@ -122,7 +122,7 @@ namespace SistemaDeVentas.Consultas
         {
             Utilidades ut = new Utilidades();
 
-            if (FiltrarcomboBox.SelectedIndex == 0 && BLL.ArticuloBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 0 && ArticuloBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
@@ -138,19 +138,19 @@ namespace SistemaDeVentas.Consultas
             }
 
 
-            if (FiltrarcomboBox.SelectedIndex == 1 && BLL.ArticuloBLL.GetListaNombreArticulo(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 1 && ArticuloBLL.GetListaNombreArticulo(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
 
             }
-            if (FiltrarcomboBox.SelectedIndex == 2 && BLL.ArticuloBLL.GetListaMarcaArticulo(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 2 && ArticuloBLL.GetListaMarcaArticulo(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
 
             }
-            if (FiltrarcomboBox.SelectedIndex == 3 && BLL.ArticuloBLL.GetListaNombreProveedor(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 3 && ArticuloBLL.GetListaNombreProveedor(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
@@ -192,7 +192,7 @@ namespace SistemaDeVentas.Consultas
 
             viewer.ArticulosreportViewer.LocalReport.DataSources.Add(
                 new Microsoft.Reporting.WinForms.ReportDataSource("DataSetArticulos",
-                BLL.ArticuloBLL.GetLista()));
+                ArticuloBLL.GetLista()));
 
             viewer.ArticulosreportViewer.LocalReport.Refresh();
 

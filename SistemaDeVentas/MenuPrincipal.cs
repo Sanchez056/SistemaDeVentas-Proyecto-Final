@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace SistemaDeVentas
 {
     public partial class MenuPrincipal : Form
@@ -147,6 +148,36 @@ namespace SistemaDeVentas
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+              UI.Registros.RegistrosDeVentas  resv =new UI.Registros.RegistrosDeVentas();
+
+            resv.MdiParent = this;
+            resv.Show();
+            resv.Location = new Point(40, 40);
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            UI.Registros.RegistrosDeVentas resv = new UI.Registros.RegistrosDeVentas();
+
+            resv.MdiParent = this;
+            resv.Show();
+            resv.Location = new Point(15, 40);
+
+        }
+
+        private void CalculadoratoolStripButton_Click(object sender, EventArgs e)
+        {
+            UI.Extras.Calculadoras ca = new UI.Extras.Calculadoras();
+
+            ca.MdiParent = this;
+            ca.Show();
+            ca.Location = new Point(1050, 40);
 
         }
     }

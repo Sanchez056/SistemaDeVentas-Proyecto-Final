@@ -390,7 +390,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrosDeEmpleado";
-            this.Text = "RegistrosDeEmpleado";
+            this.Text = "Registro De Empleado";
             this.SexogroupBox.ResumeLayout(false);
             this.SexogroupBox.PerformLayout();
             this.ResumeLayout(false);

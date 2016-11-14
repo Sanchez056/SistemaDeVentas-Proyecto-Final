@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using BLL;
 
 namespace SistemaDeVentas.Consultas
 {
@@ -31,7 +32,7 @@ namespace SistemaDeVentas.Consultas
             FiltrarcomboBox.Items.Insert(1, "Nombre");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
             FiltrarcomboBox.DisplayMember = "Id";
-            ConsultaUsuariosdataGridView.DataSource = BLL.UsuariosBLL.GetLista();
+            ConsultaUsuariosdataGridView.DataSource = UsuariosBLL.GetLista();
         }
 
         private void BuscarSelecionComBox()
@@ -44,11 +45,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.UsuariosBLL.GetLista(ut.StringInt(FiltrotextBox.Text));
+                    lista = UsuariosBLL.GetLista(ut.StringInt(FiltrotextBox.Text));
                 }
                 else
                 {
-                    lista = BLL.UsuariosBLL.GetLista();
+                    lista = UsuariosBLL.GetLista();
                 }
 
                 ConsultaUsuariosdataGridView.DataSource = lista;
@@ -58,11 +59,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.UsuariosBLL.GetListaNombreUsuario(FiltrotextBox.Text);
+                    lista = UsuariosBLL.GetListaNombreUsuario(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.UsuariosBLL.GetLista();
+                    lista = UsuariosBLL.GetLista();
                 }
 
                 ConsultaUsuariosdataGridView.DataSource = lista;
@@ -83,14 +84,14 @@ namespace SistemaDeVentas.Consultas
                 return false;
             }
 
-            if (FiltrarcomboBox.SelectedIndex == 0 && BLL.UsuariosBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 0 && UsuariosBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
 
             }
 
-            if (FiltrarcomboBox.SelectedIndex == 1 && BLL.UsuariosBLL.GetListaNombreUsuario(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 1 && UsuariosBLL.GetListaNombreUsuario(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
@@ -122,7 +123,7 @@ namespace SistemaDeVentas.Consultas
 
             viewer.UsuariosreportViewer.LocalReport.DataSources.Add(
                 new Microsoft.Reporting.WinForms.ReportDataSource("DataSetUsuarios",
-                BLL.UsuariosBLL.GetLista()));
+                UsuariosBLL.GetLista()));
 
             viewer.UsuariosreportViewer.LocalReport.Refresh();
 

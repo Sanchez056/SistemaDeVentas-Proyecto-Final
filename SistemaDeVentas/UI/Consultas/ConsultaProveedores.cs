@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using BLL;
 
 namespace SistemaDeVentas.Consultas
 {
@@ -37,7 +38,7 @@ namespace SistemaDeVentas.Consultas
             FiltrarcomboBox.Items.Insert(2, "FechaIngreso");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
             FiltrarcomboBox.DisplayMember = "Id";
-            ConsultaProveedoressdataGridView.DataSource = BLL.ProveedorBLL.GetLista();
+            ConsultaProveedoressdataGridView.DataSource = ProveedorBLL.GetLista();
         }
 
         private void BuscarSelecionComBox()
@@ -50,11 +51,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.ProveedorBLL.GetLista(ut.StringInt(FiltrotextBox.Text));
+                    lista = ProveedorBLL.GetLista(ut.StringInt(FiltrotextBox.Text));
                 }
                 else
                 {
-                    lista = BLL.ProveedorBLL.GetLista();
+                    lista = ProveedorBLL.GetLista();
                 }
 
                 ConsultaProveedoressdataGridView.DataSource = lista;
@@ -64,11 +65,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.ProveedorBLL.GetListaNombreProveedor(FiltrotextBox.Text);
+                    lista = ProveedorBLL.GetListaNombreProveedor(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.ProveedorBLL.GetLista();
+                    lista = ProveedorBLL.GetLista();
                 }
 
                 ConsultaProveedoressdataGridView.DataSource = lista;
@@ -79,11 +80,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.ProveedorBLL.GetListaFecha(DesdeDateTimePicke.Value, HastadateTimePicker.Value);
+                    lista = ProveedorBLL.GetListaFecha(DesdeDateTimePicke.Value, HastadateTimePicker.Value);
                 }
                 else
                 {
-                    lista = BLL.ProveedorBLL.GetLista();
+                    lista = ProveedorBLL.GetLista();
                 }
 
                 ConsultaProveedoressdataGridView.DataSource = lista;
@@ -116,7 +117,7 @@ namespace SistemaDeVentas.Consultas
             }
 
 
-            if (FiltrarcomboBox.SelectedIndex == 1 && BLL.ProveedorBLL.GetListaNombreProveedor(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 1 && ProveedorBLL.GetListaNombreProveedor(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
@@ -124,7 +125,7 @@ namespace SistemaDeVentas.Consultas
             }
            
 
-            if (FiltrarcomboBox.SelectedIndex == 0 && BLL.ProveedorBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 0 && ProveedorBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
@@ -152,7 +153,7 @@ namespace SistemaDeVentas.Consultas
 
             viewer.ProveedorreportViewer.LocalReport.DataSources.Add(
                 new Microsoft.Reporting.WinForms.ReportDataSource("DataSetProveedores",
-                BLL.ProveedorBLL.GetLista()));
+                ProveedorBLL.GetLista()));
 
             viewer.ProveedorreportViewer.LocalReport.Refresh();
 

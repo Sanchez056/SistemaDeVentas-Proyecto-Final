@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
+using BLL;
 
 namespace SistemaDeVentas.Consultas
 {
@@ -35,7 +36,7 @@ namespace SistemaDeVentas.Consultas
             FiltrarcomboBox.Items.Insert(5, "FechaIngreso");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
             FiltrarcomboBox.DisplayMember = "Id";
-            ConsultaGarantesdataGridView.DataSource = BLL.GaranteBLL.GetLista();
+            ConsultaGarantesdataGridView.DataSource = GaranteBLL.GetLista();
         }
 
         private void BuscarSelecionComBox()
@@ -48,11 +49,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.GaranteBLL.GetLista(ut.StringInt(FiltrotextBox.Text));
+                    lista = GaranteBLL.GetLista(ut.StringInt(FiltrotextBox.Text));
                 }
                 else
                 {
-                    lista = BLL.GaranteBLL.GetLista();
+                    lista = GaranteBLL.GetLista();
                 }
 
                 ConsultaGarantesdataGridView.DataSource = lista;
@@ -62,11 +63,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.GaranteBLL.GetListaNombreGarantes(FiltrotextBox.Text);
+                    lista = GaranteBLL.GetListaNombreGarantes(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.GaranteBLL.GetLista();
+                    lista = GaranteBLL.GetLista();
                 }
 
                 ConsultaGarantesdataGridView.DataSource = lista;
@@ -76,11 +77,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.GaranteBLL.GetListaApellido(FiltrotextBox.Text);
+                    lista = GaranteBLL.GetListaApellido(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.GaranteBLL.GetLista();
+                    lista = GaranteBLL.GetLista();
                 }
 
                 ConsultaGarantesdataGridView.DataSource = lista;
@@ -90,11 +91,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.GaranteBLL.GetListaCedula(FiltrotextBox.Text);
+                    lista = GaranteBLL.GetListaCedula(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.GaranteBLL.GetLista();
+                    lista = GaranteBLL.GetLista();
                 }
 
                 ConsultaGarantesdataGridView.DataSource = lista;
@@ -104,11 +105,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.GaranteBLL.GetListaSexo(FiltrotextBox.Text);
+                    lista = GaranteBLL.GetListaSexo(FiltrotextBox.Text);
                 }
                 else
                 {
-                    lista = BLL.GaranteBLL.GetLista();
+                    lista = GaranteBLL.GetLista();
                 }
 
                  ConsultaGarantesdataGridView.DataSource = lista;
@@ -118,11 +119,11 @@ namespace SistemaDeVentas.Consultas
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = BLL.GaranteBLL.GetListaFecha(DesdeDateTimePicke.Value, HastadateTimePicker.Value);
+                    lista = GaranteBLL.GetListaFecha(DesdeDateTimePicke.Value, HastadateTimePicker.Value);
                 }
                 else
                 {
-                    lista = BLL.GaranteBLL.GetLista();
+                    lista = GaranteBLL.GetLista();
                 }
 
                 ConsultaGarantesdataGridView.DataSource = lista;
@@ -155,32 +156,32 @@ namespace SistemaDeVentas.Consultas
             }
 
 
-            if (FiltrarcomboBox.SelectedIndex == 1 && BLL.GaranteBLL.GetListaNombreGarantes(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 1 && GaranteBLL.GetListaNombreGarantes(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
 
             }
-            if (FiltrarcomboBox.SelectedIndex == 2 && BLL.GaranteBLL.GetListaApellido(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 2 && GaranteBLL.GetListaApellido(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
 
             }
-            if (FiltrarcomboBox.SelectedIndex == 3 && BLL.GaranteBLL.GetListaCedula(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 3 && GaranteBLL.GetListaCedula(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
 
             }
-            if (FiltrarcomboBox.SelectedIndex == 4 && BLL.GaranteBLL.GetListaSexo(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 4 && GaranteBLL.GetListaSexo(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
 
             }
 
-            if (FiltrarcomboBox.SelectedIndex == 0 && BLL.GaranteBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 0 && GaranteBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
@@ -213,7 +214,7 @@ namespace SistemaDeVentas.Consultas
 
             viewer.GarantesreportViewer.LocalReport.DataSources.Add(
                 new Microsoft.Reporting.WinForms.ReportDataSource("DataSetGarantes",
-                BLL.GaranteBLL.GetLista()));
+                GaranteBLL.GetLista()));
 
             viewer.GarantesreportViewer.LocalReport.Refresh();
 

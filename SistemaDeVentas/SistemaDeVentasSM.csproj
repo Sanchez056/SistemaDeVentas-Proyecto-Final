@@ -109,20 +109,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\ArticuloBLL.cs" />
+    <Compile Include="BLL\CategoriaArticulosBLL.cs" />
     <Compile Include="BLL\ClientesBLL.cs" />
+    <Compile Include="BLL\CondicionesPagosBLLcs.cs" />
+    <Compile Include="BLL\DetalleVentasBLL.cs" />
     <Compile Include="BLL\EmpleadosBLL.cs" />
     <Compile Include="BLL\GaranteBLL.cs" />
     <Compile Include="BLL\ProveedorBLL.cs" />
+    <Compile Include="BLL\ProveedoresArticulosBLL.cs" />
     <Compile Include="BLL\TiposUsuariosBLL.cs" />
     <Compile Include="BLL\UsuariosBLL.cs" />
+    <Compile Include="BLL\VentasBLL.cs" />
     <Compile Include="DAL\SistemaVentasDb.cs" />
     <Compile Include="Entidades\Articulos..cs" />
-    <Compile Include="Entidades\CategoriaArticulos.cs" />
+    <Compile Include="Entidades\DetalleCategoriaArticulos.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Compras.cs" />
+    <Compile Include="Entidades\DetalleCondicionesPagos.cs" />
+    <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Entidades\Garantes.cs" />
     <Compile Include="Entidades\Proveedores.cs" />
+    <Compile Include="Entidades\DetalleProveedoresArticulos.cs" />
     <Compile Include="Entidades\TiposUsuarios.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="UI\Consultas\ConsultaGeneralVentas.cs">
@@ -198,6 +206,30 @@
       <DependentUpon>Presentacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="UI\Extras\Calculadoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Extras\Calculadoras.Designer.cs">
+      <DependentUpon>Calculadoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\DetalleCondicionesPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\DetalleCondicionesPagos.Designer.cs">
+      <DependentUpon>DetalleCondicionesPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\DetalleVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\DetalleVentas.Designer.cs">
+      <DependentUpon>DetalleVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\DetalleCategoriaArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\DetalleCategoriaArticulos.Designer.cs">
+      <DependentUpon>DetalleCategoriaArticulos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RegistroDeClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -249,6 +281,18 @@
     <Compile Include="UI\Registros\RegistrosDeEmpleado.Designer.cs">
       <DependentUpon>RegistrosDeEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\DetalleProveedoresArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\DetalleProveedoresArticulos.Designer.cs">
+      <DependentUpon>DetalleProveedoresArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\RegistrosDeVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RegistrosDeVentas.Designer.cs">
+      <DependentUpon>RegistrosDeVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\RegistrosGarantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +308,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SistemaVentasDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\RegistrosTipoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RegistrosTipoUsuarios.Designer.cs">
+      <DependentUpon>RegistrosTipoUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="UI\Consultas\ConsultaGarantes.resx">
@@ -301,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion.resx">
       <DependentUpon>Presentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Extras\Calculadoras.resx">
+      <DependentUpon>Calculadoras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroDeClientes.resx">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
@@ -340,8 +393,14 @@
     <EmbeddedResource Include="UI\Registros\RegistrosDeEmpleado.resx">
       <DependentUpon>RegistrosDeEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistrosDeVentas.resx">
+      <DependentUpon>RegistrosDeVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistrosGarantes.resx">
       <DependentUpon>RegistrosGarantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistrosTipoUsuarios.resx">
+      <DependentUpon>RegistrosTipoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ListadoArticulos.rdlc" />
     <EmbeddedResource Include="UI\Reportes\ListadoClientes.rdlc" />
