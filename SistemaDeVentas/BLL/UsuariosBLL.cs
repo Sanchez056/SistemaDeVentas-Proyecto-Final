@@ -15,28 +15,29 @@ namespace BLL
 
         Usuarios usuario = new Usuarios();
 
-        public static void Insertar(Usuarios u)
+        public static  bool Insertar(Usuarios u)
         {
-
-            try
-            {
+            bool retorna = false;
+              try
+               {
 
                 using (var db = new SistemaVentasDb())
                 {
 
                     db.Usuarios.Add(u);
                     db.SaveChanges();
-                    db.Dispose();
-
+                    //db.Dispose();
+                    retorna = true;
                 }
 
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
 
             }
+            return retorna;
 
         }
 

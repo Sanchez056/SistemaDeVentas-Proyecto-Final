@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using BLL;
+using SistemaDeVentas.Entidades;
+
 namespace SistemaDeVentas.Consultas
 {
     public partial class ConsultasArticulos : Form
@@ -29,9 +31,8 @@ namespace SistemaDeVentas.Consultas
         {
             FiltrarcomboBox.Items.Insert(0, "ArticuloId");
             FiltrarcomboBox.Items.Insert(1, "NombreArticulo");
-            FiltrarcomboBox.Items.Insert(2, "MarcaArticulo");
-            FiltrarcomboBox.Items.Insert(3, "NombreProveedor");          
-            FiltrarcomboBox.Items.Insert(4, "FechaIngreso");
+            FiltrarcomboBox.Items.Insert(2, "MarcaArticulo");      
+            FiltrarcomboBox.Items.Insert(3, "FechaIngreso");
             FiltrarcomboBox.DataSource = FiltrarcomboBox.Items;
             FiltrarcomboBox.DisplayMember = "Id";
             ConsultaArticulosdataGridView.DataSource = ArticuloBLL.GetLista();
@@ -84,27 +85,14 @@ namespace SistemaDeVentas.Consultas
 
                 ConsultaArticulosdataGridView.DataSource = lista;
             }
-            if (FiltrarcomboBox.SelectedIndex == 3)
-            {
-                if (!String.IsNullOrEmpty(FiltrotextBox.Text))
-                {
-
-                    lista = ArticuloBLL.GetListaNombreProveedor(FiltrotextBox.Text);
-                }
-                else
-                {
-                    lista = ArticuloBLL.GetLista();
-                }
-
-                ConsultaArticulosdataGridView.DataSource = lista;
-            }
+            
            
             if (FiltrarcomboBox.SelectedIndex == 4)
             {
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
 
-                    lista = ArticuloBLL.GetListaFecha(DesdeDateTimePicke.Value, HastadateTimePicker.Value);
+                    //lista = ArticuloBLL.GetListaFecha(DesdeDateTimePicke.Value, HastadateTimePicker.Value);
                 }
                 else
                 {
@@ -150,12 +138,7 @@ namespace SistemaDeVentas.Consultas
                 return false;
 
             }
-            if (FiltrarcomboBox.SelectedIndex == 3 && ArticuloBLL.GetListaNombreProveedor(FiltrotextBox.Text).Count == 0)
-            {
-                MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
-                return false;
-
-            }
+           
             if (FiltrarcomboBox.SelectedIndex == 4)
             {
                 if (DesdeDateTimePicke.Value == HastadateTimePicker.Value)

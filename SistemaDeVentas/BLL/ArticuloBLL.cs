@@ -5,9 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using System.Data;
-
 using Entidades;
-
+using SistemaDeVentas.Entidades;
 
 namespace BLL
 {
@@ -15,8 +14,9 @@ namespace BLL
     {
         Articulos articulos= new Articulos();
 
-        public static void Insertar(Articulos a)
+        public static bool Insertar(Articulos a)
         {
+            bool retorna = false;
 
             try
             {
@@ -27,16 +27,18 @@ namespace BLL
                     db.Articulos.Add(a);
                     db.SaveChanges();
                     db.Dispose();
+                    retorna= true;
 
                 }
 
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
 
             }
+            return retorna;
 
         }
 
@@ -94,7 +96,7 @@ namespace BLL
 
             var db = new SistemaVentasDb();
 
-            lista = db.Articulos.Where(p => p.NombreArticulo== aux).ToList();
+            lista = db.Articulos.Where(p => p.Nombre== aux).ToList();
 
             return lista;
 
@@ -105,7 +107,7 @@ namespace BLL
 
             var db = new SistemaVentasDb();
 
-            lista = db.Articulos.Where(p => p.MarcaArticulo== aux).ToList();
+            lista = db.Articulos.Where(p => p.Marca== aux).ToList();
 
             return lista;
 
@@ -117,24 +119,15 @@ namespace BLL
 
             var db = new SistemaVentasDb();
 
-            lista = db.Articulos.Where(p => p.CodigoArticulo== aux).ToList();
+            lista = db.Articulos.Where(p => p.Codigo== aux).ToList();
 
             return lista;
 
         }
 
-        public static List<Articulos> GetListaNombreProveedor(string aux)
-        {
-            List<Articulos> lista = new List<Articulos>();
-
-            var db = new SistemaVentasDb();
-
-            lista = db.Articulos.Where(p => p.NombreProveedor== aux).ToList();
-
-            return lista;
-
-        }
-        public static List<Articulos> GetListaFecha(DateTime aux)
+        
+      
+       public static List<Articulos> GetListaFecha(DateTime aux)
         {
             List<Articulos> lista = new List<Articulos>();
 
@@ -145,7 +138,7 @@ namespace BLL
             return lista;
 
         }
-        public static List<Articulos> GetListaFecha(DateTime Desde, DateTime Hasta)
+       /* public static List<Articulos> GetListaFecha(DateTime Desde, DateTime Hasta)
         {
             List<Articulos> lista = new List<Articulos>();
 
@@ -156,5 +149,6 @@ namespace BLL
             return lista;
 
         }
+        */
     }
 }

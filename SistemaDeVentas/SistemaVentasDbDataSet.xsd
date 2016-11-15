@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConStr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConStr (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemaDeVentas.Properties.Settings.GlobalReference.Default.ConStr" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConStrs" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConStrs (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemaDeVentas.Properties.Settings.GlobalReference.Default.ConStrs" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClientesTableAdapter" GeneratorDataComponentClassName="ClientesTableAdapter" Name="Clientes" UserDataComponentName="ClientesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConStr (Settings)" DbObjectName="dbo.Clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConStrs (Settings)" DbObjectName="dbo.Clientes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Clientes] ([Nombre], [Apellido], [Sexo], [Cedula], [Direccion], [Ciudad], [Telefono], [Celular], [Fecha]) VALUES (@Nombre, @Apellido, @Sexo, @Cedula, @Direccion, @Ciudad, @Telefono, @Celular, @Fecha)</CommandText>
@@ -50,7 +50,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GarantesTableAdapter" GeneratorDataComponentClassName="GarantesTableAdapter" Name="Garantes" UserDataComponentName="GarantesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConStr (Settings)" DbObjectName="dbo.Garantes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConStrs (Settings)" DbObjectName="dbo.Garantes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Garantes] ([Nombre], [Apellido], [Sexo], [Cedula], [Ciudad], [Direccion], [Telefono], [Celular], [Fecha]) VALUES (@Nombre, @Apellido, @Sexo, @Cedula, @Ciudad, @Direccion, @Telefono, @Celular, @Fecha)</CommandText>
@@ -91,7 +91,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ProveedoresTableAdapter" GeneratorDataComponentClassName="ProveedoresTableAdapter" Name="Proveedores" UserDataComponentName="ProveedoresTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConStr (Settings)" DbObjectName="dbo.Proveedores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConStrs (Settings)" DbObjectName="dbo.Proveedores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Proveedores] ([NombreProveedor], [Ciudad], [Direccion], [Telefono], [Fax], [Correo], [FechaIngreso]) VALUES (@NombreProveedor, @Ciudad, @Direccion, @Telefono, @Fax, @Correo, @FechaIngreso)</CommandText>
@@ -128,7 +128,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuariosTableAdapter" GeneratorDataComponentClassName="UsuariosTableAdapter" Name="Usuarios" UserDataComponentName="UsuariosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConStr (Settings)" DbObjectName="dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConStrs (Settings)" DbObjectName="dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[Usuarios] ([NombreUsuario], [Contrasena], [Tipo]) VALUES (@NombreUsuario, @Contrasena, @Tipo)</CommandText>
@@ -163,7 +163,7 @@
   <xs:element name="SistemaVentasDbDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SistemaVentasDbDataSet" msprop:Generator_UserDSName="SistemaVentasDbDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_RowEvArgName="ClientesRowChangeEvent" msprop:Generator_RowClassName="ClientesRow">
+        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_RowClassName="ClientesRow" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowEvArgName="ClientesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ClienteId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnClienteId" msprop:Generator_ColumnPropNameInRow="ClienteId" msprop:Generator_ColumnPropNameInTable="ClienteIdColumn" msprop:Generator_UserColumnName="ClienteId" type="xs:int" />
@@ -227,7 +227,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Garantes" msprop:Generator_TableClassName="GarantesDataTable" msprop:Generator_TableVarName="tableGarantes" msprop:Generator_TablePropName="Garantes" msprop:Generator_RowDeletingName="GarantesRowDeleting" msprop:Generator_RowChangingName="GarantesRowChanging" msprop:Generator_RowEvHandlerName="GarantesRowChangeEventHandler" msprop:Generator_RowDeletedName="GarantesRowDeleted" msprop:Generator_UserTableName="Garantes" msprop:Generator_RowChangedName="GarantesRowChanged" msprop:Generator_RowEvArgName="GarantesRowChangeEvent" msprop:Generator_RowClassName="GarantesRow">
+        <xs:element name="Garantes" msprop:Generator_TableClassName="GarantesDataTable" msprop:Generator_TableVarName="tableGarantes" msprop:Generator_RowChangedName="GarantesRowChanged" msprop:Generator_TablePropName="Garantes" msprop:Generator_RowDeletingName="GarantesRowDeleting" msprop:Generator_RowChangingName="GarantesRowChanging" msprop:Generator_RowEvHandlerName="GarantesRowChangeEventHandler" msprop:Generator_RowDeletedName="GarantesRowDeleted" msprop:Generator_RowClassName="GarantesRow" msprop:Generator_UserTableName="Garantes" msprop:Generator_RowEvArgName="GarantesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="GaranteId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnGaranteId" msprop:Generator_ColumnPropNameInRow="GaranteId" msprop:Generator_ColumnPropNameInTable="GaranteIdColumn" msprop:Generator_UserColumnName="GaranteId" type="xs:int" />
@@ -291,7 +291,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Proveedores" msprop:Generator_TableClassName="ProveedoresDataTable" msprop:Generator_TableVarName="tableProveedores" msprop:Generator_TablePropName="Proveedores" msprop:Generator_RowDeletingName="ProveedoresRowDeleting" msprop:Generator_RowChangingName="ProveedoresRowChanging" msprop:Generator_RowEvHandlerName="ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedoresRowDeleted" msprop:Generator_UserTableName="Proveedores" msprop:Generator_RowChangedName="ProveedoresRowChanged" msprop:Generator_RowEvArgName="ProveedoresRowChangeEvent" msprop:Generator_RowClassName="ProveedoresRow">
+        <xs:element name="Proveedores" msprop:Generator_TableClassName="ProveedoresDataTable" msprop:Generator_TableVarName="tableProveedores" msprop:Generator_RowChangedName="ProveedoresRowChanged" msprop:Generator_TablePropName="Proveedores" msprop:Generator_RowDeletingName="ProveedoresRowDeleting" msprop:Generator_RowChangingName="ProveedoresRowChanging" msprop:Generator_RowEvHandlerName="ProveedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="ProveedoresRowDeleted" msprop:Generator_RowClassName="ProveedoresRow" msprop:Generator_UserTableName="Proveedores" msprop:Generator_RowEvArgName="ProveedoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProveedorId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnProveedorId" msprop:Generator_ColumnPropNameInRow="ProveedorId" msprop:Generator_ColumnPropNameInTable="ProveedorIdColumn" msprop:Generator_UserColumnName="ProveedorId" type="xs:int" />
@@ -341,7 +341,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent" msprop:Generator_RowClassName="UsuariosRow">
+        <xs:element name="Usuarios" msprop:Generator_TableClassName="UsuariosDataTable" msprop:Generator_TableVarName="tableUsuarios" msprop:Generator_RowChangedName="UsuariosRowChanged" msprop:Generator_TablePropName="Usuarios" msprop:Generator_RowDeletingName="UsuariosRowDeleting" msprop:Generator_RowChangingName="UsuariosRowChanging" msprop:Generator_RowEvHandlerName="UsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuariosRowDeleted" msprop:Generator_RowClassName="UsuariosRow" msprop:Generator_UserTableName="Usuarios" msprop:Generator_RowEvArgName="UsuariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="UsuarioId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnUsuarioId" msprop:Generator_ColumnPropNameInRow="UsuarioId" msprop:Generator_ColumnPropNameInTable="UsuarioIdColumn" msprop:Generator_UserColumnName="UsuarioId" type="xs:int" />

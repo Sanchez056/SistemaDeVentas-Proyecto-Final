@@ -24,5 +24,27 @@ namespace SistemaDeVentas.UI.Registros
             ca.Show();
             ca.Location = new Point(40, 40);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if
+
+                 (MessageBox.Show("Seguro que decea cobrar y guardar factura", "Decision", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+
+               
+                MessageBox.Show("");
+            }
+        }
+
+        private void BuscarClientebutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

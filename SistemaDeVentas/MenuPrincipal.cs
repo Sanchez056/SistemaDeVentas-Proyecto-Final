@@ -26,13 +26,11 @@ namespace SistemaDeVentas
 
         private void articuloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RegistrosArticulo ResArt = new RegistrosArticulo();
-           
+            UI.Registros.RegistroDeArticulos re = new UI.Registros.RegistroDeArticulos();
 
-            ResArt.MdiParent = this;
-            ResArt.Show();
-            ResArt.Location = new Point(40, 40);
-
+            re.MdiParent = this;
+            re.Show();
+            re.Location = new Point(40, 40);
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,14 +103,7 @@ namespace SistemaDeVentas
 
         }
 
-        private void garanteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Registros.RegistrosGarantes regGarante = new Registros.RegistrosGarantes();
-
-            regGarante.MdiParent = this;
-            regGarante.Show();
-            regGarante.Location =  new Point(40, 40);
-        }
+        
 
         private void ConsultaclientesToolStripMenuItem2_Click(object sender, EventArgs e)
         {
@@ -132,14 +123,7 @@ namespace SistemaDeVentas
             consulta.Location = new Point(40, 40);
         }
 
-        private void garantesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Consultas.ConsultaGarantes consulta = new Consultas.ConsultaGarantes();
-
-            consulta.MdiParent = this;
-            consulta.Show();
-            consulta.Location = new Point(40, 40);
-        }
+       
 
         private void Ventasbutton_Click(object sender, EventArgs e)
         {
@@ -178,6 +162,11 @@ namespace SistemaDeVentas
             ca.MdiParent = this;
             ca.Show();
             ca.Location = new Point(1050, 40);
+
+        }
+
+        private void registrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

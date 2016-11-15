@@ -60,9 +60,11 @@
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.CalculadoratoolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -138,6 +140,7 @@
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
             this.registrosToolStripMenuItem.Text = "Registros";
+            this.registrosToolStripMenuItem.Click += new System.EventHandler(this.registrosToolStripMenuItem_Click);
             // 
             // RegistrosusuariosToolStripMenuItem
             // 
@@ -183,8 +186,6 @@
             // 
             this.garanteToolStripMenuItem.Name = "garanteToolStripMenuItem";
             this.garanteToolStripMenuItem.Size = new System.Drawing.Size(171, 32);
-            this.garanteToolStripMenuItem.Text = "Garante";
-            this.garanteToolStripMenuItem.Click += new System.EventHandler(this.garanteToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -246,8 +247,6 @@
             // 
             this.garantesToolStripMenuItem.Name = "garantesToolStripMenuItem";
             this.garantesToolStripMenuItem.Size = new System.Drawing.Size(157, 24);
-            this.garantesToolStripMenuItem.Text = "Garantes";
-            this.garantesToolStripMenuItem.Click += new System.EventHandler(this.garantesToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
@@ -334,13 +333,20 @@
             this.CalculadoratoolStripButton.Text = "Calculadora";
             this.CalculadoratoolStripButton.Click += new System.EventHandler(this.CalculadoratoolStripButton_Click);
             // 
-            // dateTimePicker1
+            // statusStrip1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(839, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(106, 25);
-            this.dateTimePicker1.TabIndex = 2;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripProgressBar1});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 409);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(945, 22);
+            this.statusStrip1.TabIndex = 4;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
             // MenuPrincipal
             // 
@@ -349,7 +355,7 @@
             this.BackgroundImage = global::SistemaDeVentas.Properties.Resources.fondo_twitter1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(945, 431);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
@@ -368,6 +374,8 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,6 +414,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton CalculadoratoolStripButton;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
     }
 }

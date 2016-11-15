@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using Entidades;
+using SistemaDeVentas.Entidades;
 
 namespace DAL
 {
@@ -12,14 +13,13 @@ namespace DAL
     {
         
 
-        public  SistemaVentasDb() : base("name=ConStr")
+        public  SistemaVentasDb() : base("name=ConStrs")
         {
 
         }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
         public virtual DbSet<Articulos> Articulos { get; set; }
         public virtual DbSet<Clientes>  Clientes { get; set; }
-        public virtual DbSet<Garantes> Garantes { get; set; }
         public virtual DbSet<Proveedores> Proveedores { get; set; }
 
         public virtual DbSet<TipoUsuarios> TipoUsuarios { get; set; }

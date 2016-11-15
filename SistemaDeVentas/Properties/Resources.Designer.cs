@@ -133,6 +133,16 @@ namespace SistemaDeVentas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add2 {
+            get {
+                object obj = ResourceManager.GetObject("add2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adim {
             get {
                 object obj = ResourceManager.GetObject("adim", resourceCulture);
@@ -266,6 +276,16 @@ namespace SistemaDeVentas.Properties {
         internal static System.Drawing.Bitmap cash_register {
             get {
                 object obj = ResourceManager.GetObject("cash-register", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cash_register1 {
+            get {
+                object obj = ResourceManager.GetObject("cash-register1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -553,6 +573,16 @@ namespace SistemaDeVentas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap new1 {
+            get {
+                object obj = ResourceManager.GetObject("new1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap next_ {
             get {
                 object obj = ResourceManager.GetObject("next-", resourceCulture);
@@ -583,6 +613,16 @@ namespace SistemaDeVentas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap oscuridad_fondos_de_pantalla_minimalistas_hd_muy_buenos_compilado_772722 {
+            get {
+                object obj = ResourceManager.GetObject("oscuridad-fondos-de-pantalla-minimalistas-hd-muy-buenos-compilado-772722", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap personal {
             get {
                 object obj = ResourceManager.GetObject("personal", resourceCulture);
@@ -606,6 +646,26 @@ namespace SistemaDeVentas.Properties {
         internal static System.Drawing.Bitmap print {
             get {
                 object obj = ResourceManager.GetObject("print", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap print1 {
+            get {
+                object obj = ResourceManager.GetObject("print1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sales_background {
+            get {
+                object obj = ResourceManager.GetObject("sales-background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -696,6 +756,16 @@ namespace SistemaDeVentas.Properties {
         internal static System.Drawing.Bitmap shopping_cart_full {
             get {
                 object obj = ResourceManager.GetObject("shopping cart full", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopping_cart1 {
+            get {
+                object obj = ResourceManager.GetObject("shopping cart1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

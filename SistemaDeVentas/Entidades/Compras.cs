@@ -12,13 +12,15 @@ namespace Entidades
     [Key]
 
         public int CompraId { get; set; }
-        public string NombreArticulo { get; set; }
-        public string MarcaArticulo{ get; set; }
-        public float Cantidad { get; set; }
-        public float Precio{ get; set; }
-        public float Itebis { get; set; }
-        public float Total { get; set; }
+        public string codigoCompra{ get; set; }
+        public double Cantidad { get; set; }
+        public double Precio{ get; set; }
+        public double Itebis { get; set; }
+        public double SubTotal { get; set; }
+        public double Total { get; set; }
         public DateTime Fecha { get; set; }
+
+        public DateTime Hora { get; set; }
 
     }
 }
