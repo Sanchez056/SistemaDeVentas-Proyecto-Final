@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="BLL\ArticuloBLLTests.cs" />
     <Compile Include="BLL\ClientesBLLTests.cs" />
+    <Compile Include="BLL\EmpleadosBLLTests.cs" />
     <Compile Include="BLL\ProveedorBLLTests.cs" />
     <Compile Include="BLL\UsuariosBLLTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

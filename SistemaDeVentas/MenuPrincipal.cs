@@ -169,6 +169,17 @@ namespace SistemaDeVentas
         {
 
         }
+
+        private void ComprastoolStripButton_Click(object sender, EventArgs e)
+        {
+            Registros.RegistroDeCompra resc = new Registros.RegistroDeCompra();
+
+            resc.MdiParent = this;
+            resc.Show();
+            resc.Location = new Point(15, 30);
+
+
+        }
     }
 }
 

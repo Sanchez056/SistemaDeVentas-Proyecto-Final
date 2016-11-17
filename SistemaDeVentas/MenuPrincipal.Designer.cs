@@ -41,7 +41,6 @@
             this.RegistrosproveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistroarticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrosEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.garanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ConsultausuariosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +61,10 @@
             this.CalculadoratoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.ComprastoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -134,7 +137,7 @@
             this.RegistrosproveedorToolStripMenuItem,
             this.RegistroarticuloToolStripMenuItem,
             this.registrosEmpleadoToolStripMenuItem,
-            this.garanteToolStripMenuItem,
+            this.comprasToolStripMenuItem,
             this.toolStripMenuItem1});
             this.registrosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
@@ -181,11 +184,6 @@
             this.registrosEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(171, 32);
             this.registrosEmpleadoToolStripMenuItem.Text = "Empleado";
             this.registrosEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.registrosEmpleadoToolStripMenuItem_Click);
-            // 
-            // garanteToolStripMenuItem
-            // 
-            this.garanteToolStripMenuItem.Name = "garanteToolStripMenuItem";
-            this.garanteToolStripMenuItem.Size = new System.Drawing.Size(171, 32);
             // 
             // toolStripMenuItem1
             // 
@@ -264,12 +262,15 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripSeparator1,
+            this.ComprastoolStripButton,
             this.toolStripButton2,
             this.toolStripSeparator2,
             this.toolStripButton3,
             this.toolStripSeparator3,
             this.toolStripButton4,
-            this.CalculadoratoolStripButton});
+            this.toolStripSeparator4,
+            this.CalculadoratoolStripButton,
+            this.toolStripSeparator5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 27);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(945, 25);
@@ -348,6 +349,31 @@
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
             this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
             // 
+            // comprasToolStripMenuItem
+            // 
+            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(171, 32);
+            this.comprasToolStripMenuItem.Text = "Compras";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // ComprastoolStripButton
+            // 
+            this.ComprastoolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ComprastoolStripButton.Image")));
+            this.ComprastoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ComprastoolStripButton.Name = "ComprastoolStripButton";
+            this.ComprastoolStripButton.Size = new System.Drawing.Size(81, 22);
+            this.ComprastoolStripButton.Text = "Compras";
+            this.ComprastoolStripButton.Click += new System.EventHandler(this.ComprastoolStripButton_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -402,7 +428,6 @@
         private System.Windows.Forms.ToolStripMenuItem ConsultaarticulosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ConsultaproveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registrosEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem garanteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem garantesToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
@@ -416,5 +441,9 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton ComprastoolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
     }
 }

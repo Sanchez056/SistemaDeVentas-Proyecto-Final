@@ -11,5 +11,6 @@ namespace SistemaDeVentas.BLL
 {
    public  class CategoriaArticulosBLL
     {
+
     }
 }
