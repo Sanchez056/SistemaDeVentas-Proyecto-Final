@@ -46,5 +46,53 @@ namespace SistemaDeVentas.UI.Registros
         {
 
         }
+
+        private void RegistrosDeVentas_Load(object sender, EventArgs e)
+        {
+
+        }
+        public void LlenarClase()
+        {
+
+        }
+
+        public void Llenar()
+        {
+
+        }
+        public void Limpiar()
+        {
+            DateTimePicker f = new DateTimePicker();
+            FiltrartextBox.Clear();
+            FiltrarVentatextBox.Clear();
+            FiltrarClientetextBox.Clear();
+            FiltrarEmpleadotextBox.Clear();
+            MarcatextBox.Clear();
+            CodigotextBox.Clear();
+            PreciotextBox.Clear();
+            SubTotaltextBox.Clear();
+            TotaltextBox.Clear();
+            DescuentotextBox.Clear();
+            MontoDeudatextBox.Clear();
+            CuotastextBox.Clear();
+            FechaVencmaskedTextBox.Clear();
+            ItebistextBox.Clear();
+            ItebisTotaltextBox.Clear();
+            TotalDescuntotextBox.Clear();
+            ContadoradioButton.Checked = false;
+            CreditoradioButton.Checked = false;
+            DocFactuaradioButton.Checked = false;
+            DocReciberadioButton.Checked = false;
+            //FechadateTimePicker.Value = f.Value;
+
+            //-----
+           // limpiarErroresProvider();
+
+        }
+
+        private void Nuevabutton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
     }
 }

@@ -40,24 +40,18 @@
             this.Preciolabel = new System.Windows.Forms.Label();
             this.Marcalabel = new System.Windows.Forms.Label();
             this.Codigolabel = new System.Windows.Forms.Label();
-            this.BuscarArticulosbutton = new System.Windows.Forms.Button();
             this.FiltrarArticulocomboBox = new System.Windows.Forms.ComboBox();
             this.Filtrarlabel = new System.Windows.Forms.Label();
             this.EmpleadogroupBox = new System.Windows.Forms.GroupBox();
-            this.BuscarEmpleadobutton = new System.Windows.Forms.Button();
             this.FiltrarEmpleadotextBox = new System.Windows.Forms.TextBox();
             this.FiltrarEmpleadolabel = new System.Windows.Forms.Label();
             this.FiltrarEmpleadocomboBox = new System.Windows.Forms.ComboBox();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.TipodeDocumentogroupBox = new System.Windows.Forms.GroupBox();
             this.DocFactuaradioButton = new System.Windows.Forms.RadioButton();
             this.DocReciberadioButton = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Cobrarbutton = new System.Windows.Forms.Button();
-            this.Nuevabutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DescuntotextBox = new System.Windows.Forms.TextBox();
+            this.TotalDescuntotextBox = new System.Windows.Forms.TextBox();
             this.Descuentolabel = new System.Windows.Forms.Label();
             this.TotaltextBox = new System.Windows.Forms.TextBox();
             this.ItebisTotaltextBox = new System.Windows.Forms.TextBox();
@@ -71,24 +65,21 @@
             this.FechaVeclabel = new System.Windows.Forms.Label();
             this.FechaVencmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MontoDeudalabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.MontoDeudatextBox = new System.Windows.Forms.TextBox();
             this.CuotastextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.FiltrarClientetextBox = new System.Windows.Forms.TextBox();
-            this.BuscarClientebutton = new System.Windows.Forms.Button();
             this.ClientecomboBox = new System.Windows.Forms.ComboBox();
             this.FiltrarClientelabel = new System.Windows.Forms.Label();
             this.CondiciondePagogroupBox = new System.Windows.Forms.GroupBox();
             this.CreditoradioButton = new System.Windows.Forms.RadioButton();
             this.ContadoradioButton = new System.Windows.Forms.RadioButton();
-            this.Quitarbutton = new System.Windows.Forms.Button();
             this.ItebistextBox = new System.Windows.Forms.TextBox();
             this.FiltrarVentatextBox = new System.Windows.Forms.TextBox();
             this.VentascomboBox = new System.Windows.Forms.ComboBox();
             this.HoradateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Horalabel = new System.Windows.Forms.Label();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Agregarbutton = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,10 +89,19 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Itebislabel = new System.Windows.Forms.Label();
-            this.BuscarIdbutton = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.Fechalabel = new System.Windows.Forms.Label();
             this.FacturatabControl = new System.Windows.Forms.TabControl();
+            this.BuscarArticulosbutton = new System.Windows.Forms.Button();
+            this.BuscarEmpleadobutton = new System.Windows.Forms.Button();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Cobrarbutton = new System.Windows.Forms.Button();
+            this.Nuevabutton = new System.Windows.Forms.Button();
+            this.BuscarClientebutton = new System.Windows.Forms.Button();
+            this.Quitarbutton = new System.Windows.Forms.Button();
+            this.Agregarbutton = new System.Windows.Forms.Button();
+            this.BuscarIdbutton = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.EmpleadogroupBox.SuspendLayout();
@@ -242,19 +242,6 @@
             this.Codigolabel.TabIndex = 62;
             this.Codigolabel.Text = "Codigo:";
             // 
-            // BuscarArticulosbutton
-            // 
-            this.BuscarArticulosbutton.BackgroundImage = global::SistemaDeVentas.Properties.Resources.search;
-            this.BuscarArticulosbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BuscarArticulosbutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarArticulosbutton.Location = new System.Drawing.Point(348, 13);
-            this.BuscarArticulosbutton.Name = "BuscarArticulosbutton";
-            this.BuscarArticulosbutton.Size = new System.Drawing.Size(92, 40);
-            this.BuscarArticulosbutton.TabIndex = 58;
-            this.BuscarArticulosbutton.Text = "Buscar";
-            this.BuscarArticulosbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarArticulosbutton.UseVisualStyleBackColor = true;
-            // 
             // FiltrarArticulocomboBox
             // 
             this.FiltrarArticulocomboBox.FormattingEnabled = true;
@@ -286,18 +273,6 @@
             this.EmpleadogroupBox.TabStop = false;
             this.EmpleadogroupBox.Text = "Empleado";
             // 
-            // BuscarEmpleadobutton
-            // 
-            this.BuscarEmpleadobutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarEmpleadobutton.Image = global::SistemaDeVentas.Properties.Resources.search1;
-            this.BuscarEmpleadobutton.Location = new System.Drawing.Point(327, 15);
-            this.BuscarEmpleadobutton.Name = "BuscarEmpleadobutton";
-            this.BuscarEmpleadobutton.Size = new System.Drawing.Size(84, 42);
-            this.BuscarEmpleadobutton.TabIndex = 100;
-            this.BuscarEmpleadobutton.Text = "Buscar";
-            this.BuscarEmpleadobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarEmpleadobutton.UseVisualStyleBackColor = true;
-            // 
             // FiltrarEmpleadotextBox
             // 
             this.FiltrarEmpleadotextBox.Location = new System.Drawing.Point(168, 37);
@@ -321,19 +296,6 @@
             this.FiltrarEmpleadocomboBox.Name = "FiltrarEmpleadocomboBox";
             this.FiltrarEmpleadocomboBox.Size = new System.Drawing.Size(106, 23);
             this.FiltrarEmpleadocomboBox.TabIndex = 97;
-            // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
-            this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print1;
-            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(311, 438);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(98, 54);
-            this.Imprimirbutton.TabIndex = 97;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
             // 
             // TipodeDocumentogroupBox
             // 
@@ -381,48 +343,10 @@
             this.panel2.Size = new System.Drawing.Size(292, 55);
             this.panel2.TabIndex = 94;
             // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
-            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Eliminarbutton.Location = new System.Drawing.Point(194, 4);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(87, 42);
-            this.Eliminarbutton.TabIndex = 62;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Cobrarbutton
-            // 
-            this.Cobrarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Cobrarbutton.Image = global::SistemaDeVentas.Properties.Resources.cash_register1;
-            this.Cobrarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Cobrarbutton.Location = new System.Drawing.Point(103, 4);
-            this.Cobrarbutton.Name = "Cobrarbutton";
-            this.Cobrarbutton.Size = new System.Drawing.Size(87, 42);
-            this.Cobrarbutton.TabIndex = 61;
-            this.Cobrarbutton.Text = "Cobrar";
-            this.Cobrarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Cobrarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Nuevabutton
-            // 
-            this.Nuevabutton.ForeColor = System.Drawing.Color.Black;
-            this.Nuevabutton.Image = global::SistemaDeVentas.Properties.Resources.new1;
-            this.Nuevabutton.Location = new System.Drawing.Point(3, 4);
-            this.Nuevabutton.Name = "Nuevabutton";
-            this.Nuevabutton.Size = new System.Drawing.Size(93, 42);
-            this.Nuevabutton.TabIndex = 60;
-            this.Nuevabutton.Text = "Nueva";
-            this.Nuevabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Nuevabutton.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.DescuntotextBox);
+            this.panel1.Controls.Add(this.TotalDescuntotextBox);
             this.panel1.Controls.Add(this.Descuentolabel);
             this.panel1.Controls.Add(this.TotaltextBox);
             this.panel1.Controls.Add(this.ItebisTotaltextBox);
@@ -435,12 +359,12 @@
             this.panel1.Size = new System.Drawing.Size(654, 37);
             this.panel1.TabIndex = 93;
             // 
-            // DescuntotextBox
+            // TotalDescuntotextBox
             // 
-            this.DescuntotextBox.Location = new System.Drawing.Point(259, 4);
-            this.DescuntotextBox.Name = "DescuntotextBox";
-            this.DescuntotextBox.Size = new System.Drawing.Size(61, 21);
-            this.DescuntotextBox.TabIndex = 102;
+            this.TotalDescuntotextBox.Location = new System.Drawing.Point(259, 4);
+            this.TotalDescuntotextBox.Name = "TotalDescuntotextBox";
+            this.TotalDescuntotextBox.Size = new System.Drawing.Size(61, 21);
+            this.TotalDescuntotextBox.TabIndex = 102;
             // 
             // Descuentolabel
             // 
@@ -520,7 +444,7 @@
             this.groupBox2.Controls.Add(this.FechaVeclabel);
             this.groupBox2.Controls.Add(this.FechaVencmaskedTextBox);
             this.groupBox2.Controls.Add(this.MontoDeudalabel);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.MontoDeudatextBox);
             this.groupBox2.Controls.Add(this.CuotastextBox);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.FiltrarClientetextBox);
@@ -562,12 +486,12 @@
             this.MontoDeudalabel.TabIndex = 101;
             this.MontoDeudalabel.Text = "Monto Deuda";
             // 
-            // textBox2
+            // MontoDeudatextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(68, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(72, 21);
-            this.textBox2.TabIndex = 100;
+            this.MontoDeudatextBox.Location = new System.Drawing.Point(68, 75);
+            this.MontoDeudatextBox.Name = "MontoDeudatextBox";
+            this.MontoDeudatextBox.Size = new System.Drawing.Size(72, 21);
+            this.MontoDeudatextBox.TabIndex = 100;
             // 
             // CuotastextBox
             // 
@@ -591,19 +515,6 @@
             this.FiltrarClientetextBox.Name = "FiltrarClientetextBox";
             this.FiltrarClientetextBox.Size = new System.Drawing.Size(143, 21);
             this.FiltrarClientetextBox.TabIndex = 96;
-            // 
-            // BuscarClientebutton
-            // 
-            this.BuscarClientebutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarClientebutton.Image = global::SistemaDeVentas.Properties.Resources.search2;
-            this.BuscarClientebutton.Location = new System.Drawing.Point(310, 10);
-            this.BuscarClientebutton.Name = "BuscarClientebutton";
-            this.BuscarClientebutton.Size = new System.Drawing.Size(87, 40);
-            this.BuscarClientebutton.TabIndex = 97;
-            this.BuscarClientebutton.Text = "Buscar";
-            this.BuscarClientebutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarClientebutton.UseVisualStyleBackColor = true;
-            this.BuscarClientebutton.Click += new System.EventHandler(this.BuscarClientebutton_Click);
             // 
             // ClientecomboBox
             // 
@@ -657,18 +568,6 @@
             this.ContadoradioButton.Text = "Contado";
             this.ContadoradioButton.UseVisualStyleBackColor = true;
             // 
-            // Quitarbutton
-            // 
-            this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Quitarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel2;
-            this.Quitarbutton.Location = new System.Drawing.Point(984, 173);
-            this.Quitarbutton.Name = "Quitarbutton";
-            this.Quitarbutton.Size = new System.Drawing.Size(83, 40);
-            this.Quitarbutton.TabIndex = 86;
-            this.Quitarbutton.Text = "Quitar";
-            this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Quitarbutton.UseVisualStyleBackColor = true;
-            // 
             // ItebistextBox
             // 
             this.ItebistextBox.Location = new System.Drawing.Point(520, 103);
@@ -715,18 +614,6 @@
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(76, 21);
             this.FechadateTimePicker.TabIndex = 69;
-            // 
-            // Agregarbutton
-            // 
-            this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Agregarbutton.Image = global::SistemaDeVentas.Properties.Resources.add2;
-            this.Agregarbutton.Location = new System.Drawing.Point(894, 175);
-            this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(84, 40);
-            this.Agregarbutton.TabIndex = 56;
-            this.Agregarbutton.Text = "Agregar";
-            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Agregarbutton.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
@@ -796,19 +683,6 @@
             this.Itebislabel.TabIndex = 47;
             this.Itebislabel.Text = "Itebis:";
             // 
-            // BuscarIdbutton
-            // 
-            this.BuscarIdbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BuscarIdbutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarIdbutton.Image = global::SistemaDeVentas.Properties.Resources.search2;
-            this.BuscarIdbutton.Location = new System.Drawing.Point(261, 10);
-            this.BuscarIdbutton.Name = "BuscarIdbutton";
-            this.BuscarIdbutton.Size = new System.Drawing.Size(82, 39);
-            this.BuscarIdbutton.TabIndex = 42;
-            this.BuscarIdbutton.Text = "Buscar";
-            this.BuscarIdbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarIdbutton.UseVisualStyleBackColor = true;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -840,6 +714,133 @@
             this.FacturatabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.FacturatabControl.TabIndex = 2;
             // 
+            // BuscarArticulosbutton
+            // 
+            this.BuscarArticulosbutton.BackgroundImage = global::SistemaDeVentas.Properties.Resources.search;
+            this.BuscarArticulosbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BuscarArticulosbutton.ForeColor = System.Drawing.Color.Black;
+            this.BuscarArticulosbutton.Location = new System.Drawing.Point(348, 13);
+            this.BuscarArticulosbutton.Name = "BuscarArticulosbutton";
+            this.BuscarArticulosbutton.Size = new System.Drawing.Size(92, 40);
+            this.BuscarArticulosbutton.TabIndex = 58;
+            this.BuscarArticulosbutton.Text = "Buscar";
+            this.BuscarArticulosbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BuscarArticulosbutton.UseVisualStyleBackColor = true;
+            // 
+            // BuscarEmpleadobutton
+            // 
+            this.BuscarEmpleadobutton.ForeColor = System.Drawing.Color.Black;
+            this.BuscarEmpleadobutton.Image = global::SistemaDeVentas.Properties.Resources.search1;
+            this.BuscarEmpleadobutton.Location = new System.Drawing.Point(327, 15);
+            this.BuscarEmpleadobutton.Name = "BuscarEmpleadobutton";
+            this.BuscarEmpleadobutton.Size = new System.Drawing.Size(84, 42);
+            this.BuscarEmpleadobutton.TabIndex = 100;
+            this.BuscarEmpleadobutton.Text = "Buscar";
+            this.BuscarEmpleadobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BuscarEmpleadobutton.UseVisualStyleBackColor = true;
+            // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
+            this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print1;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.Location = new System.Drawing.Point(311, 438);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(98, 54);
+            this.Imprimirbutton.TabIndex = 97;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Eliminarbutton.Location = new System.Drawing.Point(194, 4);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(87, 42);
+            this.Eliminarbutton.TabIndex = 62;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            // 
+            // Cobrarbutton
+            // 
+            this.Cobrarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Cobrarbutton.Image = global::SistemaDeVentas.Properties.Resources.cash_register1;
+            this.Cobrarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Cobrarbutton.Location = new System.Drawing.Point(103, 4);
+            this.Cobrarbutton.Name = "Cobrarbutton";
+            this.Cobrarbutton.Size = new System.Drawing.Size(87, 42);
+            this.Cobrarbutton.TabIndex = 61;
+            this.Cobrarbutton.Text = "Cobrar";
+            this.Cobrarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Cobrarbutton.UseVisualStyleBackColor = true;
+            // 
+            // Nuevabutton
+            // 
+            this.Nuevabutton.ForeColor = System.Drawing.Color.Black;
+            this.Nuevabutton.Image = global::SistemaDeVentas.Properties.Resources.new1;
+            this.Nuevabutton.Location = new System.Drawing.Point(3, 4);
+            this.Nuevabutton.Name = "Nuevabutton";
+            this.Nuevabutton.Size = new System.Drawing.Size(93, 42);
+            this.Nuevabutton.TabIndex = 60;
+            this.Nuevabutton.Text = "Nueva";
+            this.Nuevabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Nuevabutton.UseVisualStyleBackColor = true;
+            this.Nuevabutton.Click += new System.EventHandler(this.Nuevabutton_Click);
+            // 
+            // BuscarClientebutton
+            // 
+            this.BuscarClientebutton.ForeColor = System.Drawing.Color.Black;
+            this.BuscarClientebutton.Image = global::SistemaDeVentas.Properties.Resources.search2;
+            this.BuscarClientebutton.Location = new System.Drawing.Point(310, 10);
+            this.BuscarClientebutton.Name = "BuscarClientebutton";
+            this.BuscarClientebutton.Size = new System.Drawing.Size(87, 40);
+            this.BuscarClientebutton.TabIndex = 97;
+            this.BuscarClientebutton.Text = "Buscar";
+            this.BuscarClientebutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BuscarClientebutton.UseVisualStyleBackColor = true;
+            this.BuscarClientebutton.Click += new System.EventHandler(this.BuscarClientebutton_Click);
+            // 
+            // Quitarbutton
+            // 
+            this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Quitarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel2;
+            this.Quitarbutton.Location = new System.Drawing.Point(984, 173);
+            this.Quitarbutton.Name = "Quitarbutton";
+            this.Quitarbutton.Size = new System.Drawing.Size(83, 40);
+            this.Quitarbutton.TabIndex = 86;
+            this.Quitarbutton.Text = "Quitar";
+            this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Quitarbutton.UseVisualStyleBackColor = true;
+            // 
+            // Agregarbutton
+            // 
+            this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Agregarbutton.Image = global::SistemaDeVentas.Properties.Resources.add2;
+            this.Agregarbutton.Location = new System.Drawing.Point(894, 175);
+            this.Agregarbutton.Name = "Agregarbutton";
+            this.Agregarbutton.Size = new System.Drawing.Size(84, 40);
+            this.Agregarbutton.TabIndex = 56;
+            this.Agregarbutton.Text = "Agregar";
+            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Agregarbutton.UseVisualStyleBackColor = true;
+            // 
+            // BuscarIdbutton
+            // 
+            this.BuscarIdbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BuscarIdbutton.ForeColor = System.Drawing.Color.Black;
+            this.BuscarIdbutton.Image = global::SistemaDeVentas.Properties.Resources.search2;
+            this.BuscarIdbutton.Location = new System.Drawing.Point(261, 10);
+            this.BuscarIdbutton.Name = "BuscarIdbutton";
+            this.BuscarIdbutton.Size = new System.Drawing.Size(82, 39);
+            this.BuscarIdbutton.TabIndex = 42;
+            this.BuscarIdbutton.Text = "Buscar";
+            this.BuscarIdbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BuscarIdbutton.UseVisualStyleBackColor = true;
+            // 
             // RegistrosDeVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -855,6 +856,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegistrosDeVentas";
             this.Text = "Registros De Ventas";
+            this.Load += new System.EventHandler(this.RegistrosDeVentas_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -887,7 +889,7 @@
         private System.Windows.Forms.Label FechaVeclabel;
         private System.Windows.Forms.MaskedTextBox FechaVencmaskedTextBox;
         private System.Windows.Forms.Label MontoDeudalabel;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox MontoDeudatextBox;
         private System.Windows.Forms.TextBox CuotastextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox FiltrarClientetextBox;
@@ -925,7 +927,7 @@
         private System.Windows.Forms.Button Cobrarbutton;
         private System.Windows.Forms.Button Nuevabutton;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox DescuntotextBox;
+        private System.Windows.Forms.TextBox TotalDescuntotextBox;
         private System.Windows.Forms.Label Descuentolabel;
         private System.Windows.Forms.TextBox TotaltextBox;
         private System.Windows.Forms.TextBox ItebisTotaltextBox;
