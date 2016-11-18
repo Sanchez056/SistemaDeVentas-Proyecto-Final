@@ -139,7 +139,7 @@
     <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Entidades\Proveedores.cs" />
-    <Compile Include="Entidades\TiposUsuarios.cs" />
+    <Compile Include="Entidades\TipoUsuarios.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="RegistrosArticulo.cs" />
     <Compile Include="UI\Consultas\ConsultaGeneralVentas.cs">

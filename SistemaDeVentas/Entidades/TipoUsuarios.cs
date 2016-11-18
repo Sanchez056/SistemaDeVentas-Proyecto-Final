@@ -10,17 +10,17 @@ namespace Entidades
    public  class TipoUsuarios
     {
         [Key]
-        public int TipoUsuariosId{ get; set; }
+        public int TipoUsuarioId{ get; set; }
         public string Detalle{ get; set; }
 
        
 
         
 
-        public override string ToString()
+        /*public override string ToString()
         {
             return this.Detalle;
-        }
+        }*/
 
     }
 }

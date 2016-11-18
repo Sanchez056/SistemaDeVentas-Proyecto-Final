@@ -20,6 +20,15 @@ namespace SistemaDeVentas.Entidades
 
         public string Descripcion { get; set; }
 
+        public string NombreProveedor { get; set; }
+
+        public int  Cantidad { get; set; }
+
+        public  double Descuento{ get; set; }
+
+        public double PrecioCompra { get; set; }
+
+        public double PrecioVentas { get; set; }
         public string Marca { get; set; }
 
         public DateTime Fecha { get; set; }

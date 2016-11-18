@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
@@ -37,6 +38,10 @@
             this.Nombrelabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TipoUsuarioIdlabel = new System.Windows.Forms.Label();
+            this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NombreerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // Buscarbutton
@@ -133,6 +138,14 @@
             this.TipoUsuarioIdlabel.TabIndex = 8;
             this.TipoUsuarioIdlabel.Text = "TipoUsuariosId:";
             // 
+            // BuscarerrorProvider
+            // 
+            this.BuscarerrorProvider.ContainerControl = this;
+            // 
+            // NombreerrorProvider
+            // 
+            this.NombreerrorProvider.ContainerControl = this;
+            // 
             // RegistrosTipoUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -153,6 +166,8 @@
             this.Name = "RegistrosTipoUsuarios";
             this.Text = "Registros De Tipo De Usuarios";
             this.Load += new System.EventHandler(this.RegistrosTipoUsuarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,5 +184,7 @@
         private System.Windows.Forms.Label Nombrelabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label TipoUsuarioIdlabel;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
+        private System.Windows.Forms.ErrorProvider NombreerrorProvider;
     }
 }

@@ -180,6 +180,16 @@ namespace SistemaDeVentas
 
 
         }
+
+        private void tipoDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Registros.RegistrosTipoUsuarios  rect = new UI.Registros.RegistrosTipoUsuarios();
+
+            rect.MdiParent = this;
+            rect.Show();
+            rect.Location = new Point(15, 30);
+
+        }
     }
 }
 

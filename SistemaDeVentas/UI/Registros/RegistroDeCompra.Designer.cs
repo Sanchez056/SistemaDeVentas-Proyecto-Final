@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroDeCompra));
             this.ComprastabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Quitarbutton = new System.Windows.Forms.Button();
+            this.Agregarbutton = new System.Windows.Forms.Button();
             this.Imprimirbutton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -53,9 +55,7 @@
             this.Descuentoslabel = new System.Windows.Forms.Label();
             this.Impuestolabel = new System.Windows.Forms.Label();
             this.PrecioVentalabel = new System.Windows.Forms.Label();
-            this.PrecioCompralabel = new System.Windows.Forms.Label();
             this.Cantidadlabel = new System.Windows.Forms.Label();
-            this.PrecioCompratextBox = new System.Windows.Forms.TextBox();
             this.CantidadtextBox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.EmpleadogroupBox = new System.Windows.Forms.GroupBox();
@@ -84,8 +84,6 @@
             this.FiltrarCompratextBox = new System.Windows.Forms.TextBox();
             this.FiltrarCompralabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Agregarbutton = new System.Windows.Forms.Button();
-            this.Quitarbutton = new System.Windows.Forms.Button();
             this.ComprastabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -128,6 +126,30 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Compras";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // Quitarbutton
+            // 
+            this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Quitarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
+            this.Quitarbutton.Location = new System.Drawing.Point(1001, 261);
+            this.Quitarbutton.Name = "Quitarbutton";
+            this.Quitarbutton.Size = new System.Drawing.Size(82, 51);
+            this.Quitarbutton.TabIndex = 110;
+            this.Quitarbutton.Text = "Quitar";
+            this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Quitarbutton.UseVisualStyleBackColor = true;
+            // 
+            // Agregarbutton
+            // 
+            this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Agregarbutton.Image = global::SistemaDeVentas.Properties.Resources.add1;
+            this.Agregarbutton.Location = new System.Drawing.Point(903, 261);
+            this.Agregarbutton.Name = "Agregarbutton";
+            this.Agregarbutton.Size = new System.Drawing.Size(92, 51);
+            this.Agregarbutton.TabIndex = 109;
+            this.Agregarbutton.Text = "Agregar";
+            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Agregarbutton.UseVisualStyleBackColor = true;
             // 
             // Imprimirbutton
             // 
@@ -274,35 +296,29 @@
             // 
             // AsignarArticuloComprasgroupBox
             // 
-            this.AsignarArticuloComprasgroupBox.Controls.Add(this.PrecioVentatextBox);
-            this.AsignarArticuloComprasgroupBox.Controls.Add(this.DescuentotextBox);
             this.AsignarArticuloComprasgroupBox.Controls.Add(this.ImpuestotextBox);
             this.AsignarArticuloComprasgroupBox.Controls.Add(this.label13);
-            this.AsignarArticuloComprasgroupBox.Controls.Add(this.Descuentoslabel);
             this.AsignarArticuloComprasgroupBox.Controls.Add(this.Impuestolabel);
-            this.AsignarArticuloComprasgroupBox.Controls.Add(this.PrecioVentalabel);
-            this.AsignarArticuloComprasgroupBox.Controls.Add(this.PrecioCompralabel);
             this.AsignarArticuloComprasgroupBox.Controls.Add(this.Cantidadlabel);
-            this.AsignarArticuloComprasgroupBox.Controls.Add(this.PrecioCompratextBox);
             this.AsignarArticuloComprasgroupBox.Controls.Add(this.CantidadtextBox);
             this.AsignarArticuloComprasgroupBox.ForeColor = System.Drawing.Color.White;
-            this.AsignarArticuloComprasgroupBox.Location = new System.Drawing.Point(560, 104);
+            this.AsignarArticuloComprasgroupBox.Location = new System.Drawing.Point(706, 167);
             this.AsignarArticuloComprasgroupBox.Name = "AsignarArticuloComprasgroupBox";
-            this.AsignarArticuloComprasgroupBox.Size = new System.Drawing.Size(317, 183);
+            this.AsignarArticuloComprasgroupBox.Size = new System.Drawing.Size(219, 88);
             this.AsignarArticuloComprasgroupBox.TabIndex = 105;
             this.AsignarArticuloComprasgroupBox.TabStop = false;
             this.AsignarArticuloComprasgroupBox.Text = "Asignar Datos Articulos  de Compras";
             // 
             // PrecioVentatextBox
             // 
-            this.PrecioVentatextBox.Location = new System.Drawing.Point(9, 157);
+            this.PrecioVentatextBox.Location = new System.Drawing.Point(535, 90);
             this.PrecioVentatextBox.Name = "PrecioVentatextBox";
             this.PrecioVentatextBox.Size = new System.Drawing.Size(95, 20);
             this.PrecioVentatextBox.TabIndex = 10;
             // 
             // DescuentotextBox
             // 
-            this.DescuentotextBox.Location = new System.Drawing.Point(122, 106);
+            this.DescuentotextBox.Location = new System.Drawing.Point(579, 37);
             this.DescuentotextBox.Name = "DescuentotextBox";
             this.DescuentotextBox.Size = new System.Drawing.Size(88, 20);
             this.DescuentotextBox.TabIndex = 9;
@@ -325,11 +341,11 @@
             // Descuentoslabel
             // 
             this.Descuentoslabel.AutoSize = true;
-            this.Descuentoslabel.Location = new System.Drawing.Point(119, 90);
+            this.Descuentoslabel.Location = new System.Drawing.Point(516, 40);
             this.Descuentoslabel.Name = "Descuentoslabel";
-            this.Descuentoslabel.Size = new System.Drawing.Size(59, 14);
+            this.Descuentoslabel.Size = new System.Drawing.Size(58, 14);
             this.Descuentoslabel.TabIndex = 6;
-            this.Descuentoslabel.Text = "Descuentos";
+            this.Descuentoslabel.Text = "Descuento:";
             // 
             // Impuestolabel
             // 
@@ -343,20 +359,11 @@
             // PrecioVentalabel
             // 
             this.PrecioVentalabel.AutoSize = true;
-            this.PrecioVentalabel.Location = new System.Drawing.Point(6, 141);
+            this.PrecioVentalabel.Location = new System.Drawing.Point(443, 96);
             this.PrecioVentalabel.Name = "PrecioVentalabel";
             this.PrecioVentalabel.Size = new System.Drawing.Size(86, 14);
             this.PrecioVentalabel.TabIndex = 4;
             this.PrecioVentalabel.Text = "Precio de Ventas:";
-            // 
-            // PrecioCompralabel
-            // 
-            this.PrecioCompralabel.AutoSize = true;
-            this.PrecioCompralabel.Location = new System.Drawing.Point(6, 89);
-            this.PrecioCompralabel.Name = "PrecioCompralabel";
-            this.PrecioCompralabel.Size = new System.Drawing.Size(93, 14);
-            this.PrecioCompralabel.TabIndex = 3;
-            this.PrecioCompralabel.Text = "Precio de Compra:";
             // 
             // Cantidadlabel
             // 
@@ -366,13 +373,6 @@
             this.Cantidadlabel.Size = new System.Drawing.Size(50, 14);
             this.Cantidadlabel.TabIndex = 2;
             this.Cantidadlabel.Text = "Cantidad:";
-            // 
-            // PrecioCompratextBox
-            // 
-            this.PrecioCompratextBox.Location = new System.Drawing.Point(9, 106);
-            this.PrecioCompratextBox.Name = "PrecioCompratextBox";
-            this.PrecioCompratextBox.Size = new System.Drawing.Size(95, 20);
-            this.PrecioCompratextBox.TabIndex = 1;
             // 
             // CantidadtextBox
             // 
@@ -384,9 +384,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 326);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 318);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1076, 129);
+            this.dataGridView1.Size = new System.Drawing.Size(1076, 137);
             this.dataGridView1.TabIndex = 104;
             // 
             // EmpleadogroupBox
@@ -449,19 +449,23 @@
             this.ArticulosgroupBox.ForeColor = System.Drawing.Color.White;
             this.ArticulosgroupBox.Location = new System.Drawing.Point(6, 104);
             this.ArticulosgroupBox.Name = "ArticulosgroupBox";
-            this.ArticulosgroupBox.Size = new System.Drawing.Size(548, 216);
+            this.ArticulosgroupBox.Size = new System.Drawing.Size(694, 216);
             this.ArticulosgroupBox.TabIndex = 102;
             this.ArticulosgroupBox.TabStop = false;
             this.ArticulosgroupBox.Text = "Articulos";
             // 
             // InformacionArticulogroupBox
             // 
+            this.InformacionArticulogroupBox.Controls.Add(this.DescuentotextBox);
+            this.InformacionArticulogroupBox.Controls.Add(this.PrecioVentatextBox);
             this.InformacionArticulogroupBox.Controls.Add(this.Proveedorlabel);
             this.InformacionArticulogroupBox.Controls.Add(this.ProveedortextBox);
+            this.InformacionArticulogroupBox.Controls.Add(this.Descuentoslabel);
             this.InformacionArticulogroupBox.Controls.Add(this.Descripcionlabel);
             this.InformacionArticulogroupBox.Controls.Add(this.DescripciontextBox);
             this.InformacionArticulogroupBox.Controls.Add(this.CategoriatextBox);
             this.InformacionArticulogroupBox.Controls.Add(this.Categorialabel);
+            this.InformacionArticulogroupBox.Controls.Add(this.PrecioVentalabel);
             this.InformacionArticulogroupBox.Controls.Add(this.Marcalabel);
             this.InformacionArticulogroupBox.Controls.Add(this.Codigolabel);
             this.InformacionArticulogroupBox.Controls.Add(this.MarcatextBox);
@@ -469,7 +473,7 @@
             this.InformacionArticulogroupBox.ForeColor = System.Drawing.Color.White;
             this.InformacionArticulogroupBox.Location = new System.Drawing.Point(6, 73);
             this.InformacionArticulogroupBox.Name = "InformacionArticulogroupBox";
-            this.InformacionArticulogroupBox.Size = new System.Drawing.Size(536, 136);
+            this.InformacionArticulogroupBox.Size = new System.Drawing.Size(681, 136);
             this.InformacionArticulogroupBox.TabIndex = 8;
             this.InformacionArticulogroupBox.TabStop = false;
             this.InformacionArticulogroupBox.Text = "Informacion:";
@@ -487,7 +491,7 @@
             // 
             this.ProveedortextBox.Location = new System.Drawing.Point(309, 34);
             this.ProveedortextBox.Name = "ProveedortextBox";
-            this.ProveedortextBox.Size = new System.Drawing.Size(217, 20);
+            this.ProveedortextBox.Size = new System.Drawing.Size(205, 20);
             this.ProveedortextBox.TabIndex = 24;
             // 
             // Descripcionlabel
@@ -641,30 +645,6 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 22);
             this.comboBox1.TabIndex = 0;
             // 
-            // Agregarbutton
-            // 
-            this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Agregarbutton.Image = global::SistemaDeVentas.Properties.Resources.add1;
-            this.Agregarbutton.Location = new System.Drawing.Point(901, 277);
-            this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(92, 43);
-            this.Agregarbutton.TabIndex = 109;
-            this.Agregarbutton.Text = "Agregar";
-            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Agregarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Quitarbutton
-            // 
-            this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Quitarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
-            this.Quitarbutton.Location = new System.Drawing.Point(999, 277);
-            this.Quitarbutton.Name = "Quitarbutton";
-            this.Quitarbutton.Size = new System.Drawing.Size(82, 43);
-            this.Quitarbutton.TabIndex = 110;
-            this.Quitarbutton.Text = "Quitar";
-            this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Quitarbutton.UseVisualStyleBackColor = true;
-            // 
             // RegistroDeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -723,9 +703,7 @@
         private System.Windows.Forms.Label Descuentoslabel;
         private System.Windows.Forms.Label Impuestolabel;
         private System.Windows.Forms.Label PrecioVentalabel;
-        private System.Windows.Forms.Label PrecioCompralabel;
         private System.Windows.Forms.Label Cantidadlabel;
-        private System.Windows.Forms.TextBox PrecioCompratextBox;
         private System.Windows.Forms.TextBox CantidadtextBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox EmpleadogroupBox;

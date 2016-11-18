@@ -50,10 +50,12 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.RegistrosUsuarioslabel = new System.Windows.Forms.Label();
+            this.ElegirTipoUsuarioserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreUsuarioserrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContraseñaerrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfimarContraseñaerrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ElegirTipoUsuarioserrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // IdLabel
@@ -103,13 +105,12 @@
             // 
             // TipoUsuarioscomboBox
             // 
+            this.TipoUsuarioscomboBox.BackColor = System.Drawing.Color.DimGray;
+            this.TipoUsuarioscomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.TipoUsuarioscomboBox.FormattingEnabled = true;
-            this.TipoUsuarioscomboBox.Items.AddRange(new object[] {
-            resources.GetString("TipoUsuarioscomboBox.Items"),
-            resources.GetString("TipoUsuarioscomboBox.Items1"),
-            resources.GetString("TipoUsuarioscomboBox.Items2")});
             resources.ApplyResources(this.TipoUsuarioscomboBox, "TipoUsuarioscomboBox");
             this.TipoUsuarioscomboBox.Name = "TipoUsuarioscomboBox";
+            this.TipoUsuarioscomboBox.SelectedIndexChanged += new System.EventHandler(this.TipoUsuarioscomboBox_SelectedIndexChanged);
             // 
             // TipoUsuarioslabel
             // 
@@ -173,6 +174,10 @@
             resources.ApplyResources(this.RegistrosUsuarioslabel, "RegistrosUsuarioslabel");
             this.RegistrosUsuarioslabel.Name = "RegistrosUsuarioslabel";
             // 
+            // ElegirTipoUsuarioserrorProvider
+            // 
+            this.ElegirTipoUsuarioserrorProvider.ContainerControl = this;
+            // 
             // RegistroDeUsuarios
             // 
             resources.ApplyResources(this, "$this");
@@ -202,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.NombreUsuarioserrorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContraseñaerrorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfimarContraseñaerrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ElegirTipoUsuarioserrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +235,6 @@
         private System.Windows.Forms.ErrorProvider ContraseñaerrorProvider1;
         private System.Windows.Forms.ErrorProvider ConfimarContraseñaerrorProvider1;
         private System.Windows.Forms.Label RegistrosUsuarioslabel;
+        private System.Windows.Forms.ErrorProvider ElegirTipoUsuarioserrorProvider;
     }
 }

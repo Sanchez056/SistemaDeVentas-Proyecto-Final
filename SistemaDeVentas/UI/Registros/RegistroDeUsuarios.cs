@@ -32,12 +32,13 @@ namespace SistemaDeVentas
         }
         private void LLenar(Usuarios usuario)
         {
+            
             UsuarioIdtextBox.Text = usuario.UsuarioId.ToString();
             NombreUsuariostextBox.Text = usuario.NombreUsuario.ToString();
             ContraseñatextBox.Text = usuario.Contrasena;
             ConfimarContraseñatextBox1.Text = usuario.Contrasena;
-            TipoUsuarioscomboBox.Text = usuario.Tipo;
-            //CargarConboBox();
+           
+            CargarConboBox();
         }
        
         private bool validarId(string message)
@@ -86,7 +87,8 @@ namespace SistemaDeVentas
             NombreUsuariostextBox.Clear();
             ContraseñatextBox.Clear();
             ConfimarContraseñatextBox1.Clear();
-            TipoUsuarioscomboBox.Text ="Elegir una Opcion";
+            TipoUsuarioscomboBox.Text = "Elegir opcion";
+            limpiarErroresProvider();
         }
         //--
         //Botton De Guardar Usuario
@@ -95,7 +97,7 @@ namespace SistemaDeVentas
             Usuarios usuario = new Usuarios();
             BuscarerrorProvider1.Clear();
             LlenarClase(usuario);
-            //CargarConboBox();
+            CargarConboBox();
             if (ValidarTextbox() && ValidarExiste(NombreUsuariostextBox.Text))
             {
                UsuariosBLL.Insertar(usuario);
@@ -110,6 +112,7 @@ namespace SistemaDeVentas
             TipoUsuarios tus = new TipoUsuarios();
             u.NombreUsuario = NombreUsuariostextBox.Text;
             u.Contrasena = ContraseñatextBox.Text;
+            tus.Detalle = TipoUsuarioscomboBox.Text;
             u.Tipo =  tus.Detalle = TipoUsuarioscomboBox.Text;
 
         }
@@ -137,6 +140,7 @@ namespace SistemaDeVentas
                 NombreUsuarioserrorProvider1.SetError(NombreUsuariostextBox, "Favor Ingresar El Nombre de Usuario");
                 ContraseñaerrorProvider1.SetError(ContraseñatextBox, "Favor ingresar la contraseña del usuario");
                 ConfimarContraseñaerrorProvider1.SetError(ConfimarContraseñatextBox1, "Favor confirmar comtraseña");
+               
                 MessageBox.Show("Favor llenar todos los campos obligatorios");
 
             }
@@ -167,7 +171,16 @@ namespace SistemaDeVentas
                 ContraseñaerrorProvider1.Clear();
                 ConfimarContraseñaerrorProvider1.Clear();
                 ConfimarContraseñaerrorProvider1.SetError(ConfimarContraseñatextBox1, "La contraseña no coincide");
-                //MessageBox.Show("La Contraseña no conciden");
+                MessageBox.Show("La Contraseña no conciden");
+                return false;
+            }
+            if (TipoUsuarioscomboBox.Text != TipoUsuarioscomboBox.Text)
+            {
+                NombreUsuarioserrorProvider1.Clear();
+                ContraseñaerrorProvider1.Clear();
+                ConfimarContraseñaerrorProvider1.Clear();
+                ElegirTipoUsuarioserrorProvider.Clear();
+                MessageBox.Show("elegir tipo de usuarios");
                 return false;
             }
             return true;
@@ -190,23 +203,37 @@ namespace SistemaDeVentas
         public List<TipoUsuarios> lista = new List<TipoUsuarios>();
         private void CargarConboBox()
         {
-            var db = new SistemaVentasDb();
+           var db = new SistemaVentasDb();
             lista = db.TipoUsuarios.ToList();
             if (lista.Count > 0)
             {
-                TipoUsuarioscomboBox.DataSource = lista;
-                TipoUsuarioscomboBox.ValueMember = "TipoUsuarioId";
+               TipoUsuarioscomboBox.DataSource = lista;
+               TipoUsuarioscomboBox.ValueMember = "TipoUsuarioId";
                 TipoUsuarioscomboBox.DisplayMember = "Detalle";
             }
         }
 
+        private void limpiarErroresProvider()
+        {
+           NombreUsuarioserrorProvider1.Clear();
+           ConfimarContraseñaerrorProvider1.Clear();
+           ContraseñaerrorProvider1.Clear();
+            
+           
+        }
 
 
-       
+
+
         private void RegistroDeUsuarios_Load(object sender, EventArgs e)
         {
-
+            CargarConboBox();
             
+        }
+
+        private void TipoUsuarioscomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
