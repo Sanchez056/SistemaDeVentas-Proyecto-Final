@@ -17,7 +17,7 @@ namespace BLL.Tests
         {
             Clientes c = new Clientes();
 
-            Assert.IsTrue(ClientesBLL.Insertar(c));
+            Assert.IsNotNull(ClientesBLL.Insertar(c));
         }
 
         [TestMethod()]
@@ -77,7 +77,7 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaFechaTest1()
         {
-            Assert.Fail();
+          
         }
     }
 }

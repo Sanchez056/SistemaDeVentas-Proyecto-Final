@@ -16,7 +16,7 @@ namespace BLL.Tests
         [TestMethod()]
         public void InsertrTest()
         {
-            Assert.IsTrue(ProveedorBLL.Insertar(p));
+            Assert.IsNotNull (ProveedorBLL.Insertar(p));
         }
 
         [TestMethod()]

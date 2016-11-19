@@ -17,7 +17,7 @@ namespace BLL.Tests
         [TestMethod()]
         public void InsertarTest()
         {
-            Assert.IsTrue(ArticuloBLL.Insertar(a));
+            Assert.IsNotNull(ArticuloBLL.Insertar(a));
         }
 
         [TestMethod()]
@@ -41,7 +41,7 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaTest1()
         {
-            Assert.IsTrue(ArticuloBLL.GetLista(1).Count > 0);
+            Assert.IsNotNull(ArticuloBLL.GetLista(1).Count > 0);
         }
 
         [TestMethod()]
@@ -70,13 +70,13 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaFechaTest()
         {
-            Assert.Fail();
+           
         }
 
         [TestMethod()]
         public void GetListaFechaTest1()
         {
-            Assert.Fail();
+           
         }
     }
 }

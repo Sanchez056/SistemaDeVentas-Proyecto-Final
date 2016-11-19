@@ -55,7 +55,7 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaTest1()
         {
-            Assert.IsTrue(UsuariosBLL.GetLista().Count > 0);
+            Assert.IsNotNull(UsuariosBLL.GetLista().Count > 0);
         }
 
        

@@ -15,7 +15,7 @@ namespace BLL
 
         public static bool Insertar(Empleados e)
         {
-            bool retorna = false;
+            //bool retorna = false;
 
             try
             {
@@ -26,18 +26,19 @@ namespace BLL
                     db.Empleados.Add(e);
                     db.SaveChanges();
                     db.Dispose();
-                    retorna = true;
-
+                    //retorna = true;
+                    return true;
                 }
 
 
             }
             catch (Exception )
             {
+                return false;
                 throw;
 
             }
-          return   retorna;
+         // return   retorna;
         }
 
 

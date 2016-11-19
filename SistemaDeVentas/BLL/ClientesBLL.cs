@@ -14,7 +14,7 @@ namespace BLL
 
         public static bool Insertar(Clientes c)
         {
-            bool retorna = false;
+           // bool retorna = false;
             try
             {
 
@@ -23,18 +23,20 @@ namespace BLL
 
                     db.Clientes.Add(c);
                     db.SaveChanges();
-                    //db.Dispose();
-                    retorna = true;
+                    db.Dispose();
+                    // retorna = true;
+                    return true;
                 }
 
 
             }
             catch (Exception)
             {
+                return false;
                 throw;
 
             }
-            return retorna;
+           // return retorna;
 
         }
 

@@ -15,7 +15,8 @@ namespace BLL
 
         public static bool Insertar(Proveedores p)
         {
-            bool retorna = false;
+           /// bool retorna = false;
+           
             try
             {
 
@@ -25,17 +26,19 @@ namespace BLL
                     db.Proveedores.Add(p);
                     db.SaveChanges();
                     //db.Dispose();
-                    retorna = true;
+                    // retorna = true;
+                    return true;
                 }
 
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                return false;
+                throw e;
 
             }
-            return retorna;
+           /// return retorna;
 
         }
 

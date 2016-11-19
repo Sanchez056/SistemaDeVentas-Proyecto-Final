@@ -60,7 +60,7 @@ namespace BLL
 
                     db.Usuarios.Remove(us);
                     db.SaveChanges();
-                    //db.Dispose();
+                    db.Dispose();
                   return false;
                 }
 

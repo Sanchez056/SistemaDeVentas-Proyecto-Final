@@ -16,7 +16,7 @@ namespace BLL
 
         public static bool Insertar(Articulos a)
         {
-            bool retorna = false;
+          //  bool retorna = false;
 
             try
             {
@@ -27,7 +27,8 @@ namespace BLL
                     db.Articulos.Add(a);
                     db.SaveChanges();
                     db.Dispose();
-                    retorna= true;
+                    // retorna= true;
+                    return true;
 
                 }
 
@@ -35,10 +36,12 @@ namespace BLL
             }
             catch (Exception)
             {
+                return false;
                 throw;
 
             }
-            return retorna;
+            
+           // return retorna;
 
         }
 
@@ -96,6 +99,11 @@ namespace BLL
             return lista;
 
 
+        }
+
+        public static object GetListaFecha(int v)
+        {
+            throw new NotImplementedException();
         }
 
         public static List<Articulos> GetLista(int articuloId)
