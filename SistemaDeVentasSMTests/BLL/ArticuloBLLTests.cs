@@ -5,65 +5,67 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SistemaDeVentas.Entidades;
+using Entidades;
 
 namespace BLL.Tests
 {
     [TestClass()]
     public class ArticuloBLLTests
     {
+       Articulos a = new Articulos();
         [TestMethod()]
         public void InsertarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(ArticuloBLL.Insertar(a));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            Assert.IsNull(ArticuloBLL.Buscar(1));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(ArticuloBLL.Eliminar(1));
         }
 
         [TestMethod()]
         public void GetListaTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(ArticuloBLL.GetLista().Count > 0);
         }
 
         [TestMethod()]
         public void GetListaTest1()
         {
-            Assert.IsTrue(ArticuloBLL.GetLista().Count > 0);
+            Assert.IsTrue(ArticuloBLL.GetLista(1).Count > 0);
         }
 
         [TestMethod()]
         public void GetListaNombreArticuloTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(ArticuloBLL.GetListaNombreArticulo("cilindro").Count > 0);
         }
+    
 
-        [TestMethod()]
-        public void GetListaMarcaArticuloTest()
-        {
-            Assert.Fail();
-        }
+    [TestMethod()]
+    public void GetListaMarcaArticuloTest()
+    {
+        Assert.IsNotNull(ArticuloBLL.GetListaMarcaArticulo("honda").Count > 0);
+
+    } 
 
         [TestMethod()]
         public void GetListaCodigoArticuloTest()
         {
-            Assert.Fail();
-        }
+            Assert.IsNotNull(ArticuloBLL.GetListaCodigoArticulo("3232323").Count > 0);
+       }
+    
 
-        [TestMethod()]
-        public void GetListaNombreProveedorTest()
-        {
-            Assert.Fail();
-        }
+       
 
         [TestMethod()]
         public void GetListaFechaTest()

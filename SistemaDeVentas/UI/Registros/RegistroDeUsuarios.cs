@@ -19,13 +19,13 @@ namespace SistemaDeVentas
         public RegistroDeUsuarios()
         {
             InitializeComponent();
-            //CargarConboBox();
+            CargarConboBox();
 
         }
         //-- Botton Buscar y Todos sus Metodos Utilizados para Realizar dicha busqueda en la base de datos
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            //CargarConboBox();
+            CargarConboBox();
             if (validarId("Favor ingresar el id del usuario que desea buscar") && ValidarBuscar())
                 LLenar(UsuariosBLL.Buscar(String(UsuarioIdtextBox.Text)));
 

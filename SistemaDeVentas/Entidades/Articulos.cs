@@ -31,6 +31,7 @@ namespace SistemaDeVentas.Entidades
         public double PrecioVentas { get; set; }
         public string Marca { get; set; }
 
+       
         public DateTime Fecha { get; set; }
 
     }

@@ -353,6 +353,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "RegistroDeProveedores";
             this.Text = "Registro de Proveedor";
+            this.Load += new System.EventHandler(this.RegistroDeProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DirrecionerrorProvider)).EndInit();

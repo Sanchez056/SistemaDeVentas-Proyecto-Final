@@ -28,9 +28,9 @@ namespace SistemaDeVentas.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\BaseDatos\\Sis" +
             "temaVentasDb.mdf;Integrated Security=True;Connect Timeout=30")]
-        public string ConStrs {
+        public string ConStr {
             get {
-                return ((string)(this["ConStrs"]));
+                return ((string)(this["ConStr"]));
             }
         }
     }

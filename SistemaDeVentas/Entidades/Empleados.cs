@@ -17,7 +17,7 @@ namespace Entidades
 
         public string Sexo { get; set; }
 
-        public DateTime FechaNacimiento { get; set; }
+        public string FechaNacimiento { get; set; }
         public string Cedula { get; set; }
 
         public string Direccion { get; set; }

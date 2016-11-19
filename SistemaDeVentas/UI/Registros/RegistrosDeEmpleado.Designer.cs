@@ -160,6 +160,7 @@
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(107, 21);
             this.FechadateTimePicker.TabIndex = 33;
+            this.FechadateTimePicker.ValueChanged += new System.EventHandler(this.FechadateTimePicker_ValueChanged);
             // 
             // REmpleadoLabel
             // 

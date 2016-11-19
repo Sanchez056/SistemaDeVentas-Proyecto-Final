@@ -21,6 +21,14 @@ namespace SistemaDeVentas.UI.Registros
             InitializeComponent();
         }
 
+        public double StringDouble(string texto)
+        {
+            double numero = 0;
+
+            double.TryParse(texto, out numero);
+
+            return numero;
+        }
         public void CargarCombox()
         {
 
@@ -70,21 +78,23 @@ namespace SistemaDeVentas.UI.Registros
             PrecioVentatextBox.Text = articulo.PrecioVentas.ToString();
             MarcaArticulotextBox.Text = articulo.Marca;
 
-            CargarConboBox();
+           CargarConboBox();
         }
         private void Guardabutton_Click(object sender, EventArgs e)
         {
-           
+
+           Entidades.Articulos arti = new Entidades.Articulos();
             //BuscarerrorProvider1.Clear();
-            LlenarClase(articulos);
+            LlenarClase(arti);
+            CargarConboBox();
             if (ValidarTextbox() && ValidarExiste(CodigoArticulotextBox.Text))
             {
-                ArticuloBLL.Insertar(articulos);
-                CargarConboBox();
+                ArticuloBLL.Insertar(arti);
                 Limpiar();
-                limpiarErroresProvider();
-                MessageBox.Show("-_-Guardado Con Exito-_-");
+                MessageBox.Show("Guardado con exito");
             }
+
+
 
         }
         Utilidades ut = new Utilidades();
@@ -125,17 +135,18 @@ namespace SistemaDeVentas.UI.Registros
         }
         private void LlenarClase(Entidades.Articulos a)
         {
-
+            Proveedores p = new Proveedores();
             a.Codigo = CodigoArticulotextBox.Text;
             a.Nombre = NombreArticulotextBox.Text;
-            a.Cantidad = int.Parse(CantidadtextBox.Text);
+            a.Cantidad = ut.StringInt(CantidadtextBox.Text);
             a.Descripcion = DespcripciontextBox.Text; ;
             a.Marca = MarcaArticulotextBox.Text;
-            a.PrecioCompra = double.Parse(PrecioCompratextBox.Text);
-            a.PrecioVentas = double.Parse(PrecioVentatextBox.Text);
-            a.Descuento = int.Parse(DescuentotextBox.Text);
+            a.PrecioCompra =StringDouble(PrecioCompratextBox.Text);
+            a.PrecioVentas = StringDouble(PrecioVentatextBox.Text);
+            a.Descuento = ut.StringInt(DescuentotextBox.Text);
+            p.NombreProveedor = a.NombreProveedor = NombreProveedorcomboBox1.Text;
             a.Fecha = FechadateTimePicker.Value;
-
+           
 
         }
 
@@ -252,7 +263,12 @@ namespace SistemaDeVentas.UI.Registros
 
         private void Articulopanel_Paint(object sender, PaintEventArgs e)
         {
-            CargarConboBox();
+       
+        }
+
+        private void RegistroDeArticulos_Load(object sender, EventArgs e)
+        {
+             CargarConboBox();
         }
     }
 }

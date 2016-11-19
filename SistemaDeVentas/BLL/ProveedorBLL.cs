@@ -13,9 +13,9 @@ namespace BLL
     {
         Proveedores proveedores = new Proveedores();
 
-        public static void Insertar(Proveedores p)
+        public static bool Insertar(Proveedores p)
         {
-
+            bool retorna = false;
             try
             {
 
@@ -24,17 +24,18 @@ namespace BLL
 
                     db.Proveedores.Add(p);
                     db.SaveChanges();
-                    db.Dispose();
-
+                    //db.Dispose();
+                    retorna = true;
                 }
 
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
 
             }
+            return retorna;
 
         }
 
@@ -47,13 +48,33 @@ namespace BLL
 
         }
 
-        public static void Eliminar(int id)
+        public static bool Eliminar(int id)
         {
-            var db = new SistemaVentasDb();
-            Proveedores p = db.Proveedores.Find(id);
+            //bool retorna = false;
+            try
+            {
 
-            db.Proveedores.Remove(p);
-            db.SaveChanges();
+                using (var db = new SistemaVentasDb())
+                {
+                    Proveedores p = new Proveedores();
+                    p = db.Proveedores.Find(id);
+
+                    db.Proveedores.Remove(p);
+                    db.SaveChanges();
+                    //db.Dispose();
+                    return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return true;
+                throw;
+
+
+            }
+
         }
 
 

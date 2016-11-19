@@ -126,7 +126,6 @@
     <Compile Include="BLL\DetalleVentasBLL.cs" />
     <Compile Include="BLL\EmpleadosBLL.cs" />
     <Compile Include="BLL\ProveedorBLL.cs" />
-    <Compile Include="BLL\ProveedoresArticulosBLL.cs" />
     <Compile Include="BLL\TiposUsuariosBLL.cs" />
     <Compile Include="BLL\UsuariosBLL.cs" />
     <Compile Include="BLL\VentasBLL.cs" />
@@ -184,7 +183,9 @@
     <Compile Include="UI\Consultas\MyViewerClientes.Designer.cs">
       <DependentUpon>MyViewerClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Consultas\MyViewerProveedor.cs" />
+    <Compile Include="UI\Consultas\MyViewerProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\Consultas\MyViewerProveedor.designer.cs">
       <DependentUpon>MyViewerProveedor.cs</DependentUpon>
     </Compile>

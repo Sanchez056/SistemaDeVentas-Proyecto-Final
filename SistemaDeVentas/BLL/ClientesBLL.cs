@@ -12,9 +12,9 @@ namespace BLL
     {
         Clientes cliente= new Clientes();
 
-        public static void Insertar(Clientes c)
+        public static bool Insertar(Clientes c)
         {
-
+            bool retorna = false;
             try
             {
 
@@ -23,17 +23,18 @@ namespace BLL
 
                     db.Clientes.Add(c);
                     db.SaveChanges();
-                    db.Dispose();
-
+                    //db.Dispose();
+                    retorna = true;
                 }
 
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+                throw;
 
             }
+            return retorna;
 
         }
 
@@ -46,19 +47,38 @@ namespace BLL
 
         }
 
-        
 
 
 
-        public static void Eliminar(int id)
+
+        public static bool Eliminar(int id)
         {
-            var db = new SistemaVentasDb();
-            Clientes c = db.Clientes.Find(id);
+            //bool retorna = false;
+            try
+            {
 
-            db.Clientes.Remove(c);
-            db.SaveChanges();
+                using (var db = new SistemaVentasDb())
+                {
+                    Clientes c = new Clientes();
+                    c = db.Clientes.Find(id);
+
+                    db.Clientes.Remove(c);
+                    db.SaveChanges();
+                    //db.Dispose();
+                    return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return true;
+                throw;
+
+
+            }
+
         }
-
 
         public static List<Clientes> GetLista()
         {

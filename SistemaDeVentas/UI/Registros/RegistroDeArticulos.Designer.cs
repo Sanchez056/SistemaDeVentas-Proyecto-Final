@@ -337,6 +337,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "RegistroDeArticulos";
             this.Text = "RegistroDeArticulos";
+            this.Load += new System.EventHandler(this.RegistroDeArticulos_Load);
             this.Articulopanel.ResumeLayout(false);
             this.Articulopanel.PerformLayout();
             this.ResumeLayout(false);

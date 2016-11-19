@@ -29,9 +29,9 @@ namespace SistemaDeVentasSMTests.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\Origen Sistema De Ventas\\" +
             "SistemaDeVentas\\SistemaDeVentas\\BaseDatos\\SistemaVentasDb.mdf\";Integrated Securi" +
             "ty=True;Connect Timeout=30")]
-        public string ConStrs {
+        public string ConStr {
             get {
-                return ((string)(this["ConStrs"]));
+                return ((string)(this["ConStr"]));
             }
         }
     }

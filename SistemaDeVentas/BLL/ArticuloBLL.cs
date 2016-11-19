@@ -53,14 +53,36 @@ namespace BLL
 
        
 
-        public static void Eliminar(int id)
+        public static bool Eliminar(int id)
         {
-            var db = new SistemaVentasDb();
-            Articulos a = db.Articulos.Find(id);
+            //bool retorna = false;
+            try
+            {
 
-            db.Articulos.Remove(a);
-            db.SaveChanges();
+                using (var db = new SistemaVentasDb())
+                {
+                    Articulos a = new Articulos();
+                    a = db.Articulos.Find(id);
+
+                    db.Articulos.Remove(a);
+                    db.SaveChanges();
+                    //db.Dispose();
+                    return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return true;
+                throw;
+
+
+            }
+
         }
+
+    
 
 
         public static List<Articulos> GetLista()
@@ -138,7 +160,7 @@ namespace BLL
             return lista;
 
         }
-       /* public static List<Articulos> GetListaFecha(DateTime Desde, DateTime Hasta)
+       public static List<Articulos> GetListaFecha(DateTime Desde, DateTime Hasta)
         {
             List<Articulos> lista = new List<Articulos>();
 
@@ -149,6 +171,6 @@ namespace BLL
             return lista;
 
         }
-        */
+        
     }
 }

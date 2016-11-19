@@ -202,6 +202,11 @@ namespace SistemaDeVentas.Registros
             CorreoerrorProvider.Clear();
             
         }
+
+        private void RegistroDeProveedores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

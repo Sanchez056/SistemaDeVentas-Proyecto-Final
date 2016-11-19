@@ -23,31 +23,33 @@ namespace BLL.Tests
         [TestMethod()]
         public void BuscarTest()
         {
-
+         
+            Assert.IsNull(UsuariosBLL.Buscar(1));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-
+            Assert.IsTrue(UsuariosBLL.Eliminar(1));
         }
 
         [TestMethod()]
         public void GetListaNombreUsuarioTest()
         {
-
+            Assert.IsNotNull(UsuariosBLL.GetListaNombreUsuario("adolfo").Count > 0);
         }
 
         [TestMethod()]
         public void GetListaIdUsuariosTest()
         {
-           
+            Assert.IsNotNull(UsuariosBLL.GetListaIdUsuarios(1).Count > 0);
         }
 
         [TestMethod()]
         public void GetListaTest()
         {
-           
+            Assert.IsNotNull(UsuariosBLL.GetLista().Count >0);
+
         }
 
         [TestMethod()]
@@ -56,16 +58,13 @@ namespace BLL.Tests
             Assert.IsTrue(UsuariosBLL.GetLista().Count > 0);
         }
 
-        [TestMethod()]
-        public void CargarDatosTest()
-        {
-
-        }
+       
 
         [TestMethod()]
         public void getContraseñaTest()
         {
-
+            
+            Assert.IsNotNull(UsuariosBLL.getContraseña("1234").Count > 0);
         }
     }
 }

@@ -5,28 +5,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 namespace BLL.Tests
 {
     [TestClass()]
     public class ProveedorBLLTests
     {
+        Proveedores p = new Proveedores();
         [TestMethod()]
-        public void InsertarTest()
+        public void InsertrTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(ProveedorBLL.Insertar(p));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            Assert.IsNull(ProveedorBLL.Buscar(1));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(ProveedorBLL.Eliminar(1));
         }
 
         [TestMethod()]
@@ -38,19 +40,19 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaTest1()
         {
-            Assert.Fail();
+            Assert.IsTrue(ProveedorBLL.GetLista().Count > 0);
         }
 
         [TestMethod()]
         public void GetListaNombreProveedorTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(ProveedorBLL.GetListaNombreProveedor("JOSE").Count > 0);
         }
 
         [TestMethod()]
         public void GetListaFechaTest()
         {
-            Assert.Fail();
+           
         }
 
         [TestMethod()]

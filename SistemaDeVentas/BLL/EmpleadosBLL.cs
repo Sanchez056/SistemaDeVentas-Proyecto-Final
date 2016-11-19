@@ -13,8 +13,9 @@ namespace BLL
     {
         Empleados empleados = new Empleados();
 
-        public static void Insertar(Empleados e)
+        public static bool Insertar(Empleados e)
         {
+            bool retorna = false;
 
             try
             {
@@ -25,18 +26,20 @@ namespace BLL
                     db.Empleados.Add(e);
                     db.SaveChanges();
                     db.Dispose();
+                    retorna = true;
 
                 }
 
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                throw ex;
+                throw;
 
             }
-
+          return   retorna;
         }
+
 
         public static Empleados Buscar(int id)
         {
@@ -124,7 +127,7 @@ namespace BLL
 
         }
 
-        public static List<Empleados> GetListaFechaNacimiento(DateTime aux)
+        public static List<Empleados> GetListaFechaNacimiento(string aux)
         {
             List<Empleados> lista = new List<Empleados>();
 

@@ -16,5 +16,10 @@ namespace SistemaDeVentas.Registros
         {
             InitializeComponent();
         }
+
+        private void FechadateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

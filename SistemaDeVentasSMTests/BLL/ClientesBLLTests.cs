@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 namespace BLL.Tests
 {
@@ -14,19 +15,21 @@ namespace BLL.Tests
         [TestMethod()]
         public void InsertarTest()
         {
-            Assert.Fail();
+            Clientes c = new Clientes();
+
+            Assert.IsTrue(ClientesBLL.Insertar(c));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            Assert.IsNull(ClientesBLL.Buscar(1));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(ClientesBLL.Eliminar(1));
         }
 
         [TestMethod()]
@@ -38,37 +41,37 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaTest1()
         {
-            Assert.Fail();
+            Assert.IsTrue(ClientesBLL.GetLista().Count > 0);
         }
 
         [TestMethod()]
         public void GetListaNombreClienteTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(ClientesBLL.GetListaNombreCliente("Adolfo").Count > 0);
         }
 
         [TestMethod()]
         public void GetListaApellidoTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(ClientesBLL.GetListaApellido("Molina").Count > 0);
         }
 
         [TestMethod()]
         public void GetListaSexoTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(ClientesBLL.GetListaSexo("M").Count > 0);
         }
 
         [TestMethod()]
         public void GetListaCedulaTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(ClientesBLL.GetListaCedula("323232323").Count > 0);
         }
 
         [TestMethod()]
         public void GetListaFechaTest()
         {
-            Assert.Fail();
+            
         }
 
         [TestMethod()]

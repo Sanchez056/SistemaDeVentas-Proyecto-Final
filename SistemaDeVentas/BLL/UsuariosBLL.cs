@@ -44,19 +44,36 @@ namespace BLL
         public static Usuarios Buscar(int id)
         {
             var db = new SistemaVentasDb();
-
-            return db.Usuarios.Find(id);
-
-
+            return db.Usuarios.Find(id);       
         }
 
-        public static void Eliminar(int id)
+        public static bool Eliminar(int id)
         {
-            var db = new SistemaVentasDb();
-            Usuarios u = db.Usuarios.Find(id);
+           //bool retorna = false;
+            try
+            {
 
-            db.Usuarios.Remove(u);
-            db.SaveChanges();
+                using (var db = new SistemaVentasDb())
+                {
+                    Usuarios us = new Usuarios();
+                    us = db.Usuarios.Find(id);
+
+                    db.Usuarios.Remove(us);
+                    db.SaveChanges();
+                    //db.Dispose();
+                  return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return true;
+                throw;
+              
+
+            }
+           
         }
 
 
@@ -110,15 +127,7 @@ namespace BLL
             return lista;
 
         }
-        public static List<Usuarios> CargarDatos()
-        {
-            using (SistemaVentasDb db = new SistemaVentasDb())
-            {
-                var datos = (from p in db.Usuarios select p).ToList();
-
-                return datos;
-            }
-        }
+        
         public static List<Usuarios> getContraseña(string aux)
         {
             List<Usuarios> lista = new List<Usuarios>();
