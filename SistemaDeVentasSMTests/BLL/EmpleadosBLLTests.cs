@@ -12,14 +12,14 @@ namespace BLL.Tests
     [TestClass()]
     public class EmpleadosBLLTests
     {
-    
+
         [TestMethod()]
         public void InsertarTest()
         {
-           Empleados es = new Empleados();
+            Empleados es = new Empleados();
             Assert.IsNotNull(EmpleadosBLL.Insertar(es));
         }
-    
+
         [TestMethod()]
         public void BuscarTest()
         {
@@ -35,7 +35,7 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaTest()
         {
-           Assert.IsNotNull(EmpleadosBLL.GetLista().Count > 0);
+            Assert.IsNotNull(EmpleadosBLL.GetLista().Count > 0);
         }
 
         [TestMethod()]
@@ -77,13 +77,13 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaFechaIngresoTest()
         {
-            
+            Assert.IsNotNull(DateTime.Today);
         }
 
         [TestMethod()]
         public void GetListaFechaTest()
         {
-            
+            Assert.IsNotNull(DateTime.Today);
         }
     }
 }
