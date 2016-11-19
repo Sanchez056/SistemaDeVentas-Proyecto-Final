@@ -77,13 +77,13 @@ namespace BLL.Tests
         [TestMethod()]
         public void GetListaFechaIngresoTest()
         {
-            Assert.IsNotNull(DateTime.Today);
+            Assert.IsNotNull(EmpleadosBLL.GetListaFechaIngreso(DateTime.Today));
         }
 
         [TestMethod()]
         public void GetListaFechaTest()
         {
-            Assert.IsNotNull(DateTime.Today);
+            Assert.IsNotNull(ArticuloBLL.GetListaFecha(DateTime.Today));
         }
     }
 }
