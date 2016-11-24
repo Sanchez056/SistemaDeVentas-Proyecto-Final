@@ -28,5 +28,21 @@ namespace SistemaDeVentas.Entidades
 
         public DateTime Hora { get; set; }
 
+        public virtual List<Articulos> Articulos { get; set; }
+        public Ventas()
+        {
+            this.Articulos= new List<Articulos>();
+        }
+
+
+        // [Browsable(false)]
+        public Ventas(int VentaId, string codigoVenta,int  cantidad, int descuento)
+        {
+
+            this.VentaId = VentaId;
+            this.CodigoVenta = codigoVenta;
+            this.Articulos = new List<Articulos>();
+        }
+
     }
 }

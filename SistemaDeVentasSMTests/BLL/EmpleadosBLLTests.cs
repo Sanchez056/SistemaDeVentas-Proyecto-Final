@@ -85,5 +85,77 @@ namespace BLL.Tests
         {
             Assert.IsNotNull(ArticuloBLL.GetListaFecha(DateTime.Today));
         }
+
+        [TestMethod()]
+        public void InsertarTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void BuscarTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void EliminarTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaTest2()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaTest3()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaNombreEmpleadoTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaApellidoTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaSexoTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaFechaNacimientoTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaCedulaTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaFechaIngresoTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListaFechaTest1()
+        {
+            Assert.Fail();
+        }
     }
 }

@@ -29,27 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.PresentacionprogressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // PresentacionprogressBar1
-            // 
-            this.PresentacionprogressBar1.BackColor = System.Drawing.Color.Green;
-            this.PresentacionprogressBar1.ForeColor = System.Drawing.Color.Green;
-            this.PresentacionprogressBar1.Location = new System.Drawing.Point(154, 283);
-            this.PresentacionprogressBar1.Name = "PresentacionprogressBar1";
-            this.PresentacionprogressBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.PresentacionprogressBar1.RightToLeftLayout = true;
-            this.PresentacionprogressBar1.Size = new System.Drawing.Size(373, 23);
-            this.PresentacionprogressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.PresentacionprogressBar1.TabIndex = 0;
-            this.PresentacionprogressBar1.UseWaitCursor = true;
-            this.PresentacionprogressBar1.Click += new System.EventHandler(this.PresentacionprogressBar1_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+           
+           
             // 
             // Presentacion
             // 
@@ -58,7 +42,6 @@
             this.BackgroundImage = global::SistemaDeVentas.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(732, 318);
-            this.Controls.Add(this.PresentacionprogressBar1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Presentacion";
             this.Text = "Presentacion";
@@ -69,6 +52,5 @@
 
         #endregion
         private System.Windows.Forms.Timer timer1;
-        public System.Windows.Forms.ProgressBar PresentacionprogressBar1;
     }
 }

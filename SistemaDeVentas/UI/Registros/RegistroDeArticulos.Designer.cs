@@ -55,12 +55,16 @@
             this.ArticuloIdtextBox = new System.Windows.Forms.TextBox();
             this.MarcaArticulolabel = new System.Windows.Forms.Label();
             this.NombreArticulolabel = new System.Windows.Forms.Label();
+            this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
+            this.Categorialabel = new System.Windows.Forms.Label();
             this.Articulopanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Articulopanel
             // 
             this.Articulopanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Articulopanel.Controls.Add(this.Categorialabel);
+            this.Articulopanel.Controls.Add(this.CategoriacomboBox);
             this.Articulopanel.Controls.Add(this.DescuentotextBox);
             this.Articulopanel.Controls.Add(this.Descuentolabel);
             this.Articulopanel.Controls.Add(this.Cantidadlabel);
@@ -96,7 +100,7 @@
             // 
             // DescuentotextBox
             // 
-            this.DescuentotextBox.Location = new System.Drawing.Point(559, 215);
+            this.DescuentotextBox.Location = new System.Drawing.Point(556, 257);
             this.DescuentotextBox.Name = "DescuentotextBox";
             this.DescuentotextBox.Size = new System.Drawing.Size(121, 20);
             this.DescuentotextBox.TabIndex = 106;
@@ -104,7 +108,7 @@
             // Descuentolabel
             // 
             this.Descuentolabel.AutoSize = true;
-            this.Descuentolabel.Location = new System.Drawing.Point(556, 197);
+            this.Descuentolabel.Location = new System.Drawing.Point(553, 239);
             this.Descuentolabel.Name = "Descuentolabel";
             this.Descuentolabel.Size = new System.Drawing.Size(58, 14);
             this.Descuentolabel.TabIndex = 105;
@@ -113,7 +117,7 @@
             // Cantidadlabel
             // 
             this.Cantidadlabel.AutoSize = true;
-            this.Cantidadlabel.Location = new System.Drawing.Point(372, 197);
+            this.Cantidadlabel.Location = new System.Drawing.Point(369, 239);
             this.Cantidadlabel.Name = "Cantidadlabel";
             this.Cantidadlabel.Size = new System.Drawing.Size(50, 14);
             this.Cantidadlabel.TabIndex = 104;
@@ -121,9 +125,9 @@
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(375, 215);
+            this.CantidadtextBox.Location = new System.Drawing.Point(375, 257);
             this.CantidadtextBox.Name = "CantidadtextBox";
-            this.CantidadtextBox.Size = new System.Drawing.Size(141, 20);
+            this.CantidadtextBox.Size = new System.Drawing.Size(138, 20);
             this.CantidadtextBox.TabIndex = 103;
             // 
             // ArticuloIdlabel
@@ -137,22 +141,22 @@
             // 
             // PrecioVentatextBox
             // 
-            this.PrecioVentatextBox.Location = new System.Drawing.Point(559, 281);
+            this.PrecioVentatextBox.Location = new System.Drawing.Point(556, 323);
             this.PrecioVentatextBox.Name = "PrecioVentatextBox";
             this.PrecioVentatextBox.Size = new System.Drawing.Size(121, 20);
             this.PrecioVentatextBox.TabIndex = 101;
             // 
             // PrecioCompratextBox
             // 
-            this.PrecioCompratextBox.Location = new System.Drawing.Point(372, 284);
+            this.PrecioCompratextBox.Location = new System.Drawing.Point(375, 326);
             this.PrecioCompratextBox.Name = "PrecioCompratextBox";
-            this.PrecioCompratextBox.Size = new System.Drawing.Size(144, 20);
+            this.PrecioCompratextBox.Size = new System.Drawing.Size(138, 20);
             this.PrecioCompratextBox.TabIndex = 100;
             // 
             // Precioventalabel
             // 
             this.Precioventalabel.AutoSize = true;
-            this.Precioventalabel.Location = new System.Drawing.Point(556, 265);
+            this.Precioventalabel.Location = new System.Drawing.Point(553, 307);
             this.Precioventalabel.Name = "Precioventalabel";
             this.Precioventalabel.Size = new System.Drawing.Size(73, 14);
             this.Precioventalabel.TabIndex = 99;
@@ -161,7 +165,7 @@
             // PrecioComlabel
             // 
             this.PrecioComlabel.AutoSize = true;
-            this.PrecioComlabel.Location = new System.Drawing.Point(372, 265);
+            this.PrecioComlabel.Location = new System.Drawing.Point(372, 307);
             this.PrecioComlabel.Name = "PrecioComlabel";
             this.PrecioComlabel.Size = new System.Drawing.Size(80, 14);
             this.PrecioComlabel.TabIndex = 98;
@@ -171,9 +175,9 @@
             // 
             this.NombreProveedorcomboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NombreProveedorcomboBox1.FormattingEnabled = true;
-            this.NombreProveedorcomboBox1.Location = new System.Drawing.Point(372, 160);
+            this.NombreProveedorcomboBox1.Location = new System.Drawing.Point(375, 160);
             this.NombreProveedorcomboBox1.Name = "NombreProveedorcomboBox1";
-            this.NombreProveedorcomboBox1.Size = new System.Drawing.Size(308, 22);
+            this.NombreProveedorcomboBox1.Size = new System.Drawing.Size(305, 22);
             this.NombreProveedorcomboBox1.TabIndex = 97;
             this.NombreProveedorcomboBox1.SelectedIndexChanged += new System.EventHandler(this.NombreProveedorcomboBox1_SelectedIndexChanged);
             // 
@@ -198,7 +202,7 @@
             // NombreProveedorlabel
             // 
             this.NombreProveedorlabel.AutoSize = true;
-            this.NombreProveedorlabel.Location = new System.Drawing.Point(366, 143);
+            this.NombreProveedorlabel.Location = new System.Drawing.Point(372, 143);
             this.NombreProveedorlabel.Name = "NombreProveedorlabel";
             this.NombreProveedorlabel.Size = new System.Drawing.Size(98, 14);
             this.NombreProveedorlabel.TabIndex = 94;
@@ -328,6 +332,24 @@
             this.NombreArticulolabel.TabIndex = 81;
             this.NombreArticulolabel.Text = "Nombre De Articulo:";
             // 
+            // CategoriacomboBox
+            // 
+            this.CategoriacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CategoriacomboBox.FormattingEnabled = true;
+            this.CategoriacomboBox.Location = new System.Drawing.Point(375, 214);
+            this.CategoriacomboBox.Name = "CategoriacomboBox";
+            this.CategoriacomboBox.Size = new System.Drawing.Size(305, 22);
+            this.CategoriacomboBox.TabIndex = 107;
+            // 
+            // Categorialabel
+            // 
+            this.Categorialabel.AutoSize = true;
+            this.Categorialabel.Location = new System.Drawing.Point(372, 197);
+            this.Categorialabel.Name = "Categorialabel";
+            this.Categorialabel.Size = new System.Drawing.Size(54, 14);
+            this.Categorialabel.TabIndex = 108;
+            this.Categorialabel.Text = "Categoria:";
+            // 
             // RegistroDeArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -373,5 +395,7 @@
         private System.Windows.Forms.Label Descuentolabel;
         private System.Windows.Forms.Label Cantidadlabel;
         private System.Windows.Forms.TextBox CantidadtextBox;
+        private System.Windows.Forms.Label Categorialabel;
+        private System.Windows.Forms.ComboBox CategoriacomboBox;
     }
 }

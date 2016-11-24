@@ -22,5 +22,10 @@ namespace SistemaDeVentas.Consultas
 
             this.ClientesreportViewer.RefreshReport();
         }
+
+        private void ClientesreportViewer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

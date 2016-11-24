@@ -37,6 +37,7 @@
             this.ClientesreportViewer.Name = "ClientesreportViewer";
             this.ClientesreportViewer.Size = new System.Drawing.Size(691, 298);
             this.ClientesreportViewer.TabIndex = 0;
+            this.ClientesreportViewer.Load += new System.EventHandler(this.ClientesreportViewer_Load);
             // 
             // MyViewerClientes
             // 

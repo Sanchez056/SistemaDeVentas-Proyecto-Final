@@ -190,6 +190,51 @@ namespace SistemaDeVentas
             rect.Location = new Point(15, 30);
 
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Registros.RegistrosCategoriaArticulos rect = new UI.Registros.RegistrosCategoriaArticulos();
+
+            rect.MdiParent = this;
+            rect.Show();
+            rect.Location = new Point(15, 30);
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registros.RegistroDeCompra rect = new Registros.RegistroDeCompra();
+
+            rect.MdiParent = this;
+            rect.Show();
+            rect.Location = new Point(15, 30);
+        }
+
+        private void ConsultaempleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.ConsultaEmpleado cus = new UI.Consultas.ConsultaEmpleado();
+
+            cus.MdiParent = this;
+            cus.Show();
+            cus.Location = new Point(15, 30);
+        }
+
+        private void compraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.ConsultaCompra cus = new UI.Consultas.ConsultaCompra();
+
+            cus.MdiParent = this;
+            cus.Show();
+            cus.Location = new Point(15, 30);
+        }
+
+        private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.ConsultaVentas cus = new UI.Consultas.ConsultaVentas();
+
+            cus.MdiParent = this;
+            cus.Show();
+            cus.Location = new Point(15, 30);
+        }
     }
 }
 

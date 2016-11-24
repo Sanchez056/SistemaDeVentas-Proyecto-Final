@@ -47,6 +47,7 @@ namespace SistemaDeVentas.UI.Registros
         {
             DateTimePicker f = new DateTimePicker();
             ArticuloIdtextBox.Clear();
+            CodigoArticulotextBox.Clear();
             NombreArticulotextBox.Clear();
             MarcaArticulotextBox.Clear();
             DescuentotextBox.Clear();
@@ -63,7 +64,7 @@ namespace SistemaDeVentas.UI.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            if (validarId("Favor ingresar el id del Cliente que desea buscar") && ValidarBuscar())
+            if (validarId("Favor ingresar el id del Articulo que desea buscar") && ValidarBuscar())
                 LLenar(ArticuloBLL.Buscar(ut.StringInt(ArticuloIdtextBox.Text)));
         }
         private void LLenar(Entidades.Articulos articulo)
@@ -78,7 +79,8 @@ namespace SistemaDeVentas.UI.Registros
             PrecioVentatextBox.Text = articulo.PrecioVentas.ToString();
             MarcaArticulotextBox.Text = articulo.Marca;
 
-           CargarConboBox();
+          CargarConboBoxCategorias();
+            CargarConboBoxProveedores();
         }
         private void Guardabutton_Click(object sender, EventArgs e)
         {
@@ -86,7 +88,8 @@ namespace SistemaDeVentas.UI.Registros
            Entidades.Articulos arti = new Entidades.Articulos();
             //BuscarerrorProvider1.Clear();
             LlenarClase(arti);
-            CargarConboBox();
+            CargarConboBoxProveedores();
+            CargarConboBoxCategorias();
             if (ValidarTextbox() && ValidarExiste(CodigoArticulotextBox.Text))
             {
                 ArticuloBLL.Insertar(arti);
@@ -100,7 +103,7 @@ namespace SistemaDeVentas.UI.Registros
         Utilidades ut = new Utilidades();
         private bool ValidarBuscar()
         {
-            if (ClientesBLL.Buscar(ut.StringInt(ArticuloIdtextBox.Text)) == null)
+            if (ArticuloBLL.Buscar(ut.StringInt(ArticuloIdtextBox.Text)) == null)
             {
                 MessageBox.Show("Este registro no existe");
                 return false;
@@ -243,15 +246,27 @@ namespace SistemaDeVentas.UI.Registros
             }
         }
         public List<Proveedores> lista = new List<Proveedores>();
-        private void CargarConboBox()
+         private void CargarConboBoxProveedores()
+         {
+             var db = new SistemaVentasDb();
+             lista = db.Proveedores.ToList();
+             if (lista.Count > 0)
+             {
+                 NombreProveedorcomboBox1.DataSource = lista;
+                 NombreProveedorcomboBox1.ValueMember = "ProveedorId";
+                 NombreProveedorcomboBox1.DisplayMember = "NombreProveedor";
+             }
+         }
+        public List<Categorias> list = new List<Categorias>();
+        private void CargarConboBoxCategorias()
         {
             var db = new SistemaVentasDb();
-            lista = db.Proveedores.ToList();
-            if (lista.Count > 0)
+            list = db.Categorias.ToList();
+            if (list.Count > 0)
             {
-                NombreProveedorcomboBox1.DataSource = lista;
-                NombreProveedorcomboBox1.ValueMember = "ProveedorId";
-                NombreProveedorcomboBox1.DisplayMember = "NombreProveedor";
+                CategoriacomboBox.DataSource = list;
+                CategoriacomboBox.ValueMember = "CategoriaId";
+                CategoriacomboBox.DisplayMember = "Descripcion";
             }
         }
         ///---------------
@@ -268,7 +283,8 @@ namespace SistemaDeVentas.UI.Registros
 
         private void RegistroDeArticulos_Load(object sender, EventArgs e)
         {
-             CargarConboBox();
+            CargarConboBoxProveedores();
+            CargarConboBoxCategorias();
         }
     }
 }

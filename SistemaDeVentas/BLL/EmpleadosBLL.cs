@@ -51,18 +51,39 @@ namespace BLL
 
         }
 
-
-
-
-
-        public static void Eliminar(int id)
+        public static bool Eliminar(int id)
         {
-            var db = new SistemaVentasDb();
-            Empleados e = db.Empleados.Find(id);
+            //bool retorna = false;
+            try
+            {
 
-            db.Empleados.Remove(e);
-            db.SaveChanges();
+                using (var db = new SistemaVentasDb())
+                {
+                    Empleados e = new Empleados();
+                    e = db.Empleados.Find(id);
+
+                    db.Empleados.Remove(e);
+                    db.SaveChanges();
+                    //db.Dispose();
+                    return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return true;
+                throw;
+
+
+            }
+
         }
+
+
+
+
+
 
 
         public static List<Empleados> GetLista()

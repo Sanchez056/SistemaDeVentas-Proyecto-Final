@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SistemaDeVentas.BLL
 {
-    class CondicionesPagosBLLcs
+   public class CondicionesPagosBLLcs
     {
+      
+
+
     }
 }

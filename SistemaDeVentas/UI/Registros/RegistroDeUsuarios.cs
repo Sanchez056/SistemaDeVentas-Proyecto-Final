@@ -19,7 +19,7 @@ namespace SistemaDeVentas
         public RegistroDeUsuarios()
         {
             InitializeComponent();
-            CargarConboBox();
+            //CargarConboBox();
 
         }
         //-- Botton Buscar y Todos sus Metodos Utilizados para Realizar dicha busqueda en la base de datos
@@ -87,7 +87,7 @@ namespace SistemaDeVentas
             NombreUsuariostextBox.Clear();
             ContraseñatextBox.Clear();
             ConfimarContraseñatextBox1.Clear();
-            TipoUsuarioscomboBox.Text = "Elegir opcion";
+           // TipoUsuarioscomboBox.Text = "Elegir opcion";
             limpiarErroresProvider();
         }
         //--
