@@ -16,31 +16,23 @@ namespace SistemaDeVentas
 {
     public partial class RegistroDeClientes : Form
     {
+        UtilidadesInt ut = new UtilidadesInt();
+        public List<Clientes> lista = new List<Clientes>();
         public RegistroDeClientes()
         {
             InitializeComponent();
         }
-
-        private void Sexolabel_Click(object sender, EventArgs e)
+        private void Buscarbutton_Click(object sender, EventArgs e)
         {
-
+            if (validarId("Favor ingresar el id del Cliente que desea buscar") && ValidarBuscar())
+                LLenar(ClientesBLL.Buscar(ut.StringInt(ClienteIdtextBox.Text)));
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RegistroDeClientes_Load(object sender, EventArgs e)
-        {
-
-        }
         private void LLenar(Clientes cliente)
         {
             
             ClienteIdtextBox.Text = cliente.ClienteId.ToString();
             NombretextBox.Text = cliente.Nombre;
-            ApellidotextBox.Text = cliente.Apellido;
             CiudadcomboBox.Text = cliente.Ciudad;
             DirecciontextBox.Text = cliente.Direccion;
             CedulamaskedTextBox.Text = cliente.Cedula;
@@ -52,7 +44,7 @@ namespace SistemaDeVentas
                 FemeninocheckBox.Checked = true;
 
         }
-        Utilidades ut = new Utilidades();
+     
         private bool ValidarBuscar()
         {
             if (ClientesBLL.Buscar(ut.StringInt(ClienteIdtextBox.Text)) == null)
@@ -80,6 +72,39 @@ namespace SistemaDeVentas
         }
 
         //----------
+       
+
+        private bool ValidarExiste(string aux)
+        {
+            if (ClientesBLL.GetListaCedula(aux).Count() > 0)
+            {
+                MessageBox.Show("Este cedula de cliente ya existe, favor intentar con otra Cedula ...");
+                return false;
+            }
+            return true;
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        public void Limpiar()
+        {
+            DateTimePicker f = new DateTimePicker();
+            NombretextBox.Clear();
+            CedulamaskedTextBox.Clear();
+            DirecciontextBox.Clear();
+            CiudadcomboBox.Text = "Elegir Su Ciudad";
+            TelefonomaskedTextBox1.Clear();
+            CelularmaskedTextBox2.Clear();
+            MasculinocheckBox.Checked = false;
+            FemeninocheckBox.Checked = false;
+            FechadateTimePicker.Value = f.Value;
+            //-----
+            limpiarErroresProvider();
+
+        }
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             Clientes cliente = new Clientes();
@@ -95,21 +120,10 @@ namespace SistemaDeVentas
 
 
         }
-
-        private bool ValidarExiste(string aux)
-        {
-            if (ClientesBLL.GetListaCedula(aux).Count() > 0)
-            {
-                MessageBox.Show("Este cedula de cliente ya existe, favor intentar con otra Cedula ...");
-                return false;
-            }
-            return true;
-        }
         private void LlenarClase(Clientes c)
         {
            
             c.Nombre = NombretextBox.Text;
-            c.Apellido = ApellidotextBox.Text;
             c.Cedula = CedulamaskedTextBox.Text;
             c.Ciudad  = CiudadcomboBox.Text;
             c.Direccion = DirecciontextBox.Text;
@@ -139,8 +153,8 @@ namespace SistemaDeVentas
         {
 
             if (string.IsNullOrEmpty(NombretextBox.Text) &&
-                string.IsNullOrEmpty(ApellidotextBox.Text) &&
                 string.IsNullOrEmpty(CedulamaskedTextBox.Text) &&
+                string.IsNullOrEmpty(CiudadcomboBox.Text) &&
                 string.IsNullOrEmpty(DirecciontextBox.Text) &&
                 string.IsNullOrEmpty(TelefonomaskedTextBox1.Text) &&
                 string.IsNullOrEmpty(CelularmaskedTextBox2.Text)
@@ -148,7 +162,6 @@ namespace SistemaDeVentas
                 )
             {
                  NombreerrorProvider2.SetError(NombretextBox, "Favor Ingresar el Nombre de cliente");
-                 ApellidoerrorProvider3.SetError(ApellidotextBox, "Favor Ingresar el Apellido de Cliente");
                  CedulaerrorProvider4.SetError(CedulamaskedTextBox, "Favor Ingresar la Cedula Cliente");
                  CiudaderrorProvider7.SetError(CiudadcomboBox, "Favor Ingresar la Ciudad actual de donde recide el cliente");
                  DirrecionerrorProvider8.SetError(DirecciontextBox,"Favor Ingresar la Dirrecion de la ciudad de donde esta el Cliente");
@@ -164,12 +177,7 @@ namespace SistemaDeVentas
                 NombreerrorProvider2.SetError(NombretextBox, "Favor ingresar el Nombre del Cliente");
                 return false;
             }
-            if (string.IsNullOrEmpty(ApellidotextBox.Text))
-            {
-                ApellidoerrorProvider3.Clear();
-                ApellidoerrorProvider3.SetError(ApellidotextBox, "Favor ingresar el Apellido del Cliente");
-                return false;
-            }
+           
 
             if (string.IsNullOrEmpty(CedulamaskedTextBox.Text))
             {
@@ -216,36 +224,6 @@ namespace SistemaDeVentas
         }
 
 
-
-
-        private void Buscarbutton_Click(object sender, EventArgs e)
-        {
-            if (validarId("Favor ingresar el id del Cliente que desea buscar") && ValidarBuscar())
-                LLenar(ClientesBLL.Buscar(ut.StringInt(ClienteIdtextBox.Text)));
-        }
-
-        private void Nuevobutton_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-        public void Limpiar()
-        {
-            DateTimePicker f = new DateTimePicker();
-            NombretextBox.Clear();
-            ApellidotextBox.Clear();
-            CedulamaskedTextBox.Clear();
-            DirecciontextBox.Clear();
-            CiudadcomboBox.Text = "Elegir Su Ciudad";
-            TelefonomaskedTextBox1.Clear();
-            CelularmaskedTextBox2.Clear();
-            MasculinocheckBox.Checked = false;
-            FemeninocheckBox.Checked = false;
-            FechadateTimePicker.Value = f.Value;
-            //-----
-            limpiarErroresProvider();
-
-        }
-
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             if (validarId("Favor digitar el id del Cliente que desea eliminar") && ValidarBuscar())
@@ -257,23 +235,11 @@ namespace SistemaDeVentas
 
         }
 
-        public List<Clientes> lista = new List<Clientes>();
-        private void CargarConboBox()
-        {
-            var db = new SistemaVentasDb();
-            lista = db.Clientes.ToList();
-            if (lista.Count > 0)
-            {
-                CiudadcomboBox.DataSource = lista;
-                CiudadcomboBox.ValueMember = "ClienteId";
-                CiudadcomboBox.DisplayMember = "Ciudad";
-            }
-        }
         ///---------------
         private void limpiarErroresProvider()
         {
+            BuscarerrorProvider1.Clear();
             NombreerrorProvider2.Clear();
-            ApellidoerrorProvider3.Clear();
             CedulamaskedTextBox.Clear();
             SexoerrorProvider1.Clear();
             CiudaderrorProvider7.Clear();
@@ -282,8 +248,22 @@ namespace SistemaDeVentas
             CelularerrorProvider10.Clear();
 
         }
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
 
-        
+        }
+
+        private void RegistroDeClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sexolabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
 
         ///-------------
     }

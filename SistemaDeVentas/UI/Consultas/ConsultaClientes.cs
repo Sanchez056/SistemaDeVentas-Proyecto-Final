@@ -45,7 +45,7 @@ namespace SistemaDeVentas.Consultas
 
         private void BuscarSelecionComBox()
         {
-            Utilidades ut = new Utilidades();
+            UtilidadesInt ut = new UtilidadesInt();
 
 
             if (FiltrarcomboBox.SelectedIndex == 0)
@@ -76,21 +76,8 @@ namespace SistemaDeVentas.Consultas
 
                 ConsultaClientesdataGridView.DataSource = lista;
             }
+            
             if (FiltrarcomboBox.SelectedIndex == 2)
-            {
-                if (!String.IsNullOrEmpty(FiltrotextBox.Text))
-                {
-
-                    lista =ClientesBLL.GetListaApellido(FiltrotextBox.Text);
-                }
-                else
-                {
-                    lista = ClientesBLL.GetLista();
-                }
-
-                ConsultaClientesdataGridView.DataSource = lista;
-            }
-            if (FiltrarcomboBox.SelectedIndex == 3)
             {
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
@@ -104,7 +91,7 @@ namespace SistemaDeVentas.Consultas
 
                 ConsultaClientesdataGridView.DataSource = lista;
             }
-            if (FiltrarcomboBox.SelectedIndex == 4)
+            if (FiltrarcomboBox.SelectedIndex == 3)
             {
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
@@ -118,7 +105,7 @@ namespace SistemaDeVentas.Consultas
 
                 ConsultaClientesdataGridView.DataSource = lista;
             }
-            if (FiltrarcomboBox.SelectedIndex == 5)
+            if (FiltrarcomboBox.SelectedIndex == 4)
             {
                 if (!String.IsNullOrEmpty(FiltrotextBox.Text))
                 {
@@ -139,9 +126,9 @@ namespace SistemaDeVentas.Consultas
 
         private bool validar()
         {
-            Utilidades ut = new Utilidades();
+            UtilidadesInt ut = new UtilidadesInt();
 
-            if (FiltrarcomboBox.SelectedIndex == 5)
+            if (FiltrarcomboBox.SelectedIndex == 4)
             {
                 if (DesdeDateTimePicke.Value == HastadateTimePicker.Value)
                 {
@@ -166,19 +153,13 @@ namespace SistemaDeVentas.Consultas
                 return false;
 
             }
-            if (FiltrarcomboBox.SelectedIndex == 2 && ClientesBLL.GetListaApellido(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 2 && ClientesBLL.GetListaCedula(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;
 
             }
-            if (FiltrarcomboBox.SelectedIndex == 3 && ClientesBLL.GetListaCedula(FiltrotextBox.Text).Count == 0)
-            {
-                MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
-                return false;
-
-            }
-            if (FiltrarcomboBox.SelectedIndex == 4 && ClientesBLL.GetListaSexo(FiltrotextBox.Text).Count == 0)
+            if (FiltrarcomboBox.SelectedIndex == 3 && ClientesBLL.GetListaSexo(FiltrotextBox.Text).Count == 0)
             {
                 MessageBox.Show("No hay registros que coincidan con este campo de filtro..." + "\n" + "\n" + "Intente con otro campo");
                 return false;

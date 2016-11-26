@@ -134,12 +134,13 @@
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Compras.cs" />
     <Compile Include="Entidades\CondicionesPagos.cs" />
+    <Compile Include="Entidades\DetalleCompra.cs" />
     <Compile Include="Entidades\DetalleVentas.cs" />
-    <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Entidades\Proveedores.cs" />
     <Compile Include="Entidades\TipoUsuarios.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
+    <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="RegistrosArticulo.cs" />
     <Compile Include="SistemaVentasDbDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -194,6 +195,12 @@
     <Compile Include="UI\Consultas\ConsultaVentas.Designer.cs">
       <DependentUpon>ConsultaVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\MyViewerFacturaCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\MyViewerFacturaCredito.Designer.cs">
+      <DependentUpon>MyViewerFacturaCredito.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\MyViewerEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +224,12 @@
     </Compile>
     <Compile Include="UI\Consultas\MyViewerProveedor.designer.cs">
       <DependentUpon>MyViewerProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\MyViewerReciboContado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\MyViewerReciboContado.Designer.cs">
+      <DependentUpon>MyViewerReciboContado.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\MyViewerUsuarios.cs">
       <SubType>Form</SubType>
@@ -322,7 +335,8 @@
     <Compile Include="UI\Registros\RegistrosTipoUsuarios.Designer.cs">
       <DependentUpon>RegistrosTipoUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilidades.cs" />
+    <Compile Include="UtilidadesDouble.cs" />
+    <Compile Include="UtilidadesInt.cs" />
     <EmbeddedResource Include="UI\Consultas\ConsultaEmpleado.resx">
       <DependentUpon>ConsultaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -341,6 +355,9 @@
     <EmbeddedResource Include="UI\Consultas\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\MyViewerFacturaCredito.resx">
+      <DependentUpon>MyViewerFacturaCredito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\MyViewerArticulos.resx">
       <DependentUpon>MyViewerArticulos.cs</DependentUpon>
     </EmbeddedResource>
@@ -352,6 +369,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\MyViewerProveedor.resx">
       <DependentUpon>MyViewerProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\MyViewerReciboContado.resx">
+      <DependentUpon>MyViewerReciboContado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\MyViewerUsuarios.resx">
       <DependentUpon>MyViewerUsuarios.cs</DependentUpon>

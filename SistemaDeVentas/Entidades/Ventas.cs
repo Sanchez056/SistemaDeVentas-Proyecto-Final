@@ -12,37 +12,62 @@ namespace SistemaDeVentas.Entidades
         [Key]
         public int VentaId { get; set; }
 
-        public string CodigoVenta { get; set; }
+        public string Codigo { get; set; }
 
-        public string NombreCliente { get; set; }
+        public string CodicionPago { get; set; }
+      
+        public int descuento  { get; set; }
 
-        public int Descuento{ get; set; }
+        public int Cuotas { get; set; }
 
-        public int Itebis{ get; set; }
 
-        public int SubTotal { get; set; }
+        public double Deuda { get; set; }
 
-        public int Total { get; set; }
+        public DateTime FechaVencimiento { get; set; }
 
-        public DateTime Fecha{ get; set; }
+        public int Cantidad { get; set; }
 
-        public DateTime Hora { get; set; }
+        public double Precio { get; set; }
+
+        public double Itebis  { get; set; }
+
+        public double SubTotal { get; set; }
+
+        public double TotalDescuento { get; set; }
+        public  double TotalItebis   { get; set; }
+
+        public double Total { get; set; }
+
+        public DateTime Fecha { get; set; }
 
         public virtual List<Articulos> Articulos { get; set; }
+
         public Ventas()
         {
-            this.Articulos= new List<Articulos>();
+            this.Articulos = new List<Articulos>();
         }
 
 
         // [Browsable(false)]
-        public Ventas(int VentaId, string codigoVenta,int  cantidad, int descuento)
+        public Ventas(int ventaId, string codigo,string codicionPago,double subTotal,double totalDesuento,double totalItebis,double total,DateTime fecha)
         {
 
-            this.VentaId = VentaId;
-            this.CodigoVenta = codigoVenta;
+            this.VentaId= ventaId;
+            this.Codigo = codigo;
+            this.CodicionPago =codicionPago;
+            this.SubTotal = subTotal;
+            this.TotalDescuento = totalDesuento;
+            this.TotalItebis = totalItebis;
+            this.Total = total;
             this.Articulos = new List<Articulos>();
         }
+
+
+
+
+
+
+
 
     }
 }

@@ -18,7 +18,7 @@ namespace SistemaDeVentas.Registros
             InitializeComponent();
         }
 
-        Utilidades ut = new Utilidades();
+        UtilidadesInt ut = new UtilidadesInt();
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             if (validarId("Favor ingresar el id del Proveedor que desea buscar") && ValidarBuscar())

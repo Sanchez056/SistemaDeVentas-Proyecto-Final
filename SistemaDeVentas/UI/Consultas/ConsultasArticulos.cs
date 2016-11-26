@@ -40,7 +40,7 @@ namespace SistemaDeVentas.Consultas
 
         private void BuscarSelecionComBox()
         {
-            Utilidades ut = new Utilidades();
+            UtilidadesInt ut = new UtilidadesInt();
 
 
             if (FiltrarcomboBox.SelectedIndex == 0)
@@ -108,7 +108,7 @@ namespace SistemaDeVentas.Consultas
 
         private bool validar()
         {
-            Utilidades ut = new Utilidades();
+            UtilidadesInt ut = new UtilidadesInt();
 
             if (FiltrarcomboBox.SelectedIndex == 0 && ArticuloBLL.GetLista(ut.StringInt(FiltrotextBox.Text)).Count == 0)
             {

@@ -51,10 +51,26 @@ namespace BLL
 
             return db.Articulos.Find(id);
 
+        }
+        public static Articulos BuscarNombre(string nombre)
+        {
+            var db = new SistemaVentasDb();
+
+            return db.Articulos.Find(nombre);
+
+        }
+        public static Articulos BuscarCodigo(int id)
+        {
+            var db = new SistemaVentasDb();
+
+            return db.Articulos.Find(id);
 
         }
 
-       
+        
+
+
+
 
         public static bool Eliminar(int id)
         {
@@ -138,6 +154,17 @@ namespace BLL
             var db = new SistemaVentasDb();
 
             lista = db.Articulos.Where(p => p.Marca== aux).ToList();
+
+            return lista;
+
+        }
+        public static List<Articulos> GetListaPrecioVenta(double aux)
+        {
+            List<Articulos> lista = new List<Articulos>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.Articulos.Where(p => p.PrecioVentas== aux).ToList();
 
             return lista;
 

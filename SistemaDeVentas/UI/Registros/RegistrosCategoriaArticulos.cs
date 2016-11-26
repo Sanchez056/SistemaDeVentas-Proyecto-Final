@@ -14,54 +14,33 @@ namespace SistemaDeVentas.UI.Registros
 {
     public partial class RegistrosCategoriaArticulos : Form
     {
+        UtilidadesInt ut = new UtilidadesInt();
+        Entidades.Articulos art = new Entidades.Articulos();
+        Categorias categoria = new Categorias();
         public RegistrosCategoriaArticulos()
         {
             InitializeComponent();
         }
-
-        private void Quitarbutton_Click(object sender, EventArgs e)
-        {
-
-        }
-        public void Limpiar()
-        {
-            CategoriaIdtextBox.Clear();
-            DescripciontextBox.Clear();
-
-        }
-        Entidades.Articulos art = new Entidades.Articulos();
-
-        Categorias categoria = new Categorias();
-        private void Nuevobutton_Click(object sender, EventArgs e)
-        {
-            Limpiar();
-        }
-
-        private void Guardarbutton_Click(object sender, EventArgs e)
-        {
-            
-            //BuscarerrorProvider1.Clear();
-            LlenarClase(categoria);
-           
-            if (ValidarTextbox() && ValidarExiste(CategoriaIdtextBox.Text))
-            {
-                BLL.CategoriaBLL.Insertar(categoria);
-                Limpiar();
-                MessageBox.Show("Guardado con exito");
-            }
-        }
-
-        private void LLenar(Categorias categoria)
-        {
-           
-            CategoriaIdtextBox.Text = categoria.CategoriaId.ToString();
-            DescripciontextBox.Text = categoria.Descripcion;
-        }
-        Utilidades ut = new Utilidades();
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             if (validarId("Favor ingresar el id de la Categoria que desea buscar") && ValidarBuscar())
                 LLenar(BLL.CategoriaBLL.Buscar(ut.StringInt(CategoriaIdtextBox.Text)));
+        }
+        private void LLenar(Categorias categoria)
+        {
+
+            CategoriaIdtextBox.Text = categoria.CategoriaId.ToString();
+            DescripciontextBox.Text = categoria.Descripcion;
+        }
+
+        private bool ValidarExiste(string aux)
+        {
+            if (BLL.CategoriaBLL.GetListaDescripcion(aux).Count() > 0)
+            {
+                MessageBox.Show("Este Categoria ya  existe, favor intentar con otra Descripcion de Categoria ...");
+                return false;
+            }
+            return true;
         }
         private bool ValidarBuscar()
         {
@@ -89,19 +68,41 @@ namespace SistemaDeVentas.UI.Registros
             }
         }
 
-        private bool ValidarExiste(string aux)
+
+
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
         {
-            if (BLL.CategoriaBLL.GetListaDescripcion(aux).Count() > 0)
+            Limpiar();
+        }
+        public void Limpiar()
+        {
+            CategoriaIdtextBox.Clear();
+            DescripciontextBox.Clear();
+
+        }
+
+        private void Guardarbutton_Click(object sender, EventArgs e)
+        {
+            
+            BuscarerrorProvider.Clear();
+            LlenarClase(categoria);
+           
+            if (ValidarTextbox() && ValidarExiste(CategoriaIdtextBox.Text))
             {
-                MessageBox.Show("Este Categoria ya  existe, favor intentar con otra Descripcion de Categoria ...");
-                return false;
+                BLL.CategoriaBLL.Insertar(categoria);
+                Limpiar();
+                MessageBox.Show("Guardado con exito");
             }
-            return true;
         }
+
         private void LlenarClase(Categorias c)
-        {   
-            c.Descripcion= DescripciontextBox.Text;     
+        {
+            c.Descripcion = DescripciontextBox.Text;
         }
+
+
+
 
 
         private bool ValidarTextbox()
@@ -112,18 +113,10 @@ namespace SistemaDeVentas.UI.Registros
 
                 )
             {
-                // NombreerrorProvider2.SetError(CodigoArticulotextBox, "Favor Ingresar el codigo de articulo");
-
+                DescripcionerrorProvider.SetError(DescripciontextBox, "Favor la descripcion de  la Categoria de los articulo");
                 MessageBox.Show("Favor llenar todos los campos obligatorios");
 
-            }
-            if (string.IsNullOrEmpty(DescripciontextBox.Text))
-            {
-                // NombreerrorProvider2.Clear();
-                //NombreerrorProvider2.SetError(CodigoArticulotextBox, "Favor ingresar el Nombre de codigo del articulo");
-                return false;
-            }
-           
+            }     
            
 
             return true;
@@ -144,7 +137,11 @@ namespace SistemaDeVentas.UI.Registros
         {
           
         }
+        private void Quitarbutton_Click(object sender, EventArgs e)
+        {
 
-       
+        }
+
+
     }
 }

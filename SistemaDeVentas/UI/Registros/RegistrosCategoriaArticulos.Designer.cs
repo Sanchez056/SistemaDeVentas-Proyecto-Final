@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ArtculosgroupBox = new System.Windows.Forms.GroupBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,7 +38,11 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.DescripcionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.ArtculosgroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // ArtculosgroupBox
@@ -132,6 +137,14 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // DescripcionerrorProvider
+            // 
+            this.DescripcionerrorProvider.ContainerControl = this;
+            // 
+            // BuscarerrorProvider
+            // 
+            this.BuscarerrorProvider.ContainerControl = this;
+            // 
             // RegistrosCategoriaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -148,6 +161,8 @@
             this.Load += new System.EventHandler(this.RegistrosCategoriaArticulos_Load);
             this.ArtculosgroupBox.ResumeLayout(false);
             this.ArtculosgroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,5 +178,7 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider DescripcionerrorProvider;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
     }
 }

@@ -29,12 +29,16 @@ namespace DAL
 
         public virtual DbSet<CondicionesPagos> CodicionesPagos { get; set; }
 
-         public virtual DbSet<Categorias> Categorias { get; set; }
+        public virtual DbSet<Categorias> Categorias { get; set; }
+
+        public virtual DbSet<Ventas> Ventas { get; set; }
+
+        public virtual DbSet<Compras> Compras { get; set; }
         //  public virtual DbSet<CategoriaArticulos> CategoriaArticulos { get; set; }
         //---------------------------------------------------------------------
-        
-    //---------------------------------------------------------------------
-      protected override void OnModelCreating(DbModelBuilder modelBuilder)
+
+        //---------------------------------------------------------------------
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ventas>()
                  .HasMany<Articulos>(a => a.Articulos)
@@ -46,11 +50,23 @@ namespace DAL
                      ge.ToTable("DetalleVentas");
                  });
 
-           
+            modelBuilder.Entity<Compras>()
+               .HasMany<Articulos>(a => a.Articulos)
+               .WithMany(c => c.Compras)
+               .Map(ge =>
+               {
+                   ge.MapLeftKey("ArticuloId");
+                   ge.MapRightKey("CompraId");
+                   ge.ToTable("DetalleCompra");
+               });
+
+
 
         }
+
     }
 }
+
 
 
    

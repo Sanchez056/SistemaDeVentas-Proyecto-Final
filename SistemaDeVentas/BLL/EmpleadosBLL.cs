@@ -125,17 +125,7 @@ namespace BLL
 
         }
 
-        public static List<Empleados> GetListaApellido(string aux)
-        {
-            List<Empleados> lista = new List<Empleados>();
-
-            var db = new SistemaVentasDb();
-
-            lista = db.Empleados.Where(p => p.Apellido == aux).ToList();
-
-            return lista;
-
-        }
+       
 
         public static List<Empleados> GetListaSexo(string aux)
         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrosDeEmpleado));
             this.SexogroupBox = new System.Windows.Forms.GroupBox();
             this.FemeninocheckBox = new System.Windows.Forms.CheckBox();
@@ -44,20 +45,34 @@
             this.CelularmaskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.TelefonomaskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.DirecciontextBox = new System.Windows.Forms.TextBox();
-            this.ApellidotextBox = new System.Windows.Forms.TextBox();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.EmpleadoIdtextBox = new System.Windows.Forms.TextBox();
             this.Celularlabel = new System.Windows.Forms.Label();
             this.Fechalabel = new System.Windows.Forms.Label();
             this.Telefonolabel = new System.Windows.Forms.Label();
             this.Direccionlabel = new System.Windows.Forms.Label();
-            this.Apellidolabel = new System.Windows.Forms.Label();
             this.Nombrelabel = new System.Windows.Forms.Label();
             this.EmpleadoIdlabel = new System.Windows.Forms.Label();
             this.Cedulalabel = new System.Windows.Forms.Label();
             this.FechaNacimientolabel = new System.Windows.Forms.Label();
             this.FechaNacimientomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NombreerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CedulaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FechaNacimientoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.SexoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CiudaderrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DireccionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TelefonoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.SexogroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CedulaerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FechaNacimientoerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SexoerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CiudaderrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DireccionerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TelefonoerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // SexogroupBox
@@ -66,7 +81,7 @@
             this.SexogroupBox.Controls.Add(this.FemeninocheckBox);
             this.SexogroupBox.Controls.Add(this.MasculinocheckBox);
             this.SexogroupBox.ForeColor = System.Drawing.Color.White;
-            this.SexogroupBox.Location = new System.Drawing.Point(22, 405);
+            this.SexogroupBox.Location = new System.Drawing.Point(21, 342);
             this.SexogroupBox.Name = "SexogroupBox";
             this.SexogroupBox.Size = new System.Drawing.Size(217, 66);
             this.SexogroupBox.TabIndex = 50;
@@ -96,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(290, 209);
+            this.label2.Location = new System.Drawing.Point(281, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 49;
@@ -139,14 +154,14 @@
             "San Pedro de Macorís",
             "Distrito Nacional",
             "Santo Domingo "});
-            this.CiudadcomboBox.Location = new System.Drawing.Point(290, 230);
+            this.CiudadcomboBox.Location = new System.Drawing.Point(284, 171);
             this.CiudadcomboBox.Name = "CiudadcomboBox";
             this.CiudadcomboBox.Size = new System.Drawing.Size(216, 23);
             this.CiudadcomboBox.TabIndex = 48;
             // 
             // CedulamaskedTextBox
             // 
-            this.CedulamaskedTextBox.Location = new System.Drawing.Point(22, 292);
+            this.CedulamaskedTextBox.Location = new System.Drawing.Point(23, 227);
             this.CedulamaskedTextBox.Mask = "999-9999999-9";
             this.CedulamaskedTextBox.Name = "CedulamaskedTextBox";
             this.CedulamaskedTextBox.Size = new System.Drawing.Size(216, 21);
@@ -156,7 +171,7 @@
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(313, 174);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(373, 99);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(107, 21);
             this.FechadateTimePicker.TabIndex = 33;
@@ -176,7 +191,7 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.file_broken_32x32_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(343, 481);
+            this.Eliminarbutton.Location = new System.Drawing.Point(340, 481);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(132, 48);
             this.Eliminarbutton.TabIndex = 45;
@@ -189,7 +204,7 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.Color.Black;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(196, 481);
+            this.Guardarbutton.Location = new System.Drawing.Point(193, 481);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(122, 48);
             this.Guardarbutton.TabIndex = 44;
@@ -226,7 +241,7 @@
             // 
             // CelularmaskedTextBox2
             // 
-            this.CelularmaskedTextBox2.Location = new System.Drawing.Point(290, 405);
+            this.CelularmaskedTextBox2.Location = new System.Drawing.Point(284, 346);
             this.CelularmaskedTextBox2.Mask = "000-000-0000";
             this.CelularmaskedTextBox2.Name = "CelularmaskedTextBox2";
             this.CelularmaskedTextBox2.Size = new System.Drawing.Size(216, 21);
@@ -234,7 +249,7 @@
             // 
             // TelefonomaskedTextBox1
             // 
-            this.TelefonomaskedTextBox1.Location = new System.Drawing.Point(290, 342);
+            this.TelefonomaskedTextBox1.Location = new System.Drawing.Point(284, 283);
             this.TelefonomaskedTextBox1.Mask = "000-000-0000";
             this.TelefonomaskedTextBox1.Name = "TelefonomaskedTextBox1";
             this.TelefonomaskedTextBox1.Size = new System.Drawing.Size(216, 21);
@@ -242,17 +257,10 @@
             // 
             // DirecciontextBox
             // 
-            this.DirecciontextBox.Location = new System.Drawing.Point(290, 286);
+            this.DirecciontextBox.Location = new System.Drawing.Point(284, 227);
             this.DirecciontextBox.Name = "DirecciontextBox";
             this.DirecciontextBox.Size = new System.Drawing.Size(216, 21);
             this.DirecciontextBox.TabIndex = 39;
-            // 
-            // ApellidotextBox
-            // 
-            this.ApellidotextBox.Location = new System.Drawing.Point(22, 231);
-            this.ApellidotextBox.Name = "ApellidotextBox";
-            this.ApellidotextBox.Size = new System.Drawing.Size(216, 21);
-            this.ApellidotextBox.TabIndex = 38;
             // 
             // NombretextBox
             // 
@@ -271,7 +279,7 @@
             // Celularlabel
             // 
             this.Celularlabel.AutoSize = true;
-            this.Celularlabel.Location = new System.Drawing.Point(287, 384);
+            this.Celularlabel.Location = new System.Drawing.Point(281, 325);
             this.Celularlabel.Name = "Celularlabel";
             this.Celularlabel.Size = new System.Drawing.Size(44, 15);
             this.Celularlabel.TabIndex = 35;
@@ -280,7 +288,7 @@
             // Fechalabel
             // 
             this.Fechalabel.AutoSize = true;
-            this.Fechalabel.Location = new System.Drawing.Point(290, 155);
+            this.Fechalabel.Location = new System.Drawing.Point(370, 80);
             this.Fechalabel.Name = "Fechalabel";
             this.Fechalabel.Size = new System.Drawing.Size(76, 15);
             this.Fechalabel.TabIndex = 34;
@@ -289,7 +297,7 @@
             // Telefonolabel
             // 
             this.Telefonolabel.AutoSize = true;
-            this.Telefonolabel.Location = new System.Drawing.Point(287, 322);
+            this.Telefonolabel.Location = new System.Drawing.Point(281, 263);
             this.Telefonolabel.Name = "Telefonolabel";
             this.Telefonolabel.Size = new System.Drawing.Size(52, 15);
             this.Telefonolabel.TabIndex = 32;
@@ -298,20 +306,11 @@
             // Direccionlabel
             // 
             this.Direccionlabel.AutoSize = true;
-            this.Direccionlabel.Location = new System.Drawing.Point(287, 265);
+            this.Direccionlabel.Location = new System.Drawing.Point(281, 206);
             this.Direccionlabel.Name = "Direccionlabel";
             this.Direccionlabel.Size = new System.Drawing.Size(56, 15);
             this.Direccionlabel.TabIndex = 31;
             this.Direccionlabel.Text = "Direccion:";
-            // 
-            // Apellidolabel
-            // 
-            this.Apellidolabel.AutoSize = true;
-            this.Apellidolabel.Location = new System.Drawing.Point(19, 210);
-            this.Apellidolabel.Name = "Apellidolabel";
-            this.Apellidolabel.Size = new System.Drawing.Size(52, 15);
-            this.Apellidolabel.TabIndex = 30;
-            this.Apellidolabel.Text = "Apellido:";
             // 
             // Nombrelabel
             // 
@@ -334,7 +333,7 @@
             // Cedulalabel
             // 
             this.Cedulalabel.AutoSize = true;
-            this.Cedulalabel.Location = new System.Drawing.Point(23, 267);
+            this.Cedulalabel.Location = new System.Drawing.Point(19, 209);
             this.Cedulalabel.Name = "Cedulalabel";
             this.Cedulalabel.Size = new System.Drawing.Size(43, 15);
             this.Cedulalabel.TabIndex = 51;
@@ -343,7 +342,7 @@
             // FechaNacimientolabel
             // 
             this.FechaNacimientolabel.AutoSize = true;
-            this.FechaNacimientolabel.Location = new System.Drawing.Point(22, 339);
+            this.FechaNacimientolabel.Location = new System.Drawing.Point(18, 281);
             this.FechaNacimientolabel.Name = "FechaNacimientolabel";
             this.FechaNacimientolabel.Size = new System.Drawing.Size(93, 15);
             this.FechaNacimientolabel.TabIndex = 52;
@@ -351,19 +350,51 @@
             // 
             // FechaNacimientomaskedTextBox
             // 
-            this.FechaNacimientomaskedTextBox.Location = new System.Drawing.Point(27, 359);
+            this.FechaNacimientomaskedTextBox.Location = new System.Drawing.Point(23, 301);
             this.FechaNacimientomaskedTextBox.Mask = "00/00/0000";
             this.FechaNacimientomaskedTextBox.Name = "FechaNacimientomaskedTextBox";
             this.FechaNacimientomaskedTextBox.Size = new System.Drawing.Size(212, 21);
             this.FechaNacimientomaskedTextBox.TabIndex = 53;
             this.FechaNacimientomaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
+            // BuscarerrorProvider
+            // 
+            this.BuscarerrorProvider.ContainerControl = this;
+            // 
+            // NombreerrorProvider
+            // 
+            this.NombreerrorProvider.ContainerControl = this;
+            // 
+            // CedulaerrorProvider
+            // 
+            this.CedulaerrorProvider.ContainerControl = this;
+            // 
+            // FechaNacimientoerrorProvider
+            // 
+            this.FechaNacimientoerrorProvider.ContainerControl = this;
+            // 
+            // SexoerrorProvider
+            // 
+            this.SexoerrorProvider.ContainerControl = this;
+            // 
+            // CiudaderrorProvider
+            // 
+            this.CiudaderrorProvider.ContainerControl = this;
+            // 
+            // DireccionerrorProvider
+            // 
+            this.DireccionerrorProvider.ContainerControl = this;
+            // 
+            // TelefonoerrorProvider
+            // 
+            this.TelefonoerrorProvider.ContainerControl = this;
+            // 
             // RegistrosDeEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
-            this.ClientSize = new System.Drawing.Size(539, 546);
+            this.ClientSize = new System.Drawing.Size(526, 546);
             this.Controls.Add(this.FechaNacimientomaskedTextBox);
             this.Controls.Add(this.FechaNacimientolabel);
             this.Controls.Add(this.Cedulalabel);
@@ -380,14 +411,12 @@
             this.Controls.Add(this.CelularmaskedTextBox2);
             this.Controls.Add(this.TelefonomaskedTextBox1);
             this.Controls.Add(this.DirecciontextBox);
-            this.Controls.Add(this.ApellidotextBox);
             this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.EmpleadoIdtextBox);
             this.Controls.Add(this.Celularlabel);
             this.Controls.Add(this.Fechalabel);
             this.Controls.Add(this.Telefonolabel);
             this.Controls.Add(this.Direccionlabel);
-            this.Controls.Add(this.Apellidolabel);
             this.Controls.Add(this.Nombrelabel);
             this.Controls.Add(this.EmpleadoIdlabel);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -398,6 +427,14 @@
             this.Text = "Registro De Empleado";
             this.SexogroupBox.ResumeLayout(false);
             this.SexogroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CedulaerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FechaNacimientoerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SexoerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CiudaderrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DireccionerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TelefonoerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -420,18 +457,24 @@
         private System.Windows.Forms.MaskedTextBox CelularmaskedTextBox2;
         private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox1;
         private System.Windows.Forms.TextBox DirecciontextBox;
-        private System.Windows.Forms.TextBox ApellidotextBox;
         private System.Windows.Forms.TextBox NombretextBox;
         private System.Windows.Forms.TextBox EmpleadoIdtextBox;
         private System.Windows.Forms.Label Celularlabel;
         private System.Windows.Forms.Label Fechalabel;
         private System.Windows.Forms.Label Telefonolabel;
         private System.Windows.Forms.Label Direccionlabel;
-        private System.Windows.Forms.Label Apellidolabel;
         private System.Windows.Forms.Label Nombrelabel;
         private System.Windows.Forms.Label EmpleadoIdlabel;
         private System.Windows.Forms.Label Cedulalabel;
         private System.Windows.Forms.Label FechaNacimientolabel;
         private System.Windows.Forms.MaskedTextBox FechaNacimientomaskedTextBox;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
+        private System.Windows.Forms.ErrorProvider NombreerrorProvider;
+        private System.Windows.Forms.ErrorProvider CedulaerrorProvider;
+        private System.Windows.Forms.ErrorProvider FechaNacimientoerrorProvider;
+        private System.Windows.Forms.ErrorProvider SexoerrorProvider;
+        private System.Windows.Forms.ErrorProvider CiudaderrorProvider;
+        private System.Windows.Forms.ErrorProvider DireccionerrorProvider;
+        private System.Windows.Forms.ErrorProvider TelefonoerrorProvider;
     }
 }

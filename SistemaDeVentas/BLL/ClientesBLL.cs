@@ -48,6 +48,15 @@ namespace BLL
 
 
         }
+        public static Clientes BuscarNombre(string nombre )
+        {
+            var db = new SistemaVentasDb();
+
+            return db.Clientes.Find(nombre);
+
+
+        }
+
 
 
 
@@ -121,17 +130,7 @@ namespace BLL
 
         }
 
-        public static List<Clientes> GetListaApellido(string aux)
-        {
-            List<Clientes> lista = new List<Clientes>();
-
-            var db = new SistemaVentasDb();
-
-            lista = db.Clientes.Where(p => p.Apellido== aux).ToList();
-
-            return lista;
-
-        }
+       
 
         public static List<Clientes> GetListaSexo(string aux)
         {

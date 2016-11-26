@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Articulopanel = new System.Windows.Forms.Panel();
+            this.Categorialabel = new System.Windows.Forms.Label();
+            this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
             this.DescuentotextBox = new System.Windows.Forms.TextBox();
             this.Descuentolabel = new System.Windows.Forms.Label();
             this.Cantidadlabel = new System.Windows.Forms.Label();
@@ -55,9 +58,27 @@
             this.ArticuloIdtextBox = new System.Windows.Forms.TextBox();
             this.MarcaArticulolabel = new System.Windows.Forms.Label();
             this.NombreArticulolabel = new System.Windows.Forms.Label();
-            this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
-            this.Categorialabel = new System.Windows.Forms.Label();
+            this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CodigoArticuloerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NombreArticuloerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DescripcionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.MarcaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.NombreProveedorerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CategoriaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CantidaderrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PrecioCompraerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PrecioVentaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.Articulopanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CodigoArticuloerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreArticuloerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarcaerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreProveedorerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoriaerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidaderrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioCompraerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioVentaerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // Articulopanel
@@ -97,6 +118,24 @@
             this.Articulopanel.Size = new System.Drawing.Size(719, 442);
             this.Articulopanel.TabIndex = 0;
             this.Articulopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Articulopanel_Paint);
+            // 
+            // Categorialabel
+            // 
+            this.Categorialabel.AutoSize = true;
+            this.Categorialabel.Location = new System.Drawing.Point(372, 197);
+            this.Categorialabel.Name = "Categorialabel";
+            this.Categorialabel.Size = new System.Drawing.Size(54, 14);
+            this.Categorialabel.TabIndex = 108;
+            this.Categorialabel.Text = "Categoria:";
+            // 
+            // CategoriacomboBox
+            // 
+            this.CategoriacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CategoriacomboBox.FormattingEnabled = true;
+            this.CategoriacomboBox.Location = new System.Drawing.Point(375, 214);
+            this.CategoriacomboBox.Name = "CategoriacomboBox";
+            this.CategoriacomboBox.Size = new System.Drawing.Size(305, 22);
+            this.CategoriacomboBox.TabIndex = 107;
             // 
             // DescuentotextBox
             // 
@@ -332,23 +371,45 @@
             this.NombreArticulolabel.TabIndex = 81;
             this.NombreArticulolabel.Text = "Nombre De Articulo:";
             // 
-            // CategoriacomboBox
+            // BuscarerrorProvider
             // 
-            this.CategoriacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CategoriacomboBox.FormattingEnabled = true;
-            this.CategoriacomboBox.Location = new System.Drawing.Point(375, 214);
-            this.CategoriacomboBox.Name = "CategoriacomboBox";
-            this.CategoriacomboBox.Size = new System.Drawing.Size(305, 22);
-            this.CategoriacomboBox.TabIndex = 107;
+            this.BuscarerrorProvider.ContainerControl = this;
             // 
-            // Categorialabel
+            // CodigoArticuloerrorProvider
             // 
-            this.Categorialabel.AutoSize = true;
-            this.Categorialabel.Location = new System.Drawing.Point(372, 197);
-            this.Categorialabel.Name = "Categorialabel";
-            this.Categorialabel.Size = new System.Drawing.Size(54, 14);
-            this.Categorialabel.TabIndex = 108;
-            this.Categorialabel.Text = "Categoria:";
+            this.CodigoArticuloerrorProvider.ContainerControl = this;
+            // 
+            // NombreArticuloerrorProvider
+            // 
+            this.NombreArticuloerrorProvider.ContainerControl = this;
+            // 
+            // DescripcionerrorProvider
+            // 
+            this.DescripcionerrorProvider.ContainerControl = this;
+            // 
+            // MarcaerrorProvider
+            // 
+            this.MarcaerrorProvider.ContainerControl = this;
+            // 
+            // NombreProveedorerrorProvider
+            // 
+            this.NombreProveedorerrorProvider.ContainerControl = this;
+            // 
+            // CategoriaerrorProvider
+            // 
+            this.CategoriaerrorProvider.ContainerControl = this;
+            // 
+            // CantidaderrorProvider
+            // 
+            this.CantidaderrorProvider.ContainerControl = this;
+            // 
+            // PrecioCompraerrorProvider
+            // 
+            this.PrecioCompraerrorProvider.ContainerControl = this;
+            // 
+            // PrecioVentaerrorProvider
+            // 
+            this.PrecioVentaerrorProvider.ContainerControl = this;
             // 
             // RegistroDeArticulos
             // 
@@ -362,6 +423,16 @@
             this.Load += new System.EventHandler(this.RegistroDeArticulos_Load);
             this.Articulopanel.ResumeLayout(false);
             this.Articulopanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CodigoArticuloerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreArticuloerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarcaerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NombreProveedorerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoriaerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidaderrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioCompraerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioVentaerrorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,5 +468,15 @@
         private System.Windows.Forms.TextBox CantidadtextBox;
         private System.Windows.Forms.Label Categorialabel;
         private System.Windows.Forms.ComboBox CategoriacomboBox;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
+        private System.Windows.Forms.ErrorProvider CodigoArticuloerrorProvider;
+        private System.Windows.Forms.ErrorProvider NombreArticuloerrorProvider;
+        private System.Windows.Forms.ErrorProvider DescripcionerrorProvider;
+        private System.Windows.Forms.ErrorProvider MarcaerrorProvider;
+        private System.Windows.Forms.ErrorProvider NombreProveedorerrorProvider;
+        private System.Windows.Forms.ErrorProvider CategoriaerrorProvider;
+        private System.Windows.Forms.ErrorProvider CantidaderrorProvider;
+        private System.Windows.Forms.ErrorProvider PrecioCompraerrorProvider;
+        private System.Windows.Forms.ErrorProvider PrecioVentaerrorProvider;
     }
 }

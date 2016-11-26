@@ -14,7 +14,7 @@ namespace SistemaDeVentas.UI.Registros
 {
     public partial class RegistrosTipoUsuarios : Form
     {
-        Utilidades ut = new Utilidades();
+        UtilidadesInt ut = new UtilidadesInt();
         public RegistrosTipoUsuarios()
         {
             InitializeComponent();
@@ -59,11 +59,18 @@ namespace SistemaDeVentas.UI.Registros
 
 
         }
-
-        private void RegistrosTipoUsuarios_Load(object sender, EventArgs e)
+        private bool ValidarExiste(string aux)
         {
-
+            if (TiposUsuariosBLL.GetLista(aux).Count() > 0)
+            {
+                MessageBox.Show("Este nombre de Usuario ya existe, favor intentar con otro nombre de usario...");
+                return false;
+            }
+            return true;
         }
+
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -109,16 +116,7 @@ namespace SistemaDeVentas.UI.Registros
       
 
 
-        private bool ValidarExiste(string aux)
-        {
-            if (TiposUsuariosBLL.GetLista(aux).Count() > 0)
-            {
-                MessageBox.Show("Este nombre de Usuario ya existe, favor intentar con otro nombre de usario...");
-                return false;
-            }
-            return true;
-        }
-
+        
         private bool ValidarTextbox()
         {
 
@@ -137,6 +135,10 @@ namespace SistemaDeVentas.UI.Registros
 
            
             return true;
+        }
+        private void RegistrosTipoUsuarios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -31,25 +31,37 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrosDeVentas));
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.FiltrarVentalabel = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.PreciotextBox = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Nombrelabel = new System.Windows.Forms.Label();
             this.MarcatextBox = new System.Windows.Forms.TextBox();
             this.CodigotextBox = new System.Windows.Forms.TextBox();
-            this.FiltrartextBox = new System.Windows.Forms.TextBox();
-            this.Preciolabel = new System.Windows.Forms.Label();
+            this.NombretextBox = new System.Windows.Forms.TextBox();
             this.Marcalabel = new System.Windows.Forms.Label();
             this.Codigolabel = new System.Windows.Forms.Label();
+            this.CantidadDispodiblelabel = new System.Windows.Forms.Label();
+            this.PreciotextBox = new System.Windows.Forms.TextBox();
+            this.CantidadDipodibletextBox = new System.Windows.Forms.TextBox();
+            this.Preciolabel = new System.Windows.Forms.Label();
+            this.Duscuentolabel = new System.Windows.Forms.Label();
+            this.DescuentotextBox = new System.Windows.Forms.TextBox();
+            this.ArticulodataGridView = new System.Windows.Forms.DataGridView();
+            this.FiltrarVentalabel = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.FiltrarArticulotextBox = new System.Windows.Forms.TextBox();
+            this.BuscarArticulosbutton = new System.Windows.Forms.Button();
             this.FiltrarArticulocomboBox = new System.Windows.Forms.ComboBox();
             this.Filtrarlabel = new System.Windows.Forms.Label();
             this.EmpleadogroupBox = new System.Windows.Forms.GroupBox();
-            this.FiltrarEmpleadotextBox = new System.Windows.Forms.TextBox();
             this.FiltrarEmpleadolabel = new System.Windows.Forms.Label();
             this.FiltrarEmpleadocomboBox = new System.Windows.Forms.ComboBox();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.TipodeDocumentogroupBox = new System.Windows.Forms.GroupBox();
             this.DocFactuaradioButton = new System.Windows.Forms.RadioButton();
             this.DocReciberadioButton = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Cobrarbutton = new System.Windows.Forms.Button();
+            this.Nuevabutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TotalDescuntotextBox = new System.Windows.Forms.TextBox();
             this.Descuentolabel = new System.Windows.Forms.Label();
@@ -59,8 +71,6 @@
             this.Totallabel = new System.Windows.Forms.Label();
             this.EstebisTotallabel = new System.Windows.Forms.Label();
             this.SubTotallabel = new System.Windows.Forms.Label();
-            this.DescuentotextBox = new System.Windows.Forms.TextBox();
-            this.Duscuentolabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.FechaVeclabel = new System.Windows.Forms.Label();
             this.FechaVencmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -68,41 +78,26 @@
             this.MontoDeudatextBox = new System.Windows.Forms.TextBox();
             this.CuotastextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.FiltrarClientetextBox = new System.Windows.Forms.TextBox();
-            this.ClientecomboBox = new System.Windows.Forms.ComboBox();
+            this.FiltrarClientecomboBox = new System.Windows.Forms.ComboBox();
             this.FiltrarClientelabel = new System.Windows.Forms.Label();
             this.CondiciondePagogroupBox = new System.Windows.Forms.GroupBox();
             this.CreditoradioButton = new System.Windows.Forms.RadioButton();
             this.ContadoradioButton = new System.Windows.Forms.RadioButton();
+            this.Quitarbutton = new System.Windows.Forms.Button();
             this.ItebistextBox = new System.Windows.Forms.TextBox();
-            this.FiltrarVentatextBox = new System.Windows.Forms.TextBox();
-            this.VentascomboBox = new System.Windows.Forms.ComboBox();
+            this.FiltrarVentaIdtextBox = new System.Windows.Forms.TextBox();
             this.HoradateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.Horalabel = new System.Windows.Forms.Label();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Agregarbutton = new System.Windows.Forms.Button();
             this.Itebislabel = new System.Windows.Forms.Label();
+            this.BuscarIdbutton = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.Fechalabel = new System.Windows.Forms.Label();
             this.FacturatabControl = new System.Windows.Forms.TabControl();
-            this.BuscarArticulosbutton = new System.Windows.Forms.Button();
-            this.BuscarEmpleadobutton = new System.Windows.Forms.Button();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Cobrarbutton = new System.Windows.Forms.Button();
-            this.Nuevabutton = new System.Windows.Forms.Button();
-            this.BuscarClientebutton = new System.Windows.Forms.Button();
-            this.Quitarbutton = new System.Windows.Forms.Button();
-            this.Agregarbutton = new System.Windows.Forms.Button();
-            this.BuscarIdbutton = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ArticulodataGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.EmpleadogroupBox.SuspendLayout();
             this.TipodeDocumentogroupBox.SuspendLayout();
@@ -110,7 +105,6 @@
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.CondiciondePagogroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.FacturatabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +120,8 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.panel3);
+            this.tabPage2.Controls.Add(this.ArticulodataGridView);
             this.tabPage2.Controls.Add(this.FiltrarVentalabel);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.EmpleadogroupBox);
@@ -133,19 +129,15 @@
             this.tabPage2.Controls.Add(this.TipodeDocumentogroupBox);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.DescuentotextBox);
-            this.tabPage2.Controls.Add(this.Duscuentolabel);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.CondiciondePagogroupBox);
             this.tabPage2.Controls.Add(this.Quitarbutton);
             this.tabPage2.Controls.Add(this.ItebistextBox);
-            this.tabPage2.Controls.Add(this.FiltrarVentatextBox);
-            this.tabPage2.Controls.Add(this.VentascomboBox);
+            this.tabPage2.Controls.Add(this.FiltrarVentaIdtextBox);
             this.tabPage2.Controls.Add(this.HoradateTimePicker);
             this.tabPage2.Controls.Add(this.Horalabel);
             this.tabPage2.Controls.Add(this.FechadateTimePicker);
             this.tabPage2.Controls.Add(this.Agregarbutton);
-            this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Controls.Add(this.Itebislabel);
             this.tabPage2.Controls.Add(this.BuscarIdbutton);
             this.tabPage2.Controls.Add(this.label21);
@@ -154,96 +146,183 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1088, 512);
+            this.tabPage2.Size = new System.Drawing.Size(1088, 499);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Factura ";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.Nombrelabel);
+            this.panel3.Controls.Add(this.MarcatextBox);
+            this.panel3.Controls.Add(this.CodigotextBox);
+            this.panel3.Controls.Add(this.NombretextBox);
+            this.panel3.Controls.Add(this.Marcalabel);
+            this.panel3.Controls.Add(this.Codigolabel);
+            this.panel3.Controls.Add(this.CantidadDispodiblelabel);
+            this.panel3.Controls.Add(this.PreciotextBox);
+            this.panel3.Controls.Add(this.CantidadDipodibletextBox);
+            this.panel3.Controls.Add(this.Preciolabel);
+            this.panel3.Controls.Add(this.Duscuentolabel);
+            this.panel3.Controls.Add(this.DescuentotextBox);
+            this.panel3.ForeColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(460, 127);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(428, 106);
+            this.panel3.TabIndex = 104;
+            // 
+            // Nombrelabel
+            // 
+            this.Nombrelabel.AutoSize = true;
+            this.Nombrelabel.Location = new System.Drawing.Point(122, 9);
+            this.Nombrelabel.Name = "Nombrelabel";
+            this.Nombrelabel.Size = new System.Drawing.Size(49, 15);
+            this.Nombrelabel.TabIndex = 108;
+            this.Nombrelabel.Text = "Nombre:";
+            // 
+            // MarcatextBox
+            // 
+            this.MarcatextBox.Location = new System.Drawing.Point(273, 33);
+            this.MarcatextBox.Name = "MarcatextBox";
+            this.MarcatextBox.Size = new System.Drawing.Size(142, 21);
+            this.MarcatextBox.TabIndex = 105;
+            // 
+            // CodigotextBox
+            // 
+            this.CodigotextBox.Location = new System.Drawing.Point(12, 30);
+            this.CodigotextBox.Name = "CodigotextBox";
+            this.CodigotextBox.Size = new System.Drawing.Size(94, 21);
+            this.CodigotextBox.TabIndex = 104;
+            // 
+            // NombretextBox
+            // 
+            this.NombretextBox.Location = new System.Drawing.Point(122, 30);
+            this.NombretextBox.Name = "NombretextBox";
+            this.NombretextBox.Size = new System.Drawing.Size(141, 21);
+            this.NombretextBox.TabIndex = 101;
+            // 
+            // Marcalabel
+            // 
+            this.Marcalabel.AutoSize = true;
+            this.Marcalabel.Location = new System.Drawing.Point(271, 15);
+            this.Marcalabel.Name = "Marcalabel";
+            this.Marcalabel.Size = new System.Drawing.Size(41, 15);
+            this.Marcalabel.TabIndex = 107;
+            this.Marcalabel.Text = "Marca:";
+            // 
+            // Codigolabel
+            // 
+            this.Codigolabel.AutoSize = true;
+            this.Codigolabel.Location = new System.Drawing.Point(10, 11);
+            this.Codigolabel.Name = "Codigolabel";
+            this.Codigolabel.Size = new System.Drawing.Size(44, 15);
+            this.Codigolabel.TabIndex = 106;
+            this.Codigolabel.Text = "Codigo:";
+            // 
+            // CantidadDispodiblelabel
+            // 
+            this.CantidadDispodiblelabel.AutoSize = true;
+            this.CantidadDispodiblelabel.Location = new System.Drawing.Point(122, 62);
+            this.CantidadDispodiblelabel.Name = "CantidadDispodiblelabel";
+            this.CantidadDispodiblelabel.Size = new System.Drawing.Size(109, 15);
+            this.CantidadDispodiblelabel.TabIndex = 103;
+            this.CantidadDispodiblelabel.Text = "Cantidad Disponible:";
+            // 
+            // PreciotextBox
+            // 
+            this.PreciotextBox.Location = new System.Drawing.Point(274, 81);
+            this.PreciotextBox.Name = "PreciotextBox";
+            this.PreciotextBox.Size = new System.Drawing.Size(141, 21);
+            this.PreciotextBox.TabIndex = 67;
+            // 
+            // CantidadDipodibletextBox
+            // 
+            this.CantidadDipodibletextBox.Location = new System.Drawing.Point(122, 79);
+            this.CantidadDipodibletextBox.Name = "CantidadDipodibletextBox";
+            this.CantidadDipodibletextBox.Size = new System.Drawing.Size(141, 21);
+            this.CantidadDipodibletextBox.TabIndex = 102;
+            // 
+            // Preciolabel
+            // 
+            this.Preciolabel.AutoSize = true;
+            this.Preciolabel.Location = new System.Drawing.Point(277, 63);
+            this.Preciolabel.Name = "Preciolabel";
+            this.Preciolabel.Size = new System.Drawing.Size(40, 15);
+            this.Preciolabel.TabIndex = 70;
+            this.Preciolabel.Text = "Precio:";
+            // 
+            // Duscuentolabel
+            // 
+            this.Duscuentolabel.AutoSize = true;
+            this.Duscuentolabel.Location = new System.Drawing.Point(10, 61);
+            this.Duscuentolabel.Name = "Duscuentolabel";
+            this.Duscuentolabel.Size = new System.Drawing.Size(66, 15);
+            this.Duscuentolabel.TabIndex = 89;
+            this.Duscuentolabel.Text = "Descuentos:";
+            // 
+            // DescuentotextBox
+            // 
+            this.DescuentotextBox.Location = new System.Drawing.Point(13, 79);
+            this.DescuentotextBox.Name = "DescuentotextBox";
+            this.DescuentotextBox.Size = new System.Drawing.Size(93, 21);
+            this.DescuentotextBox.TabIndex = 90;
+            // 
+            // ArticulodataGridView
+            // 
+            this.ArticulodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ArticulodataGridView.Location = new System.Drawing.Point(7, 240);
+            this.ArticulodataGridView.Name = "ArticulodataGridView";
+            this.ArticulodataGridView.Size = new System.Drawing.Size(1071, 150);
+            this.ArticulodataGridView.TabIndex = 103;
             // 
             // FiltrarVentalabel
             // 
             this.FiltrarVentalabel.AutoSize = true;
             this.FiltrarVentalabel.Location = new System.Drawing.Point(14, 30);
             this.FiltrarVentalabel.Name = "FiltrarVentalabel";
-            this.FiltrarVentalabel.Size = new System.Drawing.Size(40, 15);
+            this.FiltrarVentalabel.Size = new System.Drawing.Size(50, 15);
             this.FiltrarVentalabel.TabIndex = 100;
-            this.FiltrarVentalabel.Text = "Filtrar:";
+            this.FiltrarVentalabel.Text = "FiltrarId:";
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.PreciotextBox);
-            this.groupBox5.Controls.Add(this.MarcatextBox);
-            this.groupBox5.Controls.Add(this.CodigotextBox);
-            this.groupBox5.Controls.Add(this.FiltrartextBox);
-            this.groupBox5.Controls.Add(this.Preciolabel);
-            this.groupBox5.Controls.Add(this.Marcalabel);
-            this.groupBox5.Controls.Add(this.Codigolabel);
+            this.groupBox5.Controls.Add(this.FiltrarArticulotextBox);
             this.groupBox5.Controls.Add(this.BuscarArticulosbutton);
             this.groupBox5.Controls.Add(this.FiltrarArticulocomboBox);
             this.groupBox5.Controls.Add(this.Filtrarlabel);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
             this.groupBox5.Location = new System.Drawing.Point(14, 160);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(874, 73);
+            this.groupBox5.Size = new System.Drawing.Size(449, 73);
             this.groupBox5.TabIndex = 99;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Articulos";
             // 
-            // PreciotextBox
+            // FiltrarArticulotextBox
             // 
-            this.PreciotextBox.Location = new System.Drawing.Point(727, 34);
-            this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.Size = new System.Drawing.Size(141, 21);
-            this.PreciotextBox.TabIndex = 61;
+            this.FiltrarArticulotextBox.Location = new System.Drawing.Point(164, 32);
+            this.FiltrarArticulotextBox.Name = "FiltrarArticulotextBox";
+            this.FiltrarArticulotextBox.Size = new System.Drawing.Size(178, 21);
+            this.FiltrarArticulotextBox.TabIndex = 57;
             // 
-            // MarcatextBox
+            // BuscarArticulosbutton
             // 
-            this.MarcatextBox.Location = new System.Drawing.Point(573, 34);
-            this.MarcatextBox.Name = "MarcatextBox";
-            this.MarcatextBox.Size = new System.Drawing.Size(142, 21);
-            this.MarcatextBox.TabIndex = 60;
-            // 
-            // CodigotextBox
-            // 
-            this.CodigotextBox.Location = new System.Drawing.Point(464, 34);
-            this.CodigotextBox.Name = "CodigotextBox";
-            this.CodigotextBox.Size = new System.Drawing.Size(94, 21);
-            this.CodigotextBox.TabIndex = 59;
-            // 
-            // FiltrartextBox
-            // 
-            this.FiltrartextBox.Location = new System.Drawing.Point(164, 32);
-            this.FiltrartextBox.Name = "FiltrartextBox";
-            this.FiltrartextBox.Size = new System.Drawing.Size(178, 21);
-            this.FiltrartextBox.TabIndex = 57;
-            // 
-            // Preciolabel
-            // 
-            this.Preciolabel.AutoSize = true;
-            this.Preciolabel.Location = new System.Drawing.Point(730, 16);
-            this.Preciolabel.Name = "Preciolabel";
-            this.Preciolabel.Size = new System.Drawing.Size(40, 15);
-            this.Preciolabel.TabIndex = 64;
-            this.Preciolabel.Text = "Precio:";
-            // 
-            // Marcalabel
-            // 
-            this.Marcalabel.AutoSize = true;
-            this.Marcalabel.Location = new System.Drawing.Point(571, 16);
-            this.Marcalabel.Name = "Marcalabel";
-            this.Marcalabel.Size = new System.Drawing.Size(41, 15);
-            this.Marcalabel.TabIndex = 63;
-            this.Marcalabel.Text = "Marca:";
-            // 
-            // Codigolabel
-            // 
-            this.Codigolabel.AutoSize = true;
-            this.Codigolabel.Location = new System.Drawing.Point(462, 15);
-            this.Codigolabel.Name = "Codigolabel";
-            this.Codigolabel.Size = new System.Drawing.Size(44, 15);
-            this.Codigolabel.TabIndex = 62;
-            this.Codigolabel.Text = "Codigo:";
+            this.BuscarArticulosbutton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BuscarArticulosbutton.BackgroundImage")));
+            this.BuscarArticulosbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BuscarArticulosbutton.ForeColor = System.Drawing.Color.Black;
+            this.BuscarArticulosbutton.Location = new System.Drawing.Point(348, 13);
+            this.BuscarArticulosbutton.Name = "BuscarArticulosbutton";
+            this.BuscarArticulosbutton.Size = new System.Drawing.Size(92, 40);
+            this.BuscarArticulosbutton.TabIndex = 58;
+            this.BuscarArticulosbutton.Text = "Buscar";
+            this.BuscarArticulosbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BuscarArticulosbutton.UseVisualStyleBackColor = true;
+            this.BuscarArticulosbutton.Click += new System.EventHandler(this.BuscarArticulosbutton_Click);
             // 
             // FiltrarArticulocomboBox
             // 
+            this.FiltrarArticulocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrarArticulocomboBox.FormattingEnabled = true;
             this.FiltrarArticulocomboBox.Location = new System.Drawing.Point(56, 32);
             this.FiltrarArticulocomboBox.Name = "FiltrarArticulocomboBox";
@@ -261,24 +340,16 @@
             // 
             // EmpleadogroupBox
             // 
-            this.EmpleadogroupBox.Controls.Add(this.BuscarEmpleadobutton);
-            this.EmpleadogroupBox.Controls.Add(this.FiltrarEmpleadotextBox);
             this.EmpleadogroupBox.Controls.Add(this.FiltrarEmpleadolabel);
             this.EmpleadogroupBox.Controls.Add(this.FiltrarEmpleadocomboBox);
             this.EmpleadogroupBox.ForeColor = System.Drawing.Color.White;
-            this.EmpleadogroupBox.Location = new System.Drawing.Point(650, 66);
+            this.EmpleadogroupBox.Location = new System.Drawing.Point(809, 57);
             this.EmpleadogroupBox.Name = "EmpleadogroupBox";
-            this.EmpleadogroupBox.Size = new System.Drawing.Size(417, 68);
+            this.EmpleadogroupBox.Size = new System.Drawing.Size(258, 68);
             this.EmpleadogroupBox.TabIndex = 98;
             this.EmpleadogroupBox.TabStop = false;
             this.EmpleadogroupBox.Text = "Empleado";
-            // 
-            // FiltrarEmpleadotextBox
-            // 
-            this.FiltrarEmpleadotextBox.Location = new System.Drawing.Point(168, 37);
-            this.FiltrarEmpleadotextBox.Name = "FiltrarEmpleadotextBox";
-            this.FiltrarEmpleadotextBox.Size = new System.Drawing.Size(155, 21);
-            this.FiltrarEmpleadotextBox.TabIndex = 99;
+            this.EmpleadogroupBox.Enter += new System.EventHandler(this.EmpleadogroupBox_Enter);
             // 
             // FiltrarEmpleadolabel
             // 
@@ -291,11 +362,26 @@
             // 
             // FiltrarEmpleadocomboBox
             // 
+            this.FiltrarEmpleadocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrarEmpleadocomboBox.FormattingEnabled = true;
             this.FiltrarEmpleadocomboBox.Location = new System.Drawing.Point(56, 35);
             this.FiltrarEmpleadocomboBox.Name = "FiltrarEmpleadocomboBox";
-            this.FiltrarEmpleadocomboBox.Size = new System.Drawing.Size(106, 23);
+            this.FiltrarEmpleadocomboBox.Size = new System.Drawing.Size(182, 23);
             this.FiltrarEmpleadocomboBox.TabIndex = 97;
+            // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
+            this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.Location = new System.Drawing.Point(311, 438);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(98, 54);
+            this.Imprimirbutton.TabIndex = 97;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            this.Imprimirbutton.Click += new System.EventHandler(this.Imprimirbutton_Click);
             // 
             // TipodeDocumentogroupBox
             // 
@@ -342,6 +428,47 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 55);
             this.panel2.TabIndex = 94;
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Eliminarbutton.Location = new System.Drawing.Point(194, 4);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(87, 42);
+            this.Eliminarbutton.TabIndex = 62;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Cobrarbutton
+            // 
+            this.Cobrarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Cobrarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Cobrarbutton.Image")));
+            this.Cobrarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Cobrarbutton.Location = new System.Drawing.Point(103, 4);
+            this.Cobrarbutton.Name = "Cobrarbutton";
+            this.Cobrarbutton.Size = new System.Drawing.Size(87, 42);
+            this.Cobrarbutton.TabIndex = 61;
+            this.Cobrarbutton.Text = "Cobrar";
+            this.Cobrarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Cobrarbutton.UseVisualStyleBackColor = true;
+            this.Cobrarbutton.Click += new System.EventHandler(this.Cobrarbutton_Click);
+            // 
+            // Nuevabutton
+            // 
+            this.Nuevabutton.ForeColor = System.Drawing.Color.Black;
+            this.Nuevabutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevabutton.Image")));
+            this.Nuevabutton.Location = new System.Drawing.Point(3, 4);
+            this.Nuevabutton.Name = "Nuevabutton";
+            this.Nuevabutton.Size = new System.Drawing.Size(93, 42);
+            this.Nuevabutton.TabIndex = 60;
+            this.Nuevabutton.Text = "Nueva";
+            this.Nuevabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Nuevabutton.UseVisualStyleBackColor = true;
+            this.Nuevabutton.Click += new System.EventHandler(this.Nuevabutton_Click);
             // 
             // panel1
             // 
@@ -423,22 +550,6 @@
             this.SubTotallabel.TabIndex = 95;
             this.SubTotallabel.Text = "SubTotal:";
             // 
-            // DescuentotextBox
-            // 
-            this.DescuentotextBox.Location = new System.Drawing.Point(424, 104);
-            this.DescuentotextBox.Name = "DescuentotextBox";
-            this.DescuentotextBox.Size = new System.Drawing.Size(81, 21);
-            this.DescuentotextBox.TabIndex = 90;
-            // 
-            // Duscuentolabel
-            // 
-            this.Duscuentolabel.AutoSize = true;
-            this.Duscuentolabel.Location = new System.Drawing.Point(421, 87);
-            this.Duscuentolabel.Name = "Duscuentolabel";
-            this.Duscuentolabel.Size = new System.Drawing.Size(66, 15);
-            this.Duscuentolabel.TabIndex = 89;
-            this.Duscuentolabel.Text = "Descuentos:";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.FechaVeclabel);
@@ -447,14 +558,12 @@
             this.groupBox2.Controls.Add(this.MontoDeudatextBox);
             this.groupBox2.Controls.Add(this.CuotastextBox);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.FiltrarClientetextBox);
-            this.groupBox2.Controls.Add(this.BuscarClientebutton);
-            this.groupBox2.Controls.Add(this.ClientecomboBox);
+            this.groupBox2.Controls.Add(this.FiltrarClientecomboBox);
             this.groupBox2.Controls.Add(this.FiltrarClientelabel);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(6, 53);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(403, 101);
+            this.groupBox2.Size = new System.Drawing.Size(375, 101);
             this.groupBox2.TabIndex = 88;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cliente";
@@ -462,7 +571,7 @@
             // FechaVeclabel
             // 
             this.FechaVeclabel.AutoSize = true;
-            this.FechaVeclabel.Location = new System.Drawing.Point(147, 54);
+            this.FechaVeclabel.Location = new System.Drawing.Point(186, 53);
             this.FechaVeclabel.Name = "FechaVeclabel";
             this.FechaVeclabel.Size = new System.Drawing.Size(105, 15);
             this.FechaVeclabel.TabIndex = 103;
@@ -470,7 +579,7 @@
             // 
             // FechaVencmaskedTextBox
             // 
-            this.FechaVencmaskedTextBox.Location = new System.Drawing.Point(146, 75);
+            this.FechaVencmaskedTextBox.Location = new System.Drawing.Point(185, 74);
             this.FechaVencmaskedTextBox.Mask = "00/00/0000";
             this.FechaVencmaskedTextBox.Name = "FechaVencmaskedTextBox";
             this.FechaVencmaskedTextBox.Size = new System.Drawing.Size(114, 21);
@@ -490,7 +599,7 @@
             // 
             this.MontoDeudatextBox.Location = new System.Drawing.Point(68, 75);
             this.MontoDeudatextBox.Name = "MontoDeudatextBox";
-            this.MontoDeudatextBox.Size = new System.Drawing.Size(72, 21);
+            this.MontoDeudatextBox.Size = new System.Drawing.Size(96, 21);
             this.MontoDeudatextBox.TabIndex = 100;
             // 
             // CuotastextBox
@@ -509,20 +618,13 @@
             this.label1.TabIndex = 98;
             this.label1.Text = "Cuotas";
             // 
-            // FiltrarClientetextBox
+            // FiltrarClientecomboBox
             // 
-            this.FiltrarClientetextBox.Location = new System.Drawing.Point(161, 26);
-            this.FiltrarClientetextBox.Name = "FiltrarClientetextBox";
-            this.FiltrarClientetextBox.Size = new System.Drawing.Size(143, 21);
-            this.FiltrarClientetextBox.TabIndex = 96;
-            // 
-            // ClientecomboBox
-            // 
-            this.ClientecomboBox.FormattingEnabled = true;
-            this.ClientecomboBox.Location = new System.Drawing.Point(59, 24);
-            this.ClientecomboBox.Name = "ClientecomboBox";
-            this.ClientecomboBox.Size = new System.Drawing.Size(95, 23);
-            this.ClientecomboBox.TabIndex = 95;
+            this.FiltrarClientecomboBox.FormattingEnabled = true;
+            this.FiltrarClientecomboBox.Location = new System.Drawing.Point(59, 24);
+            this.FiltrarClientecomboBox.Name = "FiltrarClientecomboBox";
+            this.FiltrarClientecomboBox.Size = new System.Drawing.Size(207, 23);
+            this.FiltrarClientecomboBox.TabIndex = 95;
             // 
             // FiltrarClientelabel
             // 
@@ -567,28 +669,33 @@
             this.ContadoradioButton.TabStop = true;
             this.ContadoradioButton.Text = "Contado";
             this.ContadoradioButton.UseVisualStyleBackColor = true;
+            this.ContadoradioButton.CheckedChanged += new System.EventHandler(this.ContadoradioButton_CheckedChanged);
+            // 
+            // Quitarbutton
+            // 
+            this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Quitarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Quitarbutton.Image")));
+            this.Quitarbutton.Location = new System.Drawing.Point(984, 173);
+            this.Quitarbutton.Name = "Quitarbutton";
+            this.Quitarbutton.Size = new System.Drawing.Size(83, 40);
+            this.Quitarbutton.TabIndex = 86;
+            this.Quitarbutton.Text = "Quitar";
+            this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Quitarbutton.UseVisualStyleBackColor = true;
             // 
             // ItebistextBox
             // 
-            this.ItebistextBox.Location = new System.Drawing.Point(520, 103);
+            this.ItebistextBox.Location = new System.Drawing.Point(583, 90);
             this.ItebistextBox.Name = "ItebistextBox";
             this.ItebistextBox.Size = new System.Drawing.Size(37, 21);
             this.ItebistextBox.TabIndex = 48;
             // 
-            // FiltrarVentatextBox
+            // FiltrarVentaIdtextBox
             // 
-            this.FiltrarVentatextBox.Location = new System.Drawing.Point(167, 28);
-            this.FiltrarVentatextBox.Name = "FiltrarVentatextBox";
-            this.FiltrarVentatextBox.Size = new System.Drawing.Size(88, 21);
-            this.FiltrarVentatextBox.TabIndex = 40;
-            // 
-            // VentascomboBox
-            // 
-            this.VentascomboBox.FormattingEnabled = true;
-            this.VentascomboBox.Location = new System.Drawing.Point(65, 26);
-            this.VentascomboBox.Name = "VentascomboBox";
-            this.VentascomboBox.Size = new System.Drawing.Size(95, 23);
-            this.VentascomboBox.TabIndex = 77;
+            this.FiltrarVentaIdtextBox.Location = new System.Drawing.Point(65, 26);
+            this.FiltrarVentaIdtextBox.Name = "FiltrarVentaIdtextBox";
+            this.FiltrarVentaIdtextBox.Size = new System.Drawing.Size(105, 21);
+            this.FiltrarVentaIdtextBox.TabIndex = 40;
             // 
             // HoradateTimePicker
             // 
@@ -615,73 +722,41 @@
             this.FechadateTimePicker.Size = new System.Drawing.Size(76, 21);
             this.FechadateTimePicker.TabIndex = 69;
             // 
-            // dataGridView2
+            // Agregarbutton
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.Descuento});
-            this.dataGridView2.Location = new System.Drawing.Point(14, 239);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.dataGridView2.Size = new System.Drawing.Size(1055, 192);
-            this.dataGridView2.StandardTab = true;
-            this.dataGridView2.TabIndex = 60;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 10F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Codigo";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 10;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Marca";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // Descuento
-            // 
-            this.Descuento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            this.Descuento.Width = 83;
+            this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Agregarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Agregarbutton.Image")));
+            this.Agregarbutton.Location = new System.Drawing.Point(894, 175);
+            this.Agregarbutton.Name = "Agregarbutton";
+            this.Agregarbutton.Size = new System.Drawing.Size(84, 40);
+            this.Agregarbutton.TabIndex = 56;
+            this.Agregarbutton.Text = "Agregar";
+            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
             // Itebislabel
             // 
             this.Itebislabel.AutoSize = true;
-            this.Itebislabel.Location = new System.Drawing.Point(520, 85);
+            this.Itebislabel.Location = new System.Drawing.Point(583, 72);
             this.Itebislabel.Name = "Itebislabel";
             this.Itebislabel.Size = new System.Drawing.Size(37, 15);
             this.Itebislabel.TabIndex = 47;
             this.Itebislabel.Text = "Itebis:";
+            // 
+            // BuscarIdbutton
+            // 
+            this.BuscarIdbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BuscarIdbutton.ForeColor = System.Drawing.Color.Black;
+            this.BuscarIdbutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarIdbutton.Image")));
+            this.BuscarIdbutton.Location = new System.Drawing.Point(176, 10);
+            this.BuscarIdbutton.Name = "BuscarIdbutton";
+            this.BuscarIdbutton.Size = new System.Drawing.Size(82, 39);
+            this.BuscarIdbutton.TabIndex = 42;
+            this.BuscarIdbutton.Text = "Buscar";
+            this.BuscarIdbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BuscarIdbutton.UseVisualStyleBackColor = true;
+            this.BuscarIdbutton.Click += new System.EventHandler(this.BuscarIdbutton_Click);
             // 
             // label21
             // 
@@ -707,139 +782,12 @@
             this.FacturatabControl.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.FacturatabControl.Controls.Add(this.tabPage2);
             this.FacturatabControl.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FacturatabControl.Location = new System.Drawing.Point(12, 12);
+            this.FacturatabControl.Location = new System.Drawing.Point(12, 25);
             this.FacturatabControl.Name = "FacturatabControl";
             this.FacturatabControl.SelectedIndex = 0;
-            this.FacturatabControl.Size = new System.Drawing.Size(1096, 543);
+            this.FacturatabControl.Size = new System.Drawing.Size(1096, 530);
             this.FacturatabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.FacturatabControl.TabIndex = 2;
-            // 
-            // BuscarArticulosbutton
-            // 
-            this.BuscarArticulosbutton.BackgroundImage = global::SistemaDeVentas.Properties.Resources.search;
-            this.BuscarArticulosbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BuscarArticulosbutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarArticulosbutton.Location = new System.Drawing.Point(348, 13);
-            this.BuscarArticulosbutton.Name = "BuscarArticulosbutton";
-            this.BuscarArticulosbutton.Size = new System.Drawing.Size(92, 40);
-            this.BuscarArticulosbutton.TabIndex = 58;
-            this.BuscarArticulosbutton.Text = "Buscar";
-            this.BuscarArticulosbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarArticulosbutton.UseVisualStyleBackColor = true;
-            // 
-            // BuscarEmpleadobutton
-            // 
-            this.BuscarEmpleadobutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarEmpleadobutton.Image = global::SistemaDeVentas.Properties.Resources.search1;
-            this.BuscarEmpleadobutton.Location = new System.Drawing.Point(327, 15);
-            this.BuscarEmpleadobutton.Name = "BuscarEmpleadobutton";
-            this.BuscarEmpleadobutton.Size = new System.Drawing.Size(84, 42);
-            this.BuscarEmpleadobutton.TabIndex = 100;
-            this.BuscarEmpleadobutton.Text = "Buscar";
-            this.BuscarEmpleadobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarEmpleadobutton.UseVisualStyleBackColor = true;
-            // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
-            this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print1;
-            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(311, 438);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(98, 54);
-            this.Imprimirbutton.TabIndex = 97;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
-            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Eliminarbutton.Location = new System.Drawing.Point(194, 4);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(87, 42);
-            this.Eliminarbutton.TabIndex = 62;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Cobrarbutton
-            // 
-            this.Cobrarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Cobrarbutton.Image = global::SistemaDeVentas.Properties.Resources.cash_register1;
-            this.Cobrarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Cobrarbutton.Location = new System.Drawing.Point(103, 4);
-            this.Cobrarbutton.Name = "Cobrarbutton";
-            this.Cobrarbutton.Size = new System.Drawing.Size(87, 42);
-            this.Cobrarbutton.TabIndex = 61;
-            this.Cobrarbutton.Text = "Cobrar";
-            this.Cobrarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Cobrarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Nuevabutton
-            // 
-            this.Nuevabutton.ForeColor = System.Drawing.Color.Black;
-            this.Nuevabutton.Image = global::SistemaDeVentas.Properties.Resources.new1;
-            this.Nuevabutton.Location = new System.Drawing.Point(3, 4);
-            this.Nuevabutton.Name = "Nuevabutton";
-            this.Nuevabutton.Size = new System.Drawing.Size(93, 42);
-            this.Nuevabutton.TabIndex = 60;
-            this.Nuevabutton.Text = "Nueva";
-            this.Nuevabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Nuevabutton.UseVisualStyleBackColor = true;
-            this.Nuevabutton.Click += new System.EventHandler(this.Nuevabutton_Click);
-            // 
-            // BuscarClientebutton
-            // 
-            this.BuscarClientebutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarClientebutton.Image = global::SistemaDeVentas.Properties.Resources.search2;
-            this.BuscarClientebutton.Location = new System.Drawing.Point(310, 10);
-            this.BuscarClientebutton.Name = "BuscarClientebutton";
-            this.BuscarClientebutton.Size = new System.Drawing.Size(87, 40);
-            this.BuscarClientebutton.TabIndex = 97;
-            this.BuscarClientebutton.Text = "Buscar";
-            this.BuscarClientebutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarClientebutton.UseVisualStyleBackColor = true;
-            this.BuscarClientebutton.Click += new System.EventHandler(this.BuscarClientebutton_Click);
-            // 
-            // Quitarbutton
-            // 
-            this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Quitarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel2;
-            this.Quitarbutton.Location = new System.Drawing.Point(984, 173);
-            this.Quitarbutton.Name = "Quitarbutton";
-            this.Quitarbutton.Size = new System.Drawing.Size(83, 40);
-            this.Quitarbutton.TabIndex = 86;
-            this.Quitarbutton.Text = "Quitar";
-            this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Quitarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Agregarbutton
-            // 
-            this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Agregarbutton.Image = global::SistemaDeVentas.Properties.Resources.add2;
-            this.Agregarbutton.Location = new System.Drawing.Point(894, 175);
-            this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(84, 40);
-            this.Agregarbutton.TabIndex = 56;
-            this.Agregarbutton.Text = "Agregar";
-            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Agregarbutton.UseVisualStyleBackColor = true;
-            // 
-            // BuscarIdbutton
-            // 
-            this.BuscarIdbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BuscarIdbutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarIdbutton.Image = global::SistemaDeVentas.Properties.Resources.search2;
-            this.BuscarIdbutton.Location = new System.Drawing.Point(261, 10);
-            this.BuscarIdbutton.Name = "BuscarIdbutton";
-            this.BuscarIdbutton.Size = new System.Drawing.Size(82, 39);
-            this.BuscarIdbutton.TabIndex = 42;
-            this.BuscarIdbutton.Text = "Buscar";
-            this.BuscarIdbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarIdbutton.UseVisualStyleBackColor = true;
             // 
             // RegistrosDeVentas
             // 
@@ -859,6 +807,9 @@
             this.Load += new System.EventHandler(this.RegistrosDeVentas_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ArticulodataGridView)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.EmpleadogroupBox.ResumeLayout(false);
@@ -872,7 +823,6 @@
             this.groupBox2.PerformLayout();
             this.CondiciondePagogroupBox.ResumeLayout(false);
             this.CondiciondePagogroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.FacturatabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -892,34 +842,22 @@
         private System.Windows.Forms.TextBox MontoDeudatextBox;
         private System.Windows.Forms.TextBox CuotastextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox FiltrarClientetextBox;
-        private System.Windows.Forms.Button BuscarClientebutton;
-        private System.Windows.Forms.ComboBox ClientecomboBox;
         private System.Windows.Forms.Label FiltrarClientelabel;
         private System.Windows.Forms.GroupBox CondiciondePagogroupBox;
         private System.Windows.Forms.RadioButton CreditoradioButton;
         private System.Windows.Forms.RadioButton ContadoradioButton;
         private System.Windows.Forms.Button Quitarbutton;
         private System.Windows.Forms.TextBox ItebistextBox;
-        private System.Windows.Forms.TextBox FiltrarVentatextBox;
-        private System.Windows.Forms.ComboBox VentascomboBox;
+        private System.Windows.Forms.TextBox FiltrarVentaIdtextBox;
         private System.Windows.Forms.DateTimePicker HoradateTimePicker;
         private System.Windows.Forms.Label Horalabel;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Button Agregarbutton;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label Itebislabel;
         private System.Windows.Forms.Button BuscarIdbutton;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label Fechalabel;
         private System.Windows.Forms.TabControl FacturatabControl;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.GroupBox TipodeDocumentogroupBox;
         private System.Windows.Forms.RadioButton DocFactuaradioButton;
         private System.Windows.Forms.RadioButton DocReciberadioButton;
@@ -938,21 +876,26 @@
         private System.Windows.Forms.Button Imprimirbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.GroupBox EmpleadogroupBox;
-        private System.Windows.Forms.Button BuscarEmpleadobutton;
-        private System.Windows.Forms.TextBox FiltrarEmpleadotextBox;
         private System.Windows.Forms.Label FiltrarEmpleadolabel;
         private System.Windows.Forms.ComboBox FiltrarEmpleadocomboBox;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox PreciotextBox;
-        private System.Windows.Forms.TextBox MarcatextBox;
-        private System.Windows.Forms.TextBox CodigotextBox;
-        private System.Windows.Forms.TextBox FiltrartextBox;
-        private System.Windows.Forms.Label Preciolabel;
-        private System.Windows.Forms.Label Marcalabel;
-        private System.Windows.Forms.Label Codigolabel;
+        private System.Windows.Forms.TextBox FiltrarArticulotextBox;
         private System.Windows.Forms.Button BuscarArticulosbutton;
         private System.Windows.Forms.ComboBox FiltrarArticulocomboBox;
         private System.Windows.Forms.Label Filtrarlabel;
         private System.Windows.Forms.Label FiltrarVentalabel;
+        private System.Windows.Forms.ComboBox FiltrarClientecomboBox;
+        private System.Windows.Forms.TextBox NombretextBox;
+        private System.Windows.Forms.TextBox CantidadDipodibletextBox;
+        private System.Windows.Forms.DataGridView ArticulodataGridView;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox MarcatextBox;
+        private System.Windows.Forms.TextBox CodigotextBox;
+        private System.Windows.Forms.Label Marcalabel;
+        private System.Windows.Forms.Label Codigolabel;
+        private System.Windows.Forms.Label CantidadDispodiblelabel;
+        private System.Windows.Forms.TextBox PreciotextBox;
+        private System.Windows.Forms.Label Preciolabel;
+        private System.Windows.Forms.Label Nombrelabel;
     }
 }

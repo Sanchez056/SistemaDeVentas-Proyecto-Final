@@ -19,7 +19,7 @@ namespace SistemaDeVentas.Consultas
             InitializeComponent();
         }
 
-        Utilidades ut = new Utilidades();
+        UtilidadesInt ut = new UtilidadesInt();
         public List<Usuarios> lista = new List<Usuarios>();
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
@@ -37,7 +37,7 @@ namespace SistemaDeVentas.Consultas
 
         private void BuscarSelecionComBox()
         {
-            Utilidades ut = new Utilidades();
+            UtilidadesInt ut = new UtilidadesInt();
 
 
             if (FiltrarcomboBox.SelectedIndex == 0)
@@ -73,7 +73,7 @@ namespace SistemaDeVentas.Consultas
 
         private bool validar()
         {
-            Utilidades ut = new Utilidades();
+            UtilidadesInt ut = new UtilidadesInt();
 
             
                 

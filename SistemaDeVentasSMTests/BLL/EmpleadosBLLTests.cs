@@ -50,11 +50,8 @@ namespace BLL.Tests
             Assert.IsNotNull(EmpleadosBLL.GetListaNombreEmpleado("JOSE").Count > 0);
         }
 
-        [TestMethod()]
-        public void GetListaApellidoTest()
-        {
-            Assert.IsNotNull(EmpleadosBLL.GetListaApellido("Molina").Count > 0);
-        }
+       
+       
 
         [TestMethod()]
         public void GetListaSexoTest()

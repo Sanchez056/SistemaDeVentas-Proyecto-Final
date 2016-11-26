@@ -16,10 +16,10 @@ namespace SistemaDeVentas
 {
     public partial class RegistroDeUsuarios : Form 
     {
+        UtilidadesInt ut = new UtilidadesInt();
         public RegistroDeUsuarios()
         {
             InitializeComponent();
-            //CargarConboBox();
 
         }
         //-- Botton Buscar y Todos sus Metodos Utilizados para Realizar dicha busqueda en la base de datos
@@ -27,7 +27,7 @@ namespace SistemaDeVentas
         {
             CargarConboBox();
             if (validarId("Favor ingresar el id del usuario que desea buscar") && ValidarBuscar())
-                LLenar(UsuariosBLL.Buscar(String(UsuarioIdtextBox.Text)));
+                LLenar(UsuariosBLL.Buscar(ut.StringInt(UsuarioIdtextBox.Text)));
 
         }
         private void LLenar(Usuarios usuario)
@@ -56,7 +56,7 @@ namespace SistemaDeVentas
         }
         private bool ValidarBuscar()
         {
-            if (UsuariosBLL.Buscar(String(UsuarioIdtextBox.Text)) == null)
+            if (UsuariosBLL.Buscar(ut.StringInt(UsuarioIdtextBox.Text)) == null)
             {
                 MessageBox.Show("Este registro no existe");
                  return false;
@@ -66,14 +66,7 @@ namespace SistemaDeVentas
 
 
         }
-        public int String(string texto)
-        {
-            int numero = 0;
-
-            int.TryParse(texto, out numero);
-
-            return numero;
-        }
+       
         //--
         //Botton de Nuevo Usuario
         private void Nuevobutton_Click(object sender, EventArgs e)
@@ -87,7 +80,6 @@ namespace SistemaDeVentas
             NombreUsuariostextBox.Clear();
             ContraseñatextBox.Clear();
             ConfimarContraseñatextBox1.Clear();
-           // TipoUsuarioscomboBox.Text = "Elegir opcion";
             limpiarErroresProvider();
         }
         //--
@@ -193,7 +185,7 @@ namespace SistemaDeVentas
 
             if (validarId("Favor digitar el id del usuario que desea eliminar") && ValidarBuscar())
             {
-                 UsuariosBLL.Eliminar(String(UsuarioIdtextBox.Text));
+                 UsuariosBLL.Eliminar(ut.StringInt(UsuarioIdtextBox.Text));
                 Limpiar();
                 MessageBox.Show("ELiminado con exito");
             }
