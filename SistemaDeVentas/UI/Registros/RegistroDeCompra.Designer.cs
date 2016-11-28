@@ -31,7 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroDeCompra));
             this.ComprastabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.FechaateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Quitarbutton = new System.Windows.Forms.Button();
+            this.Agregarbutton = new System.Windows.Forms.Button();
+            this.Imprimirbutton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Eliminarbutton = new System.Windows.Forms.Button();
+            this.Comprarbutton = new System.Windows.Forms.Button();
+            this.Nuevabutton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.DescuentoTotaltextBox = new System.Windows.Forms.TextBox();
             this.DescuntoTotallabel = new System.Windows.Forms.Label();
@@ -53,6 +60,12 @@
             this.FiltrarEmpleadocomboBox = new System.Windows.Forms.ComboBox();
             this.ArticulosgroupBox = new System.Windows.Forms.GroupBox();
             this.InformacionArticulogroupBox = new System.Windows.Forms.GroupBox();
+            this.CantidadCompratextBox = new System.Windows.Forms.TextBox();
+            this.PreciotextBox = new System.Windows.Forms.TextBox();
+            this.PrecioVentalabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NombretextBox = new System.Windows.Forms.TextBox();
+            this.Nombrelabel = new System.Windows.Forms.Label();
             this.DescuentotextBox = new System.Windows.Forms.TextBox();
             this.Proveedorlabel = new System.Windows.Forms.Label();
             this.ProveedortextBox = new System.Windows.Forms.TextBox();
@@ -66,26 +79,15 @@
             this.MarcatextBox = new System.Windows.Forms.TextBox();
             this.CodigotextBox = new System.Windows.Forms.TextBox();
             this.FiltrarArticuloslabel2 = new System.Windows.Forms.Label();
+            this.BuscarArticulobutton = new System.Windows.Forms.Button();
             this.FiltrarArticulotextBox = new System.Windows.Forms.TextBox();
             this.FiltrarArticulocomboBox = new System.Windows.Forms.ComboBox();
             this.CompragroupBox = new System.Windows.Forms.GroupBox();
+            this.BuscarComprabutton = new System.Windows.Forms.Button();
             this.FiltrarCompratextBox = new System.Windows.Forms.TextBox();
             this.FiltrarCompralabel = new System.Windows.Forms.Label();
-            this.Quitarbutton = new System.Windows.Forms.Button();
-            this.Agregarbutton = new System.Windows.Forms.Button();
-            this.Imprimirbutton = new System.Windows.Forms.Button();
-            this.Eliminarbutton = new System.Windows.Forms.Button();
-            this.Comprarbutton = new System.Windows.Forms.Button();
-            this.Nuevabutton = new System.Windows.Forms.Button();
-            this.BuscarArticulobutton = new System.Windows.Forms.Button();
-            this.BuscarComprabutton = new System.Windows.Forms.Button();
-            this.Nombrelabel = new System.Windows.Forms.Label();
-            this.NombretextBox = new System.Windows.Forms.TextBox();
-            this.FechaateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.PreciotextBox = new System.Windows.Forms.TextBox();
-            this.PrecioVentalabel = new System.Windows.Forms.Label();
-            this.CantidadCompratextBox = new System.Windows.Forms.TextBox();
+            this.CodigoCompralabel = new System.Windows.Forms.Label();
+            this.CodigoCompratextBox = new System.Windows.Forms.TextBox();
             this.ComprastabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -130,6 +132,52 @@
             this.tabPage1.Text = "Compras";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // FechaateTimePicker
+            // 
+            this.FechaateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaateTimePicker.Location = new System.Drawing.Point(966, 6);
+            this.FechaateTimePicker.Name = "FechaateTimePicker";
+            this.FechaateTimePicker.Size = new System.Drawing.Size(89, 20);
+            this.FechaateTimePicker.TabIndex = 111;
+            // 
+            // Quitarbutton
+            // 
+            this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Quitarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
+            this.Quitarbutton.Location = new System.Drawing.Point(1001, 261);
+            this.Quitarbutton.Name = "Quitarbutton";
+            this.Quitarbutton.Size = new System.Drawing.Size(82, 51);
+            this.Quitarbutton.TabIndex = 110;
+            this.Quitarbutton.Text = "Quitar";
+            this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Quitarbutton.UseVisualStyleBackColor = true;
+            // 
+            // Agregarbutton
+            // 
+            this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Agregarbutton.Image = global::SistemaDeVentas.Properties.Resources.add1;
+            this.Agregarbutton.Location = new System.Drawing.Point(903, 261);
+            this.Agregarbutton.Name = "Agregarbutton";
+            this.Agregarbutton.Size = new System.Drawing.Size(92, 51);
+            this.Agregarbutton.TabIndex = 109;
+            this.Agregarbutton.Text = "Agregar";
+            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
+            // 
+            // Imprimirbutton
+            // 
+            this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
+            this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print1;
+            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Imprimirbutton.Location = new System.Drawing.Point(315, 461);
+            this.Imprimirbutton.Name = "Imprimirbutton";
+            this.Imprimirbutton.Size = new System.Drawing.Size(98, 54);
+            this.Imprimirbutton.TabIndex = 108;
+            this.Imprimirbutton.Text = "Imprimir";
+            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Imprimirbutton.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -140,6 +188,47 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(299, 55);
             this.panel2.TabIndex = 107;
+            // 
+            // Eliminarbutton
+            // 
+            this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Eliminarbutton.Location = new System.Drawing.Point(198, 4);
+            this.Eliminarbutton.Name = "Eliminarbutton";
+            this.Eliminarbutton.Size = new System.Drawing.Size(94, 42);
+            this.Eliminarbutton.TabIndex = 62;
+            this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
+            // 
+            // Comprarbutton
+            // 
+            this.Comprarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Comprarbutton.Image = global::SistemaDeVentas.Properties.Resources.cash_register1;
+            this.Comprarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Comprarbutton.Location = new System.Drawing.Point(103, 4);
+            this.Comprarbutton.Name = "Comprarbutton";
+            this.Comprarbutton.Size = new System.Drawing.Size(89, 42);
+            this.Comprarbutton.TabIndex = 61;
+            this.Comprarbutton.Text = "Comprar";
+            this.Comprarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Comprarbutton.UseVisualStyleBackColor = true;
+            this.Comprarbutton.Click += new System.EventHandler(this.Comprarbutton_Click);
+            // 
+            // Nuevabutton
+            // 
+            this.Nuevabutton.ForeColor = System.Drawing.Color.Black;
+            this.Nuevabutton.Image = global::SistemaDeVentas.Properties.Resources.new1;
+            this.Nuevabutton.Location = new System.Drawing.Point(3, 4);
+            this.Nuevabutton.Name = "Nuevabutton";
+            this.Nuevabutton.Size = new System.Drawing.Size(93, 42);
+            this.Nuevabutton.TabIndex = 60;
+            this.Nuevabutton.Text = "Nueva";
+            this.Nuevabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Nuevabutton.UseVisualStyleBackColor = true;
+            this.Nuevabutton.Click += new System.EventHandler(this.Nuevabutton_Click);
             // 
             // panel1
             // 
@@ -359,6 +448,54 @@
             this.InformacionArticulogroupBox.Text = "Informacion:";
             this.InformacionArticulogroupBox.Enter += new System.EventHandler(this.InformacionArticulogroupBox_Enter);
             // 
+            // CantidadCompratextBox
+            // 
+            this.CantidadCompratextBox.Location = new System.Drawing.Point(266, 81);
+            this.CantidadCompratextBox.Name = "CantidadCompratextBox";
+            this.CantidadCompratextBox.Size = new System.Drawing.Size(177, 20);
+            this.CantidadCompratextBox.TabIndex = 32;
+            // 
+            // PreciotextBox
+            // 
+            this.PreciotextBox.Location = new System.Drawing.Point(570, 82);
+            this.PreciotextBox.Name = "PreciotextBox";
+            this.PreciotextBox.Size = new System.Drawing.Size(87, 20);
+            this.PreciotextBox.TabIndex = 31;
+            // 
+            // PrecioVentalabel
+            // 
+            this.PrecioVentalabel.AutoSize = true;
+            this.PrecioVentalabel.Location = new System.Drawing.Point(567, 64);
+            this.PrecioVentalabel.Name = "PrecioVentalabel";
+            this.PrecioVentalabel.Size = new System.Drawing.Size(93, 14);
+            this.PrecioVentalabel.TabIndex = 30;
+            this.PrecioVentalabel.Text = "Precio de Compra:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(263, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 14);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Cantidad Compra:";
+            // 
+            // NombretextBox
+            // 
+            this.NombretextBox.Location = new System.Drawing.Point(106, 34);
+            this.NombretextBox.Name = "NombretextBox";
+            this.NombretextBox.Size = new System.Drawing.Size(146, 20);
+            this.NombretextBox.TabIndex = 28;
+            // 
+            // Nombrelabel
+            // 
+            this.Nombrelabel.AutoSize = true;
+            this.Nombrelabel.Location = new System.Drawing.Point(103, 17);
+            this.Nombrelabel.Name = "Nombrelabel";
+            this.Nombrelabel.Size = new System.Drawing.Size(47, 14);
+            this.Nombrelabel.TabIndex = 27;
+            this.Nombrelabel.Text = "Nombre:";
+            // 
             // DescuentotextBox
             // 
             this.DescuentotextBox.Location = new System.Drawing.Point(449, 81);
@@ -464,6 +601,19 @@
             this.FiltrarArticuloslabel2.TabIndex = 7;
             this.FiltrarArticuloslabel2.Text = "Filtrar:";
             // 
+            // BuscarArticulobutton
+            // 
+            this.BuscarArticulobutton.ForeColor = System.Drawing.Color.Black;
+            this.BuscarArticulobutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarArticulobutton.Image")));
+            this.BuscarArticulobutton.Location = new System.Drawing.Point(353, 11);
+            this.BuscarArticulobutton.Name = "BuscarArticulobutton";
+            this.BuscarArticulobutton.Size = new System.Drawing.Size(82, 56);
+            this.BuscarArticulobutton.TabIndex = 6;
+            this.BuscarArticulobutton.Text = "Buscar";
+            this.BuscarArticulobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BuscarArticulobutton.UseVisualStyleBackColor = true;
+            this.BuscarArticulobutton.Click += new System.EventHandler(this.BuscarArticulobutton_Click);
+            // 
             // FiltrarArticulotextBox
             // 
             this.FiltrarArticulotextBox.Location = new System.Drawing.Point(180, 45);
@@ -481,6 +631,8 @@
             // 
             // CompragroupBox
             // 
+            this.CompragroupBox.Controls.Add(this.CodigoCompratextBox);
+            this.CompragroupBox.Controls.Add(this.CodigoCompralabel);
             this.CompragroupBox.Controls.Add(this.BuscarComprabutton);
             this.CompragroupBox.Controls.Add(this.FiltrarCompratextBox);
             this.CompragroupBox.Controls.Add(this.FiltrarCompralabel);
@@ -492,6 +644,19 @@
             this.CompragroupBox.TabIndex = 101;
             this.CompragroupBox.TabStop = false;
             this.CompragroupBox.Text = "Compra";
+            // 
+            // BuscarComprabutton
+            // 
+            this.BuscarComprabutton.ForeColor = System.Drawing.Color.Black;
+            this.BuscarComprabutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarComprabutton.Image")));
+            this.BuscarComprabutton.Location = new System.Drawing.Point(176, 0);
+            this.BuscarComprabutton.Name = "BuscarComprabutton";
+            this.BuscarComprabutton.Size = new System.Drawing.Size(82, 56);
+            this.BuscarComprabutton.TabIndex = 3;
+            this.BuscarComprabutton.Text = "Buscar";
+            this.BuscarComprabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BuscarComprabutton.UseVisualStyleBackColor = true;
+            this.BuscarComprabutton.Click += new System.EventHandler(this.BuscarComprabutton_Click);
             // 
             // FiltrarCompratextBox
             // 
@@ -509,165 +674,21 @@
             this.FiltrarCompralabel.TabIndex = 1;
             this.FiltrarCompralabel.Text = "Filtrar:";
             // 
-            // Quitarbutton
+            // CodigoCompralabel
             // 
-            this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Quitarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
-            this.Quitarbutton.Location = new System.Drawing.Point(1001, 261);
-            this.Quitarbutton.Name = "Quitarbutton";
-            this.Quitarbutton.Size = new System.Drawing.Size(82, 51);
-            this.Quitarbutton.TabIndex = 110;
-            this.Quitarbutton.Text = "Quitar";
-            this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Quitarbutton.UseVisualStyleBackColor = true;
+            this.CodigoCompralabel.AutoSize = true;
+            this.CodigoCompralabel.Location = new System.Drawing.Point(272, 41);
+            this.CodigoCompralabel.Name = "CodigoCompralabel";
+            this.CodigoCompralabel.Size = new System.Drawing.Size(42, 14);
+            this.CodigoCompralabel.TabIndex = 4;
+            this.CodigoCompralabel.Text = "Codigo:";
             // 
-            // Agregarbutton
+            // CodigoCompratextBox
             // 
-            this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Agregarbutton.Image = global::SistemaDeVentas.Properties.Resources.add1;
-            this.Agregarbutton.Location = new System.Drawing.Point(903, 261);
-            this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(92, 51);
-            this.Agregarbutton.TabIndex = 109;
-            this.Agregarbutton.Text = "Agregar";
-            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Agregarbutton.UseVisualStyleBackColor = true;
-            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
-            // 
-            // Imprimirbutton
-            // 
-            this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
-            this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print1;
-            this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(315, 461);
-            this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(98, 54);
-            this.Imprimirbutton.TabIndex = 108;
-            this.Imprimirbutton.Text = "Imprimir";
-            this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Imprimirbutton.UseVisualStyleBackColor = true;
-            // 
-            // Eliminarbutton
-            // 
-            this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
-            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Eliminarbutton.Location = new System.Drawing.Point(198, 4);
-            this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(94, 42);
-            this.Eliminarbutton.TabIndex = 62;
-            this.Eliminarbutton.Text = "Eliminar";
-            this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Eliminarbutton.UseVisualStyleBackColor = true;
-            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
-            // 
-            // Comprarbutton
-            // 
-            this.Comprarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Comprarbutton.Image = global::SistemaDeVentas.Properties.Resources.cash_register1;
-            this.Comprarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Comprarbutton.Location = new System.Drawing.Point(103, 4);
-            this.Comprarbutton.Name = "Comprarbutton";
-            this.Comprarbutton.Size = new System.Drawing.Size(89, 42);
-            this.Comprarbutton.TabIndex = 61;
-            this.Comprarbutton.Text = "Comprar";
-            this.Comprarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Comprarbutton.UseVisualStyleBackColor = true;
-            // 
-            // Nuevabutton
-            // 
-            this.Nuevabutton.ForeColor = System.Drawing.Color.Black;
-            this.Nuevabutton.Image = global::SistemaDeVentas.Properties.Resources.new1;
-            this.Nuevabutton.Location = new System.Drawing.Point(3, 4);
-            this.Nuevabutton.Name = "Nuevabutton";
-            this.Nuevabutton.Size = new System.Drawing.Size(93, 42);
-            this.Nuevabutton.TabIndex = 60;
-            this.Nuevabutton.Text = "Nueva";
-            this.Nuevabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Nuevabutton.UseVisualStyleBackColor = true;
-            this.Nuevabutton.Click += new System.EventHandler(this.Nuevabutton_Click);
-            // 
-            // BuscarArticulobutton
-            // 
-            this.BuscarArticulobutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarArticulobutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarArticulobutton.Image")));
-            this.BuscarArticulobutton.Location = new System.Drawing.Point(353, 11);
-            this.BuscarArticulobutton.Name = "BuscarArticulobutton";
-            this.BuscarArticulobutton.Size = new System.Drawing.Size(82, 56);
-            this.BuscarArticulobutton.TabIndex = 6;
-            this.BuscarArticulobutton.Text = "Buscar";
-            this.BuscarArticulobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarArticulobutton.UseVisualStyleBackColor = true;
-            this.BuscarArticulobutton.Click += new System.EventHandler(this.BuscarArticulobutton_Click);
-            // 
-            // BuscarComprabutton
-            // 
-            this.BuscarComprabutton.ForeColor = System.Drawing.Color.Black;
-            this.BuscarComprabutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarComprabutton.Image")));
-            this.BuscarComprabutton.Location = new System.Drawing.Point(176, 0);
-            this.BuscarComprabutton.Name = "BuscarComprabutton";
-            this.BuscarComprabutton.Size = new System.Drawing.Size(82, 56);
-            this.BuscarComprabutton.TabIndex = 3;
-            this.BuscarComprabutton.Text = "Buscar";
-            this.BuscarComprabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BuscarComprabutton.UseVisualStyleBackColor = true;
-            this.BuscarComprabutton.Click += new System.EventHandler(this.BuscarComprabutton_Click);
-            // 
-            // Nombrelabel
-            // 
-            this.Nombrelabel.AutoSize = true;
-            this.Nombrelabel.Location = new System.Drawing.Point(103, 17);
-            this.Nombrelabel.Name = "Nombrelabel";
-            this.Nombrelabel.Size = new System.Drawing.Size(47, 14);
-            this.Nombrelabel.TabIndex = 27;
-            this.Nombrelabel.Text = "Nombre:";
-            // 
-            // NombretextBox
-            // 
-            this.NombretextBox.Location = new System.Drawing.Point(106, 34);
-            this.NombretextBox.Name = "NombretextBox";
-            this.NombretextBox.Size = new System.Drawing.Size(146, 20);
-            this.NombretextBox.TabIndex = 28;
-            // 
-            // FechaateTimePicker
-            // 
-            this.FechaateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaateTimePicker.Location = new System.Drawing.Point(966, 6);
-            this.FechaateTimePicker.Name = "FechaateTimePicker";
-            this.FechaateTimePicker.Size = new System.Drawing.Size(89, 20);
-            this.FechaateTimePicker.TabIndex = 111;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(263, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 14);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Cantidad Compra:";
-            // 
-            // PreciotextBox
-            // 
-            this.PreciotextBox.Location = new System.Drawing.Point(570, 82);
-            this.PreciotextBox.Name = "PreciotextBox";
-            this.PreciotextBox.Size = new System.Drawing.Size(87, 20);
-            this.PreciotextBox.TabIndex = 31;
-            // 
-            // PrecioVentalabel
-            // 
-            this.PrecioVentalabel.AutoSize = true;
-            this.PrecioVentalabel.Location = new System.Drawing.Point(567, 64);
-            this.PrecioVentalabel.Name = "PrecioVentalabel";
-            this.PrecioVentalabel.Size = new System.Drawing.Size(93, 14);
-            this.PrecioVentalabel.TabIndex = 30;
-            this.PrecioVentalabel.Text = "Precio de Compra:";
-            // 
-            // CantidadCompratextBox
-            // 
-            this.CantidadCompratextBox.Location = new System.Drawing.Point(266, 81);
-            this.CantidadCompratextBox.Name = "CantidadCompratextBox";
-            this.CantidadCompratextBox.Size = new System.Drawing.Size(177, 20);
-            this.CantidadCompratextBox.TabIndex = 32;
+            this.CodigoCompratextBox.Location = new System.Drawing.Point(322, 38);
+            this.CodigoCompratextBox.Name = "CodigoCompratextBox";
+            this.CodigoCompratextBox.Size = new System.Drawing.Size(100, 20);
+            this.CodigoCompratextBox.TabIndex = 5;
             // 
             // RegistroDeCompra
             // 
@@ -760,5 +781,7 @@
         private System.Windows.Forms.TextBox PreciotextBox;
         private System.Windows.Forms.Label PrecioVentalabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox CodigoCompratextBox;
+        private System.Windows.Forms.Label CodigoCompralabel;
     }
 }

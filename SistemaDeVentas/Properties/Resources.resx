@@ -142,6 +142,9 @@
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="agregar-usuarios-icono-3782-481" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-usuarios-icono-3782-481.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="users2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\users2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,9 +187,6 @@
   <data name="fondo-negro-15911" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo-negro-15911.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar-usuarios-icono-3782-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-usuarios-icono-3782-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="shopping cart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopping cart1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,8 +208,8 @@
   <data name="ladrillo-textura-de-fondo_1035-2260" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ladrillo-textura-de-fondo_1035-2260.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar-archivo-icono-3676-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar-archivo-icono-3676-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregar-usuarios-icono-3782-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-usuarios-icono-3782-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,6 +262,9 @@
   <data name="agregar-un-grafico-de-barras-icono-5280-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar-un-grafico-de-barras-icono-5280-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fondo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="blue-and-red-neon-circle-pattern-wallpaper-60019" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\blue-and-red-neon-circle-pattern-wallpaper-60019.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -304,6 +307,9 @@
   <data name="folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="agregar-archivo-icono-3676-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-archivo-icono-3676-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="oscuridad-fondos-de-pantalla-minimalistas-hd-muy-buenos-compilado-772721" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\oscuridad-fondos-de-pantalla-minimalistas-hd-muy-buenos-compilado-772721.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -318,6 +324,9 @@
   </data>
   <data name="elegant-grey-illumination-background-presentations-powerpoint-backgrounds_low1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elegant-grey-illumination-background-presentations-powerpoint-backgrounds_low1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basket_put" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basket_put.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="personal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\personal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -336,6 +345,9 @@
   </data>
   <data name="shopping cart full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopping cart full.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_gray.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -358,7 +370,7 @@
   <data name="new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user2.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

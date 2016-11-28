@@ -5,22 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace Entidades
+namespace SistemaDeVentas.Entidades
 {
-   public  class TipoUsuarios
+    public class TipoUsuarios
     {
         [Key]
-        public int TipoUsuarioId{ get; set; }
-        public string Detalle{ get; set; }
-
-       
-
-        
-
-        /*public override string ToString()
-        {
-            return this.Detalle;
-        }*/
+        public int TipoUsuarioId { get; set; }
+        public string Detalle { get; set; }
 
     }
 }

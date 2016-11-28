@@ -43,8 +43,27 @@ namespace SistemaDeVentas.BLL
                 // return retorna;
 
             }
+        public static bool Modificar(int id, Categorias cat)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new SistemaVentasDb())
+                {
+                    Categorias c = db.Categorias.Find(id);
+                    c.Descripcion = cat.Descripcion;                
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
 
-            public static Categorias Buscar(int id)
+        public static Categorias Buscar(int id)
             {
                 var db = new SistemaVentasDb();
 

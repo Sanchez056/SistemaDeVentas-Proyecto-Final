@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL;
 using Entidades;
+using SistemaDeVentas.Entidades;
 
 namespace BLL
 {
@@ -12,32 +13,57 @@ namespace BLL
     {
 
         TipoUsuarios usuario = new TipoUsuarios();
-
-        public static bool Insertar(TipoUsuarios u)
+        public static bool Insertars(TipoUsuarios t)
         {
-            bool retorna = false;
+            //  bool retorna = false;
+
             try
             {
 
                 using (var db = new SistemaVentasDb())
                 {
 
-                    db.TipoUsuarios.Add(u);
+                    db.TipoUsuarios.Add(t);
                     db.SaveChanges();
-                    //db.Dispose();
-                    retorna = true;
+                    db.Dispose();
+                    // retorna= true;
+                    return true;
+
                 }
 
 
             }
             catch (Exception)
             {
+                return false;
                 throw;
 
             }
-            return retorna;
+
+            // return retorna;
 
         }
+        public static bool Modificard(int id, TipoUsuarios tip)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new SistemaVentasDb())
+                {
+                    TipoUsuarios t = db.TipoUsuarios.Find(id);
+                    t.Detalle = tip.Detalle;
+
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
+
 
         public static TipoUsuarios Buscar(int id)
         {
@@ -56,8 +82,30 @@ namespace BLL
             db.TipoUsuarios.Remove(u);
             db.SaveChanges();
         }
+        public static List<TipoUsuarios> GetLista()
+        {
+            List<TipoUsuarios> lista = new List<TipoUsuarios>();
 
-        public static List<TipoUsuarios> GetLista(string detalle)
+            var db = new SistemaVentasDb();
+
+            lista = db.TipoUsuarios.ToList();
+
+            return lista;
+
+
+        }
+        public static List<TipoUsuarios> GetLista(int tipoId)
+        {
+            List<TipoUsuarios> lista = new List<TipoUsuarios>();
+
+            var db = new SistemaVentasDb();
+
+            lista = db.TipoUsuarios.Where(p => p.TipoUsuarioId == tipoId).ToList();
+
+            return lista;
+
+        }
+        public static List<TipoUsuarios> GetListaDetalle(string detalle)
         {
             List<TipoUsuarios> lista = new List<TipoUsuarios>();
 

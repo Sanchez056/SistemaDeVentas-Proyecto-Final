@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Entidades;
 using BLL;
 using DAL;
-
+using SistemaDeVentas.Entidades;
 
 namespace SistemaDeVentas
 {
@@ -96,6 +96,14 @@ namespace SistemaDeVentas
                 Limpiar();
                 MessageBox.Show("Guardado con exito");
             }
+            else
+            {
+
+                UsuariosBLL.Modificar(ut.StringInt(UsuarioIdtextBox.Text), usuario);
+                Limpiar();
+                limpiarErroresProvider();
+                MessageBox.Show("Actualizado con exito");
+            }
 
         }
 
@@ -118,7 +126,7 @@ namespace SistemaDeVentas
         {
             if (UsuariosBLL.GetListaNombreUsuario(aux).Count() > 0)
             {
-                MessageBox.Show("Este nombre de Usuario ya existe, favor intentar con otro nombre de usario...");
+                MessageBox.Show("Este nombre de Usuario ya existe, favor intentar con otro nombre de usario o Modificar..");
                 return false;
             }
             return true;

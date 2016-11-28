@@ -41,6 +41,34 @@ namespace BLL
          // return   retorna;
         }
 
+        public static bool Modificar(int id, Empleados emp)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new SistemaVentasDb())
+                {
+                    Empleados e = db.Empleados.Find(id);
+                    e.Nombre = emp.Nombre;
+                    e.Celular = emp.Celular;
+                    e.Ciudad = emp.Ciudad;
+                    e.Direccion = emp.Direccion;
+                    e.Cedula = emp.Cedula;
+                    e.Sexo = emp.Sexo;
+                    e.Telefono = emp.Telefono;
+                    e.FechaNacimiento = emp.FechaNacimiento;
+
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
+
 
         public static Empleados Buscar(int id)
         {

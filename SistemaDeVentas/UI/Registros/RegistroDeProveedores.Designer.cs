@@ -167,9 +167,9 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel2;
-            this.Eliminarbutton.Location = new System.Drawing.Point(321, 365);
+            this.Eliminarbutton.Location = new System.Drawing.Point(301, 349);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(104, 55);
+            this.Eliminarbutton.Size = new System.Drawing.Size(105, 38);
             this.Eliminarbutton.TabIndex = 16;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,9 +180,9 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(184, 365);
+            this.Guardarbutton.Location = new System.Drawing.Point(193, 349);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(111, 55);
+            this.Guardarbutton.Size = new System.Drawing.Size(102, 38);
             this.Guardarbutton.TabIndex = 15;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -193,9 +193,9 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources.add1;
-            this.Nuevobutton.Location = new System.Drawing.Point(54, 365);
+            this.Nuevobutton.Location = new System.Drawing.Point(83, 349);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(102, 55);
+            this.Nuevobutton.Size = new System.Drawing.Size(101, 38);
             this.Nuevobutton.TabIndex = 14;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -327,7 +327,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
-            this.ClientSize = new System.Drawing.Size(501, 439);
+            this.ClientSize = new System.Drawing.Size(501, 402);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FechaIngresodateTimePicker);
             this.Controls.Add(this.CiudadcomboBox);

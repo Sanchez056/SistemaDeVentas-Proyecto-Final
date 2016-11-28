@@ -122,7 +122,6 @@
     <Compile Include="BLL\CategoriaBLL.cs" />
     <Compile Include="BLL\ClientesBLL.cs" />
     <Compile Include="BLL\CompraBLL.cs" />
-    <Compile Include="BLL\CondicionesPagosBLLcs.cs" />
     <Compile Include="BLL\EmpleadosBLL.cs" />
     <Compile Include="BLL\ProveedorBLL.cs" />
     <Compile Include="BLL\TiposUsuariosBLL.cs" />
@@ -134,18 +133,21 @@
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Compras.cs" />
     <Compile Include="Entidades\CondicionesPagos.cs" />
-    <Compile Include="Entidades\DetalleCompra.cs" />
-    <Compile Include="Entidades\DetalleVentas.cs" />
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Entidades\Proveedores.cs" />
     <Compile Include="Entidades\TipoUsuarios.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
     <Compile Include="Entidades\Ventas.cs" />
-    <Compile Include="RegistrosArticulo.cs" />
-    <Compile Include="SistemaVentasDbDataSet2.Designer.cs">
+    <Compile Include="SistemaVentasDbDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SistemaVentasDbDataSet2.xsd</DependentUpon>
+      <DependentUpon>SistemaVentasDbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaCatedoriaArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaCatedoriaArticulos.Designer.cs">
+      <DependentUpon>ConsultaCatedoriaArticulos.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\ConsultaCompra.cs">
       <SubType>Form</SubType>
@@ -158,12 +160,6 @@
     </Compile>
     <Compile Include="UI\Consultas\ConsultaEmpleado.Designer.cs">
       <DependentUpon>ConsultaEmpleado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Consultas\ConsultaGeneralVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Consultas\ConsultaGeneralVentas.Designer.cs">
-      <DependentUpon>ConsultaGeneralVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\ConsultaClientes.cs">
       <SubType>Form</SubType>
@@ -183,6 +179,12 @@
     <Compile Include="UI\Consultas\ConsultasArticulos.Designer.cs">
       <DependentUpon>ConsultasArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\ConsultaTipoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaTipoUsuarios.Designer.cs">
+      <DependentUpon>ConsultaTipoUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\ConsultaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +196,12 @@
     </Compile>
     <Compile Include="UI\Consultas\ConsultaVentas.Designer.cs">
       <DependentUpon>ConsultaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\MyViewerCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\MyViewerCategoria.Designer.cs">
+      <DependentUpon>MyViewerCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Consultas\MyViewerFacturaCredito.cs">
       <SubType>Form</SubType>
@@ -231,17 +239,17 @@
     <Compile Include="UI\Consultas\MyViewerReciboContado.Designer.cs">
       <DependentUpon>MyViewerReciboContado.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\MyViewerTipoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\MyViewerTipoUsuarios.Designer.cs">
+      <DependentUpon>MyViewerTipoUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Consultas\MyViewerUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Consultas\MyViewerUsuarios.Designer.cs">
       <DependentUpon>MyViewerUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion.Designer.cs">
-      <DependentUpon>Presentacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="UI\Extras\Calculadoras.cs">
@@ -274,11 +282,11 @@
     <Compile Include="UI\Registros\RegistroDeClientes.Designer.cs">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\LoginUsuarios.cs">
+    <Compile Include="InicioSecionUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\LoginUsuarios.Designer.cs">
-      <DependentUpon>LoginUsuarios.cs</DependentUpon>
+    <Compile Include="InicioSecionUsuario.Designer.cs">
+      <DependentUpon>InicioSecionUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -319,29 +327,22 @@
     <Compile Include="UI\Registros\RegistrosDeVentas.Designer.cs">
       <DependentUpon>RegistrosDeVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="SistemaVentasDbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SistemaVentasDbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="SistemaVentasDbDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SistemaVentasDbDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Registros\RegistrosTipoUsuarios.cs">
+    <Compile Include="UI\Registros\RegistroTipoUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\RegistrosTipoUsuarios.Designer.cs">
-      <DependentUpon>RegistrosTipoUsuarios.cs</DependentUpon>
+    <Compile Include="UI\Registros\RegistroTipoUsuarios.Designer.cs">
+      <DependentUpon>RegistroTipoUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="UtilidadesDouble.cs" />
     <Compile Include="UtilidadesInt.cs" />
+    <EmbeddedResource Include="UI\Consultas\ConsultaCatedoriaArticulos.resx">
+      <DependentUpon>ConsultaCatedoriaArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ConsultaCompra.resx">
+      <DependentUpon>ConsultaCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\ConsultaEmpleado.resx">
       <DependentUpon>ConsultaEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Consultas\ConsultaGeneralVentas.resx">
-      <DependentUpon>ConsultaGeneralVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\ConsultaClientes.resx">
       <DependentUpon>ConsultaClientes.cs</DependentUpon>
@@ -352,8 +353,17 @@
     <EmbeddedResource Include="UI\Consultas\ConsultasArticulos.resx">
       <DependentUpon>ConsultasArticulos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ConsultaTipoUsuarios.resx">
+      <DependentUpon>ConsultaTipoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\ConsultaUsuarios.resx">
       <DependentUpon>ConsultaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ConsultaVentas.resx">
+      <DependentUpon>ConsultaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\MyViewerCategoria.resx">
+      <DependentUpon>MyViewerCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\MyViewerFacturaCredito.resx">
       <DependentUpon>MyViewerFacturaCredito.cs</DependentUpon>
@@ -373,11 +383,11 @@
     <EmbeddedResource Include="UI\Consultas\MyViewerReciboContado.resx">
       <DependentUpon>MyViewerReciboContado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\MyViewerTipoUsuarios.resx">
+      <DependentUpon>MyViewerTipoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\MyViewerUsuarios.resx">
       <DependentUpon>MyViewerUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion.resx">
-      <DependentUpon>Presentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Extras\Calculadoras.resx">
       <DependentUpon>Calculadoras.cs</DependentUpon>
@@ -394,8 +404,8 @@
     <EmbeddedResource Include="UI\Registros\RegistroDeClientes.resx">
       <DependentUpon>RegistroDeClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\LoginUsuarios.resx">
-      <DependentUpon>LoginUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="InicioSecionUsuario.resx">
+      <DependentUpon>InicioSecionUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -429,14 +439,16 @@
     <EmbeddedResource Include="UI\Registros\RegistrosDeVentas.resx">
       <DependentUpon>RegistrosDeVentas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RegistrosTipoUsuarios.resx">
-      <DependentUpon>RegistrosTipoUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\RegistroTipoUsuarios.resx">
+      <DependentUpon>RegistroTipoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\ListadoArticulos.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\ListadoCategoria.rdlc" />
     <EmbeddedResource Include="UI\Reportes\ListadoClientes.rdlc" />
     <EmbeddedResource Include="UI\Reportes\ListadoProveedores.rdlc" />
     <EmbeddedResource Include="UI\Reportes\ListadosEmpleados.rdlc" />
     <EmbeddedResource Include="UI\Reportes\ListadosUsuarios.rdlc" />
+    <EmbeddedResource Include="UI\Reportes\ListadoTipoUsuarios.rdlc" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -449,38 +461,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="SistemaVentasDbDataSet.xsc">
-      <DependentUpon>SistemaVentasDbDataSet.xsd</DependentUpon>
+    <None Include="SistemaVentasDbDataSet3.xsc">
+      <DependentUpon>SistemaVentasDbDataSet3.xsd</DependentUpon>
     </None>
-    <None Include="SistemaVentasDbDataSet.xsd">
+    <None Include="SistemaVentasDbDataSet3.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SistemaVentasDbDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>SistemaVentasDbDataSet3.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="SistemaVentasDbDataSet.xss">
-      <DependentUpon>SistemaVentasDbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="SistemaVentasDbDataSet1.xsc">
-      <DependentUpon>SistemaVentasDbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="SistemaVentasDbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SistemaVentasDbDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SistemaVentasDbDataSet1.xss">
-      <DependentUpon>SistemaVentasDbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="SistemaVentasDbDataSet2.xsc">
-      <DependentUpon>SistemaVentasDbDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="SistemaVentasDbDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SistemaVentasDbDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SistemaVentasDbDataSet2.xss">
-      <DependentUpon>SistemaVentasDbDataSet2.xsd</DependentUpon>
+    <None Include="SistemaVentasDbDataSet3.xss">
+      <DependentUpon>SistemaVentasDbDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -521,6 +511,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>SistemaVentasDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\user2.ico" />
+    <None Include="Resources\agregar-usuarios-icono-3782-481.png" />
+    <None Include="Resources\basket_put.ico" />
+    <None Include="Resources\fondo.jpg" />
     <None Include="Resources\add2.ico" />
     <None Include="Resources\cash-register1.ico" />
     <None Include="Resources\shopping cart1.ico" />

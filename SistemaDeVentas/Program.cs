@@ -13,10 +13,9 @@ namespace SistemaDeVentas
         [STAThread]
         static void Main()
         {
-           // Database.SetInitializer<SistemaDeVentasDb>(new DropCreateDatabaseAlways<Siste>());
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipal());
+            Application.Run(new InicioSecionUsuario());
 
         }
     }

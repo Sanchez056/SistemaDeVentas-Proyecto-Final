@@ -44,6 +44,33 @@ namespace BLL
            // return retorna;
 
         }
+        public static bool  Modificar(int id, Articulos art)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new SistemaVentasDb())
+                {
+                    Articulos a = db.Articulos.Find(id);
+                    a.Nombre = art.Nombre;
+                    a.Marca = art.Marca;
+                    a.NombreProveedor = art.NombreProveedor;
+                    a.PrecioCompra= art.PrecioCompra;
+                    a.PrecioVentas = art.PrecioVentas;
+                    a.Codigo = art.Codigo;
+                    a.CantidadDispodible = art.CantidadDispodible;
+                    a.Categoria = art.Categoria;
+
+                    db.SaveChanges();
+                }
+                   retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
 
         public static Articulos Buscar(int id)
         {

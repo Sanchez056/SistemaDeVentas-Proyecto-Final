@@ -41,6 +41,32 @@ namespace BLL
            /// return retorna;
 
         }
+        public static bool Modificar(int id, Proveedores prov)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new SistemaVentasDb())
+                {
+                    Proveedores p = db.Proveedores.Find(id);
+                    p.NombreProveedor = prov.NombreProveedor;
+                    p.Telefono = prov.Telefono;
+                    p.Ciudad = prov.Ciudad;
+                    p.Correo = prov.Correo;
+                    p.Direccion = prov.Direccion;
+                    p.Fax = prov.Fax;
+
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
+
 
         public static Proveedores Buscar(int id)
         {

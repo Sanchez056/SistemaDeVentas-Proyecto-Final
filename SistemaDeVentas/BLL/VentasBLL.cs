@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Entidades;
 using DAL;
 using SistemaDeVentas.Entidades;
+using System.Data.Entity;
 
 namespace SistemaDeVentas.BLL
 {
@@ -14,38 +15,61 @@ namespace SistemaDeVentas.BLL
        
             Ventas  ventas = new Ventas();
 
-            public static bool Insertar(Ventas v)
+        public static bool Insertar(Ventas v)
+        {
+            bool re = false;
+            try
             {
-                //  bool retorna = false;
+                var db = new SistemaVentasDb();
 
-                try
+                db.Ventas.Add(v);
+                var gp = db.Ventas.Add(v);
+                foreach (var art in v.Articulos)
                 {
-
-                    using (var db = new SistemaVentasDb())
-                    {
-
-                        db.Ventas.Add(v);
-                        db.SaveChanges();
-                        db.Dispose();
-                        // retorna= true;
-                        return true;
-
-                    }
-
-
+                    db.Entry(art).State = EntityState.Unchanged;
                 }
-                catch (Exception)
-                {
-                    return false;
-                    throw;
-
-                }
-
-                // return retorna;
-
+                db.SaveChanges();
+                db.Dispose();
+                re = true;
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return re;
 
-            public static Ventas Buscar(int id)
+        }
+        public static bool Modificar(int id, Ventas vent)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new SistemaVentasDb())
+                {
+                    Ventas v = db.Ventas.Find(id);
+                    v.Cuota = vent.Cuota;
+                    v.Codigo = vent.Codigo;
+                    v.Deuda = vent.Deuda;
+                    v.Cantidad = vent.Cantidad;
+                    v.Itebis = vent.Itebis;
+                    v.Precio = vent.Precio;
+                    v.TipoDocumento = vent.TipoDocumento;
+                    v.CodicionPago = vent.CodicionPago;
+                    v.descuento = vent.descuento;
+               
+
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
+
+        public static Ventas Buscar(int id)
             {
                 var db = new SistemaVentasDb();
 

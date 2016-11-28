@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrosDeVentas));
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ArticuloScomboBox = new System.Windows.Forms.ComboBox();
+            this.CodigoVentatextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Nombrelabel = new System.Windows.Forms.Label();
             this.MarcatextBox = new System.Windows.Forms.TextBox();
-            this.CodigotextBox = new System.Windows.Forms.TextBox();
+            this.CodigoArticulotextBox = new System.Windows.Forms.TextBox();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.Marcalabel = new System.Windows.Forms.Label();
             this.Codigolabel = new System.Windows.Forms.Label();
@@ -72,8 +76,8 @@
             this.EstebisTotallabel = new System.Windows.Forms.Label();
             this.SubTotallabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.FechaVencimientodateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FechaVeclabel = new System.Windows.Forms.Label();
-            this.FechaVencmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.MontoDeudalabel = new System.Windows.Forms.Label();
             this.MontoDeudatextBox = new System.Windows.Forms.TextBox();
             this.CuotastextBox = new System.Windows.Forms.TextBox();
@@ -95,6 +99,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.Fechalabel = new System.Windows.Forms.Label();
             this.FacturatabControl = new System.Windows.Forms.TabControl();
+            this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CodigoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BuscarArticuloserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ElegirCondicionPagoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.TipoDocumentoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ArticulodataGridView)).BeginInit();
@@ -106,6 +115,11 @@
             this.groupBox2.SuspendLayout();
             this.CondiciondePagogroupBox.SuspendLayout();
             this.FacturatabControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CodigoerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarArticuloserrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ElegirCondicionPagoerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TipoDocumentoerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -120,6 +134,9 @@
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabPage2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage2.Controls.Add(this.ArticuloScomboBox);
+            this.tabPage2.Controls.Add(this.CodigoVentatextBox);
+            this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.panel3);
             this.tabPage2.Controls.Add(this.ArticulodataGridView);
             this.tabPage2.Controls.Add(this.FiltrarVentalabel);
@@ -146,9 +163,33 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1088, 499);
+            this.tabPage2.Size = new System.Drawing.Size(1115, 499);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Factura ";
+            // 
+            // ArticuloScomboBox
+            // 
+            this.ArticuloScomboBox.FormattingEnabled = true;
+            this.ArticuloScomboBox.Location = new System.Drawing.Point(394, 81);
+            this.ArticuloScomboBox.Name = "ArticuloScomboBox";
+            this.ArticuloScomboBox.Size = new System.Drawing.Size(121, 23);
+            this.ArticuloScomboBox.TabIndex = 107;
+            // 
+            // CodigoVentatextBox
+            // 
+            this.CodigoVentatextBox.Location = new System.Drawing.Point(281, 23);
+            this.CodigoVentatextBox.Name = "CodigoVentatextBox";
+            this.CodigoVentatextBox.Size = new System.Drawing.Size(100, 21);
+            this.CodigoVentatextBox.TabIndex = 106;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(240, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 15);
+            this.label3.TabIndex = 105;
+            this.label3.Text = "Codigo:";
             // 
             // panel3
             // 
@@ -156,7 +197,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.Nombrelabel);
             this.panel3.Controls.Add(this.MarcatextBox);
-            this.panel3.Controls.Add(this.CodigotextBox);
+            this.panel3.Controls.Add(this.CodigoArticulotextBox);
             this.panel3.Controls.Add(this.NombretextBox);
             this.panel3.Controls.Add(this.Marcalabel);
             this.panel3.Controls.Add(this.Codigolabel);
@@ -188,12 +229,12 @@
             this.MarcatextBox.Size = new System.Drawing.Size(142, 21);
             this.MarcatextBox.TabIndex = 105;
             // 
-            // CodigotextBox
+            // CodigoArticulotextBox
             // 
-            this.CodigotextBox.Location = new System.Drawing.Point(12, 30);
-            this.CodigotextBox.Name = "CodigotextBox";
-            this.CodigotextBox.Size = new System.Drawing.Size(94, 21);
-            this.CodigotextBox.TabIndex = 104;
+            this.CodigoArticulotextBox.Location = new System.Drawing.Point(12, 30);
+            this.CodigoArticulotextBox.Name = "CodigoArticulotextBox";
+            this.CodigoArticulotextBox.Size = new System.Drawing.Size(94, 21);
+            this.CodigoArticulotextBox.TabIndex = 104;
             // 
             // NombretextBox
             // 
@@ -271,9 +312,9 @@
             // ArticulodataGridView
             // 
             this.ArticulodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ArticulodataGridView.Location = new System.Drawing.Point(7, 240);
+            this.ArticulodataGridView.Location = new System.Drawing.Point(17, 240);
             this.ArticulodataGridView.Name = "ArticulodataGridView";
-            this.ArticulodataGridView.Size = new System.Drawing.Size(1071, 150);
+            this.ArticulodataGridView.Size = new System.Drawing.Size(1050, 179);
             this.ArticulodataGridView.TabIndex = 103;
             // 
             // FiltrarVentalabel
@@ -281,9 +322,9 @@
             this.FiltrarVentalabel.AutoSize = true;
             this.FiltrarVentalabel.Location = new System.Drawing.Point(14, 30);
             this.FiltrarVentalabel.Name = "FiltrarVentalabel";
-            this.FiltrarVentalabel.Size = new System.Drawing.Size(50, 15);
+            this.FiltrarVentalabel.Size = new System.Drawing.Size(20, 15);
             this.FiltrarVentalabel.TabIndex = 100;
-            this.FiltrarVentalabel.Text = "FiltrarId:";
+            this.FiltrarVentalabel.Text = "Id:";
             // 
             // groupBox5
             // 
@@ -343,7 +384,7 @@
             this.EmpleadogroupBox.Controls.Add(this.FiltrarEmpleadolabel);
             this.EmpleadogroupBox.Controls.Add(this.FiltrarEmpleadocomboBox);
             this.EmpleadogroupBox.ForeColor = System.Drawing.Color.White;
-            this.EmpleadogroupBox.Location = new System.Drawing.Point(809, 57);
+            this.EmpleadogroupBox.Location = new System.Drawing.Point(887, 55);
             this.EmpleadogroupBox.Name = "EmpleadogroupBox";
             this.EmpleadogroupBox.Size = new System.Drawing.Size(258, 68);
             this.EmpleadogroupBox.TabIndex = 98;
@@ -374,9 +415,9 @@
             this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
             this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(311, 438);
+            this.Imprimirbutton.Location = new System.Drawing.Point(325, 440);
             this.Imprimirbutton.Name = "Imprimirbutton";
-            this.Imprimirbutton.Size = new System.Drawing.Size(98, 54);
+            this.Imprimirbutton.Size = new System.Drawing.Size(98, 48);
             this.Imprimirbutton.TabIndex = 97;
             this.Imprimirbutton.Text = "Imprimir";
             this.Imprimirbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -424,9 +465,9 @@
             this.panel2.Controls.Add(this.Eliminarbutton);
             this.panel2.Controls.Add(this.Cobrarbutton);
             this.panel2.Controls.Add(this.Nuevabutton);
-            this.panel2.Location = new System.Drawing.Point(14, 437);
+            this.panel2.Location = new System.Drawing.Point(17, 434);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 55);
+            this.panel2.Size = new System.Drawing.Size(291, 55);
             this.panel2.TabIndex = 94;
             // 
             // Eliminarbutton
@@ -434,7 +475,7 @@
             this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Eliminarbutton.Location = new System.Drawing.Point(194, 4);
+            this.Eliminarbutton.Location = new System.Drawing.Point(189, 6);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(87, 42);
             this.Eliminarbutton.TabIndex = 62;
@@ -448,7 +489,7 @@
             this.Cobrarbutton.ForeColor = System.Drawing.Color.Black;
             this.Cobrarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Cobrarbutton.Image")));
             this.Cobrarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Cobrarbutton.Location = new System.Drawing.Point(103, 4);
+            this.Cobrarbutton.Location = new System.Drawing.Point(91, 5);
             this.Cobrarbutton.Name = "Cobrarbutton";
             this.Cobrarbutton.Size = new System.Drawing.Size(87, 42);
             this.Cobrarbutton.TabIndex = 61;
@@ -463,7 +504,7 @@
             this.Nuevabutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevabutton.Image")));
             this.Nuevabutton.Location = new System.Drawing.Point(3, 4);
             this.Nuevabutton.Name = "Nuevabutton";
-            this.Nuevabutton.Size = new System.Drawing.Size(93, 42);
+            this.Nuevabutton.Size = new System.Drawing.Size(82, 42);
             this.Nuevabutton.TabIndex = 60;
             this.Nuevabutton.Text = "Nueva";
             this.Nuevabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -481,7 +522,7 @@
             this.panel1.Controls.Add(this.Totallabel);
             this.panel1.Controls.Add(this.EstebisTotallabel);
             this.panel1.Controls.Add(this.SubTotallabel);
-            this.panel1.Location = new System.Drawing.Point(415, 437);
+            this.panel1.Location = new System.Drawing.Point(434, 451);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(654, 37);
             this.panel1.TabIndex = 93;
@@ -552,8 +593,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.FechaVencimientodateTimePicker);
             this.groupBox2.Controls.Add(this.FechaVeclabel);
-            this.groupBox2.Controls.Add(this.FechaVencmaskedTextBox);
             this.groupBox2.Controls.Add(this.MontoDeudalabel);
             this.groupBox2.Controls.Add(this.MontoDeudatextBox);
             this.groupBox2.Controls.Add(this.CuotastextBox);
@@ -568,6 +609,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cliente";
             // 
+            // FechaVencimientodateTimePicker
+            // 
+            this.FechaVencimientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaVencimientodateTimePicker.Location = new System.Drawing.Point(189, 73);
+            this.FechaVencimientodateTimePicker.Name = "FechaVencimientodateTimePicker";
+            this.FechaVencimientodateTimePicker.Size = new System.Drawing.Size(102, 21);
+            this.FechaVencimientodateTimePicker.TabIndex = 104;
+            // 
             // FechaVeclabel
             // 
             this.FechaVeclabel.AutoSize = true;
@@ -576,15 +625,6 @@
             this.FechaVeclabel.Size = new System.Drawing.Size(105, 15);
             this.FechaVeclabel.TabIndex = 103;
             this.FechaVeclabel.Text = "Vencimiento Factura";
-            // 
-            // FechaVencmaskedTextBox
-            // 
-            this.FechaVencmaskedTextBox.Location = new System.Drawing.Point(185, 74);
-            this.FechaVencmaskedTextBox.Mask = "00/00/0000";
-            this.FechaVencmaskedTextBox.Name = "FechaVencmaskedTextBox";
-            this.FechaVencmaskedTextBox.Size = new System.Drawing.Size(114, 21);
-            this.FechaVencmaskedTextBox.TabIndex = 102;
-            this.FechaVencmaskedTextBox.ValidatingType = typeof(System.DateTime);
             // 
             // MontoDeudalabel
             // 
@@ -675,13 +715,14 @@
             // 
             this.Quitarbutton.ForeColor = System.Drawing.Color.Black;
             this.Quitarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Quitarbutton.Image")));
-            this.Quitarbutton.Location = new System.Drawing.Point(984, 173);
+            this.Quitarbutton.Location = new System.Drawing.Point(984, 187);
             this.Quitarbutton.Name = "Quitarbutton";
             this.Quitarbutton.Size = new System.Drawing.Size(83, 40);
             this.Quitarbutton.TabIndex = 86;
             this.Quitarbutton.Text = "Quitar";
             this.Quitarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Quitarbutton.UseVisualStyleBackColor = true;
+            this.Quitarbutton.Click += new System.EventHandler(this.Quitarbutton_Click);
             // 
             // ItebistextBox
             // 
@@ -692,15 +733,16 @@
             // 
             // FiltrarVentaIdtextBox
             // 
-            this.FiltrarVentaIdtextBox.Location = new System.Drawing.Point(65, 26);
+            this.FiltrarVentaIdtextBox.Location = new System.Drawing.Point(65, 28);
             this.FiltrarVentaIdtextBox.Name = "FiltrarVentaIdtextBox";
-            this.FiltrarVentaIdtextBox.Size = new System.Drawing.Size(105, 21);
+            this.FiltrarVentaIdtextBox.Size = new System.Drawing.Size(81, 21);
             this.FiltrarVentaIdtextBox.TabIndex = 40;
+            this.FiltrarVentaIdtextBox.TextChanged += new System.EventHandler(this.FiltrarVentaIdtextBox_TextChanged);
             // 
             // HoradateTimePicker
             // 
             this.HoradateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.HoradateTimePicker.Location = new System.Drawing.Point(977, 21);
+            this.HoradateTimePicker.Location = new System.Drawing.Point(1053, 21);
             this.HoradateTimePicker.Name = "HoradateTimePicker";
             this.HoradateTimePicker.Size = new System.Drawing.Size(90, 21);
             this.HoradateTimePicker.TabIndex = 71;
@@ -708,7 +750,7 @@
             // Horalabel
             // 
             this.Horalabel.AutoSize = true;
-            this.Horalabel.Location = new System.Drawing.Point(981, 3);
+            this.Horalabel.Location = new System.Drawing.Point(1057, 3);
             this.Horalabel.Name = "Horalabel";
             this.Horalabel.Size = new System.Drawing.Size(31, 15);
             this.Horalabel.TabIndex = 70;
@@ -717,7 +759,7 @@
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(899, 21);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(975, 21);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(76, 21);
             this.FechadateTimePicker.TabIndex = 69;
@@ -726,7 +768,7 @@
             // 
             this.Agregarbutton.ForeColor = System.Drawing.Color.Black;
             this.Agregarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Agregarbutton.Image")));
-            this.Agregarbutton.Location = new System.Drawing.Point(894, 175);
+            this.Agregarbutton.Location = new System.Drawing.Point(894, 189);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(84, 40);
             this.Agregarbutton.TabIndex = 56;
@@ -749,7 +791,7 @@
             this.BuscarIdbutton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BuscarIdbutton.ForeColor = System.Drawing.Color.Black;
             this.BuscarIdbutton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarIdbutton.Image")));
-            this.BuscarIdbutton.Location = new System.Drawing.Point(176, 10);
+            this.BuscarIdbutton.Location = new System.Drawing.Point(152, 10);
             this.BuscarIdbutton.Name = "BuscarIdbutton";
             this.BuscarIdbutton.Size = new System.Drawing.Size(82, 39);
             this.BuscarIdbutton.TabIndex = 42;
@@ -771,7 +813,7 @@
             // Fechalabel
             // 
             this.Fechalabel.AutoSize = true;
-            this.Fechalabel.Location = new System.Drawing.Point(914, 3);
+            this.Fechalabel.Location = new System.Drawing.Point(990, 3);
             this.Fechalabel.Name = "Fechalabel";
             this.Fechalabel.Size = new System.Drawing.Size(35, 15);
             this.Fechalabel.TabIndex = 36;
@@ -785,9 +827,29 @@
             this.FacturatabControl.Location = new System.Drawing.Point(12, 25);
             this.FacturatabControl.Name = "FacturatabControl";
             this.FacturatabControl.SelectedIndex = 0;
-            this.FacturatabControl.Size = new System.Drawing.Size(1096, 530);
+            this.FacturatabControl.Size = new System.Drawing.Size(1123, 530);
             this.FacturatabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.FacturatabControl.TabIndex = 2;
+            // 
+            // BuscarerrorProvider
+            // 
+            this.BuscarerrorProvider.ContainerControl = this;
+            // 
+            // CodigoerrorProvider
+            // 
+            this.CodigoerrorProvider.ContainerControl = this;
+            // 
+            // BuscarArticuloserrorProvider
+            // 
+            this.BuscarArticuloserrorProvider.ContainerControl = this;
+            // 
+            // ElegirCondicionPagoerrorProvider
+            // 
+            this.ElegirCondicionPagoerrorProvider.ContainerControl = this;
+            // 
+            // TipoDocumentoerrorProvider
+            // 
+            this.TipoDocumentoerrorProvider.ContainerControl = this;
             // 
             // RegistrosDeVentas
             // 
@@ -797,7 +859,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1120, 567);
+            this.ClientSize = new System.Drawing.Size(1185, 567);
             this.Controls.Add(this.FacturatabControl);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -824,6 +886,11 @@
             this.CondiciondePagogroupBox.ResumeLayout(false);
             this.CondiciondePagogroupBox.PerformLayout();
             this.FacturatabControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CodigoerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarArticuloserrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ElegirCondicionPagoerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TipoDocumentoerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -837,7 +904,6 @@
         private System.Windows.Forms.Label Duscuentolabel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label FechaVeclabel;
-        private System.Windows.Forms.MaskedTextBox FechaVencmaskedTextBox;
         private System.Windows.Forms.Label MontoDeudalabel;
         private System.Windows.Forms.TextBox MontoDeudatextBox;
         private System.Windows.Forms.TextBox CuotastextBox;
@@ -890,12 +956,21 @@
         private System.Windows.Forms.DataGridView ArticulodataGridView;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox MarcatextBox;
-        private System.Windows.Forms.TextBox CodigotextBox;
+        private System.Windows.Forms.TextBox CodigoArticulotextBox;
         private System.Windows.Forms.Label Marcalabel;
         private System.Windows.Forms.Label Codigolabel;
         private System.Windows.Forms.Label CantidadDispodiblelabel;
         private System.Windows.Forms.TextBox PreciotextBox;
         private System.Windows.Forms.Label Preciolabel;
         private System.Windows.Forms.Label Nombrelabel;
+        private System.Windows.Forms.TextBox CodigoVentatextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker FechaVencimientodateTimePicker;
+        private System.Windows.Forms.ComboBox ArticuloScomboBox;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
+        private System.Windows.Forms.ErrorProvider CodigoerrorProvider;
+        private System.Windows.Forms.ErrorProvider BuscarArticuloserrorProvider;
+        private System.Windows.Forms.ErrorProvider ElegirCondicionPagoerrorProvider;
+        private System.Windows.Forms.ErrorProvider TipoDocumentoerrorProvider;
     }
 }

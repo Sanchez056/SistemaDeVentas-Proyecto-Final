@@ -37,7 +37,7 @@ namespace SistemaDeVentas.UI.Registros
         {
             if (BLL.CategoriaBLL.GetListaDescripcion(aux).Count() > 0)
             {
-                MessageBox.Show("Este Categoria ya  existe, favor intentar con otra Descripcion de Categoria ...");
+                MessageBox.Show("Este Categoria ya  existe, favor intentar con otra Descripcion de Categoria o Modificar...");
                 return false;
             }
             return true;
@@ -79,7 +79,7 @@ namespace SistemaDeVentas.UI.Registros
         {
             CategoriaIdtextBox.Clear();
             DescripciontextBox.Clear();
-
+            limpiarErroresProvider();
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
@@ -88,11 +88,20 @@ namespace SistemaDeVentas.UI.Registros
             BuscarerrorProvider.Clear();
             LlenarClase(categoria);
            
-            if (ValidarTextbox() && ValidarExiste(CategoriaIdtextBox.Text))
+            if (ValidarTextbox() && ValidarExiste(DescripciontextBox.Text))
             {
                 BLL.CategoriaBLL.Insertar(categoria);
                 Limpiar();
+                limpiarErroresProvider();
                 MessageBox.Show("Guardado con exito");
+            }
+            else
+            {
+
+               BLL.CategoriaBLL.Modificar(ut.StringInt(CategoriaIdtextBox.Text), categoria);
+                Limpiar();
+                limpiarErroresProvider();
+                MessageBox.Show("Actualizado con exito");
             }
         }
 
@@ -131,7 +140,13 @@ namespace SistemaDeVentas.UI.Registros
                 MessageBox.Show("ELiminado con exito");
             }
         }
-       
+
+        private void limpiarErroresProvider()
+        {
+            BuscarerrorProvider.Clear();
+            DescripcionerrorProvider.Clear();
+
+        }
 
         private void RegistrosCategoriaArticulos_Load(object sender, EventArgs e)
         {

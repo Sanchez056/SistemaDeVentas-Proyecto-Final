@@ -40,6 +40,28 @@ namespace BLL
             return retorna;
 
         }
+        public static bool Modificar(int id, Usuarios us)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new SistemaVentasDb())
+                {
+                    Usuarios usa = db.Usuarios.Find(id);
+                    usa.NombreUsuario = us.NombreUsuario;
+                    usa.Contrasena = us.Contrasena;
+                    usa.Tipo = us.Tipo;              
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
+
 
         public static Usuarios Buscar(int id)
         {

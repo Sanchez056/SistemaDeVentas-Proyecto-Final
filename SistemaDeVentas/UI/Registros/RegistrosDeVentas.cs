@@ -28,38 +28,20 @@ namespace SistemaDeVentas.UI.Registros
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+      
         public List<Clientes> lists = new List<Clientes>();
-        private void BuscarClientebutton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void RegistrosDeVentas_Load(object sender, EventArgs e)
         {
             CargarComboxEmpleados();
             CargarConboBoxClientes();
             CargarFiltrar();
-        }
-        public void LlenarClase()
-        {
+            LLenarCombo();
 
+           
+           
         }
-
+       
 
         public void Limpiar()
         {
@@ -67,14 +49,15 @@ namespace SistemaDeVentas.UI.Registros
             FiltrarArticulotextBox.Clear();
             FiltrarVentaIdtextBox.Clear();
             MarcatextBox.Clear();
-            CodigotextBox.Clear();
+            CodigoArticulotextBox.Clear();
             PreciotextBox.Clear();
             SubTotaltextBox.Clear();
             TotaltextBox.Clear();
             DescuentotextBox.Clear();
             MontoDeudatextBox.Clear();
             CuotastextBox.Clear();
-            FechaVencmaskedTextBox.Clear();
+            NombretextBox.Clear();
+            CantidadDipodibletextBox.Clear();
             ItebistextBox.Clear();
             ItebisTotaltextBox.Clear();
             TotalDescuntotextBox.Clear();
@@ -82,7 +65,9 @@ namespace SistemaDeVentas.UI.Registros
             CreditoradioButton.Checked = false;
             DocFactuaradioButton.Checked = false;
             DocReciberadioButton.Checked = false;
+            ArticulodataGridView.DataSource = null;
             //FechadateTimePicker.Value = f.Value;
+            LimpiarErroresProvider();
 
             //-----
             // limpiarErroresProvider();
@@ -98,29 +83,44 @@ namespace SistemaDeVentas.UI.Registros
         {
             if (validarId("Favor ingresar el id de la Venta que desea buscar") && ValidarBuscar())
                 LLenar(BLL.VentasBLL.Buscar(ut.StringInt(FiltrarVentaIdtextBox.Text)));
+             
         }
 
-        private void LLenar(Ventas venta)
+        private void LLenar(Ventas v)
         {
-             //Clientes cliente = new Clientes();
-            FiltrarVentaIdtextBox.Text = venta.VentaId.ToString();
+           
+            var vent = BLL.VentasBLL.Buscar(ut.StringInt(FiltrarVentaIdtextBox.Text));
+            FiltrarVentaIdtextBox.Text = v.VentaId.ToString();
+            if (ContadoradioButton.Checked == true)
+            {
+                v.CodicionPago = "Contado";
+            }
+            else
+            {
+                if (CreditoradioButton.Checked == true)
+                    v.CodicionPago = "Credito";
+                else
+                    v.CodicionPago = "Nada";
+            }
+            ArticulodataGridView.DataSource = null;
+            ArticulodataGridView.DataSource = v.Articulos;
+            MontoDeudatextBox.Text = v.Deuda.ToString();
+            CodigoVentatextBox.Text = v.Codigo;
+            CuotastextBox.Text = v.Cuota.ToString();
+            ItebistextBox.Text = v.Itebis.ToString();
             
-            CuotastextBox.Text = venta.Cuotas.ToString();
-            MontoDeudatextBox.Text = venta.Deuda.ToString();
-            SubTotaltextBox.Text = venta.SubTotal.ToString();
-            TotalDescuntotextBox.Text = venta.TotalDescuento.ToString();
-            ItebisTotaltextBox.Text = venta.TotalItebis.ToString();
-            TotaltextBox.Text = venta.Total.ToString();
-            if (venta.CodicionPago == "Contado")
-                ContadoradioButton.Checked = true;
-            if (venta.CodicionPago == "Credito")
-                CreditoradioButton.Checked = true;
+            
 
-         
+            //v.Fecha = FechadateTimePicker.Value;
+
+            
             CargarComboxEmpleados();
             CargarConboBoxClientes();
+            
+           
         }
 
+        
         private void CargarComboxEmpleados()
         {
 
@@ -184,42 +184,115 @@ namespace SistemaDeVentas.UI.Registros
         {
 
         }
-
+     
         private void Cobrarbutton_Click(object sender, EventArgs e)
         {
+            BuscarArticuloserrorProvider.Clear();
+            BuscarerrorProvider.Clear();
+            LlenarClase(venta);
+            if (ValidarTextbox() && ValidarExiste(CodigoArticulotextBox.Text))
+            {
+                BLL.VentasBLL.Insertar(venta);
+                Limpiar();
+                LimpiarErroresProvider();
+                MessageBox.Show("Guardado con exito");
+            }
+            else
+            {
+
+                BLL.VentasBLL.Modificar(ut.StringInt(FiltrarVentaIdtextBox.Text), venta);
+                Limpiar();
+                LimpiarErroresProvider();
+                MessageBox.Show("Actualizado con exito");
+            }
+
 
         }
         private void LlenarClase(Ventas v)
         {
+            v.Itebis = utDouble.StringDouble(ItebistextBox.Text);
+            v.Cuota = utint.StringInt(CuotastextBox.Text);
+            v.Deuda = utDouble.StringDouble(MontoDeudatextBox.Text);
+            v.Codigo = CodigoVentatextBox.Text;
+
+            if (ContadoradioButton.Checked == true)
+            {
+                v.CodicionPago = "Contado";      
+            }
+            else
+            {
+                if (CreditoradioButton.Checked == true)
+
+                    v.CodicionPago = "Credito";
+                
+                else
+
+                    v.CodicionPago = "Nada";
+            }
+
+           // v.FechaVencimiento = FechaVencimientodateTimePicker.Value;
+            v.Fecha = FechadateTimePicker.Value;
 
 
-
+            CargarComboxEmpleados();
+            CargarConboBoxClientes();
 
         }
-        //---------------------------------------------------------------------------------------
+        private bool ValidarTextbox()
+        {
+
+            if (string.IsNullOrEmpty(CodigoVentatextBox.Text) )
+                
+            {
+               CodigoerrorProvider.SetError(CodigoVentatextBox, "Favor Ingresar el codigo de la venta");
+              
+                MessageBox.Show("Favor llenar todos los campos obligatorios");
+
+            }
+            if (string.IsNullOrEmpty(CodigoVentatextBox.Text))
+            {
+                CodigoerrorProvider.Clear();
+                CodigoerrorProvider.SetError(CodigoArticulotextBox, "Favor ingresar el codigo de la venta");
+                return false;
+            }
+            if (ContadoradioButton.Checked == false && CreditoradioButton.Checked == false)
+            {
+               ElegirCondicionPagoerrorProvider.SetError(CondiciondePagogroupBox, "Seleccionar condicion de pagos");
+                return false;
+            }
+            if (DocReciberadioButton.Checked == false && DocFactuaradioButton.Checked == false)
+            {
+                TipoDocumentoerrorProvider.SetError(TipodeDocumentogroupBox, "Seleccionar el tipo de documentos");
+                return false;
+            }
+            return true;
+
+        }
+        private bool ValidarExiste(string aux)
+        {
+            if (BLL.VentasBLL.GetListaCodigo(aux).Count() > 0)
+            {
+                MessageBox.Show("Este codigo de venta  ya existe, favor intentar con otro codigo o modificar el codigo ...");
+                return false;
+            }
+            return true;
+        }
+        //---------------------------------------------------------------------
 
         private void BuscarArticulosbutton_Click(object sender, EventArgs e)
-        {
-            //if (validarIdArticulo("Favor ingresar el id de Articulo que desea buscar") && ValidarBuscarArticulo())
-           //  LlenarArticulo(ArticuloBLL.Buscar(ut.StringInt(FiltrarArticulotextBox.Text)));
-
+        {          
             BuscarSelecionComBox();
         }
 
         public void LlenarArticulo(Articulos articulos)
         {
-            // return false;
-
-           // FiltrarArticulotextBox.Text = articulos.Nombre.ToString();
+            
             DescuentotextBox.Text = articulos.Descuento.ToString();
             NombretextBox.Text = articulos.Nombre;
-            CantidadDipodibletextBox.Text = articulos.Cantidad.ToString();
+            CantidadDipodibletextBox.Text = articulos.CantidadDispodible.ToString();
             MarcatextBox.Text = articulos.Marca;
             PreciotextBox.Text = articulos.PrecioVentas.ToString();
-            CodigotextBox.Text = articulos.Codigo.ToString();
-            // DescuentotextBox.Text = venta.descuento.ToString();
-
-            // return true;
+            CodigoArticulotextBox.Text = articulos.Codigo.ToString();
         }
        
         private bool ValidarBuscarArticulo()
@@ -258,9 +331,6 @@ namespace SistemaDeVentas.UI.Registros
             FiltrarArticulocomboBox.Items.Insert(1, "Nombre");
             FiltrarArticulocomboBox.Items.Insert(2, "Codigo");
             FiltrarArticulocomboBox.DataSource = FiltrarArticulocomboBox.Items;
-          
-
-
         }
         private void BuscarSelecionComBox()
         {
@@ -271,38 +341,27 @@ namespace SistemaDeVentas.UI.Registros
             {
                 
                     if (validarIdArticulo("Favor ingresar el id de Articulo que desea buscar") && ValidarBuscarArticulo())
-                        LlenarArticulo(ArticuloBLL.Buscar(ut.StringInt(FiltrarArticulotextBox.Text)));
-                
-                  
+                        LlenarArticulo(ArticuloBLL.Buscar(ut.StringInt(FiltrarArticulotextBox.Text)));                  
             }
             if (FiltrarArticulocomboBox.SelectedIndex == 1)
             {
-              
-                {
+                 {
                     if (!String.IsNullOrEmpty(FiltrarArticulotextBox.Text))
-                    {
-                        
-
-                        lista = ArticuloBLL.GetListaNombreArticulo(FiltrarArticulotextBox.Text);
-                        
-
-                        //lista =''
-                      
-                    }
+                      {                        
+                        lista = ArticuloBLL.GetListaNombreArticulo(FiltrarArticulotextBox.Text);                                            
+                      }
                     else
                     {
                         lista = ArticuloBLL.GetLista();
                     }
 
                     ArticulodataGridView.DataSource = lista;
-
                 }
             }
             if (FiltrarArticulocomboBox.SelectedIndex == 2)
             {
                 {
-
-                    if (!String.IsNullOrEmpty(FiltrarArticulotextBox.Text))
+                   if (!String.IsNullOrEmpty(FiltrarArticulotextBox.Text))
                     {
 
                         lista = ArticuloBLL.GetListaCodigoArticulo(FiltrarArticulotextBox.Text);
@@ -316,47 +375,6 @@ namespace SistemaDeVentas.UI.Registros
                 }
             }
             
-            
-
-
-
-
-        }
-       
-        private void Agregarbutton_Click(object sender, EventArgs e)
-        {
-            venta.Articulos.Add(new Articulos(ut.StringInt(FiltrarArticulotextBox.Text), CodigotextBox.Text, NombretextBox.Text, MarcatextBox.Text, utDouble.StringDouble(PreciotextBox.Text)));
-            ArticulodataGridView.DataSource = null;
-            ArticulodataGridView.DataSource = venta.Articulos;
-            ArticulodataGridView.Columns["Cantidad"].ReadOnly = false;
-
-
-
-        }
-        private void SumOpcion2()
-        {
-            Ventas venta = new Ventas();
-            //decimal total = 0;
-            if (ArticulodataGridView.Rows.Count > 0)
-            {
-                foreach (DataGridViewRow row in ArticulodataGridView.Rows)
-                {
-                    venta.Total += Convert.ToDouble(row.Cells["columnPrecio"].Value);
-                }
-            }
-
-            TotaltextBox.Text = Convert.ToString(venta.Total);
-        }
-
-        private void ContadoradioButton_CheckedChanged(object sender, EventArgs e)
-        {
-                     
-        }
-
-        private void Imprimirbutton_Click(object sender, EventArgs e)
-        {
-
-
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -368,6 +386,87 @@ namespace SistemaDeVentas.UI.Registros
                 MessageBox.Show("ELiminado con exito");
             }
         }
+
+
+        private void Agregarbutton_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(FiltrarArticulotextBox.Text))
+            {
+                MessageBox.Show("El el Campo de busqueda de Articulos no tiene data por favor ingresar un Id o Nombre o Codigo");
+            }
+            else
+            {
+                venta.Articulos.Add(new Articulos(ut.StringInt(FiltrarArticulotextBox.Text), CodigoArticulotextBox.Text, NombretextBox.Text, MarcatextBox.Text, utDouble.StringDouble(PreciotextBox.Text)));
+                ArticulodataGridView.DataSource = null;
+                ArticulodataGridView.DataSource = venta.Articulos;
+            }
+            
+
+        }
+
+        private void LimpiarErroresProvider()
+        {
+            CodigoerrorProvider.Clear();
+            ElegirCondicionPagoerrorProvider.Clear();
+            TipoDocumentoerrorProvider.Clear();
+        }
+
+
+        private void LLenarCombo()
+        {
+
+          
+
+        }
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+       
+        private void ContadoradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+                     
+        }
+
+        private void Imprimirbutton_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void FiltrarVentaIdtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Quitarbutton_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+        private void Modificarbutton_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void BuscarClientebutton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 
 }

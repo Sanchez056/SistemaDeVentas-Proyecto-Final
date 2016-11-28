@@ -18,12 +18,12 @@ namespace SistemaDeVentas.Entidades
       
         public int descuento  { get; set; }
 
-        public int Cuotas { get; set; }
+        public int Cuota { get; set; }
 
 
-        public double Deuda { get; set; }
+         public double Deuda { get; set; }
 
-        public DateTime FechaVencimiento { get; set; }
+      //  public DateTime FechaVencimiento { get; set; }
 
         public int Cantidad { get; set; }
 
@@ -37,6 +37,9 @@ namespace SistemaDeVentas.Entidades
         public  double TotalItebis   { get; set; }
 
         public double Total { get; set; }
+
+        public string  TipoDocumento { get; set; }
+
 
         public DateTime Fecha { get; set; }
 

@@ -20,7 +20,6 @@ namespace SistemaDeVentas.Registros
         Compras compra = new Compras();
         public List<Empleados> list = new List<Empleados>();
         public List<Articulos> lista = new List<Articulos>();
-        Ventas venta = new Ventas();
         Clientes cliente = new Clientes();
         UtilidadesInt utint = new UtilidadesInt();
         UtilidadesDouble utDouble = new UtilidadesDouble();
@@ -62,13 +61,15 @@ namespace SistemaDeVentas.Registros
         }
         private void LLenar(Compras compra)
         {
-            //Clientes cliente = new Clientes();
+            var comp = BLL.CompraBLL.Buscar(ut.StringInt(FiltrarCompratextBox.Text));
             FiltrarCompratextBox.Text = compra.CompraId.ToString();
+            CodigoCompratextBox.Text = compra.Codigo;
             SubTotaltextBox.Text = compra.SubTotal.ToString();
             DescuentoTotaltextBox.Text = compra.TotalDescuento.ToString();
             TotalItebistextBox.Text =   compra.TotalItebis.ToString();
             TotaltextBox.Text = compra.Total.ToString();
-          
+            ArticulodataGridView.DataSource = null;
+            ArticulodataGridView.DataSource = compra.Articulos;
 
             CargarComboxEmpleados();
         }
@@ -157,7 +158,7 @@ namespace SistemaDeVentas.Registros
             MarcatextBox.Text = articulos.Marca;
             DescripciontextBox.Text = articulos.Descripcion;
             CategoriatextBox.Text = articulos.Categoria;
-            CantidadCompratextBox.Text = articulos.Cantidad.ToString();
+            CantidadCompratextBox.Text = articulos.CantidadDispodible.ToString();
             PreciotextBox.Text = articulos.PrecioCompra.ToString();
             DescuentotextBox.Text = articulos.Descuento.ToString();
             CodigotextBox.Text = articulos.Codigo.ToString();
@@ -276,11 +277,12 @@ namespace SistemaDeVentas.Registros
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
-           compra.Articulos.Add(new Articulos(ut.StringInt(FiltrarArticulotextBox.Text), CodigotextBox.Text, NombretextBox.Text, MarcatextBox.Text, utDouble.StringDouble(PreciotextBox.Text)));
+            //compra.Articulos.Add(new Articulos(ut.StringInt(FiltrarArticulotextBox.Text), CodigotextBox.Text, NombretextBox.Text, MarcatextBox.Text, utDouble.StringDouble(PreciotextBox.Text)));
             ArticulodataGridView.DataSource = null;
-            ArticulodataGridView.DataSource = compra.Articulos;
-            ArticulodataGridView.Columns["Cantidad"].ReadOnly = false;
+            //ArticulodataGridView.DataSource = compra.Articulos;
+            //ArticulodataGridView.Columns["Cantidad"].ReadOnly = false;
         }
+        
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
@@ -291,5 +293,61 @@ namespace SistemaDeVentas.Registros
                 MessageBox.Show("ELiminado con exito");
             }
         }
+
+        private void Comprarbutton_Click(object sender, EventArgs e)
+        {
+            LlenarClase(compra);
+            if (ValidarTextbox() && ValidarExiste(CodigoCompratextBox.Text))
+            {
+                BLL.CompraBLL.Insertar(compra);
+                MessageBox.Show("Guardado con exito");
+            }
+
+
+        }
+        private void  LlenarClase(Compras comp)
+        {
+           // comp.Codigo = CodigoCompratextBox.Text;
+
+        }
+        private bool ValidarTextbox()
+        {
+
+            if (string.IsNullOrEmpty(CodigoCompratextBox.Text)
+
+
+                )
+            {
+                // NombreerrorProvider2.SetError(NombretextBox, "Favor Ingresar el Nombre de cliente");
+
+
+                MessageBox.Show("Favor llenar todos los campos obligatorios");
+
+            }
+            if (string.IsNullOrEmpty(CodigoCompratextBox.Text))
+            {
+                // NombreerrorProvider2.Clear();
+                //NombreerrorProvider2.SetError(NombretextBox, "Favor ingresar el Nombre del Cliente");
+                return false;
+            }
+            return true;
+
+        }
+        private bool ValidarExiste(string aux)
+        {
+            if (BLL.CompraBLL.GetListaCodigo(aux).Count() > 0)
+            {
+                MessageBox.Show("Este codigo de compra  ya existe, favor intentar con otro codigo ...");
+                return false;
+            }
+            return true;
+        }
+
+
+
+
+
+
     }
+        
 }

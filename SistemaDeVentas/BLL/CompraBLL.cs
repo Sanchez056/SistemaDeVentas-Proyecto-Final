@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Entidades;
 using DAL;
 using SistemaDeVentas.Entidades;
+using System.Data.Entity;
 
 namespace SistemaDeVentas.BLL
 {
@@ -15,34 +16,53 @@ namespace SistemaDeVentas.BLL
 
         public static bool Insertar(Compras c)
         {
-            //  bool retorna = false;
-
+            bool re = false;
             try
             {
+                var db = new SistemaVentasDb();
 
+                db.Compras.Add(c);
+                var gp = db.Compras.Add(c);
+                foreach (var art in c.Articulos)
+                {
+                    db.Entry(art).State = EntityState.Unchanged;
+                }
+                db.SaveChanges();
+                db.Dispose();
+                re = true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return re;
+
+
+        }
+        public static bool Modificar(int id, Compras com)
+        {
+            bool retorno = false;
+            try
+            {
                 using (var db = new SistemaVentasDb())
                 {
-
-                    db.Compras.Add(c);
+                    Compras c = db.Compras.Find(id);
+                    c.Codigo = com.Codigo;
+                    c.Itebis = com.Itebis;
+                    c.Cantidad = com.Cantidad;
+                    
+                    
                     db.SaveChanges();
-                    db.Dispose();
-                    // retorna= true;
-                    return true;
-
                 }
-
-
+                retorno = true;
             }
             catch (Exception)
             {
-                return false;
                 throw;
-
             }
-
-            // return retorna;
-
+            return retorno;
         }
+
 
         public static Compras Buscar(int id)
         {

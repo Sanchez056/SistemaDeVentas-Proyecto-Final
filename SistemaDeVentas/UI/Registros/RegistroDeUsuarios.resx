@@ -175,7 +175,7 @@
     <value>56, 164</value>
   </data>
   <data name="NombreUsuariostextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 20</value>
+    <value>292, 20</value>
   </data>
   <data name="NombreUsuariostextBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -256,7 +256,7 @@
     <value>*</value>
   </data>
   <data name="ContraseñatextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 20</value>
+    <value>292, 20</value>
   </data>
   <data name="ContraseñatextBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -280,7 +280,7 @@
     <value>*</value>
   </data>
   <data name="ConfimarContraseñatextBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 20</value>
+    <value>292, 20</value>
   </data>
   <data name="ConfimarContraseñatextBox1.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -361,7 +361,7 @@
     <value>56, 296</value>
   </data>
   <data name="TipoUsuarioscomboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 22</value>
+    <value>292, 22</value>
   </data>
   <data name="TipoUsuarioscomboBox.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -418,7 +418,7 @@
     <value>6, 14</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>377, 399</value>
+    <value>404, 399</value>
   </data>
   <data name="RegistrosUsuarioslabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -454,7 +454,7 @@
     <value>NoControl</value>
   </data>
   <data name="Eliminarbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 338</value>
+    <value>244, 338</value>
   </data>
   <data name="Eliminarbutton.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 39</value>
@@ -484,7 +484,7 @@
     <value>NoControl</value>
   </data>
   <data name="Guardarbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>123, 338</value>
+    <value>151, 338</value>
   </data>
   <data name="Guardarbutton.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 39</value>
@@ -514,10 +514,10 @@
     <value>NoControl</value>
   </data>
   <data name="Nuevobutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 338</value>
+    <value>63, 338</value>
   </data>
   <data name="Nuevobutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 39</value>
+    <value>82, 39</value>
   </data>
   <data name="Nuevobutton.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>

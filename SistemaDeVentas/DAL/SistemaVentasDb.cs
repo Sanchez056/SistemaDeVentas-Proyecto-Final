@@ -19,7 +19,7 @@ namespace DAL
 
         }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
-        public virtual DbSet<Articulos> Articulos { get; set; }
+      
         public virtual DbSet<Clientes> Clientes { get; set; }
         public virtual DbSet<Proveedores> Proveedores { get; set; }
 
@@ -33,8 +33,10 @@ namespace DAL
 
         public virtual DbSet<Ventas> Ventas { get; set; }
 
+        public virtual DbSet<Articulos> Articulos { get; set; }
+
         public virtual DbSet<Compras> Compras { get; set; }
-        //  public virtual DbSet<CategoriaArticulos> CategoriaArticulos { get; set; }
+         // public virtual DbSet<DetalleVentas> DetalleVentas{ get; set; }
         //---------------------------------------------------------------------
 
         //---------------------------------------------------------------------
@@ -49,7 +51,7 @@ namespace DAL
                      ge.MapRightKey("VentaId");
                      ge.ToTable("DetalleVentas");
                  });
-
+            
             modelBuilder.Entity<Compras>()
                .HasMany<Articulos>(a => a.Articulos)
                .WithMany(c => c.Compras)
@@ -57,9 +59,9 @@ namespace DAL
                {
                    ge.MapLeftKey("ArticuloId");
                    ge.MapRightKey("CompraId");
-                   ge.ToTable("DetalleCompra");
+                   ge.ToTable("DetalleCompras");
                });
-
+               
 
 
         }

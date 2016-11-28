@@ -56,7 +56,32 @@ namespace BLL
 
 
         }
+        public static bool Modificar(int id,Clientes cli)
+        {
+            bool retorno = false;
+            try
+            {
+                using (var db = new SistemaVentasDb())
+                {
+                    Clientes c = db.Clientes.Find(id);
+                    c.Nombre = cli.Nombre;
+                    c.Celular = cli.Celular;
+                    c.Ciudad = cli.Ciudad;
+                    c.Direccion = cli.Direccion;
+                    c.Cedula = cli.Cedula;
+                    c.Sexo = cli.Sexo;
+                    c.Telefono = cli.Telefono;
 
+                    db.SaveChanges();
+                }
+                retorno = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return retorno;
+        }
 
 
 

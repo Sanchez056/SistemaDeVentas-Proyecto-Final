@@ -321,9 +321,9 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.file_broken_32x32_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(296, 396);
+            this.Eliminarbutton.Location = new System.Drawing.Point(293, 369);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(113, 42);
+            this.Eliminarbutton.Size = new System.Drawing.Size(95, 42);
             this.Eliminarbutton.TabIndex = 22;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -334,7 +334,7 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.Color.Black;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(170, 396);
+            this.Guardarbutton.Location = new System.Drawing.Point(176, 369);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(105, 42);
             this.Guardarbutton.TabIndex = 21;
@@ -347,9 +347,9 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.Color.Black;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources._new;
-            this.Nuevobutton.Location = new System.Drawing.Point(48, 396);
+            this.Nuevobutton.Location = new System.Drawing.Point(75, 369);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(104, 42);
+            this.Nuevobutton.Size = new System.Drawing.Size(95, 42);
             this.Nuevobutton.TabIndex = 20;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -374,7 +374,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
-            this.ClientSize = new System.Drawing.Size(460, 453);
+            this.ClientSize = new System.Drawing.Size(464, 424);
             this.Controls.Add(this.SexogroupBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CiudadcomboBox);

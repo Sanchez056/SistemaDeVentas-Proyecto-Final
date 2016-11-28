@@ -48,7 +48,7 @@ namespace SistemaDeVentas.UI.Registros
             NombreArticulotextBox.Text = articulo.Nombre;
             CodigoArticulotextBox.Text = articulo.Codigo;
             DespcripciontextBox.Text = articulo.Descripcion;
-            CantidadtextBox.Text = articulo.Cantidad.ToString();
+            CantidadtextBox.Text = articulo.CantidadDispodible.ToString();
             PrecioCompratextBox.Text = articulo.PrecioCompra.ToString();
             PrecioVentatextBox.Text = articulo.PrecioVentas.ToString();
             MarcaArticulotextBox.Text = articulo.Marca;
@@ -86,7 +86,7 @@ namespace SistemaDeVentas.UI.Registros
         {
             if (ArticuloBLL.GetListaCodigoArticulo(aux).Count() > 0)
             {
-                MessageBox.Show("Este codigo ya existe, favor intentar con otra Codigo ...");
+                MessageBox.Show("Este codigo ya existe, favor intentar con otra Codigo o modificar ...");
                 return false;
             }
             return true;
@@ -131,6 +131,14 @@ namespace SistemaDeVentas.UI.Registros
                 Limpiar();
                 MessageBox.Show("Guardado con exito");
             }
+            else
+            {
+
+                ArticuloBLL.Modificar(ut.StringInt(ArticuloIdtextBox.Text), arti);
+                Limpiar();
+                limpiarErroresProvider();
+                MessageBox.Show("Actualizado con exito");
+            }
 
 
 
@@ -142,7 +150,7 @@ namespace SistemaDeVentas.UI.Registros
             Categorias c = new Categorias();
             a.Codigo = CodigoArticulotextBox.Text;
             a.Nombre = NombreArticulotextBox.Text;
-            a.Cantidad = ut.StringInt(CantidadtextBox.Text);
+            a.CantidadDispodible = ut.StringInt(CantidadtextBox.Text);
             a.Descripcion = DespcripciontextBox.Text; ;
             a.Marca = MarcaArticulotextBox.Text;
             a.PrecioCompra = StringDouble(PrecioCompratextBox.Text);

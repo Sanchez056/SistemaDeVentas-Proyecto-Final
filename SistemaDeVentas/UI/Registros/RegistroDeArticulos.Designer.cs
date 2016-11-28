@@ -284,9 +284,9 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
-            this.Eliminarbutton.Location = new System.Drawing.Point(430, 372);
+            this.Eliminarbutton.Location = new System.Drawing.Point(451, 376);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(122, 55);
+            this.Eliminarbutton.Size = new System.Drawing.Size(122, 42);
             this.Eliminarbutton.TabIndex = 89;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -297,9 +297,9 @@
             // 
             this.Guardabutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Guardabutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardabutton.Location = new System.Drawing.Point(303, 372);
+            this.Guardabutton.Location = new System.Drawing.Point(291, 376);
             this.Guardabutton.Name = "Guardabutton";
-            this.Guardabutton.Size = new System.Drawing.Size(124, 55);
+            this.Guardabutton.Size = new System.Drawing.Size(135, 42);
             this.Guardabutton.TabIndex = 88;
             this.Guardabutton.Text = "Guardar";
             this.Guardabutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -310,9 +310,9 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources._new;
-            this.Nuevobutton.Location = new System.Drawing.Point(174, 370);
+            this.Nuevobutton.Location = new System.Drawing.Point(145, 376);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(112, 57);
+            this.Nuevobutton.Size = new System.Drawing.Size(119, 42);
             this.Nuevobutton.TabIndex = 87;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

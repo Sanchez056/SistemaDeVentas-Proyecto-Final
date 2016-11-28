@@ -17,10 +17,10 @@ namespace SistemaDeVentas.Entidades
 
 
         public string Codigo { get; set; }
-
+       
         public string Nombre { get; set; }
 
-         [Browsable(false)]
+        [Browsable(false)]
         public string Descripcion { get; set; }
 
         public string Marca { get; set; }
@@ -28,10 +28,12 @@ namespace SistemaDeVentas.Entidades
         [Browsable(false)]
         public string NombreProveedor { get; set; }
 
-        [Browsable(false)]
+       [Browsable(false)]
         public string Categoria { get; set; }
+       [Browsable(false)]
+        public int CantidadDispodible { get; set; }
 
-        public int Cantidad { get; set; }
+        public int RestCantidad { get; set; }
 
         public double Descuento { get; set; }
 
@@ -51,7 +53,7 @@ namespace SistemaDeVentas.Entidades
         public virtual List<Ventas> Ventas { get; set; }
         public virtual List<Compras> Compras { get; set; }
 
-
+      
         public Articulos()
         {
             this.Ventas = new List<Ventas>();
@@ -59,7 +61,7 @@ namespace SistemaDeVentas.Entidades
 
         }
 
-
+   
         public Articulos(int articuloId,string codigo,string nombre,string marca,double precio)
         {
             this.ArticuloId = articuloId;

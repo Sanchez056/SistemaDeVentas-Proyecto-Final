@@ -46,7 +46,7 @@ namespace SistemaDeVentas.Registros
         {
             if (EmpleadosBLL.GetListaCedula(aux).Count() > 0)
             {
-                MessageBox.Show("Este cedula de Empleado ya existe, favor intentar con otra Cedula ...");
+                MessageBox.Show("Este cedula de Empleado ya existe, favor intentar con otra Cedula o modificar ...");
                 return false;
             }
             return true;
@@ -113,6 +113,14 @@ namespace SistemaDeVentas.Registros
                 Limpiar();
                 limpiarErroresProvider();
                 MessageBox.Show("-_-Guardado Con Exito-_-");
+            }
+            else
+            {
+
+                EmpleadosBLL.Modificar(ut.StringInt(EmpleadoIdtextBox.Text), empleado);
+                Limpiar();
+                limpiarErroresProvider();
+                MessageBox.Show("Actualizado con exito");
             }
         }
         
@@ -250,5 +258,27 @@ namespace SistemaDeVentas.Registros
         {
 
         }
+
+        private void Modificarbutton_Click(object sender, EventArgs e)
+        {
+            
+                if (validarId("Favor digitar el id si desea modificar Tipos de Usuarios") && ValidarBuscar())
+                {
+                    Clientes cliente = new Clientes();
+                    cliente.Nombre = NombretextBox.Text;
+                    cliente.Telefono = TelefonomaskedTextBox1.Text;
+                    cliente.Cedula = CedulamaskedTextBox.Text;
+                    cliente.Celular = CelularmaskedTextBox2.Text;
+                    cliente.Ciudad = CiudadcomboBox.Text;
+                    cliente.Direccion = DirecciontextBox.Text;
+                   
+                    Limpiar();
+                    MessageBox.Show("Modificado  con exito");
+
+                }
+
+                
+        }
     }
-}
+    }
+

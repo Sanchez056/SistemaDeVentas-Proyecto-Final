@@ -54,7 +54,7 @@
             this.ArtculosgroupBox.Controls.Add(this.CategoriaIdtextBox);
             this.ArtculosgroupBox.Controls.Add(this.label1);
             this.ArtculosgroupBox.ForeColor = System.Drawing.Color.White;
-            this.ArtculosgroupBox.Location = new System.Drawing.Point(24, 12);
+            this.ArtculosgroupBox.Location = new System.Drawing.Point(36, 12);
             this.ArtculosgroupBox.Name = "ArtculosgroupBox";
             this.ArtculosgroupBox.Size = new System.Drawing.Size(326, 157);
             this.ArtculosgroupBox.TabIndex = 0;
@@ -64,11 +64,13 @@
             // Buscarbutton
             // 
             this.Buscarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Buscarbutton.Image = global::SistemaDeVentas.Properties.Resources.search2;
             this.Buscarbutton.Location = new System.Drawing.Point(143, 32);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(95, 39);
             this.Buscarbutton.TabIndex = 5;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -107,33 +109,39 @@
             // Nuevobutton
             // 
             this.Nuevobutton.ForeColor = System.Drawing.Color.Black;
-            this.Nuevobutton.Location = new System.Drawing.Point(12, 189);
+            this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources.new1;
+            this.Nuevobutton.Location = new System.Drawing.Point(36, 189);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(87, 46);
+            this.Nuevobutton.Size = new System.Drawing.Size(87, 41);
             this.Nuevobutton.TabIndex = 1;
             this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
             this.Guardarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Guardarbutton.Location = new System.Drawing.Point(148, 188);
+            this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
+            this.Guardarbutton.Location = new System.Drawing.Point(153, 189);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(84, 47);
+            this.Guardarbutton.Size = new System.Drawing.Size(85, 41);
             this.Guardarbutton.TabIndex = 2;
             this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(277, 189);
+            this.button1.Image = global::SistemaDeVentas.Properties.Resources.cancel2;
+            this.button1.Location = new System.Drawing.Point(279, 189);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 46);
+            this.button1.Size = new System.Drawing.Size(92, 41);
             this.button1.TabIndex = 3;
             this.button1.Text = "Eliminar";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -149,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 243);
+            this.ClientSize = new System.Drawing.Size(397, 242);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);

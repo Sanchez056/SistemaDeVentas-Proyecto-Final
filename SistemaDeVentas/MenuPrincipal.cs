@@ -181,15 +181,7 @@ namespace SistemaDeVentas
 
         }
 
-        private void tipoDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UI.Registros.RegistrosTipoUsuarios  rect = new UI.Registros.RegistrosTipoUsuarios();
-
-            rect.MdiParent = this;
-            rect.Show();
-            rect.Location = new Point(15, 30);
-
-        }
+       
 
         private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -230,6 +222,35 @@ namespace SistemaDeVentas
         private void ventasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             UI.Consultas.ConsultaVentas cus = new UI.Consultas.ConsultaVentas();
+
+            cus.MdiParent = this;
+            cus.Show();
+            cus.Location = new Point(15, 30);
+        }
+
+       
+
+        private void tiposUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Registros.RegistroTipoUsuarios res = new UI.Registros.RegistroTipoUsuarios();
+
+            res.MdiParent = this;
+            res.Show();
+            res.Location = new Point(15, 30);
+        }
+
+        private void tipoDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.ConsultaTipoUsuarios cus = new UI.Consultas.ConsultaTipoUsuarios();
+
+            cus.MdiParent = this;
+            cus.Show();
+            cus.Location = new Point(15, 30);
+        }
+
+        private void categoriaDeArticulosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.ConsultaCatedoriaArticulos cus = new UI.Consultas.ConsultaCatedoriaArticulos();
 
             cus.MdiParent = this;
             cus.Show();

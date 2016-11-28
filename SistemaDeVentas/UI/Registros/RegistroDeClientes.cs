@@ -78,7 +78,7 @@ namespace SistemaDeVentas
         {
             if (ClientesBLL.GetListaCedula(aux).Count() > 0)
             {
-                MessageBox.Show("Este cedula de cliente ya existe, favor intentar con otra Cedula ...");
+                MessageBox.Show("Este cedula de cliente ya existe, favor intentar con otra Cedula o modificar...");
                 return false;
             }
             return true;
@@ -116,6 +116,15 @@ namespace SistemaDeVentas
                 Limpiar();
                 limpiarErroresProvider();
                 MessageBox.Show("-_-Guardado Con Exito-_-");
+
+            }
+            else
+            {
+
+                ClientesBLL.Modificar(ut.StringInt(ClienteIdtextBox.Text), cliente);
+                Limpiar();
+                limpiarErroresProvider();
+                MessageBox.Show("Actualizado con exito");
             }
 
 

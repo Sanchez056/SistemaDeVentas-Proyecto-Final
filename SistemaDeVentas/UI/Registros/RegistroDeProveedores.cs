@@ -91,6 +91,14 @@ namespace SistemaDeVentas.Registros
                 limpiarErroresProvider();
                 MessageBox.Show("-_-Guardado Con Exito-_-");
             }
+            else
+            {
+
+                ProveedorBLL.Modificar(ut.StringInt(ProveedorIdtextBox.Text), proveedor);
+                Limpiar();
+                limpiarErroresProvider();
+                MessageBox.Show("Actualizado con exito");
+            }
 
         }
 
@@ -98,7 +106,7 @@ namespace SistemaDeVentas.Registros
         {
             if (ProveedorBLL.GetListaNombreProveedor(aux).Count() > 0)
             {
-                MessageBox.Show("Este Nombre proveedor de ya existe, favor intentar con otro Nombre de Proveedor...");
+                MessageBox.Show("Este Nombre proveedor de ya existe, favor intentar con otro Nombre de Proveedor o modificar...");
                 return false;
             }
             return true;
