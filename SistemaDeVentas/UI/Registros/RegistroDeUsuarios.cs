@@ -16,6 +16,7 @@ namespace SistemaDeVentas
 {
     public partial class RegistroDeUsuarios : Form 
     {
+        Usuarios usuario = new Usuarios();
         UtilidadesInt ut = new UtilidadesInt();
         public RegistroDeUsuarios()
         {
@@ -96,14 +97,7 @@ namespace SistemaDeVentas
                 Limpiar();
                 MessageBox.Show("Guardado con exito");
             }
-            else
-            {
-
-                UsuariosBLL.Modificar(ut.StringInt(UsuarioIdtextBox.Text), usuario);
-                Limpiar();
-                limpiarErroresProvider();
-                MessageBox.Show("Actualizado con exito");
-            }
+           
 
         }
 
@@ -234,6 +228,24 @@ namespace SistemaDeVentas
         private void TipoUsuarioscomboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
+
+                LlenarClase(usuario);
+                if (ValidarExiste(NombreUsuariostextBox.Text))
+                {
+                    UsuariosBLL.Modificar(ut.StringInt(UsuarioIdtextBox.Text), usuario);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
+
+            }
         }
     }
 }

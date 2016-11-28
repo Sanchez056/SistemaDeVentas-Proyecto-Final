@@ -36,7 +36,7 @@ namespace DAL
         public virtual DbSet<Articulos> Articulos { get; set; }
 
         public virtual DbSet<Compras> Compras { get; set; }
-         // public virtual DbSet<DetalleVentas> DetalleVentas{ get; set; }
+        public virtual DbSet<DetalleVentas> DetalleVentas{ get; set; }
         //---------------------------------------------------------------------
 
         //---------------------------------------------------------------------

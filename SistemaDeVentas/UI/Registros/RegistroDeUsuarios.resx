@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;IdLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="UsuarioIdtextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 123</value>
@@ -169,7 +169,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;UsuarioIdtextBox.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="NombreUsuariostextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 164</value>
@@ -190,7 +190,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NombreUsuariostextBox.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="NombreUsuariosLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -220,7 +220,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NombreUsuariosLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -247,7 +247,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="ContraseñatextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 210</value>
@@ -271,7 +271,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ContraseñatextBox.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="ConfimarContraseñatextBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 254</value>
@@ -295,7 +295,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ConfimarContraseñatextBox1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="ContraseñaLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -325,7 +325,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ContraseñaLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="ComfimarContraseñalabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -355,7 +355,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ComfimarContraseñalabel2.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="TipoUsuarioscomboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 296</value>
@@ -376,7 +376,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TipoUsuarioscomboBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="TipoUsuarioslabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -406,7 +406,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;TipoUsuarioslabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <metadata name="BuscarerrorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -419,6 +419,33 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>404, 399</value>
+  </data>
+  <data name="Editarbutton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 338</value>
+  </data>
+  <data name="Editarbutton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 39</value>
+  </data>
+  <data name="Editarbutton.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="Editarbutton.Text" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Editarbutton.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;Editarbutton.Name" xml:space="preserve">
+    <value>Editarbutton</value>
+  </data>
+  <data name="&gt;&gt;Editarbutton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Editarbutton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Editarbutton.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="RegistrosUsuarioslabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -448,13 +475,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;RegistrosUsuarioslabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="Eliminarbutton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Eliminarbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 338</value>
+    <value>290, 338</value>
   </data>
   <data name="Eliminarbutton.Size" type="System.Drawing.Size, System.Drawing">
     <value>97, 39</value>
@@ -478,13 +505,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Eliminarbutton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="Guardarbutton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Guardarbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 338</value>
+    <value>100, 338</value>
   </data>
   <data name="Guardarbutton.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 39</value>
@@ -508,13 +535,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Guardarbutton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Nuevobutton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="Nuevobutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 338</value>
+    <value>12, 338</value>
   </data>
   <data name="Nuevobutton.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 39</value>
@@ -538,7 +565,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Nuevobutton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="Buscarbutton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -568,7 +595,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Buscarbutton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 8.25pt</value>

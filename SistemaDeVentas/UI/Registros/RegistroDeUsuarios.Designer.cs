@@ -51,6 +51,7 @@
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.RegistrosUsuarioslabel = new System.Windows.Forms.Label();
             this.ElegirTipoUsuarioserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Editarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreUsuarioserrorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContraseñaerrorProvider1)).BeginInit();
@@ -178,11 +179,21 @@
             // 
             this.ElegirTipoUsuarioserrorProvider.ContainerControl = this;
             // 
+            // Editarbutton
+            // 
+            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Editarbutton.Image = global::SistemaDeVentas.Properties.Resources.ark;
+            resources.ApplyResources(this.Editarbutton, "Editarbutton");
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
             // RegistroDeUsuarios
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
+            this.Controls.Add(this.Editarbutton);
             this.Controls.Add(this.RegistrosUsuarioslabel);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -236,5 +247,6 @@
         private System.Windows.Forms.ErrorProvider ConfimarContraseñaerrorProvider1;
         private System.Windows.Forms.Label RegistrosUsuarioslabel;
         private System.Windows.Forms.ErrorProvider ElegirTipoUsuarioserrorProvider;
+        private System.Windows.Forms.Button Editarbutton;
     }
 }

@@ -57,6 +57,7 @@
             this.TelefonoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.FaxerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.CorreoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Editarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DirrecionerrorProvider)).BeginInit();
@@ -167,9 +168,9 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel2;
-            this.Eliminarbutton.Location = new System.Drawing.Point(301, 349);
+            this.Eliminarbutton.Location = new System.Drawing.Point(361, 349);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(105, 38);
+            this.Eliminarbutton.Size = new System.Drawing.Size(118, 38);
             this.Eliminarbutton.TabIndex = 16;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -180,7 +181,7 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(193, 349);
+            this.Guardarbutton.Location = new System.Drawing.Point(131, 349);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(102, 38);
             this.Guardarbutton.TabIndex = 15;
@@ -193,7 +194,7 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources.add1;
-            this.Nuevobutton.Location = new System.Drawing.Point(83, 349);
+            this.Nuevobutton.Location = new System.Drawing.Point(21, 349);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(101, 38);
             this.Nuevobutton.TabIndex = 14;
@@ -322,12 +323,26 @@
             // 
             this.CorreoerrorProvider.ContainerControl = this;
             // 
+            // Editarbutton
+            // 
+            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Editarbutton.Image = global::SistemaDeVentas.Properties.Resources.ark;
+            this.Editarbutton.Location = new System.Drawing.Point(239, 347);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(116, 40);
+            this.Editarbutton.TabIndex = 110;
+            this.Editarbutton.Text = "Editar";
+            this.Editarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
             // RegistroDeProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(501, 402);
+            this.Controls.Add(this.Editarbutton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FechaIngresodateTimePicker);
             this.Controls.Add(this.CiudadcomboBox);
@@ -396,5 +411,6 @@
         private System.Windows.Forms.ErrorProvider TelefonoerrorProvider;
         private System.Windows.Forms.ErrorProvider FaxerrorProvider;
         private System.Windows.Forms.ErrorProvider CorreoerrorProvider;
+        private System.Windows.Forms.Button Editarbutton;
     }
 }

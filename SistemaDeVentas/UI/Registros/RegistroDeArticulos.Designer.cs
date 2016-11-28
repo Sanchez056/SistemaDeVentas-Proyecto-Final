@@ -68,6 +68,7 @@
             this.CantidaderrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.PrecioCompraerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.PrecioVentaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Editarbutton = new System.Windows.Forms.Button();
             this.Articulopanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CodigoArticuloerrorProvider)).BeginInit();
@@ -84,6 +85,7 @@
             // Articulopanel
             // 
             this.Articulopanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Articulopanel.Controls.Add(this.Editarbutton);
             this.Articulopanel.Controls.Add(this.Categorialabel);
             this.Articulopanel.Controls.Add(this.CategoriacomboBox);
             this.Articulopanel.Controls.Add(this.DescuentotextBox);
@@ -284,9 +286,9 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
-            this.Eliminarbutton.Location = new System.Drawing.Point(451, 376);
+            this.Eliminarbutton.Location = new System.Drawing.Point(478, 377);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(122, 42);
+            this.Eliminarbutton.Size = new System.Drawing.Size(133, 44);
             this.Eliminarbutton.TabIndex = 89;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -297,7 +299,7 @@
             // 
             this.Guardabutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Guardabutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardabutton.Location = new System.Drawing.Point(291, 376);
+            this.Guardabutton.Location = new System.Drawing.Point(195, 376);
             this.Guardabutton.Name = "Guardabutton";
             this.Guardabutton.Size = new System.Drawing.Size(135, 42);
             this.Guardabutton.TabIndex = 88;
@@ -310,7 +312,7 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources._new;
-            this.Nuevobutton.Location = new System.Drawing.Point(145, 376);
+            this.Nuevobutton.Location = new System.Drawing.Point(60, 376);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(119, 42);
             this.Nuevobutton.TabIndex = 87;
@@ -411,6 +413,19 @@
             // 
             this.PrecioVentaerrorProvider.ContainerControl = this;
             // 
+            // Editarbutton
+            // 
+            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Editarbutton.Image = global::SistemaDeVentas.Properties.Resources.ark;
+            this.Editarbutton.Location = new System.Drawing.Point(346, 377);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(117, 42);
+            this.Editarbutton.TabIndex = 109;
+            this.Editarbutton.Text = "Editar";
+            this.Editarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
             // RegistroDeArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -478,5 +493,6 @@
         private System.Windows.Forms.ErrorProvider CantidaderrorProvider;
         private System.Windows.Forms.ErrorProvider PrecioCompraerrorProvider;
         private System.Windows.Forms.ErrorProvider PrecioVentaerrorProvider;
+        private System.Windows.Forms.Button Editarbutton;
     }
 }

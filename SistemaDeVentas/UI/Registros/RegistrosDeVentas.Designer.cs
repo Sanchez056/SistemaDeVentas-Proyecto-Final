@@ -104,6 +104,7 @@
             this.BuscarArticuloserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.ElegirCondicionPagoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.TipoDocumentoerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Editarbutton = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ArticulodataGridView)).BeginInit();
@@ -163,7 +164,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1115, 499);
+            this.tabPage2.Size = new System.Drawing.Size(1187, 499);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Factura ";
             // 
@@ -415,7 +416,7 @@
             this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
             this.Imprimirbutton.Image = ((System.Drawing.Image)(resources.GetObject("Imprimirbutton.Image")));
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(325, 440);
+            this.Imprimirbutton.Location = new System.Drawing.Point(417, 442);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(98, 48);
             this.Imprimirbutton.TabIndex = 97;
@@ -462,12 +463,13 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.Editarbutton);
             this.panel2.Controls.Add(this.Eliminarbutton);
             this.panel2.Controls.Add(this.Cobrarbutton);
             this.panel2.Controls.Add(this.Nuevabutton);
             this.panel2.Location = new System.Drawing.Point(17, 434);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(291, 55);
+            this.panel2.Size = new System.Drawing.Size(394, 55);
             this.panel2.TabIndex = 94;
             // 
             // Eliminarbutton
@@ -475,7 +477,7 @@
             this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Eliminarbutton.Location = new System.Drawing.Point(189, 6);
+            this.Eliminarbutton.Location = new System.Drawing.Point(286, 5);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(87, 42);
             this.Eliminarbutton.TabIndex = 62;
@@ -522,7 +524,7 @@
             this.panel1.Controls.Add(this.Totallabel);
             this.panel1.Controls.Add(this.EstebisTotallabel);
             this.panel1.Controls.Add(this.SubTotallabel);
-            this.panel1.Location = new System.Drawing.Point(434, 451);
+            this.panel1.Location = new System.Drawing.Point(523, 452);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(654, 37);
             this.panel1.TabIndex = 93;
@@ -827,7 +829,7 @@
             this.FacturatabControl.Location = new System.Drawing.Point(12, 25);
             this.FacturatabControl.Name = "FacturatabControl";
             this.FacturatabControl.SelectedIndex = 0;
-            this.FacturatabControl.Size = new System.Drawing.Size(1123, 530);
+            this.FacturatabControl.Size = new System.Drawing.Size(1195, 530);
             this.FacturatabControl.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.FacturatabControl.TabIndex = 2;
             // 
@@ -851,6 +853,19 @@
             // 
             this.TipoDocumentoerrorProvider.ContainerControl = this;
             // 
+            // Editarbutton
+            // 
+            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Editarbutton.Image = global::SistemaDeVentas.Properties.Resources.ark;
+            this.Editarbutton.Location = new System.Drawing.Point(184, 5);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(96, 43);
+            this.Editarbutton.TabIndex = 113;
+            this.Editarbutton.Text = "Editar";
+            this.Editarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
             // RegistrosDeVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -859,7 +874,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1185, 567);
+            this.ClientSize = new System.Drawing.Size(1219, 567);
             this.Controls.Add(this.FacturatabControl);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -972,5 +987,6 @@
         private System.Windows.Forms.ErrorProvider BuscarArticuloserrorProvider;
         private System.Windows.Forms.ErrorProvider ElegirCondicionPagoerrorProvider;
         private System.Windows.Forms.ErrorProvider TipoDocumentoerrorProvider;
+        private System.Windows.Forms.Button Editarbutton;
     }
 }

@@ -343,11 +343,22 @@ namespace SistemaDeVentas.Registros
             return true;
         }
 
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
 
+                LlenarClase(compra);
+                if (ValidarExiste(CodigoCompratextBox.Text))
+                {
+                    BLL.CompraBLL.Modificar(ut.StringInt(FiltrarCompratextBox.Text), compra);
+                    Limpiar();
+                   // limpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
 
-
-
-
+            }
+        }
     }
         
 }

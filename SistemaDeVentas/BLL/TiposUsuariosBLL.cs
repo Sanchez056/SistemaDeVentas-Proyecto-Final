@@ -74,13 +74,32 @@ namespace BLL
 
         }
 
-        public static void Eliminar(int id)
+        public static bool Eliminar(int id)
         {
-            var db = new SistemaVentasDb();
-            TipoUsuarios u= db.TipoUsuarios.Find(id);
+            
+            try
+            {
 
-            db.TipoUsuarios.Remove(u);
-            db.SaveChanges();
+                using (var db = new SistemaVentasDb())
+                {
+                    TipoUsuarios t = new TipoUsuarios();
+                    t = db.TipoUsuarios.Find(id);
+
+                    db.TipoUsuarios.Remove(t);
+                    db.SaveChanges();
+                    db.Dispose();
+                    return false;
+                }
+
+
+            }
+            catch (Exception)
+            {
+                return true;
+                throw;
+
+
+            }
         }
         public static List<TipoUsuarios> GetLista()
         {

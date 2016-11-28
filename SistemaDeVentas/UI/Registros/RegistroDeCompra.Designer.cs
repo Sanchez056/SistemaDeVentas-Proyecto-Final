@@ -83,11 +83,12 @@
             this.FiltrarArticulotextBox = new System.Windows.Forms.TextBox();
             this.FiltrarArticulocomboBox = new System.Windows.Forms.ComboBox();
             this.CompragroupBox = new System.Windows.Forms.GroupBox();
+            this.CodigoCompratextBox = new System.Windows.Forms.TextBox();
+            this.CodigoCompralabel = new System.Windows.Forms.Label();
             this.BuscarComprabutton = new System.Windows.Forms.Button();
             this.FiltrarCompratextBox = new System.Windows.Forms.TextBox();
             this.FiltrarCompralabel = new System.Windows.Forms.Label();
-            this.CodigoCompralabel = new System.Windows.Forms.Label();
-            this.CodigoCompratextBox = new System.Windows.Forms.TextBox();
+            this.Editarbutton = new System.Windows.Forms.Button();
             this.ComprastabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -107,7 +108,7 @@
             this.ComprastabControl.Location = new System.Drawing.Point(12, 12);
             this.ComprastabControl.Name = "ComprastabControl";
             this.ComprastabControl.SelectedIndex = 0;
-            this.ComprastabControl.Size = new System.Drawing.Size(1098, 552);
+            this.ComprastabControl.Size = new System.Drawing.Size(1189, 552);
             this.ComprastabControl.TabIndex = 0;
             // 
             // tabPage1
@@ -127,7 +128,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1090, 522);
+            this.tabPage1.Size = new System.Drawing.Size(1181, 522);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Compras";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -170,7 +171,7 @@
             this.Imprimirbutton.ForeColor = System.Drawing.Color.Black;
             this.Imprimirbutton.Image = global::SistemaDeVentas.Properties.Resources.print1;
             this.Imprimirbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Imprimirbutton.Location = new System.Drawing.Point(315, 461);
+            this.Imprimirbutton.Location = new System.Drawing.Point(409, 461);
             this.Imprimirbutton.Name = "Imprimirbutton";
             this.Imprimirbutton.Size = new System.Drawing.Size(98, 54);
             this.Imprimirbutton.TabIndex = 108;
@@ -181,12 +182,13 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.Editarbutton);
             this.panel2.Controls.Add(this.Eliminarbutton);
             this.panel2.Controls.Add(this.Comprarbutton);
             this.panel2.Controls.Add(this.Nuevabutton);
             this.panel2.Location = new System.Drawing.Point(10, 460);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(299, 55);
+            this.panel2.Size = new System.Drawing.Size(393, 55);
             this.panel2.TabIndex = 107;
             // 
             // Eliminarbutton
@@ -194,7 +196,7 @@
             this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.cancel;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Eliminarbutton.Location = new System.Drawing.Point(198, 4);
+            this.Eliminarbutton.Location = new System.Drawing.Point(283, 4);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(94, 42);
             this.Eliminarbutton.TabIndex = 62;
@@ -241,7 +243,7 @@
             this.panel1.Controls.Add(this.Totallabel);
             this.panel1.Controls.Add(this.ItebisTotallabel);
             this.panel1.Controls.Add(this.SubTotallabel);
-            this.panel1.Location = new System.Drawing.Point(419, 460);
+            this.panel1.Location = new System.Drawing.Point(513, 471);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(662, 37);
             this.panel1.TabIndex = 106;
@@ -645,6 +647,22 @@
             this.CompragroupBox.TabStop = false;
             this.CompragroupBox.Text = "Compra";
             // 
+            // CodigoCompratextBox
+            // 
+            this.CodigoCompratextBox.Location = new System.Drawing.Point(322, 38);
+            this.CodigoCompratextBox.Name = "CodigoCompratextBox";
+            this.CodigoCompratextBox.Size = new System.Drawing.Size(100, 20);
+            this.CodigoCompratextBox.TabIndex = 5;
+            // 
+            // CodigoCompralabel
+            // 
+            this.CodigoCompralabel.AutoSize = true;
+            this.CodigoCompralabel.Location = new System.Drawing.Point(272, 41);
+            this.CodigoCompralabel.Name = "CodigoCompralabel";
+            this.CodigoCompralabel.Size = new System.Drawing.Size(42, 14);
+            this.CodigoCompralabel.TabIndex = 4;
+            this.CodigoCompralabel.Text = "Codigo:";
+            // 
             // BuscarComprabutton
             // 
             this.BuscarComprabutton.ForeColor = System.Drawing.Color.Black;
@@ -674,28 +692,25 @@
             this.FiltrarCompralabel.TabIndex = 1;
             this.FiltrarCompralabel.Text = "Filtrar:";
             // 
-            // CodigoCompralabel
+            // Editarbutton
             // 
-            this.CodigoCompralabel.AutoSize = true;
-            this.CodigoCompralabel.Location = new System.Drawing.Point(272, 41);
-            this.CodigoCompralabel.Name = "CodigoCompralabel";
-            this.CodigoCompralabel.Size = new System.Drawing.Size(42, 14);
-            this.CodigoCompralabel.TabIndex = 4;
-            this.CodigoCompralabel.Text = "Codigo:";
-            // 
-            // CodigoCompratextBox
-            // 
-            this.CodigoCompratextBox.Location = new System.Drawing.Point(322, 38);
-            this.CodigoCompratextBox.Name = "CodigoCompratextBox";
-            this.CodigoCompratextBox.Size = new System.Drawing.Size(100, 20);
-            this.CodigoCompratextBox.TabIndex = 5;
+            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Editarbutton.Image = global::SistemaDeVentas.Properties.Resources.ark;
+            this.Editarbutton.Location = new System.Drawing.Point(198, 6);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(79, 39);
+            this.Editarbutton.TabIndex = 114;
+            this.Editarbutton.Text = "Editar";
+            this.Editarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
             // 
             // RegistroDeCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1116, 570);
+            this.ClientSize = new System.Drawing.Size(1213, 570);
             this.Controls.Add(this.ComprastabControl);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
@@ -783,5 +798,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox CodigoCompratextBox;
         private System.Windows.Forms.Label CodigoCompralabel;
+        private System.Windows.Forms.Button Editarbutton;
     }
 }

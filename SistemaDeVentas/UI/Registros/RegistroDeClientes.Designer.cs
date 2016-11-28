@@ -61,6 +61,7 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
+            this.Editarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider1)).BeginInit();
             this.SexogroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NombreerrorProvider2)).BeginInit();
@@ -321,7 +322,7 @@
             // 
             this.Eliminarbutton.ForeColor = System.Drawing.Color.Black;
             this.Eliminarbutton.Image = global::SistemaDeVentas.Properties.Resources.file_broken_32x32_32;
-            this.Eliminarbutton.Location = new System.Drawing.Point(293, 369);
+            this.Eliminarbutton.Location = new System.Drawing.Point(338, 369);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(95, 42);
             this.Eliminarbutton.TabIndex = 22;
@@ -334,7 +335,7 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.Color.Black;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(176, 369);
+            this.Guardarbutton.Location = new System.Drawing.Point(122, 369);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(105, 42);
             this.Guardarbutton.TabIndex = 21;
@@ -347,7 +348,7 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.Color.Black;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources._new;
-            this.Nuevobutton.Location = new System.Drawing.Point(75, 369);
+            this.Nuevobutton.Location = new System.Drawing.Point(21, 369);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(95, 42);
             this.Nuevobutton.TabIndex = 20;
@@ -369,12 +370,25 @@
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
+            // Editarbutton
+            // 
+            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Editarbutton.Location = new System.Drawing.Point(233, 369);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(99, 42);
+            this.Editarbutton.TabIndex = 110;
+            this.Editarbutton.Text = "Editar";
+            this.Editarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
             // RegistroDeClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkBlue;
             this.ClientSize = new System.Drawing.Size(464, 424);
+            this.Controls.Add(this.Editarbutton);
             this.Controls.Add(this.SexogroupBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CiudadcomboBox);
@@ -451,5 +465,6 @@
         private System.Windows.Forms.CheckBox FemeninocheckBox;
         private System.Windows.Forms.CheckBox MasculinocheckBox;
         private System.Windows.Forms.ErrorProvider SexoerrorProvider1;
+        private System.Windows.Forms.Button Editarbutton;
     }
 }

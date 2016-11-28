@@ -17,6 +17,7 @@ namespace SistemaDeVentas
     public partial class RegistroDeClientes : Form
     {
         UtilidadesInt ut = new UtilidadesInt();
+        Clientes cliente = new Clientes();
         public List<Clientes> lista = new List<Clientes>();
         public RegistroDeClientes()
         {
@@ -112,23 +113,20 @@ namespace SistemaDeVentas
             LlenarClase(cliente);
             if (ValidarTextbox() && ValidarExiste(CedulamaskedTextBox.Text))
             {
-                ClientesBLL.Insertar(cliente);
-                Limpiar();
-                limpiarErroresProvider();
-                MessageBox.Show("-_-Guardado Con Exito-_-");
+                
+                    ClientesBLL.Insertar(cliente);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("-_-Guardado Con Exito-_-");      
 
             }
-            else
-            {
-
-                ClientesBLL.Modificar(ut.StringInt(ClienteIdtextBox.Text), cliente);
-                Limpiar();
-                limpiarErroresProvider();
-                MessageBox.Show("Actualizado con exito");
+                  
+                
             }
+        
 
 
-        }
+        
         private void LlenarClase(Clientes c)
         {
            
@@ -272,7 +270,22 @@ namespace SistemaDeVentas
 
         }
 
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
 
+                LlenarClase(cliente);
+                if (ValidarExiste(CedulamaskedTextBox.Text))
+                {
+                    ClientesBLL.Modificar(ut.StringInt(ClienteIdtextBox.Text), cliente);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
+
+            }
+        }
 
         ///-------------
     }

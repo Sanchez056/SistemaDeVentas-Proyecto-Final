@@ -114,14 +114,7 @@ namespace SistemaDeVentas.Registros
                 limpiarErroresProvider();
                 MessageBox.Show("-_-Guardado Con Exito-_-");
             }
-            else
-            {
-
-                EmpleadosBLL.Modificar(ut.StringInt(EmpleadoIdtextBox.Text), empleado);
-                Limpiar();
-                limpiarErroresProvider();
-                MessageBox.Show("Actualizado con exito");
-            }
+            
         }
         
         private void LlenarClase(Empleados e)
@@ -278,6 +271,23 @@ namespace SistemaDeVentas.Registros
                 }
 
                 
+        }
+
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
+
+                LlenarClase(empleado);
+                if (ValidarExiste(CedulamaskedTextBox.Text))
+                {
+                    EmpleadosBLL.Modificar(ut.StringInt(EmpleadoIdtextBox.Text), empleado);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
+
+            }
         }
     }
     }

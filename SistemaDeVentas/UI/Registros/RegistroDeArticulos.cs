@@ -89,6 +89,8 @@ namespace SistemaDeVentas.UI.Registros
                 MessageBox.Show("Este codigo ya existe, favor intentar con otra Codigo o modificar ...");
                 return false;
             }
+            
+            
             return true;
         }
 
@@ -121,29 +123,30 @@ namespace SistemaDeVentas.UI.Registros
         {
 
            Entidades.Articulos arti = new Entidades.Articulos();
-            //BuscarerrorProvider1.Clear();
+            BuscarerrorProvider.Clear();
             LlenarClase(arti);
             CargarConboBoxProveedores();
             CargarConboBoxCategorias();
             if (ValidarTextbox() && ValidarExiste(CodigoArticulotextBox.Text))
             {
-                ArticuloBLL.Insertar(arti);
-                Limpiar();
-                MessageBox.Show("Guardado con exito");
-            }
-            else
-            {
 
-                ArticuloBLL.Modificar(ut.StringInt(ArticuloIdtextBox.Text), arti);
+               ArticuloBLL.Insertar(arti);
                 Limpiar();
                 limpiarErroresProvider();
-                MessageBox.Show("Actualizado con exito");
+                MessageBox.Show("-_-Guardado Con Exito-_-");
+
             }
+            
+
+            // LlenarClase(arti);
+
+
+
 
 
 
         }
-       
+
         private void LlenarClase(Entidades.Articulos a)
         {
             Proveedores p = new Proveedores();
@@ -311,6 +314,23 @@ namespace SistemaDeVentas.UI.Registros
         private void NombreProveedorcomboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
+
+                LlenarClase(articulos);
+                if (ValidarExiste(CodigoArticulotextBox.Text))
+                {
+                   ArticuloBLL.Modificar(ut.StringInt(ArticuloIdtextBox.Text), articulos);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
+
+            }
         }
     }
 }

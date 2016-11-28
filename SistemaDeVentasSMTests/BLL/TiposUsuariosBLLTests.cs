@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SistemaDeVentas.Entidades;
 
 namespace BLL.Tests
 {
@@ -14,25 +15,27 @@ namespace BLL.Tests
         [TestMethod()]
         public void InsertarTest()
         {
-            Assert.Fail();
+            TipoUsuarios t = new TipoUsuarios();
+
+            Assert.IsTrue(TiposUsuariosBLL.Insertars(t));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            Assert.IsNull(TiposUsuariosBLL.Buscar(1));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(TiposUsuariosBLL.Eliminar(1));
         }
 
         [TestMethod()]
         public void GetListaTest()
         {
-            Assert.Fail();
+            Assert.IsTrue(TiposUsuariosBLL.GetLista().Count > 0);
         }
     }
 }

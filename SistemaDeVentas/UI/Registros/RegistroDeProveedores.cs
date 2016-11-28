@@ -13,6 +13,7 @@ namespace SistemaDeVentas.Registros
 {
     public partial class RegistroDeProveedores : Form
     {
+        Proveedores proveedor = new Proveedores();
         public RegistroDeProveedores()
         {
             InitializeComponent();
@@ -91,14 +92,7 @@ namespace SistemaDeVentas.Registros
                 limpiarErroresProvider();
                 MessageBox.Show("-_-Guardado Con Exito-_-");
             }
-            else
-            {
-
-                ProveedorBLL.Modificar(ut.StringInt(ProveedorIdtextBox.Text), proveedor);
-                Limpiar();
-                limpiarErroresProvider();
-                MessageBox.Show("Actualizado con exito");
-            }
+           
 
         }
 
@@ -214,6 +208,24 @@ namespace SistemaDeVentas.Registros
         private void RegistroDeProveedores_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+          
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
+
+                LlenarClase(proveedor);
+                if (ValidarExiste(NombretextBox.Text))
+                {
+                    ProveedorBLL.Modificar(ut.StringInt(ProveedorIdlabel.Text), proveedor);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
+
+            }
         }
     }
 }

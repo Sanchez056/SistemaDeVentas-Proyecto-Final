@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Entidades;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SistemaDeVentas.BLL;
 using System;
 using System.Collections.Generic;
@@ -11,40 +12,41 @@ namespace SistemaDeVentas.BLL.Tests
     [TestClass()]
     public class CategoriaBLLTests
     {
+        Categorias a = new Categorias();
         [TestMethod()]
         public void InsertarTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(CategoriaBLL.Insertar(a));
         }
 
         [TestMethod()]
         public void BuscarTest()
         {
-            Assert.Fail();
+            Assert.IsNull(CategoriaBLL.Buscar(1));
         }
 
         [TestMethod()]
         public void EliminarTest()
         {
-            Assert.Fail();
+            Assert.IsNull(CategoriaBLL.Eliminar(1));
         }
 
         [TestMethod()]
         public void GetListaTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(CategoriaBLL.GetLista().Count > 0);
         }
 
         [TestMethod()]
         public void GetListaTest1()
         {
-            Assert.Fail();
+            Assert.IsNotNull(CategoriaBLL.GetLista(1).Count > 0);
         }
 
         [TestMethod()]
         public void GetListaDescripcionTest()
         {
-            Assert.Fail();
+            Assert.IsNotNull(CategoriaBLL.GetListaDescripcion("Piezas").Count > 0);
         }
     }
 }

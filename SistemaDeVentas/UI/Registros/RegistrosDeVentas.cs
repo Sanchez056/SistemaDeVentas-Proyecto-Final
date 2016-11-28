@@ -18,7 +18,7 @@ namespace SistemaDeVentas.UI.Registros
     {
         public List<Ventas> ventList = new List<Ventas>();
         public List<Empleados> list = new List<Empleados>();
-        public List<Articulos> lista = new List<Articulos>();
+       public List<Articulos> lista = new List<Articulos>();
         Ventas venta = new Ventas();
         Clientes cliente = new Clientes();
         UtilidadesInt utint = new UtilidadesInt();
@@ -53,6 +53,7 @@ namespace SistemaDeVentas.UI.Registros
             PreciotextBox.Clear();
             SubTotaltextBox.Clear();
             TotaltextBox.Clear();
+            CodigoVentatextBox.Clear();
             DescuentotextBox.Clear();
             MontoDeudatextBox.Clear();
             CuotastextBox.Clear();
@@ -66,6 +67,7 @@ namespace SistemaDeVentas.UI.Registros
             DocFactuaradioButton.Checked = false;
             DocReciberadioButton.Checked = false;
             ArticulodataGridView.DataSource = null;
+            ArticulodataGridView.Rows.Clear();
             //FechadateTimePicker.Value = f.Value;
             LimpiarErroresProvider();
 
@@ -102,12 +104,13 @@ namespace SistemaDeVentas.UI.Registros
                 else
                     v.CodicionPago = "Nada";
             }
-            ArticulodataGridView.DataSource = null;
-            ArticulodataGridView.DataSource = v.Articulos;
             MontoDeudatextBox.Text = v.Deuda.ToString();
             CodigoVentatextBox.Text = v.Codigo;
             CuotastextBox.Text = v.Cuota.ToString();
             ItebistextBox.Text = v.Itebis.ToString();
+        
+            ArticulodataGridView.DataSource = null;
+            ArticulodataGridView.DataSource = v.Articulos;
             
             
 
@@ -117,6 +120,10 @@ namespace SistemaDeVentas.UI.Registros
             CargarComboxEmpleados();
             CargarConboBoxClientes();
             
+           
+        }
+        private void CargarCombobox()
+        {
            
         }
 
@@ -192,19 +199,13 @@ namespace SistemaDeVentas.UI.Registros
             LlenarClase(venta);
             if (ValidarTextbox() && ValidarExiste(CodigoArticulotextBox.Text))
             {
+              
                 BLL.VentasBLL.Insertar(venta);
                 Limpiar();
                 LimpiarErroresProvider();
                 MessageBox.Show("Guardado con exito");
             }
-            else
-            {
-
-                BLL.VentasBLL.Modificar(ut.StringInt(FiltrarVentaIdtextBox.Text), venta);
-                Limpiar();
-                LimpiarErroresProvider();
-                MessageBox.Show("Actualizado con exito");
-            }
+          
 
 
         }
@@ -252,7 +253,7 @@ namespace SistemaDeVentas.UI.Registros
             if (string.IsNullOrEmpty(CodigoVentatextBox.Text))
             {
                 CodigoerrorProvider.Clear();
-                CodigoerrorProvider.SetError(CodigoArticulotextBox, "Favor ingresar el codigo de la venta");
+                CodigoerrorProvider.SetError(CodigoVentatextBox, "Favor ingresar el codigo de la venta");
                 return false;
             }
             if (ContadoradioButton.Checked == false && CreditoradioButton.Checked == false)
@@ -393,13 +394,17 @@ namespace SistemaDeVentas.UI.Registros
 
             if (string.IsNullOrEmpty(FiltrarArticulotextBox.Text))
             {
-                MessageBox.Show("El el Campo de busqueda de Articulos no tiene data por favor ingresar un Id o Nombre o Codigo");
+                MessageBox.Show("El el Campo de busqueda de Articulos no tiene dato por favor ingresar un Id o Nombre o Codigo");
             }
             else
             {
+
                 venta.Articulos.Add(new Articulos(ut.StringInt(FiltrarArticulotextBox.Text), CodigoArticulotextBox.Text, NombretextBox.Text, MarcatextBox.Text, utDouble.StringDouble(PreciotextBox.Text)));
+                venta.Articulos.AddRange(lista);
                 ArticulodataGridView.DataSource = null;
                 ArticulodataGridView.DataSource = venta.Articulos;
+            
+              
             }
             
 
@@ -415,8 +420,11 @@ namespace SistemaDeVentas.UI.Registros
 
         private void LLenarCombo()
         {
+            ArticuloScomboBox.DataSource = ArticuloBLL.GetLista();
+            ArticuloScomboBox.DisplayMember = "Nombre";
+            ArticuloScomboBox.ValueMember = "ArticuloId";
 
-          
+
 
         }
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -467,6 +475,22 @@ namespace SistemaDeVentas.UI.Registros
 
         }
 
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
+
+                LlenarClase(venta);
+                if (ValidarExiste(CodigoVentatextBox.Text))
+                {
+                    BLL.VentasBLL.Modificar(ut.StringInt(FiltrarVentaIdtextBox.Text), venta);
+                    Limpiar();
+                    LimpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
+
+            }
+        }
     }
 
 }

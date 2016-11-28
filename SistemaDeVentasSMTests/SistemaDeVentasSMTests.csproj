@@ -67,11 +67,12 @@
     <Compile Include="BLL\ArticuloBLLTests.cs" />
     <Compile Include="BLL\CategoriaBLLTests.cs" />
     <Compile Include="BLL\ClientesBLLTests.cs" />
+    <Compile Include="BLL\CompraBLLTests.cs" />
     <Compile Include="BLL\EmpleadosBLLTests.cs" />
     <Compile Include="BLL\ProveedorBLLTests.cs" />
     <Compile Include="BLL\TiposUsuariosBLLTests.cs" />
-    <Compile Include="BLL\usuarios.cs" />
     <Compile Include="BLL\UsuariosBLLTests.cs" />
+    <Compile Include="BLL\VentasBLLTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

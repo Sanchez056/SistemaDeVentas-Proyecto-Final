@@ -95,14 +95,7 @@ namespace SistemaDeVentas.UI.Registros
                 limpiarErroresProvider();
                 MessageBox.Show("Guardado con exito");
             }
-            else
-            {
-
-               BLL.CategoriaBLL.Modificar(ut.StringInt(CategoriaIdtextBox.Text), categoria);
-                Limpiar();
-                limpiarErroresProvider();
-                MessageBox.Show("Actualizado con exito");
-            }
+            
         }
 
         private void LlenarClase(Categorias c)
@@ -157,6 +150,21 @@ namespace SistemaDeVentas.UI.Registros
 
         }
 
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
 
+                LlenarClase(categoria);
+                if (ValidarExiste(DescripciontextBox.Text))
+                {
+                    BLL.CategoriaBLL.Modificar(ut.StringInt(CategoriaIdtextBox.Text), categoria);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
+
+            }
+        }
     }
 }

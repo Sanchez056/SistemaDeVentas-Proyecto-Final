@@ -33,14 +33,7 @@ namespace SistemaDeVentas.UI.Registros
                 Limpiar();
                 MessageBox.Show("Guardado con exito");
             }
-            else
-            { 
-
-                TiposUsuariosBLL.Modificard(ut.StringInt(TipoIdtextBox.Text), tipo);
-                Limpiar();
-                limpiarErroresProvider();
-                MessageBox.Show("Actualizado con exito");
-            }
+           
 
         }
         private void LlenarClase(TipoUsuarios t)
@@ -143,5 +136,21 @@ namespace SistemaDeVentas.UI.Registros
 
         }
 
+        private void Editarbutton_Click(object sender, EventArgs e)
+        {
+            if (validarId("Favor Buscar el Id para que desea actualizar") && ValidarTextbox())
+            {
+
+                LlenarClase(tipo);
+                if (ValidarExiste(DetalletextBox.Text))
+                {
+                    TiposUsuariosBLL.Modificard(ut.StringInt(TipoIdtextBox.Text), tipo);
+                    Limpiar();
+                    limpiarErroresProvider();
+                    MessageBox.Show("Actualizado con exito");
+                }
+
+            }
+        }
     }
 }

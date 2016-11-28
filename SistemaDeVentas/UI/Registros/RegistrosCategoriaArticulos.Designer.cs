@@ -40,6 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.DescripcionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Editarbutton = new System.Windows.Forms.Button();
             this.ArtculosgroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
@@ -110,7 +111,7 @@
             // 
             this.Nuevobutton.ForeColor = System.Drawing.Color.Black;
             this.Nuevobutton.Image = global::SistemaDeVentas.Properties.Resources.new1;
-            this.Nuevobutton.Location = new System.Drawing.Point(36, 189);
+            this.Nuevobutton.Location = new System.Drawing.Point(12, 189);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(87, 41);
             this.Nuevobutton.TabIndex = 1;
@@ -123,7 +124,7 @@
             // 
             this.Guardarbutton.ForeColor = System.Drawing.Color.Black;
             this.Guardarbutton.Image = global::SistemaDeVentas.Properties.Resources.save1;
-            this.Guardarbutton.Location = new System.Drawing.Point(153, 189);
+            this.Guardarbutton.Location = new System.Drawing.Point(105, 189);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(85, 41);
             this.Guardarbutton.TabIndex = 2;
@@ -136,7 +137,7 @@
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::SistemaDeVentas.Properties.Resources.cancel2;
-            this.button1.Location = new System.Drawing.Point(279, 189);
+            this.button1.Location = new System.Drawing.Point(293, 189);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 41);
             this.button1.TabIndex = 3;
@@ -153,11 +154,25 @@
             // 
             this.BuscarerrorProvider.ContainerControl = this;
             // 
+            // Editarbutton
+            // 
+            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Editarbutton.Image = global::SistemaDeVentas.Properties.Resources.ark;
+            this.Editarbutton.Location = new System.Drawing.Point(196, 190);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(91, 40);
+            this.Editarbutton.TabIndex = 111;
+            this.Editarbutton.Text = "Editar";
+            this.Editarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
             // RegistrosCategoriaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 242);
+            this.ClientSize = new System.Drawing.Size(407, 242);
+            this.Controls.Add(this.Editarbutton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -188,5 +203,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider DescripcionerrorProvider;
         private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
+        private System.Windows.Forms.Button Editarbutton;
     }
 }

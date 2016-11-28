@@ -133,6 +133,7 @@
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Compras.cs" />
     <Compile Include="Entidades\CondicionesPagos.cs" />
+    <Compile Include="Entidades\DetalleVentas.cs" />
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Entidades\Proveedores.cs" />
     <Compile Include="Entidades\TipoUsuarios.cs" />
