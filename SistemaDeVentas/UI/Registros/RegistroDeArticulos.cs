@@ -46,11 +46,10 @@ namespace SistemaDeVentas.UI.Registros
 
             ArticuloIdtextBox.Text = articulo.ArticuloId.ToString();
             NombreArticulotextBox.Text = articulo.Nombre;
-            CodigoArticulotextBox.Text = articulo.Codigo;
             DespcripciontextBox.Text = articulo.Descripcion;
             CantidadtextBox.Text = articulo.CantidadDispodible.ToString();
             PrecioCompratextBox.Text = articulo.PrecioCompra.ToString();
-            PrecioVentatextBox.Text = articulo.PrecioVentas.ToString();
+            PrecioVentatextBox.Text = articulo.Precio.ToString();
             MarcaArticulotextBox.Text = articulo.Marca;
 
             CargarConboBoxCategorias();
@@ -84,9 +83,9 @@ namespace SistemaDeVentas.UI.Registros
 
         private bool ValidarExiste(string aux)
         {
-            if (ArticuloBLL.GetListaCodigoArticulo(aux).Count() > 0)
+            if (ArticuloBLL.GetListaNombreArticulo(aux).Count() > 0)
             {
-                MessageBox.Show("Este codigo ya existe, favor intentar con otra Codigo o modificar ...");
+                MessageBox.Show("Este nombre ya existe, favor intentar con otra nombre o modificar ...");
                 return false;
             }
             
@@ -102,7 +101,6 @@ namespace SistemaDeVentas.UI.Registros
         {
             DateTimePicker f = new DateTimePicker();
             ArticuloIdtextBox.Clear();
-            CodigoArticulotextBox.Clear();
             NombreArticulotextBox.Clear();
             MarcaArticulotextBox.Clear();
             DescuentotextBox.Clear();
@@ -127,7 +125,7 @@ namespace SistemaDeVentas.UI.Registros
             LlenarClase(arti);
             CargarConboBoxProveedores();
             CargarConboBoxCategorias();
-            if (ValidarTextbox() && ValidarExiste(CodigoArticulotextBox.Text))
+            if (ValidarTextbox() && ValidarExiste(NombreArticulotextBox.Text))
             {
 
                ArticuloBLL.Insertar(arti);
@@ -151,13 +149,12 @@ namespace SistemaDeVentas.UI.Registros
         {
             Proveedores p = new Proveedores();
             Categorias c = new Categorias();
-            a.Codigo = CodigoArticulotextBox.Text;
             a.Nombre = NombreArticulotextBox.Text;
             a.CantidadDispodible = ut.StringInt(CantidadtextBox.Text);
             a.Descripcion = DespcripciontextBox.Text; ;
             a.Marca = MarcaArticulotextBox.Text;
             a.PrecioCompra = StringDouble(PrecioCompratextBox.Text);
-            a.PrecioVentas = StringDouble(PrecioVentatextBox.Text);
+            a.Precio = StringDouble(PrecioVentatextBox.Text);
             a.Descuento = ut.StringInt(DescuentotextBox.Text);
             p.NombreProveedor = a.NombreProveedor = NombreProveedorcomboBox1.Text;
             a.Categoria = c.Descripcion = CategoriacomboBox.Text;
@@ -169,8 +166,8 @@ namespace SistemaDeVentas.UI.Registros
         private bool ValidarTextbox()
         {
 
-            if (string.IsNullOrEmpty(CodigoArticulotextBox.Text) &&
-                string.IsNullOrEmpty(NombreArticulotextBox.Text) &&
+
+            if (string.IsNullOrEmpty(NombreArticulotextBox.Text) &&
                 string.IsNullOrEmpty(DespcripciontextBox.Text) &&
                 string.IsNullOrEmpty(MarcaArticulotextBox.Text) &&
                 string.IsNullOrEmpty(NombreProveedorcomboBox1.Text) &&
@@ -183,7 +180,6 @@ namespace SistemaDeVentas.UI.Registros
 
                 )
             {
-               CodigoArticuloerrorProvider.SetError(CodigoArticulotextBox, "Favor Ingresar el codigo de articulo");
                NombreArticuloerrorProvider.SetError(NombreArticulotextBox, "Favor Ingresar el  nombre del articulos");
                DescripcionerrorProvider.SetError(DespcripciontextBox, "Favor Ingresar la descripcion del articulo");
                MarcaerrorProvider.SetError(MarcaArticulotextBox, "Favor Ingresar la marca del articulo");
@@ -195,12 +191,7 @@ namespace SistemaDeVentas.UI.Registros
                MessageBox.Show("Favor llenar todos los campos obligatorios");
 
             }
-            if (string.IsNullOrEmpty(CodigoArticulotextBox.Text))
-            {
-                CodigoArticuloerrorProvider.Clear();
-                CodigoArticuloerrorProvider.SetError(CodigoArticulotextBox, "Favor Ingresar el codigo de articulo");
-                return false;
-            }
+           
             if (string.IsNullOrEmpty(NombreArticulotextBox.Text))
             {
                 NombreArticuloerrorProvider.Clear();
@@ -322,7 +313,7 @@ namespace SistemaDeVentas.UI.Registros
             {
 
                 LlenarClase(articulos);
-                if (ValidarExiste(CodigoArticulotextBox.Text))
+                if (ValidarExiste(NombreArticulotextBox.Text))
                 {
                    ArticuloBLL.Modificar(ut.StringInt(ArticuloIdtextBox.Text), articulos);
                     Limpiar();

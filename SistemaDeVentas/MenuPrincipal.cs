@@ -137,11 +137,21 @@ namespace SistemaDeVentas
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-              UI.Registros.RegistrosDeVentas  resv =new UI.Registros.RegistrosDeVentas();
+            try
+            {
+                UI.Registros.RegistrosDeVentas resv = new UI.Registros.RegistrosDeVentas();
 
-            resv.MdiParent = this;
-            resv.Show();
-            resv.Location = new Point(40, 40);
+                resv.MdiParent = this;
+                resv.Show();
+                resv.Location = new Point(40, 40);
+
+            }
+            catch (Exception es)
+            {
+                MessageBox.Show(es.ToString());
+                throw;
+            }
+             
 
         }
 
@@ -172,11 +182,7 @@ namespace SistemaDeVentas
 
         private void ComprastoolStripButton_Click(object sender, EventArgs e)
         {
-            Registros.RegistroDeCompra resc = new Registros.RegistroDeCompra();
-
-            resc.MdiParent = this;
-            resc.Show();
-            resc.Location = new Point(15, 30);
+          
 
 
         }
@@ -194,11 +200,7 @@ namespace SistemaDeVentas
 
         private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Registros.RegistroDeCompra rect = new Registros.RegistroDeCompra();
-
-            rect.MdiParent = this;
-            rect.Show();
-            rect.Location = new Point(15, 30);
+            
         }
 
         private void ConsultaempleadosToolStripMenuItem_Click(object sender, EventArgs e)

@@ -27,7 +27,7 @@ namespace DAL
 
         public virtual DbSet<Empleados> Empleados { get; set; }
 
-        public virtual DbSet<CondicionesPagos> CodicionesPagos { get; set; }
+        public virtual DbSet<CondicionPagos> CodicionPagos { get; set; }
 
         public virtual DbSet<Categorias> Categorias { get; set; }
 
@@ -35,8 +35,7 @@ namespace DAL
 
         public virtual DbSet<Articulos> Articulos { get; set; }
 
-        public virtual DbSet<Compras> Compras { get; set; }
-        public virtual DbSet<DetalleVentas> DetalleVentas{ get; set; }
+        
         //---------------------------------------------------------------------
 
         //---------------------------------------------------------------------
@@ -52,16 +51,7 @@ namespace DAL
                      ge.ToTable("DetalleVentas");
                  });
             
-            modelBuilder.Entity<Compras>()
-               .HasMany<Articulos>(a => a.Articulos)
-               .WithMany(c => c.Compras)
-               .Map(ge =>
-               {
-                   ge.MapLeftKey("ArticuloId");
-                   ge.MapRightKey("CompraId");
-                   ge.ToTable("DetalleCompras");
-               });
-               
+            
 
 
         }

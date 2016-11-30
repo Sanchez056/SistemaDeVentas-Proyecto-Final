@@ -7,6 +7,8 @@ using DAL;
 using System.Data;
 using Entidades;
 using SistemaDeVentas.Entidades;
+using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace BLL
 {
@@ -16,34 +18,23 @@ namespace BLL
 
         public static bool Insertar(Articulos a)
         {
-          //  bool retorna = false;
-
+            bool re = false;
             try
             {
+                SistemaVentasDb db = new SistemaVentasDb();
 
-                using (var db = new SistemaVentasDb())
-                {
-
-                    db.Articulos.Add(a);
-                    db.SaveChanges();
-                    db.Dispose();
-                    // retorna= true;
-                    return true;
-
-                }
-
-
+                db.Articulos.Add(a);
+                db.SaveChanges();
+                db.Dispose();
+                re = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return false;
-                throw;
-
+                throw ex;
             }
-            
-           // return retorna;
-
+            return re;
         }
+    
         public static bool  Modificar(int id, Articulos art)
         {
             bool retorno = false;
@@ -56,8 +47,7 @@ namespace BLL
                     a.Marca = art.Marca;
                     a.NombreProveedor = art.NombreProveedor;
                     a.PrecioCompra= art.PrecioCompra;
-                    a.PrecioVentas = art.PrecioVentas;
-                    a.Codigo = art.Codigo;
+                    a.Precio = art.Precio;
                     a.CantidadDispodible = art.CantidadDispodible;
                     a.Categoria = art.Categoria;
 
@@ -144,10 +134,7 @@ namespace BLL
 
         }
 
-        public static object GetListaFecha(int v)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public static List<Articulos> GetLista(int articuloId)
         {
@@ -185,29 +172,27 @@ namespace BLL
             return lista;
 
         }
-        public static List<Articulos> GetListaPrecioVenta(double aux)
+        public static double GetListaPrecio(int id)
         {
-            List<Articulos> lista = new List<Articulos>();
-
-            var db = new SistemaVentasDb();
-
-            lista = db.Articulos.Where(p => p.PrecioVentas== aux).ToList();
-
-            return lista;
+            double precio = 0;
+            using (var db = new SistemaVentasDb())
+            {
+                try
+                {
+                    Articulos a = db.Articulos.Where(aO => aO.ArticuloId== id).FirstOrDefault();
+                    precio = a.Precio;
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.ToString());
+                    throw;
+                }
+                return precio;
+            }
 
         }
 
-        public static List<Articulos> GetListaCodigoArticulo(string aux)
-        {
-            List<Articulos> lista = new List<Articulos>();
-
-            var db = new SistemaVentasDb();
-
-            lista = db.Articulos.Where(p => p.Codigo== aux).ToList();
-
-            return lista;
-
-        }
+      
 
         
       

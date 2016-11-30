@@ -14,15 +14,12 @@ namespace SistemaDeVentas.Entidades
         [Key]
 
         public int ArticuloId { get; set; }
-
-
-        public string Codigo { get; set; }
-       
+   
         public string Nombre { get; set; }
 
         [Browsable(false)]
         public string Descripcion { get; set; }
-
+        [Browsable(false)]
         public string Marca { get; set; }
 
         [Browsable(false)]
@@ -33,16 +30,17 @@ namespace SistemaDeVentas.Entidades
        [Browsable(false)]
         public int CantidadDispodible { get; set; }
 
-        public int RestCantidad { get; set; }
+        public int Cantidad { get; set; }
 
+        [Browsable(false)]
         public double Descuento { get; set; }
 
          [Browsable(false)]
         public double PrecioCompra { get; set; }
 
-        public double PrecioVentas { get; set; }
+        public double Precio { get; set; }
 
-        public double  Total { get; set; }
+        public double  Importe { get; set; }
 
 
 
@@ -51,30 +49,24 @@ namespace SistemaDeVentas.Entidades
 
         //------------------------
         public virtual List<Ventas> Ventas { get; set; }
-        public virtual List<Compras> Compras { get; set; }
 
       
         public Articulos()
         {
             this.Ventas = new List<Ventas>();
-            this.Compras = new List<Compras>();
-
+           
         }
 
    
-        public Articulos(int articuloId,string codigo,string nombre,string marca,double precio)
+        public Articulos(int articuloId,string nombre,int cantidad,double precio,double importe)
         {
             this.ArticuloId = articuloId;
-            this.Codigo = codigo;
             this.Nombre = nombre;
-            this.Marca = marca;
-           // this.Cantidad = cantidad;
-           // this.Descuento = descuento;
-            this.PrecioVentas = precio;
+            this.Cantidad = cantidad;
+            this.Precio = precio;
+            this.Importe = Cantidad*Precio;
             this.Ventas = new List<Ventas>();
-            this.Compras = new List<Compras>();
-
-
+           
         }
        
 

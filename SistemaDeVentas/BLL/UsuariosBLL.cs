@@ -114,18 +114,7 @@ namespace BLL
 
         }
        
-        public static List<Usuarios> GetListaIdUsuarios(int id)
-        {
-            List<Usuarios> lista = new List<Usuarios>();
-
-            var db = new SistemaVentasDb();
-
-            lista = db.Usuarios.Where(p => p.UsuarioId == id).ToList();
-
-            return lista;
-
-        }
-
+        
         public static List<Usuarios> GetLista()
         {
             List<Usuarios> lista = new List<Usuarios>();

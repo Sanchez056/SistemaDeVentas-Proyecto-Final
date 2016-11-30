@@ -12,13 +12,15 @@ namespace SistemaDeVentas.Entidades
         [Key]
         public int VentaId { get; set; }
 
-        public string Codigo { get; set; }
-
-        public string CodicionPago { get; set; }
       
+        public string CodicionPago { get; set; }
+
+        public string Cliente { get; set; }
+
+        public string  Empleado { get; set; }
+
         public int descuento  { get; set; }
 
-        public int Cuota { get; set; }
 
 
          public double Deuda { get; set; }
@@ -38,7 +40,6 @@ namespace SistemaDeVentas.Entidades
 
         public double Total { get; set; }
 
-        public string  TipoDocumento { get; set; }
 
 
         public DateTime Fecha { get; set; }
@@ -55,8 +56,7 @@ namespace SistemaDeVentas.Entidades
         public Ventas(int ventaId, string codigo,string codicionPago,double subTotal,double totalDesuento,double totalItebis,double total,DateTime fecha)
         {
 
-            this.VentaId= ventaId;
-            this.Codigo = codigo;
+            this.VentaId = ventaId;
             this.CodicionPago =codicionPago;
             this.SubTotal = subTotal;
             this.TotalDescuento = totalDesuento;

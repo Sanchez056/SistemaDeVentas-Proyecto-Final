@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Articulopanel = new System.Windows.Forms.Panel();
+            this.Editarbutton = new System.Windows.Forms.Button();
             this.Categorialabel = new System.Windows.Forms.Label();
             this.CategoriacomboBox = new System.Windows.Forms.ComboBox();
             this.DescuentotextBox = new System.Windows.Forms.TextBox();
@@ -45,8 +46,6 @@
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.RegistrosArticulolabel = new System.Windows.Forms.Label();
             this.NombreProveedorlabel = new System.Windows.Forms.Label();
-            this.CodigoArticulotextBox = new System.Windows.Forms.TextBox();
-            this.CodigoArticulolabel = new System.Windows.Forms.Label();
             this.DespcripciontextBox = new System.Windows.Forms.TextBox();
             this.DescripcionLabel = new System.Windows.Forms.Label();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -59,7 +58,6 @@
             this.MarcaArticulolabel = new System.Windows.Forms.Label();
             this.NombreArticulolabel = new System.Windows.Forms.Label();
             this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.CodigoArticuloerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.NombreArticuloerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.DescripcionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.MarcaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
@@ -68,10 +66,8 @@
             this.CantidaderrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.PrecioCompraerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.PrecioVentaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Editarbutton = new System.Windows.Forms.Button();
             this.Articulopanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CodigoArticuloerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreArticuloerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcaerrorProvider)).BeginInit();
@@ -101,8 +97,6 @@
             this.Articulopanel.Controls.Add(this.FechadateTimePicker);
             this.Articulopanel.Controls.Add(this.RegistrosArticulolabel);
             this.Articulopanel.Controls.Add(this.NombreProveedorlabel);
-            this.Articulopanel.Controls.Add(this.CodigoArticulotextBox);
-            this.Articulopanel.Controls.Add(this.CodigoArticulolabel);
             this.Articulopanel.Controls.Add(this.DespcripciontextBox);
             this.Articulopanel.Controls.Add(this.DescripcionLabel);
             this.Articulopanel.Controls.Add(this.Eliminarbutton);
@@ -121,10 +115,23 @@
             this.Articulopanel.TabIndex = 0;
             this.Articulopanel.Paint += new System.Windows.Forms.PaintEventHandler(this.Articulopanel_Paint);
             // 
+            // Editarbutton
+            // 
+            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
+            this.Editarbutton.Image = global::SistemaDeVentas.Properties.Resources.ark;
+            this.Editarbutton.Location = new System.Drawing.Point(346, 377);
+            this.Editarbutton.Name = "Editarbutton";
+            this.Editarbutton.Size = new System.Drawing.Size(117, 42);
+            this.Editarbutton.TabIndex = 109;
+            this.Editarbutton.Text = "Editar";
+            this.Editarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Editarbutton.UseVisualStyleBackColor = true;
+            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
+            // 
             // Categorialabel
             // 
             this.Categorialabel.AutoSize = true;
-            this.Categorialabel.Location = new System.Drawing.Point(372, 197);
+            this.Categorialabel.Location = new System.Drawing.Point(372, 143);
             this.Categorialabel.Name = "Categorialabel";
             this.Categorialabel.Size = new System.Drawing.Size(54, 14);
             this.Categorialabel.TabIndex = 108;
@@ -134,14 +141,14 @@
             // 
             this.CategoriacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoriacomboBox.FormattingEnabled = true;
-            this.CategoriacomboBox.Location = new System.Drawing.Point(375, 214);
+            this.CategoriacomboBox.Location = new System.Drawing.Point(375, 160);
             this.CategoriacomboBox.Name = "CategoriacomboBox";
             this.CategoriacomboBox.Size = new System.Drawing.Size(305, 22);
             this.CategoriacomboBox.TabIndex = 107;
             // 
             // DescuentotextBox
             // 
-            this.DescuentotextBox.Location = new System.Drawing.Point(556, 257);
+            this.DescuentotextBox.Location = new System.Drawing.Point(556, 212);
             this.DescuentotextBox.Name = "DescuentotextBox";
             this.DescuentotextBox.Size = new System.Drawing.Size(121, 20);
             this.DescuentotextBox.TabIndex = 106;
@@ -149,7 +156,7 @@
             // Descuentolabel
             // 
             this.Descuentolabel.AutoSize = true;
-            this.Descuentolabel.Location = new System.Drawing.Point(553, 239);
+            this.Descuentolabel.Location = new System.Drawing.Point(553, 194);
             this.Descuentolabel.Name = "Descuentolabel";
             this.Descuentolabel.Size = new System.Drawing.Size(58, 14);
             this.Descuentolabel.TabIndex = 105;
@@ -158,7 +165,7 @@
             // Cantidadlabel
             // 
             this.Cantidadlabel.AutoSize = true;
-            this.Cantidadlabel.Location = new System.Drawing.Point(369, 239);
+            this.Cantidadlabel.Location = new System.Drawing.Point(369, 193);
             this.Cantidadlabel.Name = "Cantidadlabel";
             this.Cantidadlabel.Size = new System.Drawing.Size(50, 14);
             this.Cantidadlabel.TabIndex = 104;
@@ -166,7 +173,7 @@
             // 
             // CantidadtextBox
             // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(375, 257);
+            this.CantidadtextBox.Location = new System.Drawing.Point(375, 211);
             this.CantidadtextBox.Name = "CantidadtextBox";
             this.CantidadtextBox.Size = new System.Drawing.Size(138, 20);
             this.CantidadtextBox.TabIndex = 103;
@@ -182,14 +189,14 @@
             // 
             // PrecioVentatextBox
             // 
-            this.PrecioVentatextBox.Location = new System.Drawing.Point(556, 323);
+            this.PrecioVentatextBox.Location = new System.Drawing.Point(556, 256);
             this.PrecioVentatextBox.Name = "PrecioVentatextBox";
             this.PrecioVentatextBox.Size = new System.Drawing.Size(121, 20);
             this.PrecioVentatextBox.TabIndex = 101;
             // 
             // PrecioCompratextBox
             // 
-            this.PrecioCompratextBox.Location = new System.Drawing.Point(375, 326);
+            this.PrecioCompratextBox.Location = new System.Drawing.Point(375, 259);
             this.PrecioCompratextBox.Name = "PrecioCompratextBox";
             this.PrecioCompratextBox.Size = new System.Drawing.Size(138, 20);
             this.PrecioCompratextBox.TabIndex = 100;
@@ -197,7 +204,7 @@
             // Precioventalabel
             // 
             this.Precioventalabel.AutoSize = true;
-            this.Precioventalabel.Location = new System.Drawing.Point(553, 307);
+            this.Precioventalabel.Location = new System.Drawing.Point(553, 240);
             this.Precioventalabel.Name = "Precioventalabel";
             this.Precioventalabel.Size = new System.Drawing.Size(73, 14);
             this.Precioventalabel.TabIndex = 99;
@@ -206,7 +213,7 @@
             // PrecioComlabel
             // 
             this.PrecioComlabel.AutoSize = true;
-            this.PrecioComlabel.Location = new System.Drawing.Point(372, 307);
+            this.PrecioComlabel.Location = new System.Drawing.Point(372, 240);
             this.PrecioComlabel.Name = "PrecioComlabel";
             this.PrecioComlabel.Size = new System.Drawing.Size(80, 14);
             this.PrecioComlabel.TabIndex = 98;
@@ -216,9 +223,9 @@
             // 
             this.NombreProveedorcomboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NombreProveedorcomboBox1.FormattingEnabled = true;
-            this.NombreProveedorcomboBox1.Location = new System.Drawing.Point(375, 160);
+            this.NombreProveedorcomboBox1.Location = new System.Drawing.Point(32, 324);
             this.NombreProveedorcomboBox1.Name = "NombreProveedorcomboBox1";
-            this.NombreProveedorcomboBox1.Size = new System.Drawing.Size(305, 22);
+            this.NombreProveedorcomboBox1.Size = new System.Drawing.Size(313, 22);
             this.NombreProveedorcomboBox1.TabIndex = 97;
             this.NombreProveedorcomboBox1.SelectedIndexChanged += new System.EventHandler(this.NombreProveedorcomboBox1_SelectedIndexChanged);
             // 
@@ -243,31 +250,15 @@
             // NombreProveedorlabel
             // 
             this.NombreProveedorlabel.AutoSize = true;
-            this.NombreProveedorlabel.Location = new System.Drawing.Point(372, 143);
+            this.NombreProveedorlabel.Location = new System.Drawing.Point(29, 307);
             this.NombreProveedorlabel.Name = "NombreProveedorlabel";
             this.NombreProveedorlabel.Size = new System.Drawing.Size(98, 14);
             this.NombreProveedorlabel.TabIndex = 94;
             this.NombreProveedorlabel.Text = "Nombre Proveedor:";
             // 
-            // CodigoArticulotextBox
-            // 
-            this.CodigoArticulotextBox.Location = new System.Drawing.Point(34, 162);
-            this.CodigoArticulotextBox.Name = "CodigoArticulotextBox";
-            this.CodigoArticulotextBox.Size = new System.Drawing.Size(311, 20);
-            this.CodigoArticulotextBox.TabIndex = 93;
-            // 
-            // CodigoArticulolabel
-            // 
-            this.CodigoArticulolabel.AutoSize = true;
-            this.CodigoArticulolabel.Location = new System.Drawing.Point(31, 143);
-            this.CodigoArticulolabel.Name = "CodigoArticulolabel";
-            this.CodigoArticulolabel.Size = new System.Drawing.Size(95, 14);
-            this.CodigoArticulolabel.TabIndex = 92;
-            this.CodigoArticulolabel.Text = "Codigo de Articulo:";
-            // 
             // DespcripciontextBox
             // 
-            this.DespcripciontextBox.Location = new System.Drawing.Point(32, 265);
+            this.DespcripciontextBox.Location = new System.Drawing.Point(32, 211);
             this.DespcripciontextBox.Multiline = true;
             this.DespcripciontextBox.Name = "DespcripciontextBox";
             this.DespcripciontextBox.Size = new System.Drawing.Size(313, 43);
@@ -276,7 +267,7 @@
             // DescripcionLabel
             // 
             this.DescripcionLabel.AutoSize = true;
-            this.DescripcionLabel.Location = new System.Drawing.Point(31, 248);
+            this.DescripcionLabel.Location = new System.Drawing.Point(34, 194);
             this.DescripcionLabel.Name = "DescripcionLabel";
             this.DescripcionLabel.Size = new System.Drawing.Size(65, 14);
             this.DescripcionLabel.TabIndex = 90;
@@ -336,14 +327,14 @@
             // 
             // MarcaArticulotextBox
             // 
-            this.MarcaArticulotextBox.Location = new System.Drawing.Point(34, 328);
+            this.MarcaArticulotextBox.Location = new System.Drawing.Point(34, 274);
             this.MarcaArticulotextBox.Name = "MarcaArticulotextBox";
             this.MarcaArticulotextBox.Size = new System.Drawing.Size(311, 20);
             this.MarcaArticulotextBox.TabIndex = 85;
             // 
             // NombreArticulotextBox
             // 
-            this.NombreArticulotextBox.Location = new System.Drawing.Point(34, 216);
+            this.NombreArticulotextBox.Location = new System.Drawing.Point(34, 162);
             this.NombreArticulotextBox.Name = "NombreArticulotextBox";
             this.NombreArticulotextBox.Size = new System.Drawing.Size(311, 20);
             this.NombreArticulotextBox.TabIndex = 84;
@@ -358,7 +349,7 @@
             // MarcaArticulolabel
             // 
             this.MarcaArticulolabel.AutoSize = true;
-            this.MarcaArticulolabel.Location = new System.Drawing.Point(31, 311);
+            this.MarcaArticulolabel.Location = new System.Drawing.Point(31, 257);
             this.MarcaArticulolabel.Name = "MarcaArticulolabel";
             this.MarcaArticulolabel.Size = new System.Drawing.Size(92, 14);
             this.MarcaArticulolabel.TabIndex = 82;
@@ -367,7 +358,7 @@
             // NombreArticulolabel
             // 
             this.NombreArticulolabel.AutoSize = true;
-            this.NombreArticulolabel.Location = new System.Drawing.Point(31, 197);
+            this.NombreArticulolabel.Location = new System.Drawing.Point(31, 143);
             this.NombreArticulolabel.Name = "NombreArticulolabel";
             this.NombreArticulolabel.Size = new System.Drawing.Size(103, 14);
             this.NombreArticulolabel.TabIndex = 81;
@@ -376,10 +367,6 @@
             // BuscarerrorProvider
             // 
             this.BuscarerrorProvider.ContainerControl = this;
-            // 
-            // CodigoArticuloerrorProvider
-            // 
-            this.CodigoArticuloerrorProvider.ContainerControl = this;
             // 
             // NombreArticuloerrorProvider
             // 
@@ -413,19 +400,6 @@
             // 
             this.PrecioVentaerrorProvider.ContainerControl = this;
             // 
-            // Editarbutton
-            // 
-            this.Editarbutton.ForeColor = System.Drawing.Color.Black;
-            this.Editarbutton.Image = global::SistemaDeVentas.Properties.Resources.ark;
-            this.Editarbutton.Location = new System.Drawing.Point(346, 377);
-            this.Editarbutton.Name = "Editarbutton";
-            this.Editarbutton.Size = new System.Drawing.Size(117, 42);
-            this.Editarbutton.TabIndex = 109;
-            this.Editarbutton.Text = "Editar";
-            this.Editarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Editarbutton.UseVisualStyleBackColor = true;
-            this.Editarbutton.Click += new System.EventHandler(this.Editarbutton_Click);
-            // 
             // RegistroDeArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -439,7 +413,6 @@
             this.Articulopanel.ResumeLayout(false);
             this.Articulopanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CodigoArticuloerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NombreArticuloerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MarcaerrorProvider)).EndInit();
@@ -464,8 +437,6 @@
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label RegistrosArticulolabel;
         private System.Windows.Forms.Label NombreProveedorlabel;
-        private System.Windows.Forms.TextBox CodigoArticulotextBox;
-        private System.Windows.Forms.Label CodigoArticulolabel;
         private System.Windows.Forms.TextBox DespcripciontextBox;
         private System.Windows.Forms.Label DescripcionLabel;
         private System.Windows.Forms.Button Eliminarbutton;
@@ -484,7 +455,6 @@
         private System.Windows.Forms.Label Categorialabel;
         private System.Windows.Forms.ComboBox CategoriacomboBox;
         private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
-        private System.Windows.Forms.ErrorProvider CodigoArticuloerrorProvider;
         private System.Windows.Forms.ErrorProvider NombreArticuloerrorProvider;
         private System.Windows.Forms.ErrorProvider DescripcionerrorProvider;
         private System.Windows.Forms.ErrorProvider MarcaerrorProvider;

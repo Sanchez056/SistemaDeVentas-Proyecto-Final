@@ -7,6 +7,7 @@ using Entidades;
 using DAL;
 using SistemaDeVentas.Entidades;
 using System.Data.Entity;
+using System.Windows.Forms;
 
 namespace SistemaDeVentas.BLL
 {
@@ -37,8 +38,11 @@ namespace SistemaDeVentas.BLL
                 throw ex;
             }
             return re;
-
         }
+
+    
+
+    
         public static bool Modificar(int id, Ventas vent)
         {
             bool retorno = false;
@@ -47,13 +51,12 @@ namespace SistemaDeVentas.BLL
                 using (var db = new SistemaVentasDb())
                 {
                     Ventas v = db.Ventas.Find(id);
-                    v.Cuota = vent.Cuota;
-                    v.Codigo = vent.Codigo;
+                    
                     v.Deuda = vent.Deuda;
                     v.Cantidad = vent.Cantidad;
                     v.Itebis = vent.Itebis;
                     v.Precio = vent.Precio;
-                    v.TipoDocumento = vent.TipoDocumento;
+                   
                     v.CodicionPago = vent.CodicionPago;
                     v.descuento = vent.descuento;
                
@@ -141,17 +144,7 @@ namespace SistemaDeVentas.BLL
 
 
 
-            public static List<Ventas> GetListaCodigo(string aux)
-            {
-                List<Ventas> lista = new List<Ventas>();
-
-                var db = new SistemaVentasDb();
-
-                lista = db.Ventas.Where(p => p.Codigo == aux).ToList();
-
-                return lista;
-
-            }
+          
            
 
            
